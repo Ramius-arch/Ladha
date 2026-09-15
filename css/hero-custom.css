@@ -1,0 +1,60 @@
+/* hero-custom.css */
+
+/* Import Playfair Display */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Graph‑style background for hero left column */
+.hero-left {
+  position: relative;
+  overflow: hidden;
+}
+.hero-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0,0,0,0.02) 0,
+    rgba(0,0,0,0.02) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Hero title font and size */
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* Hide camera HUD elements */
+.viewfinder-hud-top,
+.viewfinder-hud-bottom {
+  display: none !important;
+}
+
+/* Subtle HUD overlay on garment image */
+.hero-lead-img-wrap::after {
+  content: 'REC';
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  border-radius: 2px;
+}
+
+/* Remove any green meta dot */
+.hero-meta-badge .meta-dot {
+  display: none;
+}
