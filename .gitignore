@@ -22,3 +22,6 @@ test*.png
 full_page*.png
 audit*.png
 screenshot*.png
+
+# Netlify
+.netlify/
