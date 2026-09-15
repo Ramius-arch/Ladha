@@ -198,7 +198,7 @@ section {
 .section-sub {
   font-size: 1.125rem;
   color: var(--muted);
-  max-width: 600px;
+  max-width: min(100%, 600px);
   line-height: 1.7;
   margin-bottom: 4rem;
   text-transform: none;
@@ -236,12 +236,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav {
-  max-width: 1240px;
+  max-width: min(92vw, 1380px);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.95rem 2rem;
+  padding: 0.95rem clamp(1rem, 2.5vw, 2rem);
 }
 
 .logo a {
@@ -690,7 +690,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-sub {
   font-size: clamp(0.92rem, 1.1vw, 1.05rem);
   color: var(--text-muted);
-  max-width: 480px;
+  max-width: min(100%, 480px);
   line-height: 1.55;
   margin-bottom: 1.75rem;
   font-weight: 400;
@@ -1151,8 +1151,8 @@ h1, h2, h3, h4, h5, h6 {
   }
   .hero-split {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    max-width: 580px;
+    gap: 2rem;
+    max-width: min(90vw, 580px);
     margin: 0 auto;
   }
   .hero-left {
@@ -1173,7 +1173,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
   }
   .hero-terminal {
-    max-width: 400px;
+    max-width: min(90vw, 400px);
     margin: 0 auto;
   }
 }
@@ -1181,8 +1181,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile Devices (<= 640px): Proportional Mobile Typography & Touch Ergonomics */
 @media (max-width: 640px) {
   .hero.deep-canvas {
-    padding-top: 1.5rem !important;
-    padding-bottom: 2.5rem !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 2rem !important;
   }
   .hero-top-meta {
     flex-direction: column;
@@ -1874,6 +1874,18 @@ h1, h2, h3, h4, h5, h6 {
 .product-card,
 .lookbook-item,
 .feed-item {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Fail-safe: Hero headline and core elements MUST be visible on first paint.
+   On real mobile, the sticky header covers these elements so IntersectionObserver
+   with threshold 0.15 may never fire — leaving them at opacity: 0. */
+.hero-title[data-animate],
+.hero-sub[data-animate],
+.hero-actions[data-animate],
+.hero-top-meta[data-animate],
+.hero-telemetry[data-animate] {
   opacity: 1 !important;
   transform: none !important;
 }
