@@ -25,3 +25,6 @@ screenshot*.png
 
 # Netlify
 .netlify/
+
+# Vercel
+.vercel/
