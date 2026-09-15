@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drops Archive — LADHA</title>
+    <meta name="description" content="Shop all 1-of-1 curated drops, vintage streetwear, and archival garments at LADHA. Taste over trend.">
+    <meta property="og:title" content="Drops Archive — LADHA">
+    <meta property="og:description" content="Curated 1-of-1 pieces. Handpicked in Nairobi.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/products-data.js" defer></script>
+    <script src="js/store-db.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body class="deep-canvas">
+    <div class="grain"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <!-- Runway Top Announcement Countdown Ticker -->
+        <div class="announcement-bar">
+            <div class="announcement-item">
+                <span class="card-live-dot"></span>
+                <span>NEXT DROP IN:</span>
+                <span class="countdown-digits">02D 14H 28M 45S</span>
+            </div>
+            <div class="announcement-item announcement-note">
+                <span>GIKOMBA & TOI ARCHIVE BALES UNLOCKED</span>
+                <span>•</span>
+                <span>NAIROBI SAME-DAY DISPATCH</span>
+            </div>
+            <div class="announcement-item">
+                <span>1-OF-1 PIECES • FIRST TO CLAIM WINS</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="logo"><a href="index.html">LADHA</a></div>
+            <div class="nav-links" id="nav-links">
+                <a href="shop.html" class="active">Shop Drops</a>
+                <a href="index.html#edit">The Edit</a>
+                <a href="index.html#lookbook">Lookbook</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-live-status">
+                    <span class="live-beacon"></span>
+                    <span class="live-nairobi-clock">NAIROBI --:--:-- EAT</span>
+                </div>
+                <button class="cart-trigger" aria-label="Open Shopping Bag">
+                    <span class="cart-btn-label">BAG</span>
+                    <span class="cart-count-badge" style="display:none">0</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="shop.html">Shop Drops</a>
+            <a href="index.html#edit">The Edit</a>
+            <a href="index.html#lookbook">Lookbook</a>
+            <a href="about.html">About</a>
+            <a href="#" class="cart-trigger">Shopping Bag</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Title Header -->
+        <header class="page-header deep-canvas">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Drops Archive</span>
+                </div>
+                <div class="section-stamp">
+                    <span class="section-stamp-num">PIECE 01</span>
+                    <span class="section-stamp-title">CATALOG DIRECTORY</span>
+                    <span class="section-stamp-line"></span>
+                    <span>SINGULAR PIECES ONLY</span>
+                </div>
+                <h1 class="page-title">ALL DROPS</h1>
+            </div>
+        </header>
+
+        <!-- Catalog Section -->
+        <section class="deep-canvas" style="padding-top: 0;">
+            <div class="container">
+                <!-- Controls & Filters -->
+                <div class="catalog-controls">
+                    <div class="filter-group" id="category-filters">
+                        <button class="filter-btn active" data-category="ALL">ALL PIECES</button>
+                        <button class="filter-btn" data-category="STREETWEAR">STREETWEAR</button>
+                        <button class="filter-btn" data-category="VINTAGE">VINTAGE</button>
+                        <button class="filter-btn" data-category="MEN'S">MEN'S</button>
+                        <button class="filter-btn" data-category="WOMEN'S">WOMEN'S</button>
+                    </div>
+
+                    <div class="catalog-search-sort">
+                        <div class="catalog-search">
+                            <input type="text" id="shop-search" placeholder="SEARCH ARCHIVE..." aria-label="Search garments">
+                        </div>
+                        <div class="catalog-sort">
+                            <select id="shop-sort" aria-label="Sort products">
+                                <option value="featured">SORT: FEATURED</option>
+                                <option value="price-asc">PRICE: LOW TO HIGH</option>
+                                <option value="price-desc">PRICE: HIGH TO LOW</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meta bar showing count -->
+                <div class="catalog-meta-bar">
+                    <span id="catalog-count">SHOWING 9 OF 9 PIECES</span>
+                    <span>1-OF-1 CURATION • SOURCED IN NAIROBI</span>
+                </div>
+
+                <!-- Dynamic Product Grid -->
+                <div class="product-grid" id="catalog-grid">
+                    <!-- Populated via JavaScript -->
+                </div>
+
+                <div id="no-results" style="display: none; padding: 6rem 2rem; text-align: center;">
+                    <p style="font-family: var(--font-mono); font-size: 11px; color: var(--muted); letter-spacing: var(--tracking-wide);">NO MATCHING PIECES FOUND</p>
+                    <h3 style="font-size: 1.5rem; margin: 1rem 0; font-weight: 800;">TRY ANOTHER SEARCH OR RESET FILTERS</h3>
+                    <button class="btn btn-accent btn-sm" id="reset-filters-btn">RESET ALL FILTERS</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer dark-canvas">
+        <div class="container footer-cols">
+            <div class="footer-col">
+                <p>© 2026 LADHA</p>
+            </div>
+            <div class="footer-col footer-nav">
+                <a href="shop.html">All Drops</a>
+                <a href="index.html#edit">The Edit</a>
+                <a href="index.html#lookbook">Lookbook</a>
+                <a href="about.html">About</a>
+                <a href="checkout.html">Checkout</a>
+                <a href="admin.html" style="color: var(--accent); font-weight: 700;">MANAGER CRM ⚙</a>
+            </div>
+            <div class="footer-col text-right">
+                <p>NAIROBI 🇰🇪</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Catalog Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof LADHA_PRODUCTS === 'undefined') return;
+
+            const grid = document.getElementById('catalog-grid');
+            const countEl = document.getElementById('catalog-count');
+            const searchInput = document.getElementById('shop-search');
+            const sortSelect = document.getElementById('shop-sort');
+            const filterBtns = document.querySelectorAll('#category-filters .filter-btn');
+            const noResults = document.getElementById('no-results');
+            const resetBtn = document.getElementById('reset-filters-btn');
+
+            let activeCategory = 'ALL';
+            let searchQuery = '';
+            let sortMode = 'featured';
+
+            // Check URL parameters for category filter
+            const urlParams = new URLSearchParams(window.location.search);
+            const catParam = urlParams.get('category');
+            if (catParam) {
+                const normalized = catParam.toUpperCase();
+                filterBtns.forEach(btn => {
+                    const btnCat = btn.getAttribute('data-category').toUpperCase();
+                    if (btnCat === normalized || (normalized === 'MENS' && btnCat === "MEN'S") || (normalized === 'WOMENS' && btnCat === "WOMEN'S")) {
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        activeCategory = btn.getAttribute('data-category');
+                    }
+                });
+            }
+
+            function renderProducts() {
+                const allProducts = (typeof LadhaDB !== "undefined") ? LadhaDB.getProducts() : LADHA_PRODUCTS;
+                let filtered = allProducts.filter(item => {
+                    const matchesCat = activeCategory === 'ALL' || item.category.toUpperCase() === activeCategory.toUpperCase();
+                    const query = searchQuery.toLowerCase().trim();
+                    const matchesSearch = !query || 
+                        item.name.toLowerCase().includes(query) || 
+                        item.category.toLowerCase().includes(query) || 
+                        item.fabric.toLowerCase().includes(query) ||
+                        item.description.toLowerCase().includes(query);
+                    return matchesCat && matchesSearch;
+                });
+
+                // Sorting
+                if (sortMode === 'price-asc') {
+                    filtered.sort((a, b) => a.price - b.price);
+                } else if (sortMode === 'price-desc') {
+                    filtered.sort((a, b) => b.price - a.price);
+                }
+
+                if (countEl) {
+                    countEl.textContent = `SHOWING ${filtered.length} OF ${allProducts.length} PIECES`;
+                }
+
+                if (filtered.length === 0) {
+                    grid.style.display = 'none';
+                    noResults.style.display = 'block';
+                } else {
+                    grid.style.display = 'grid';
+                    noResults.style.display = 'none';
+                    grid.innerHTML = filtered.map(item => `
+                        <div class="product-card">
+                            <div class="product-img viewfinder-wrap">
+                                <div class="viewfinder-corners"></div>
+                                <div class="vintage-hangtag">
+                                    <span class="hangtag-eyelet"></span>
+                                    <span>1-OF-1</span>
+                                </div>
+                                <a href="product.html?id=${item.id}" style="display:block; width:100%; height:100%;">
+                                    ${(item.image && (item.image.endsWith('.mp4') || item.image.endsWith('.webm') || item.image.endsWith('.mov'))) ?
+                                        `<video src="${item.image}" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video>` :
+                                        `<img src="${item.image}" alt="${item.name}" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;">`}
+                                </a>
+                                <div class="card-quick-actions">
+                                    <button class="btn-quick-view" data-product-id="${item.id}">QUICK VIEW</button>
+                                    <button class="btn-quick-add" data-product-id="${item.id}">+ BAG</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                    <span class="product-tag">${item.category} • ${item.size}</span>
+                                    <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">${item.id.toUpperCase()}</span>
+                                </div>
+                                <h3 class="product-name">
+                                    <a href="product.html?id=${item.id}">${item.name}</a>
+                                </h3>
+                                <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                                    <span class="product-price">KES ${item.price.toLocaleString()}</span>
+                                    <a href="product.html?id=${item.id}" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+            }
+
+            // Bind filter buttons
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeCategory = btn.getAttribute('data-category');
+                    renderProducts();
+                });
+            });
+
+            // Bind search
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                renderProducts();
+            });
+
+            // Bind sort
+            sortSelect.addEventListener('change', (e) => {
+                sortMode = e.target.value;
+                renderProducts();
+            });
+
+            // Reset
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                    activeCategory = 'ALL';
+                    searchQuery = '';
+                    sortMode = 'featured';
+                    searchInput.value = '';
+                    sortSelect.value = 'featured';
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    filterBtns[0].classList.add('active');
+                    renderProducts();
+                });
+            }
+
+            // Initial render
+            renderProducts();
+            window.addEventListener("ladha-db-updated", () => renderProducts());
+        });
+    </script>
+</body>
+</html>

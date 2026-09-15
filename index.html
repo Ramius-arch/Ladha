@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LADHA — Taste Over Trend.</title>
+    <meta name="description" content="LADHA — A Kenyan curated fashion brand. Taste Over Trend. Streetwear-inspired, high-contrast, bold.">
+    <meta property="og:title" content="LADHA — Taste Over Trend.">
+    <meta property="og:description" content="LADHA — A Kenyan curated fashion brand. Taste Over Trend.">
+    <meta property="og:url" content="https://ladha.ke">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/products-data.js" defer></script>
+    <script src="js/store-db.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body class="deep-canvas">
+    <div class="grain"></div>
+
+    <header class="header">
+        <!-- Runway Top Announcement Countdown Ticker -->
+        <div class="announcement-bar">
+            <div class="announcement-item">
+                <span class="card-live-dot"></span>
+                <span>NEXT DROP IN:</span>
+                <span class="countdown-digits">02D 14H 28M 45S</span>
+            </div>
+            <div class="announcement-item announcement-note">
+                <span>GIKOMBA & TOI ARCHIVE BALES UNLOCKED</span>
+                <span>•</span>
+                <span>NAIROBI SAME-DAY DISPATCH</span>
+            </div>
+            <div class="announcement-item">
+                <span>1-OF-1 PIECES • FIRST TO CLAIM WINS</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="logo"><a href="index.html">LADHA</a></div>
+            <div class="nav-links" id="nav-links">
+                <a href="shop.html">Shop Drops</a>
+                <a href="#edit">The Edit</a>
+                <a href="#lookbook">Lookbook</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-live-status">
+                    <span class="live-beacon"></span>
+                    <span class="live-nairobi-clock">NAIROBI --:--:-- EAT</span>
+                </div>
+                <button class="cart-trigger" aria-label="Open Shopping Bag">
+                    <span class="cart-btn-label">BAG</span>
+                    <span class="cart-count-badge" style="display:none">0</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="shop.html">Shop Drops</a>
+            <a href="#edit">The Edit</a>
+            <a href="#lookbook">Lookbook</a>
+            <a href="about.html">About</a>
+            <a href="#" class="cart-trigger">Shopping Bag</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero deep-canvas">
+        <div class="hero-watermark" aria-hidden="true">LADHA ARCHIVE 04 // SINGULAR TASTE</div>
+        <div class="container hero-split">
+            <!-- Left Column: Display Statement, Datum, & Archival Telemetry -->
+            <div class="hero-left">
+                <div class="hero-top-meta" data-animate>
+                    <div class="hero-meta-badge">
+                        <span class="meta-dot"></span>
+                        <span>ARCHIVE DROP 04 // NBO 01°17'S 36°49'E</span>
+                    </div>
+                    <span class="hero-meta-status">BALES UNLOCKED: 18 // KEPT: 6%</span>
+                </div>
+
+                <h1 class="hero-title" data-animate>
+                    TASTE<br>
+                    OVER<br>
+                    TREND<span class="hero-accent-dot">.</span>
+                </h1>
+
+                <p class="hero-sub" data-animate>
+                    In a sea of fast-fashion sameness, singular taste is currency. We inspect hundreds of vintage bales across Nairobi, reject 94% of what we touch, and archive only the 1-of-1 pieces worth owning.
+                </p>
+
+                <div class="hero-actions" data-animate>
+                    <a href="#drops" class="btn btn-accent btn-rolling">
+                        <span class="btn-roller">
+                            <span class="btn-text-default">SEE WHAT JUST DROPPED <span class="btn-arrow">↓</span></span>
+                            <span class="btn-text-hover">SEE WHAT JUST DROPPED <span class="btn-arrow">↓</span></span>
+                        </span>
+                    </a>
+                    <a href="about.html" class="hero-manifesto-link">
+                        <span>THE 6% PROTOCOL</span>
+                        <span class="hero-link-arrow">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Archival Telemetry Strip -->
+                <div class="hero-telemetry" data-animate>
+                    <div class="telemetry-item">
+                        <span class="telemetry-idx">[ 01 ]</span>
+                        <div class="telemetry-content">
+                            <span class="telemetry-val">6.0%</span>
+                            <span class="telemetry-lbl">ACCEPTANCE RATIO</span>
+                        </div>
+                    </div>
+                    <div class="telemetry-item">
+                        <span class="telemetry-idx">[ 02 ]</span>
+                        <div class="telemetry-content">
+                            <span class="telemetry-val">NAIROBI</span>
+                            <span class="telemetry-lbl">PROVENANCE ARCHIVE</span>
+                        </div>
+                    </div>
+                    <div class="telemetry-item">
+                        <span class="telemetry-idx">[ 03 ]</span>
+                        <div class="telemetry-content">
+                            <span class="telemetry-val">SAME-DAY</span>
+                            <span class="telemetry-lbl">EAT DISPATCH SPEED</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Optical Viewfinder Garment Terminal -->
+            <div class="hero-right" data-animate>
+                <div class="hero-terminal">
+                    <!-- Tactile Look Switcher Tabs -->
+                    <div class="hero-switcher-bar" role="tablist" aria-label="Featured Archive Pieces">
+                        <button class="hero-switch-tab hero-piece-tab active" data-hero-piece="0" role="tab" aria-selected="true">
+                            <span class="tab-idx">LOOK 01</span>
+                            <span class="tab-name">NIKE 90s</span>
+                        </button>
+                        <button class="hero-switch-tab hero-piece-tab" data-hero-piece="1" role="tab" aria-selected="false">
+                            <span class="tab-idx">LOOK 02</span>
+                            <span class="tab-name">LEVI'S RAW</span>
+                        </button>
+                        <button class="hero-switch-tab hero-piece-tab" data-hero-piece="2" role="tab" aria-selected="false">
+                            <span class="tab-idx">LOOK 03</span>
+                            <span class="tab-name">CARHARTT</span>
+                        </button>
+                    </div>
+
+                    <!-- Optical Viewfinder Card -->
+                    <div class="hero-lead-card">
+                        <div class="hero-lead-img-wrap viewfinder-wrap">
+                            <!-- Technical Camera HUD Overlays -->
+                            <div class="viewfinder-corners"></div>
+                            <div class="viewfinder-crosshair"></div>
+                            <div class="viewfinder-hud-top">
+                                <span class="hud-rec"><span class="rec-dot"></span>REC [4K 60FPS]</span>
+                                <span class="hud-optic">LENS 50MM F/1.4</span>
+                                <span class="hud-shutter">1/250S // ISO 400</span>
+                            </div>
+                            <div class="viewfinder-hud-bottom">
+                                <span class="hud-coord">LOC: GIKOMBA // NBO</span>
+                                <span class="hud-ref" id="hero-piece-code">REF: LADHA-P01</span>
+                            </div>
+
+                            <!-- Tactile Physical Hangtag -->
+                            <div class="vintage-hangtag" id="hero-piece-hangtag">
+                                <span class="hangtag-eyelet"></span>
+                                <span class="hangtag-text">1-OF-1 ARCHIVE</span>
+                            </div>
+
+                            <a href="product.html?id=product-1" id="hero-piece-link" style="display:block; width:100%; height:100%;">
+                                <img src="assets/products/product-1.jpg" alt="Featured Drop: 90s Nike Windbreaker" class="hero-lead-img" id="hero-piece-img">
+                            </a>
+
+                            <div class="card-quick-actions">
+                                <button class="btn-quick-view" id="hero-quick-view-btn" data-product-id="product-1">QUICK VIEW</button>
+                                <button class="btn-quick-add" id="hero-quick-add-btn" data-product-id="product-1">+ BAG</button>
+                            </div>
+                        </div>
+
+                        <!-- Card Metadata Terminal -->
+                        <div class="hero-lead-meta">
+                            <div class="hero-meta-col-left">
+                                <div class="hero-piece-category-row">
+                                    <span class="hero-lead-cat" id="hero-piece-cat">VINTAGE STREETWEAR</span>
+                                    <span class="card-live-indicator" id="hero-piece-stock"><span class="card-live-dot"></span>1-OF-1 IN STOCK</span>
+                                </div>
+                                <h3 class="hero-lead-title"><a href="product.html?id=product-1" id="hero-piece-title">Vintage Nike Colorblock Windbreaker</a></h3>
+                                <div class="hero-piece-spec-tags">
+                                    <span class="hero-spec-tag" id="hero-piece-grade">GRADE A+ (9.5/10)</span>
+                                    <span class="hero-spec-tag" id="hero-piece-size">SIZE L • PIT-TO-PIT 24"</span>
+                                </div>
+                            </div>
+                            <div class="hero-lead-price-col">
+                                <span class="hero-lead-price-val" id="hero-piece-price">KES 3,500</span>
+                                <a href="product.html?id=product-1" class="hero-lead-cta" id="hero-piece-cta">
+                                    <span>SPECS</span>
+                                    <span class="cta-arrow">&rarr;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kinetic Infinite Marquee Ticker -->
+    <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track">
+            <div class="marquee-item">
+                <span>DROP 04 LIVE</span><span class="marquee-star">★</span>
+                <span>NAIROBI SAME-DAY DISPATCH</span><span class="marquee-star">★</span>
+                <span>1-OF-1 ARCHIVE PIECES ONLY</span><span class="marquee-star">★</span>
+                <span>WE REJECT 94% OF WHAT WE FIND</span><span class="marquee-star">★</span>
+                <span>TASTE OVER TREND</span><span class="marquee-star">★</span>
+                <span>M-PESA INSTANT CHECKOUT</span><span class="marquee-star">★</span>
+                <span>AUTHENTIC VINTAGE PROVENANCE</span><span class="marquee-star">★</span>
+            </div>
+            <div class="marquee-item">
+                <span>DROP 04 LIVE</span><span class="marquee-star">★</span>
+                <span>NAIROBI SAME-DAY DISPATCH</span><span class="marquee-star">★</span>
+                <span>1-OF-1 ARCHIVE PIECES ONLY</span><span class="marquee-star">★</span>
+                <span>WE REJECT 94% OF WHAT WE FIND</span><span class="marquee-star">★</span>
+                <span>TASTE OVER TREND</span><span class="marquee-star">★</span>
+                <span>M-PESA INSTANT CHECKOUT</span><span class="marquee-star">★</span>
+                <span>AUTHENTIC VINTAGE PROVENANCE</span><span class="marquee-star">★</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="drops" class="drops deep-canvas">
+        <div class="container">
+            <div class="section-stamp" data-animate>
+                <span class="section-stamp-num">PIECE 01</span>
+                <span class="section-stamp-title">THE ARCHIVE COLLECTION</span>
+                <span class="section-stamp-line"></span>
+                <span>AUTUMN DROP 04</span>
+            </div>
+            <h2 class="section-title" data-animate>JUST LANDED</h2>
+            
+                        <div class="product-grid">
+                <!-- Vintage Nike Windbreaker -->
+                <div class="product-card" data-animate>
+                    <div class="product-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <div class="vintage-hangtag">
+                            <span class="hangtag-eyelet"></span>
+                            <span>1-OF-1</span>
+                        </div>
+                        <a href="product.html?id=product-1">
+                            <img src="assets/products/product-1.jpg" alt="Vintage Nike Windbreaker" loading="lazy">
+                        </a>
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="product-1">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="product-1">+ BAG</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span class="product-tag">STREETWEAR</span>
+                            <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">PRODUCT-1</span>
+                        </div>
+                        <h3 class="product-name"><a href="product.html?id=product-1">Vintage Nike Windbreaker</a></h3>
+                        <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                            <span class="product-price">KES 3,500</span>
+                            <a href="product.html?id=product-1" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Oversized Denim Jacket -->
+                <div class="product-card" data-animate>
+                    <div class="product-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <div class="vintage-hangtag">
+                            <span class="hangtag-eyelet"></span>
+                            <span>DISTRESSED</span>
+                        </div>
+                        <a href="product.html?id=product-2">
+                            <img src="assets/products/product-2.jpg" alt="Oversized Denim Jacket" loading="lazy">
+                        </a>
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="product-2">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="product-2">+ BAG</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span class="product-tag">WOMEN'S</span>
+                            <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">PRODUCT-2</span>
+                        </div>
+                        <h3 class="product-name"><a href="product.html?id=product-2">Oversized Denim Jacket</a></h3>
+                        <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                            <span class="product-price">KES 2,800</span>
+                            <a href="product.html?id=product-2" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ralph Lauren Oxford Shirt -->
+                <div class="product-card" data-animate>
+                    <div class="product-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <div class="vintage-hangtag">
+                            <span class="hangtag-eyelet"></span>
+                            <span>NEAR MINT</span>
+                        </div>
+                        <a href="product.html?id=product-3">
+                            <img src="assets/products/product-3.jpg" alt="Ralph Lauren Oxford Shirt" loading="lazy">
+                        </a>
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="product-3">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="product-3">+ BAG</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span class="product-tag">MEN'S</span>
+                            <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">PRODUCT-3</span>
+                        </div>
+                        <h3 class="product-name"><a href="product.html?id=product-3">Ralph Lauren Oxford Shirt</a></h3>
+                        <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                            <span class="product-price">KES 1,500</span>
+                            <a href="product.html?id=product-3" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 90s Levi's 501 Raw -->
+                <div class="product-card" data-animate>
+                    <div class="product-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <div class="vintage-hangtag">
+                            <span class="hangtag-eyelet"></span>
+                            <span>SELVEDGE</span>
+                        </div>
+                        <a href="product.html?id=product-4">
+                            <img src="assets/products/product-4.jpg" alt="90s Levi's 501 Raw" loading="lazy">
+                        </a>
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="product-4">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="product-4">+ BAG</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span class="product-tag">VINTAGE</span>
+                            <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">PRODUCT-4</span>
+                        </div>
+                        <h3 class="product-name"><a href="product.html?id=product-4">90s Levi's 501 Raw</a></h3>
+                        <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                            <span class="product-price">KES 4,200</span>
+                            <a href="product.html?id=product-4" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carhartt Work Pants -->
+                <div class="product-card" data-animate>
+                    <div class="product-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <div class="vintage-hangtag">
+                            <span class="hangtag-eyelet"></span>
+                            <span>DOUBLE-KNEE</span>
+                        </div>
+                        <a href="product.html?id=product-5">
+                            <img src="assets/products/product-5.jpg" alt="Carhartt Work Pants" loading="lazy">
+                        </a>
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="product-5">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="product-5">+ BAG</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span class="product-tag">STREETWEAR</span>
+                            <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">PRODUCT-5</span>
+                        </div>
+                        <h3 class="product-name"><a href="product.html?id=product-5">Carhartt Work Pants</a></h3>
+                        <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                            <span class="product-price">KES 3,000</span>
+                            <a href="product.html?id=product-5" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Silk Midi Skirt -->
+                <div class="product-card" data-animate>
+                    <div class="product-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <div class="vintage-hangtag">
+                            <span class="hangtag-eyelet"></span>
+                            <span>100% SILK</span>
+                        </div>
+                        <a href="product.html?id=product-6">
+                            <img src="assets/products/product-6.jpg" alt="Silk Midi Skirt" loading="lazy">
+                        </a>
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="product-6">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="product-6">+ BAG</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span class="product-tag">WOMEN'S</span>
+                            <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">PRODUCT-6</span>
+                        </div>
+                        <h3 class="product-name"><a href="product.html?id=product-6">Silk Midi Skirt</a></h3>
+                        <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                            <span class="product-price">KES 1,800</span>
+                            <a href="product.html?id=product-6" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Timberland Flannel -->
+                <div class="product-card" data-animate>
+                    <div class="product-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <div class="vintage-hangtag">
+                            <span class="hangtag-eyelet"></span>
+                            <span>HEAVYWEAVE</span>
+                        </div>
+                        <a href="product.html?id=product-7">
+                            <img src="assets/products/product-7.jpg" alt="Timberland Flannel" loading="lazy">
+                        </a>
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="product-7">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="product-7">+ BAG</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span class="product-tag">MEN'S</span>
+                            <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">PRODUCT-7</span>
+                        </div>
+                        <h3 class="product-name"><a href="product.html?id=product-7">Timberland Flannel</a></h3>
+                        <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                            <span class="product-price">KES 2,200</span>
+                            <a href="product.html?id=product-7" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Champion Reverse Weave Hoodie -->
+                <div class="product-card" data-animate>
+                    <div class="product-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <div class="vintage-hangtag">
+                            <span class="hangtag-eyelet"></span>
+                            <span>HEAVY 12OZ</span>
+                        </div>
+                        <a href="product.html?id=product-8">
+                            <img src="assets/products/product-8.jpg" alt="Champion Reverse Weave Hoodie" loading="lazy">
+                        </a>
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="product-8">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="product-8">+ BAG</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span class="product-tag">VINTAGE</span>
+                            <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">PRODUCT-8</span>
+                        </div>
+                        <h3 class="product-name"><a href="product.html?id=product-8">Champion Reverse Weave Hoodie</a></h3>
+                        <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                            <span class="product-price">KES 3,800</span>
+                            <a href="product.html?id=product-8" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stüssy Graphic Tee -->
+                <div class="product-card" data-animate>
+                    <div class="product-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <div class="vintage-hangtag">
+                            <span class="hangtag-eyelet"></span>
+                            <span>SINGLE STITCH</span>
+                        </div>
+                        <a href="product.html?id=product-9">
+                            <img src="assets/products/product-9.jpg" alt="Stüssy Graphic Tee" loading="lazy">
+                        </a>
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="product-9">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="product-9">+ BAG</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span class="product-tag">STREETWEAR</span>
+                            <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">PRODUCT-9</span>
+                        </div>
+                        <h3 class="product-name"><a href="product.html?id=product-9">Stüssy Graphic Tee</a></h3>
+                        <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                            <span class="product-price">KES 1,200</span>
+                            <a href="product.html?id=product-9" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="shop.html" class="link-arrow" data-animate>VIEW ALL DROPS →</a>
+        </div>
+    </section>
+
+    <section id="categories" class="categories deep-canvas">
+        <div class="container">
+            <div class="section-stamp" data-animate>
+                <span class="section-stamp-num">PIECE 02</span>
+                <span class="section-stamp-title">DIRECTORY INDEX</span>
+                <span class="section-stamp-line"></span>
+                <span>CURATED BY SILHOUETTE</span>
+            </div>
+            <div class="category-grid">
+                <a href="shop.html?category=mens" class="category-block" data-animate><span>MEN'S</span></a>
+                <a href="shop.html?category=womens" class="category-block" data-animate><span>WOMEN'S</span></a>
+                <a href="shop.html?category=vintage" class="category-block" data-animate><span>VINTAGE</span></a>
+                <a href="shop.html?category=streetwear" class="category-block" data-animate><span>STREETWEAR</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="edit" class="edit light-canvas">
+        <div class="container">
+            <div class="section-stamp" data-animate>
+                <span class="section-stamp-num">PIECE 03</span>
+                <span class="section-stamp-title">SELECTION PROTOCOL</span>
+                <span class="section-stamp-line"></span>
+                <span>THE 6% ACCEPTANCE RATIO</span>
+            </div>
+            <h2 class="section-title" data-animate>500 PIECES IN.<br>30 MAKE THE CUT.</h2>
+            <p class="section-sub" data-animate>Your taste deserves better than a random pile. Every piece on this site survived a brutal selection process.</p>
+            
+            <div class="edit-grid">
+                <div class="edit-step" data-animate>
+                    <h3>SOURCED</h3>
+                    <p>Gikomba. Toi. Ngara. We go deep so you don't have to.</p>
+                </div>
+                <div class="edit-step" data-animate>
+                    <h3>INSPECTED</h3>
+                    <p>Every stitch. Every seam. Every fabric. If it's not perfect, it's not LADHA.</p>
+                </div>
+                <div class="edit-step" data-animate>
+                    <h3>STYLED</h3>
+                    <p>We don't sell clothes. We sell the look. Every piece is styled before it's listed.</p>
+                </div>
+            </div>
+            
+            <div class="stats-row" data-animate>
+                <div class="stat-item">
+                    <span class="counter" data-target="2000">0</span>
+                    <span class="stat-label">REVIEWED MONTHLY</span>
+                </div>
+                <div class="stat-item">
+                    <span class="counter" data-target="6" data-suffix="%">0</span>
+                    <span class="stat-label">MAKE THE CUT</span>
+                </div>
+                <div class="stat-item">
+                    <span class="counter" data-target="0">0</span>
+                    <span class="stat-label">COMPROMISES</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lookbook" class="lookbook deep-canvas">
+        <div class="container">
+            <div class="section-stamp" data-animate>
+                <span class="section-stamp-num">PIECE 04</span>
+                <span class="section-stamp-title">EDITORIAL LOOKBOOK</span>
+                <span class="section-stamp-line"></span>
+                <span>PHOTOGRAPHED IN NAIROBI</span>
+            </div>
+            <h2 class="section-title" data-animate>THIS IS WHAT TASTE LOOKS LIKE</h2>
+            
+            <div class="lookbook-grid">
+                <div class="lookbook-item tall" data-animate>
+                    <div class="lookbook-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <img src="assets/lookbook/look-1.jpg" alt="LOOK 01 — STREET CLASSIC" loading="lazy">
+                    </div>
+                    <p class="lookbook-caption">LOOK 01 — STREET CLASSIC [ ARCHIVE // NBO ]</p>
+                </div>
+                <div class="lookbook-item" data-animate>
+                    <div class="lookbook-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <img src="assets/lookbook/look-2.jpg" alt="LOOK 02 — VINTAGE REVIVAL" loading="lazy">
+                    </div>
+                    <p class="lookbook-caption">LOOK 02 — VINTAGE REVIVAL [ ARCHIVE // NBO ]</p>
+                </div>
+                <div class="lookbook-item" data-animate>
+                    <div class="lookbook-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <img src="assets/lookbook/look-3.jpg" alt="LOOK 03 — URBAN EDGE" loading="lazy">
+                    </div>
+                    <p class="lookbook-caption">LOOK 03 — URBAN EDGE [ ARCHIVE // NBO ]</p>
+                </div>
+                <div class="lookbook-item tall" data-animate>
+                    <div class="lookbook-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <img src="assets/lookbook/look-4.jpg" alt="LOOK 04 — WEEKEND LAYERS" loading="lazy">
+                    </div>
+                    <p class="lookbook-caption">LOOK 04 — WEEKEND LAYERS [ ARCHIVE // NBO ]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kinetic Reverse Accent Marquee Strip -->
+    <div class="marquee-strip accent-strip reverse" aria-hidden="true">
+        <div class="marquee-track">
+            <div class="marquee-item">
+                <span>WEAR THE SINGULAR</span><span class="marquee-star">★</span>
+                <span>REJECT THE 94%</span><span class="marquee-star">★</span>
+                <span>NO DEADSTOCK MARKUPS</span><span class="marquee-star">★</span>
+                <span>HANDPICKED IN NAIROBI</span><span class="marquee-star">★</span>
+                <span>GRADE A VINTAGE</span><span class="marquee-star">★</span>
+                <span>NEVER DUPLICATED</span><span class="marquee-star">★</span>
+                <span>EST. 2026 NBO</span><span class="marquee-star">★</span>
+            </div>
+            <div class="marquee-item">
+                <span>WEAR THE SINGULAR</span><span class="marquee-star">★</span>
+                <span>REJECT THE 94%</span><span class="marquee-star">★</span>
+                <span>NO DEADSTOCK MARKUPS</span><span class="marquee-star">★</span>
+                <span>HANDPICKED IN NAIROBI</span><span class="marquee-star">★</span>
+                <span>GRADE A VINTAGE</span><span class="marquee-star">★</span>
+                <span>NEVER DUPLICATED</span><span class="marquee-star">★</span>
+                <span>EST. 2026 NBO</span><span class="marquee-star">★</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="manifesto" class="manifesto accent-canvas">
+        <div class="container">
+            <div class="section-stamp" style="color: rgba(0,0,0,0.6);" data-animate>
+                <span class="section-stamp-num" style="background: #0a0a0a; color: var(--accent);">PIECE 05</span>
+                <span class="section-stamp-title" style="color: #0a0a0a;">BRAND MANIFESTO</span>
+                <span class="section-stamp-line" style="background: repeating-linear-gradient(90deg, rgba(0,0,0,0.2) 0 7px, transparent 7px 13px);"></span>
+                <span style="color: #0a0a0a;">NAIROBI COUTURE ETHOS</span>
+            </div>
+            <h2 class="section-title" data-animate>TRENDS EXPIRE.<br>TASTE DOESN'T.</h2>
+            
+            <div class="manifesto-grid">
+                <div class="manifesto-item" data-animate>
+                    <h3>ONE OF ONE</h3>
+                    <p>Every piece is singular. When it's gone, it's gone.</p>
+                </div>
+                <div class="manifesto-item" data-animate>
+                    <h3>PRICED FAIR</h3>
+                    <p>Premium taste, accessible price. No markups for a logo.</p>
+                </div>
+                <div class="manifesto-item" data-animate>
+                    <h3>DELIVERED FAST</h3>
+                    <p>Same-day Nairobi. 2-3 days countrywide. M-Pesa or card.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order deep-canvas">
+        <div class="container">
+            <div class="section-stamp" data-animate>
+                <span class="section-stamp-num">PIECE 06</span>
+                <span class="section-stamp-title">ACQUISITION PROTOCOL</span>
+                <span class="section-stamp-line"></span>
+                <span>DIRECT STOREFRONT DISPATCH</span>
+            </div>
+            <h2 class="section-title" data-animate>SEE IT. WANT IT. GET IT.</h2>
+            
+            <div class="order-steps">
+                <div class="order-step" data-animate>
+                    <span class="step-num">01</span>
+                    <h3>BROWSE</h3>
+                    <p>Here or @ladha.ke on Instagram</p>
+                </div>
+                <div class="order-step" data-animate>
+                    <span class="step-num">02</span>
+                    <h3>CLAIM IT</h3>
+                    <p>WhatsApp us. First come, first served.</p>
+                </div>
+                <div class="order-step" data-animate>
+                    <span class="step-num">03</span>
+                    <h3>RECEIVE</h3>
+                    <p>M-Pesa. Delivered. Done.</p>
+                </div>
+            </div>
+            
+            <a href="https://wa.me/254700000000" class="btn btn-accent btn-lg" data-animate>ORDER ON WHATSAPP <span class="btn-arrow">→</span></a>
+        </div>
+    </section>
+
+    <section id="feed" class="feed deep-canvas">
+        <div class="container">
+            <p class="meta" data-animate>@LADHA.KE</p>
+            <h2 class="section-title" data-animate>THE FEED</h2>
+            
+            <div class="feed-grid">
+                <div class="feed-item" data-animate>
+                    <img src="assets/feed/feed-1.jpg" alt="LADHA Drop 01" loading="lazy">
+                </div>
+                <div class="feed-item" data-animate>
+                    <img src="assets/feed/feed-2.jpg" alt="LADHA Drop 02" loading="lazy">
+                </div>
+                <div class="feed-item" data-animate>
+                    <img src="assets/feed/feed-3.jpg" alt="LADHA Drop 03" loading="lazy">
+                </div>
+                <div class="feed-item" data-animate>
+                    <img src="assets/feed/feed-4.jpg" alt="LADHA Drop 04" loading="lazy">
+                </div>
+            </div>
+            
+            <a href="#" class="link-arrow" data-animate>FOLLOW FOR FIRST ACCESS →</a>
+        </div>
+    </section>
+
+    <footer class="footer dark-canvas">
+        <div class="container footer-cols">
+            <div class="footer-col">
+                <p>© 2026 LADHA</p>
+            </div>
+            <div class="footer-col footer-nav">
+                <a href="shop.html">All Drops</a>
+                <a href="#edit">The Edit</a>
+                <a href="#lookbook">Lookbook</a>
+                <a href="about.html">About</a>
+                <a href="checkout.html">Checkout</a>
+                <a href="admin.html" style="color: var(--accent); font-weight: 700;">MANAGER CRM ⚙</a>
+            </div>
+            <div class="footer-col text-right">
+                <p>NAIROBI 🇰🇪</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

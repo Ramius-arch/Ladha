@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LADHA — Store Manager Command Center</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Dedicated Store Manager CRM Styling */
+        body.admin-canvas {
+            background: #f5f4f0;
+            color: #0a0a0a;
+            font-family: var(--font-display);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admin-topbar {
+            background: #0a0a0a;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 0.85rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .admin-brand {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .admin-logo {
+            font-weight: 900;
+            font-size: 1.25rem;
+            letter-spacing: 0.15em;
+            color: #ffffff;
+        }
+
+        .admin-badge {
+            background: var(--accent);
+            color: #0a0a0a;
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+            padding: 2px 7px;
+        }
+
+        .admin-top-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .admin-top-link {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            color: #a0a09d;
+            transition: color 0.2s ease;
+            text-transform: uppercase;
+        }
+
+        .admin-top-link:hover {
+            color: var(--accent);
+        }
+
+        /* KPI Header Metrics HUD */
+        .admin-kpi-bar {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 2rem;
+        }
+
+        .admin-kpi-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .admin-kpi-card {
+            border-left: 2px solid #0a0a0a;
+            padding-left: 1rem;
+        }
+
+        .admin-kpi-card.accent-border {
+            border-left-color: var(--accent-dark);
+        }
+
+        .kpi-label {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+            display: block;
+        }
+
+        .kpi-val {
+            font-family: var(--font-mono);
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+
+        .kpi-sub {
+            font-size: 11px;
+            color: var(--text-faint);
+            margin-top: 0.25rem;
+        }
+
+        /* CRM Navigation Tabs */
+        .admin-nav-tabs {
+            background: #ecebe6;
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .admin-tab-btn {
+            background: transparent;
+            border: none;
+            padding: 1.1rem 1.5rem;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+        }
+
+        .admin-tab-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .admin-tab-btn.active {
+            color: #0a0a0a;
+            background: #ffffff;
+            border-bottom: 2px solid #0a0a0a;
+            font-weight: 900;
+        }
+
+        /* CRM Main Container */
+        .admin-main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 6rem;
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        .admin-panel {
+            display: none;
+        }
+
+        .admin-panel.active {
+            display: block;
+        }
+
+        /* Panel Header & Action Bar */
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border);
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .panel-title {
+            font-size: 1.75rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+        }
+
+        .panel-subtitle {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* Controls & Search */
+        .panel-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .admin-search-input {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 0.65rem 1rem;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            width: 280px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .admin-search-input:focus {
+            border-color: #0a0a0a;
+        }
+
+        /* Data Tables */
+        .admin-table-wrap {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            overflow-x: auto;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.85rem;
+        }
+
+        .admin-table th {
+            background: #f7f6f2;
+            padding: 1rem 1.25rem;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: var(--tracking-wide);
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+        }
+
+        .admin-table td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        .admin-table tr:hover td {
+            background: #fafaf8;
+        }
+
+        .thumb-preview {
+            width: 48px;
+            height: 60px;
+            background: #f0eee9;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            display: block;
+        }
+
+        .table-item-name {
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 0.2rem;
+        }
+
+        .table-item-meta {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
+        .stock-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 800;
+            padding: 3px 7px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .stock-badge.in-stock {
+            background: #eef7dc;
+            color: #436900;
+            border: 1px solid #cce897;
+        }
+
+        .stock-badge.sold-out {
+            background: #ecebe6;
+            color: #777773;
+            border: 1px solid #d4d3cc;
+        }
+
+        .inline-price-input {
+            width: 90px;
+            padding: 4px 6px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 700;
+            border: 1px solid var(--border);
+            background: #ffffff;
+            color: #0a0a0a;
+            text-align: right;
+        }
+
+        .inline-price-input:focus {
+            border-color: #0a0a0a;
+            outline: none;
+        }
+
+        /* Action Buttons */
+        .action-btn-group {
+            display: flex;
+            gap: 0.4rem;
+            align-items: center;
+        }
+
+        .btn-action-sm {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 800;
+            padding: 4px 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-action-sm:hover {
+            border-color: #0a0a0a;
+            background: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .btn-action-sm.danger:hover {
+            background: #d90429;
+            border-color: #d90429;
+            color: #ffffff;
+        }
+
+        /* Form Card Layouts */
+        .admin-card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .admin-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .admin-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .admin-card-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.25rem;
+        }
+
+        .form-row label {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: var(--tracking-wide);
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .form-row input,
+        .form-row select,
+        .form-row textarea {
+            background: #fafaf8;
+            border: 1px solid var(--border);
+            padding: 0.75rem 0.85rem;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: #0a0a0a;
+            outline: none;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .form-row input:focus,
+        .form-row select:focus,
+        .form-row textarea:focus {
+            background: #ffffff;
+            border-color: #0a0a0a;
+        }
+
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+        }
+
+        /* Modal Drawer for Editing Garments */
+        .admin-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .admin-modal-backdrop.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .admin-modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            max-width: 680px;
+            background: #ffffff;
+            border-left: 1px solid var(--border);
+            box-shadow: -15px 0 50px rgba(0, 0, 0, 0.2);
+            z-index: 2010;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .admin-modal.open {
+            transform: translateX(0);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            background: #fbfbfa;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-title {
+            font-size: 1.125rem;
+            font-weight: 900;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.75rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            line-height: 1;
+        }
+
+        .modal-body {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .modal-footer {
+            padding: 1.25rem 2rem;
+            background: #f7f6f2;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Order Status Dropdown */
+        .order-status-select {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            font-weight: 800;
+            padding: 4px 8px;
+            border: 1px solid var(--border);
+            background: #ffffff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 992px) {
+            .admin-kpi-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .admin-card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .admin-kpi-grid {
+                grid-template-columns: 1fr;
+            }
+            .admin-topbar {
+                padding: 0.75rem 1rem;
+            }
+            .admin-main {
+                padding: 1.5rem 1rem 4rem;
+            }
+        }
+    
+        /* ===================================================================
+           MEDIA UPLOADER, DROPZONE & ASSET LIBRARY MODAL STYLES
+           =================================================================== */
+
+        .asset-dropzone {
+            border: 2px dashed var(--border);
+            background: #fafaf8;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+
+        .asset-dropzone:hover,
+        .asset-dropzone.dragover {
+            border-color: #0a0a0a;
+            background: #ffffff;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .asset-dropzone.dragover {
+            border-color: var(--accent-dark);
+            background: rgba(204, 255, 0, 0.04);
+            transform: scale(1.01);
+        }
+
+        .dropzone-icon-wrap {
+            width: 42px;
+            height: 42px;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.75rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .asset-dropzone:hover .dropzone-icon-wrap {
+            transform: translateY(-2px);
+            border-color: #0a0a0a;
+        }
+
+        .dropzone-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 0.25rem;
+        }
+
+        .dropzone-title span {
+            text-decoration: underline;
+            color: #0a0a0a;
+            cursor: pointer;
+        }
+
+        .dropzone-sub {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            color: var(--text-muted);
+            letter-spacing: 0.04em;
+            margin-bottom: 0.75rem;
+        }
+
+        .dropzone-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-lib-browse {
+            background: #0a0a0a;
+            color: var(--accent);
+            border: 1px solid #0a0a0a;
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-lib-browse:hover {
+            background: var(--accent);
+            color: #0a0a0a;
+        }
+
+        .paste-hint {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            color: var(--text-faint);
+        }
+
+        /* Asset Preview Card */
+        .asset-preview-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+            margin-top: 0.5rem;
+        }
+
+        .preview-media-frame {
+            width: 72px;
+            height: 90px;
+            background: #f0eee9;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-media-frame img,
+        .preview-media-frame video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .preview-details {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .preview-file-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #0a0a0a;
+            word-break: break-all;
+        }
+
+        .preview-file-meta {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .media-badge {
+            font-family: var(--font-mono);
+            font-size: 8px;
+            font-weight: 900;
+            padding: 2px 6px;
+            background: #0a0a0a;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+        }
+
+        .preview-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .preview-action-btn {
+            background: none;
+            border: none;
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+
+        .preview-action-btn:hover {
+            color: #0a0a0a;
+        }
+
+        .preview-action-btn.remove:hover {
+            color: #d90429;
+        }
+
+        /* Large Media Library Modal */
+        .media-lib-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            z-index: 3000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .media-lib-backdrop.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .media-lib-window {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 1100px;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: scale(0.97);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .media-lib-backdrop.open .media-lib-window {
+            transform: scale(1);
+        }
+
+        .media-lib-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            background: #0a0a0a;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .media-lib-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .media-lib-filters-bar {
+            background: #f7f6f2;
+            padding: 0.75rem 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .media-cat-tabs {
+            display: flex;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .media-tab-pill {
+            background: transparent;
+            border: 1px solid transparent;
+            font-family: var(--font-mono);
+            font-size: 9px;
+            font-weight: 800;
+            padding: 4px 9px;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+
+        .media-tab-pill:hover {
+            color: #0a0a0a;
+            border-color: var(--border);
+        }
+
+        .media-tab-pill.active {
+            background: #0a0a0a;
+            color: var(--accent);
+            border-color: #0a0a0a;
+        }
+
+        .media-lib-body {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        .media-lib-gallery {
+            padding: 1.5rem 2rem;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 1rem;
+            align-content: flex-start;
+            background: #fcfbfa;
+        }
+
+        .media-item-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.2s ease;
+            aspect-ratio: 4/5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-item-card:hover {
+            border-color: #0a0a0a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .media-item-card.selected {
+            border: 2px solid var(--accent-dark);
+            outline: 2px solid #0a0a0a;
+        }
+
+        .media-item-card.selected::after {
+            content: "✓";
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            width: 18px;
+            height: 18px;
+            background: #0a0a0a;
+            color: var(--accent);
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+        }
+
+        .media-item-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background: #ecebe6;
+        }
+
+        .media-item-video-indicator {
+            position: absolute;
+            bottom: 6px;
+            left: 6px;
+            background: rgba(10, 10, 10, 0.85);
+            color: #ffffff;
+            font-family: var(--font-mono);
+            font-size: 8px;
+            font-weight: 800;
+            padding: 2px 5px;
+            letter-spacing: 0.05em;
+        }
+
+        .media-lib-sidebar {
+            background: #ffffff;
+            border-left: 1px solid var(--border);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .sidebar-preview-frame {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: #f0eee9;
+            border: 1px solid var(--border);
+            margin-bottom: 1rem;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-preview-frame img,
+        .sidebar-preview-frame video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar-meta-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar-meta-label {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .sidebar-meta-val {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            font-weight: 700;
+            color: #0a0a0a;
+            max-width: 160px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+    </style>
+</head>
+<body class="admin-canvas">
+
+    <!-- Top Command Bar -->
+    <header class="admin-topbar">
+        <div class="admin-brand">
+            <span class="admin-logo">LADHA</span>
+            <span class="admin-badge">MANAGER CRM</span>
+            <span class="card-live-dot" style="margin-left: 0.5rem;"></span>
+            <span class="live-nairobi-clock" style="font-family: var(--font-mono); font-size: 10px; color: #a0a09d;">NAIROBI --:--:-- EAT</span>
+        </div>
+        <div class="admin-top-actions">
+            <button class="admin-top-link" id="btn-open-global-media-lib" style="background:none; border:none; cursor:pointer;">📁 ASSET LIBRARY</button>
+            <a href="index.html" class="admin-top-link" target="_blank">VIEW STOREFRONT ↗</a>
+            <button class="btn btn-accent btn-sm" id="btn-quick-new-piece" style="padding: 0.45rem 0.9rem; font-size: 10px;">
+                + NEW PIECE
+            </button>
+        </div>
+    </header>
+
+    <!-- KPI HUD Metrics Bar -->
+    <section class="admin-kpi-bar">
+        <div class="admin-kpi-grid">
+            <div class="admin-kpi-card accent-border">
+                <span class="kpi-label">ACTIVE 1-OF-1 PIECES</span>
+                <div class="kpi-val" id="kpi-active-inventory">0</div>
+                <div class="kpi-sub">Curated Nairobi drops ready for dispatch</div>
+            </div>
+            <div class="admin-kpi-card">
+                <span class="kpi-label">TOTAL ARCHIVE VALUE</span>
+                <div class="kpi-val" id="kpi-archive-value">KES 0</div>
+                <div class="kpi-sub">Calculated across all available garments</div>
+            </div>
+            <div class="admin-kpi-card">
+                <span class="kpi-label">RECORDED M-PESA CLAIMS</span>
+                <div class="kpi-val" id="kpi-orders-count">0</div>
+                <div class="kpi-sub" id="kpi-orders-revenue">KES 0 in verified orders</div>
+            </div>
+            <div class="admin-kpi-card">
+                <span class="kpi-label">DISPATCH QUEUE</span>
+                <div class="kpi-val" id="kpi-pending-dispatches">0</div>
+                <div class="kpi-sub">Awaiting Nairobi courier delivery</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="admin-nav-tabs" aria-label="CRM Navigation Tabs">
+        <button class="admin-tab-btn active" data-tab="inventory">01 // ARCHIVE INVENTORY</button>
+        <button class="admin-tab-btn" data-tab="lookbook">02 // EDITORIAL LOOKBOOK</button>
+        <button class="admin-tab-btn" data-tab="feed">03 // THE FEED</button>
+        <button class="admin-tab-btn" data-tab="timer">04 // DROP TIMER & TICKER</button>
+        <button class="admin-tab-btn" data-tab="claims">05 // CLAIMS & ORDERS</button>
+        <button class="admin-tab-btn" data-tab="backup">06 // DATABASE & BACKUP</button>
+    </nav>
+
+    <!-- Main CRM Content Workspace -->
+    <main class="admin-main">
+
+        <!-- ===================================================================
+             TAB 1: ARCHIVE INVENTORY & GARMENTS
+             =================================================================== -->
+        <section class="admin-panel active" id="panel-inventory">
+            <div class="panel-header">
+                <div>
+                    <h1 class="panel-title">ARCHIVE INVENTORY</h1>
+                    <p class="panel-subtitle">Manage 1-of-1 pieces, real-time pricing, condition grading, and flat tailoring measurements.</p>
+                </div>
+                <button class="btn btn-dark btn-sm" id="btn-add-garment">
+                    + ADD NEW ARCHIVE PIECE
+                </button>
+            </div>
+
+            <div class="panel-controls">
+                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                    <input type="text" class="admin-search-input" id="inventory-search" placeholder="SEARCH PIECE, ID, OR FABRIC...">
+                    <div class="filter-group" id="inventory-category-filters">
+                        <button class="filter-btn active" data-cat="ALL">ALL</button>
+                        <button class="filter-btn" data-cat="STREETWEAR">STREETWEAR</button>
+                        <button class="filter-btn" data-cat="VINTAGE">VINTAGE</button>
+                        <button class="filter-btn" data-cat="MEN'S">MEN'S</button>
+                        <button class="filter-btn" data-cat="WOMEN'S">WOMEN'S</button>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                    <span style="font-family: var(--font-mono); font-size: 10px; color: var(--text-muted);" id="inventory-count-label">0 PIECES</span>
+                </div>
+            </div>
+
+            <div class="admin-table-wrap">
+                <table class="admin-table" id="inventory-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">PHOTO</th>
+                            <th>ITEM CODE & TITLE</th>
+                            <th>CATEGORY</th>
+                            <th>SIZE</th>
+                            <th>CONDITION</th>
+                            <th style="text-align: right;">PRICE (KES)</th>
+                            <th style="text-align: center;">STATUS</th>
+                            <th style="text-align: right;">ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-tbody">
+                        <!-- Populated dynamically by admin.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             TAB 2: EDITORIAL LOOKBOOK
+             =================================================================== -->
+        <section class="admin-panel" id="panel-lookbook">
+            <div class="panel-header">
+                <div>
+                    <h1 class="panel-title">CAMPAIGN LOOKBOOK</h1>
+                    <p class="panel-subtitle">Curate the 4 editorial looks featured on the homepage. Changes immediately reflect live on index.html.</p>
+                </div>
+                <button class="btn btn-accent btn-sm" id="btn-save-lookbook">
+                    SAVE LOOKBOOK CHANGES &rarr;
+                </button>
+            </div>
+
+            <div class="admin-card-grid" id="lookbook-cards-container">
+                <!-- 4 Lookbook edit cards generated by admin.js -->
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             TAB 3: THE FEED (INSTAGRAM CURATION)
+             =================================================================== -->
+        <section class="admin-panel" id="panel-feed">
+            <div class="panel-header">
+                <div>
+                    <h1 class="panel-title">THE FEED CURATION</h1>
+                    <p class="panel-subtitle">Update the 4 grid photographs and deep-links on the homepage feed section.</p>
+                </div>
+                <button class="btn btn-accent btn-sm" id="btn-save-feed">
+                    SAVE FEED CHANGES &rarr;
+                </button>
+            </div>
+
+            <div class="admin-card-grid" id="feed-cards-container">
+                <!-- 4 Feed edit cards generated by admin.js -->
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             TAB 4: DROP TIMER & ANNOUNCEMENT TICKER
+             =================================================================== -->
+        <section class="admin-panel" id="panel-timer">
+            <div class="panel-header">
+                <div>
+                    <h1 class="panel-title">DROP COUNTDOWN & TICKER</h1>
+                    <p class="panel-subtitle">Control the top runway announcement banner, countdown clock, and live sourcing dispatch notices.</p>
+                </div>
+                <button class="btn btn-accent btn-sm" id="btn-save-timer">
+                    UPDATE RUNWAY TICKER &rarr;
+                </button>
+            </div>
+
+            <div class="admin-card-grid">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <span class="admin-card-title">COUNTDOWN TARGET</span>
+                        <span class="card-live-dot"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Next Archive Drop Date & Time</label>
+                        <input type="datetime-local" id="timer-drop-datetime">
+                    </div>
+
+                    <div style="background: #0a0a0a; color: #ffffff; padding: 1.5rem; margin-top: 1.5rem; border: 1px solid rgba(255,255,255,0.1);">
+                        <span style="font-family: var(--font-mono); font-size: 10px; color: var(--accent); display: block; margin-bottom: 0.5rem;">LIVE RUNWAY PREVIEW</span>
+                        <div style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 900; letter-spacing: 0.1em;" id="timer-preview-digits">
+                            --D --H --M --S
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <span class="admin-card-title">ANNOUNCEMENT NOTICES</span>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Ticker Notice 1 (Left)</label>
+                        <input type="text" id="ticker-notice-1" placeholder="GIKOMBA & TOI ARCHIVE BALES UNLOCKED">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Ticker Notice 2 (Center)</label>
+                        <input type="text" id="ticker-notice-2" placeholder="NAIROBI SAME-DAY DISPATCH">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Ticker Notice 3 (Right)</label>
+                        <input type="text" id="ticker-notice-3" placeholder="1-OF-1 PIECES • FIRST TO CLAIM WINS">
+                    </div>
+
+                    <div class="form-row" style="flex-direction: row; align-items: center; gap: 0.75rem; margin-top: 1rem;">
+                        <input type="checkbox" id="ticker-visible-toggle" style="width: 18px; height: 18px; accent-color: #0a0a0a;">
+                        <label for="ticker-visible-toggle" style="margin-bottom: 0; cursor: pointer;">Enable Top Announcement Banner Site-Wide</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             TAB 5: CLAIMS & M-PESA ORDERS
+             =================================================================== -->
+        <section class="admin-panel" id="panel-claims">
+            <div class="panel-header">
+                <div>
+                    <h1 class="panel-title">CLAIMS & M-PESA ORDERS</h1>
+                    <p class="panel-subtitle">Real-time log of customer checkouts, Lipa na M-Pesa receipts, and Nairobi delivery tracking.</p>
+                </div>
+                <button class="btn btn-outline btn-sm" id="btn-simulate-order">
+                    + SIMULATE TEST ORDER
+                </button>
+            </div>
+
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ORDER ID & DATE</th>
+                            <th>CUSTOMER NAME</th>
+                            <th>PHONE</th>
+                            <th>ESTATE / ADDRESS</th>
+                            <th>GARMENTS</th>
+                            <th style="text-align: right;">TOTAL (KES)</th>
+                            <th style="text-align: center;">M-PESA REF</th>
+                            <th style="text-align: center;">DISPATCH STATUS</th>
+                            <th style="text-align: right;">ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-tbody">
+                        <!-- Populated dynamically by admin.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             TAB 6: DATABASE & BACKUP
+             =================================================================== -->
+        <section class="admin-panel" id="panel-backup">
+            <div class="panel-header">
+                <div>
+                    <h1 class="panel-title">DATABASE PORTABILITY & BACKUP</h1>
+                    <p class="panel-subtitle">Export full catalog data to JSON, restore backups, or reset the store to curated factory state.</p>
+                </div>
+            </div>
+
+            <div class="admin-card-grid">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <span class="admin-card-title">EXPORT DATABASE</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #555550; line-height: 1.6; margin-bottom: 1.5rem;">
+                        Download a complete JSON snapshot containing all 1-of-1 products, lookbook photos, feed curation, settings, and orders.
+                    </p>
+                    <button class="btn btn-dark btn-block" id="btn-export-json">
+                        DOWNLOAD BACKUP (.JSON) &darr;
+                    </button>
+                </div>
+
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <span class="admin-card-title">IMPORT & RESTORE</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #555550; line-height: 1.6; margin-bottom: 1.5rem;">
+                        Restore or load a catalog from a JSON file. This will update the local database immediately.
+                    </p>
+                    <input type="file" id="import-json-file" accept=".json" style="margin-bottom: 1rem; font-family: var(--font-mono); font-size: 11px;">
+                    <button class="btn btn-outline btn-block" id="btn-import-json">
+                        RESTORE FROM FILE &uarr;
+                    </button>
+                </div>
+
+                <div class="admin-card" style="border-color: #d90429; grid-column: 1 / -1;">
+                    <div class="admin-card-header" style="border-bottom-color: rgba(217, 4, 41, 0.2);">
+                        <span class="admin-card-title" style="color: #d90429;">FACTORY FACTORY RESET</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #555550; line-height: 1.6; margin-bottom: 1.5rem;">
+                        Reset all inventory, lookbook looks, feed items, and drop settings back to original curated Nairobi drops. Caution: this will overwrite unsaved changes.
+                    </p>
+                    <button class="btn btn-outline btn-sm" id="btn-reset-factory" style="border-color: #d90429; color: #d90429;">
+                        RESET STORE TO FACTORY DEFAULTS
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================================================================
+         GARMENT EDITOR MODAL / DRAWER
+         =================================================================== -->
+    <div class="admin-modal-backdrop" id="modal-backdrop"></div>
+    <aside class="admin-modal" id="garment-modal" aria-label="Garment Editor">
+        <div class="modal-header">
+            <div>
+                <span style="font-family: var(--font-mono); font-size: 9px; color: var(--text-muted); letter-spacing: 0.1em;">GARMENT ARCHIVE EDITOR</span>
+                <h2 class="modal-title" id="modal-garment-heading">EDIT ARCHIVE PIECE</h2>
+            </div>
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+        </div>
+
+        <form id="garment-form" class="modal-body">
+            <input type="hidden" id="edit-id">
+
+            <div class="form-grid-2">
+                <div class="form-row">
+                    <label>Garment Title *</label>
+                    <input type="text" id="edit-name" required placeholder="Vintage Nike Colorblock Windbreaker">
+                </div>
+                <div class="form-row">
+                    <label>Item ID (Ref Code) *</label>
+                    <input type="text" id="edit-id-display" required placeholder="product-1">
+                </div>
+            </div>
+
+            <div class="form-grid-2">
+                <div class="form-row">
+                    <label>Category *</label>
+                    <select id="edit-category" required>
+                        <option value="STREETWEAR">STREETWEAR</option>
+                        <option value="VINTAGE">VINTAGE</option>
+                        <option value="MEN'S">MEN'S</option>
+                        <option value="WOMEN'S">WOMEN'S</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Price in KES *</label>
+                    <input type="number" id="edit-price" required placeholder="3500">
+                </div>
+            </div>
+
+            <div class="form-grid-2">
+                <div class="form-row">
+                    <label>Tagged Size *</label>
+                    <input type="text" id="edit-size" required placeholder="L (Boxy 90s Cut)">
+                </div>
+                <div class="form-row">
+                    <label>Stock Status</label>
+                    <select id="edit-stock">
+                        <option value="true">1-OF-1 AVAILABLE IN STOCK</option>
+                        <option value="false">SOLD OUT / CLAIMED</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-grid-2">
+                <div class="form-row">
+                    <label>Condition Grade</label>
+                    <input type="text" id="edit-condition" placeholder="Grade A Vintage (9.5/10)">
+                </div>
+                <div class="form-row">
+                    <label>Provenance / Sourced In</label>
+                    <input type="text" id="edit-provenance" placeholder="Sourced in Gikomba. Era: c. 1993–1996.">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>Inspector Condition Notes</label>
+                <input type="text" id="edit-condition-note" placeholder="Pristine nylon shell, fully functional YKK zip, crisp elastic cuffs.">
+            </div>
+
+            <div class="form-row">
+                <label>Fabric Composition</label>
+                <input type="text" id="edit-fabric" placeholder="100% Ripstop Nylon / Breathable Poly Mesh Lining">
+            </div>
+
+            <div class="form-row">
+                <label>Editorial Description</label>
+                <textarea id="edit-description" rows="3" placeholder="Curator's notes and styling narrative..."></textarea>
+            </div>
+
+            <div class="form-row">
+                <label>Garment Photography or Video Asset *</label>
+                
+                <!-- Interactive Dropzone -->
+                <div class="asset-dropzone" id="garment-dropzone" data-target="edit-image">
+                    <div class="dropzone-icon-wrap">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                    </div>
+                    <div class="dropzone-title">Drag &amp; drop image/video here, or <span class="browse-trigger">Browse computer</span></div>
+                    <div class="dropzone-sub">Supports 4K JPG, PNG, WEBP, and MP4 / WEBM Videos</div>
+                    <div class="dropzone-actions">
+                        <button type="button" class="btn-lib-browse" data-target="edit-image">📁 CHOOSE FROM ASSET LIBRARY</button>
+                        <span class="paste-hint">or Ctrl+V to paste</span>
+                    </div>
+                    <input type="file" class="hidden-file-input" accept="image/*,video/*" style="display:none;">
+                </div>
+
+                <!-- Live Preview Card -->
+                <div class="asset-preview-card" id="garment-asset-preview-card">
+                    <div class="preview-media-frame viewfinder-wrap" id="garment-media-frame">
+                        <div class="viewfinder-corners"></div>
+                        <img id="edit-img-preview" src="assets/products/product-1.jpg" alt="Preview">
+                    </div>
+                    <div class="preview-details">
+                        <div class="preview-file-name" id="garment-file-name">product-1.jpg</div>
+                        <div class="preview-file-meta">
+                            <span class="media-badge" id="garment-media-badge">JPG IMAGE</span>
+                            <span style="font-family: var(--font-mono); font-size: 10px; color: var(--text-muted);" id="garment-file-path">assets/products/product-1.jpg</span>
+                        </div>
+                        <div class="preview-actions">
+                            <button type="button" class="preview-action-btn" id="btn-change-garment-asset">Replace</button>
+                            <button type="button" class="preview-action-btn remove" id="btn-remove-garment-asset">Clear</button>
+                            <button type="button" class="preview-action-btn" id="btn-toggle-manual-url" style="color: var(--text-faint);">Manual URL</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden or collapsible manual URL input -->
+                <input type="text" id="edit-image" required value="assets/products/product-1.jpg" style="margin-top: 0.5rem; display: none;" placeholder="assets/products/product-1.jpg">
+            </div>
+
+            <div style="border-top: 1px solid var(--border); padding-top: 1.5rem; margin-top: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+                    <h4 style="font-size: 0.95rem; font-weight: 800;">FLAT TAILORING MEASUREMENTS</h4>
+                    <span style="font-family: var(--font-mono); font-size: 9px; color: var(--text-muted);">INCHES &amp; CENTIMETERS</span>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-row">
+                        <label>Pit To Pit (Inches)</label>
+                        <input type="text" id="edit-pit-in" placeholder="24.5 in">
+                    </div>
+                    <div class="form-row">
+                        <label>Pit To Pit (CM)</label>
+                        <input type="text" id="edit-pit-cm" placeholder="62.0 cm">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-row">
+                        <label>Total Length (Inches)</label>
+                        <input type="text" id="edit-len-in" placeholder="27.5 in">
+                    </div>
+                    <div class="form-row">
+                        <label>Total Length (CM)</label>
+                        <input type="text" id="edit-len-cm" placeholder="70.0 cm">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-row">
+                        <label>Shoulder Width (Inches)</label>
+                        <input type="text" id="edit-sh-in" placeholder="22.0 in">
+                    </div>
+                    <div class="form-row">
+                        <label>Shoulder Width (CM)</label>
+                        <input type="text" id="edit-sh-cm" placeholder="56.0 cm">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-row">
+                        <label>Sleeve Length (Inches)</label>
+                        <input type="text" id="edit-sl-in" placeholder="25.0 in">
+                    </div>
+                    <div class="form-row">
+                        <label>Sleeve Length (CM)</label>
+                        <input type="text" id="edit-sl-cm" placeholder="63.5 cm">
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline btn-sm" id="modal-cancel-btn">CANCEL</button>
+            <button type="button" class="btn btn-accent btn-sm" id="modal-save-btn">SAVE PIECE &rarr;</button>
+        </div>
+    </aside>
+
+    
+    <!-- ===================================================================
+         GLOBAL VISUAL ASSET & MEDIA LIBRARY MODAL
+         =================================================================== -->
+    <div class="media-lib-backdrop" id="media-lib-backdrop">
+        <div class="media-lib-window" role="dialog" aria-label="Media Asset Library">
+            <div class="media-lib-top">
+                <div class="media-lib-title">
+                    <span class="section-stamp-num">LIBRARY</span>
+                    <span>PROJECT ASSET &amp; MEDIA REPOSITORY</span>
+                </div>
+                <button class="modal-close" id="media-lib-close-btn" style="color:#ffffff;">&times;</button>
+            </div>
+
+            <div class="media-lib-filters-bar">
+                <div class="media-cat-tabs" id="media-cat-tabs">
+                    <button class="media-tab-pill active" data-cat="ALL">ALL ASSETS (<span id="count-all-media">0</span>)</button>
+                    <button class="media-tab-pill" data-cat="PRODUCTS">PRODUCTS</button>
+                    <button class="media-tab-pill" data-cat="LOOKBOOK">LOOKBOOK</button>
+                    <button class="media-tab-pill" data-cat="FEED">THE FEED</button>
+                    <button class="media-tab-pill" data-cat="VIDEOS">CINEMATIC VIDEOS</button>
+                    <button class="media-tab-pill" data-cat="UPLOADS">UPLOADS</button>
+                </div>
+
+                <div style="display: flex; gap: 0.75rem; align-items: center;">
+                    <input type="text" class="admin-search-input" id="media-lib-search" placeholder="SEARCH ASSETS..." style="width: 200px; padding: 0.4rem 0.75rem;">
+                    <button class="btn btn-accent btn-sm" id="btn-lib-upload-file" style="padding: 0.4rem 0.8rem; font-size: 9px;">
+                        + UPLOAD NEW FILE
+                    </button>
+                    <input type="file" id="lib-hidden-file-input" accept="image/*,video/*" style="display: none;">
+                </div>
+            </div>
+
+            <div class="media-lib-body">
+                <!-- Gallery Grid -->
+                <div class="media-lib-gallery" id="media-lib-grid">
+                    <!-- Populated dynamically -->
+                </div>
+
+                <!-- Asset Detail Inspector Sidebar -->
+                <aside class="media-lib-sidebar" id="media-lib-sidebar">
+                    <span style="font-family: var(--font-mono); font-size: 9px; color: var(--text-muted); margin-bottom: 0.5rem;">ASSET INSPECTOR</span>
+                    <div class="sidebar-preview-frame viewfinder-wrap" id="sidebar-preview-frame">
+                        <div class="viewfinder-corners"></div>
+                        <img id="sidebar-preview-img" src="assets/products/product-1.jpg" alt="Selected">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <h4 id="sidebar-file-name" style="font-size: 0.95rem; font-weight: 800; word-break: break-all; margin-bottom: 0.25rem;">product-1.jpg</h4>
+                        <span class="media-badge" id="sidebar-file-badge">JPG IMAGE</span>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 1.5rem;">
+                        <div class="sidebar-meta-row">
+                            <span class="sidebar-meta-label">Path</span>
+                            <span class="sidebar-meta-val" id="sidebar-file-path">assets/products/product-1.jpg</span>
+                        </div>
+                        <div class="sidebar-meta-row">
+                            <span class="sidebar-meta-label">Folder</span>
+                            <span class="sidebar-meta-val" id="sidebar-file-folder">products</span>
+                        </div>
+                        <div class="sidebar-meta-row">
+                            <span class="sidebar-meta-label">File Size</span>
+                            <span class="sidebar-meta-val" id="sidebar-file-size">795 KB</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <button type="button" class="btn btn-accent btn-block" id="btn-select-chosen-asset">
+                            INSERT THIS ASSET &rarr;
+                        </button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <div id="ladha-toast" class="ladha-toast" aria-live="polite"></div>
+
+    <!-- Scripts -->
+    <script src="js/products-data.js"></script>
+    <script src="js/store-db.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

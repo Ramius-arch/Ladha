@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourcing & The 6% Rule — LADHA</title>
+    <meta name="description" content="The LADHA curation philosophy: How we reject 94% of garments to bring Nairobi the rarest 1-of-1 pieces.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/products-data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body class="deep-canvas">
+    <div class="grain"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <!-- Runway Top Announcement Countdown Ticker -->
+        <div class="announcement-bar">
+            <div class="announcement-item">
+                <span class="card-live-dot"></span>
+                <span>NEXT DROP IN:</span>
+                <span class="countdown-digits">02D 14H 28M 45S</span>
+            </div>
+            <div class="announcement-item announcement-note">
+                <span>GIKOMBA & TOI ARCHIVE BALES UNLOCKED</span>
+                <span>•</span>
+                <span>NAIROBI SAME-DAY DISPATCH</span>
+            </div>
+            <div class="announcement-item">
+                <span>1-OF-1 PIECES • FIRST TO CLAIM WINS</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="logo"><a href="index.html">LADHA</a></div>
+            <div class="nav-links" id="nav-links">
+                <a href="shop.html">Shop Drops</a>
+                <a href="index.html#edit">The Edit</a>
+                <a href="index.html#lookbook">Lookbook</a>
+                <a href="about.html" class="active">About</a>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-live-status">
+                    <span class="live-beacon"></span>
+                    <span class="live-nairobi-clock">NAIROBI --:--:-- EAT</span>
+                </div>
+                <button class="cart-trigger" aria-label="Open Shopping Bag">
+                    <span class="cart-btn-label">BAG</span>
+                    <span class="cart-count-badge" style="display:none">0</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="shop.html">Shop Drops</a>
+            <a href="index.html#edit">The Edit</a>
+            <a href="index.html#lookbook">Lookbook</a>
+            <a href="about.html">About</a>
+            <a href="#" class="cart-trigger">Shopping Bag</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <header class="page-header deep-canvas">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>About & Curation</span>
+                </div>
+                <h1 class="page-title">TASTE OVER TREND</h1>
+            </div>
+        </header>
+
+        <!-- Manifesto Block -->
+        <section class="deep-canvas" style="padding-top: 4rem;">
+            <div class="container">
+                <p class="meta">THE PHILOSOPHY</p>
+                <h2 class="about-headline">WE DON'T SELL USED CLOTHES.<br>WE EXCAVATE PERSONAL STYLE.</h2>
+                <p class="about-story-p">
+                    Nairobi is one of the fashion capitals of the African continent, but the retail landscape is choked by two extremes: cheap fast-fashion synthetic garbage that ends up in landfills after three washes, or inflated luxury boutiques charging 20x markups for logos.
+                </p>
+                <p class="about-story-p">
+                    Between 4:00 AM and sunrise, before Nairobi wakes up, thousands of shipping containers open across Gikomba, Toi, and Ngara. Inside are masterpieces of textile engineering: 1993 single-stitch cotton tees, 14-ounce American denim, Japanese nylon windbreakers, and tailored British wool.
+                </p>
+                <p class="about-story-p">
+                    LADHA was founded on a singular conviction: <strong>Your taste deserves better than the algorithm.</strong> We do the hours of dirt and digging so you get the pure unrepeatable heat.
+                </p>
+            </div>
+        </section>
+
+        <!-- The 6% Rule Section -->
+        <section class="accent-canvas" style="padding: 6rem 2rem;">
+            <div class="container">
+                <p class="meta" style="color: rgba(0,0,0,0.6);">THE 6% BENCHMARK</p>
+                <h2 class="section-title" style="color: var(--black); margin-bottom: 2rem;">
+                    WHY 94% OF PIECES GET KILLED.
+                </h2>
+                <p style="font-size: 1.25rem; color: rgba(0,0,0,0.85); max-width: 800px; line-height: 1.7; margin-bottom: 3rem;">
+                    We inspect every prospective garment across four strict gates. If it fails even one criterion, it is immediately discarded:
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+                    <div style="border-top: 2px solid rgba(0,0,0,0.25); padding-top: 1.5rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 0.5rem; color: var(--black);">1. FIBER INTEGRITY</h3>
+                        <p style="color: rgba(0,0,0,0.75); font-size: 0.95rem; line-height: 1.6;">
+                            Zero cheap poly-blends. We look for heavyweight ring-spun cotton, heavyweight wool, raw denim, and true vintage ripstop.
+                        </p>
+                    </div>
+                    <div style="border-top: 2px solid rgba(0,0,0,0.25); padding-top: 1.5rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 0.5rem; color: var(--black);">2. SILHOUETTE PROPORTION</h3>
+                        <p style="color: rgba(0,0,0,0.75); font-size: 0.95rem; line-height: 1.6;">
+                            It must drape with modern intent. Boxy shoulders, relaxed pit-to-pit, or fluid bias cuts that stand out on Nairobi streets.
+                        </p>
+                    </div>
+                    <div style="border-top: 2px solid rgba(0,0,0,0.25); padding-top: 1.5rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 0.5rem; color: var(--black);">3. HARDWARE & SEAMS</h3>
+                        <p style="color: rgba(0,0,0,0.75); font-size: 0.95rem; line-height: 1.6;">
+                            All zippers must be authentic YKK/Talon. Heavy bar-tack stitching, intact shank buttons, and zero broken threads.
+                        </p>
+                    </div>
+                    <div style="border-top: 2px solid rgba(0,0,0,0.25); padding-top: 1.5rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 0.5rem; color: var(--black);">4. UNREPEATABLE CHARACTER</h3>
+                        <p style="color: rgba(0,0,0,0.75); font-size: 0.95rem; line-height: 1.6;">
+                            No generic department store filler. Every piece on LADHA must stop someone mid-stride and trigger a conversation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Condition & Grading Matrix -->
+        <section class="deep-canvas">
+            <div class="container">
+                <p class="meta">TRANSPARENCY STANDARDS</p>
+                <h2 class="section-title">THE VINTAGE GRADING MATRIX</h2>
+                <p style="color: var(--muted); max-width: 700px; line-height: 1.6; margin-bottom: 2rem;">
+                    Because every piece is 1-of-1, we enforce rigorous standardized inspection grades so you know exactly what you are receiving before you order:
+                </p>
+
+                <table class="grading-table">
+                    <thead>
+                        <tr>
+                            <th>GRADE LEVEL</th>
+                            <th>SCORE</th>
+                            <th>STRUCTURAL CRITERIA</th>
+                            <th>PATINA DETAILS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>GRADE A+</td>
+                            <td>9.6 – 10.0</td>
+                            <td>Deadstock / unworn condition. Zero seam stress.</td>
+                            <td>Original crisp fabric hand feel. Pristine graphics and hardware.</td>
+                        </tr>
+                        <tr>
+                            <td>GRADE A</td>
+                            <td>9.0 – 9.5</td>
+                            <td>Excellent structural integrity. Fully functional zips.</td>
+                            <td>Soft, pleasant natural vintage fading. Zero holes, tears, or stains.</td>
+                        </tr>
+                        <tr>
+                            <td>DISTRESSED</td>
+                            <td>8.5 – 8.9</td>
+                            <td>Intentional wabi-sabi wear. Minor hem fraying.</td>
+                            <td>Authentic heavy stone-washing, paint speckling, or vintage honeycombs.</td>
+                        </tr>
+                        <tr>
+                            <td>REJECTED</td>
+                            <td>&lt; 8.5</td>
+                            <td>Structural failures, pit stains, cheap poly.</td>
+                            <td>Never listed on LADHA. Recycled or re-purposed.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Sizing & Care Note -->
+                <div style="margin-top: 6rem; background: #ffffff; border: 1px solid var(--border); padding: 3rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                    <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 1rem; color: var(--text-primary);">GARMENT CARE INSTRUCTION</h3>
+                    <p style="color: #444440; line-height: 1.7; max-width: 800px; margin-bottom: 2rem;">
+                        Vintage fabrics carry decades of life. To keep your piece in pristine shape: Wash cold inside out (max 30°C), avoid synthetic heat tumble dryers (hang dry in shaded breeze), and steam rather than dry iron prints.
+                    </p>
+                    <a href="shop.html" class="btn btn-accent">EXPLORE THE CURRENT 6% &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer dark-canvas">
+        <div class="container footer-cols">
+            <div class="footer-col">
+                <p>© 2026 LADHA</p>
+            </div>
+            <div class="footer-col footer-nav">
+                <a href="shop.html">All Drops</a>
+                <a href="index.html#edit">The Edit</a>
+                <a href="index.html#lookbook">Lookbook</a>
+                <a href="about.html">About</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <div class="footer-col text-right">
+                <p>NAIROBI 🇰🇪</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garment Specs — LADHA</title>
+    <meta name="description" content="1-of-1 Curated Vintage Piece. View exact garment measurements, condition rating, and fabric specs at LADHA.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/products-data.js" defer></script>
+    <script src="js/store-db.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body class="deep-canvas">
+    <div class="grain"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <!-- Runway Top Announcement Countdown Ticker -->
+        <div class="announcement-bar">
+            <div class="announcement-item">
+                <span class="card-live-dot"></span>
+                <span>NEXT DROP IN:</span>
+                <span class="countdown-digits">02D 14H 28M 45S</span>
+            </div>
+            <div class="announcement-item announcement-note">
+                <span>GIKOMBA & TOI ARCHIVE BALES UNLOCKED</span>
+                <span>•</span>
+                <span>NAIROBI SAME-DAY DISPATCH</span>
+            </div>
+            <div class="announcement-item">
+                <span>1-OF-1 PIECES • FIRST TO CLAIM WINS</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="logo"><a href="index.html">LADHA</a></div>
+            <div class="nav-links" id="nav-links">
+                <a href="shop.html">Shop Drops</a>
+                <a href="index.html#edit">The Edit</a>
+                <a href="index.html#lookbook">Lookbook</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-live-status">
+                    <span class="live-beacon"></span>
+                    <span class="live-nairobi-clock">NAIROBI --:--:-- EAT</span>
+                </div>
+                <button class="cart-trigger" aria-label="Open Shopping Bag">
+                    <span class="cart-btn-label">BAG</span>
+                    <span class="cart-count-badge" style="display:none">0</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="shop.html">Shop Drops</a>
+            <a href="index.html#edit">The Edit</a>
+            <a href="index.html#lookbook">Lookbook</a>
+            <a href="about.html">About</a>
+            <a href="#" class="cart-trigger">Shopping Bag</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="pdp-section deep-canvas">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="shop.html">Drops Archive</a>
+                    <span>/</span>
+                    <span id="breadcrumb-product-name">Loading piece...</span>
+                </div>
+
+                <div class="section-stamp">
+                    <span class="section-stamp-num" id="pdp-stamp-code">PIECE SPEC</span>
+                    <span class="section-stamp-title">ARCHIVE VERIFICATION PROTOCOL</span>
+                    <span class="section-stamp-line"></span>
+                    <span>1-OF-1 CURATION</span>
+                </div>
+
+                <!-- Product Detail Grid -->
+                <div class="pdp-grid">
+                    <!-- Left: 4K Gallery -->
+                    <div class="pdp-gallery">
+                        <div class="pdp-main-image viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <div class="vintage-hangtag">
+                                <span class="hangtag-eyelet"></span>
+                                <span>1-OF-1 ARCHIVE</span>
+                            </div>
+                            <img id="pdp-img" src="assets/products/product-1.jpg" alt="Garment Photo">
+                        </div>
+                    </div>
+
+                    <!-- Right: Info & Vintage Specs -->
+                    <div class="pdp-info">
+                        <span class="pdp-tag" id="pdp-cat-tag">STREETWEAR</span>
+                        <h1 class="pdp-title" id="pdp-name">Vintage Garment</h1>
+
+                        <div class="pdp-price-row">
+                            <span class="pdp-price" id="pdp-price">KES 0</span>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                                <span class="pdp-tax-note">Taxes included • 1-of-1 Piece</span>
+                                <span class="card-live-indicator" style="margin-top: 0;"><span class="card-live-dot"></span>AVAILABLE NOW</span>
+                            </div>
+                        </div>
+
+                        <!-- Condition Box -->
+                        <div class="condition-box">
+                            <div class="condition-header">
+                                <span style="font-family: var(--font-mono); font-size: 10px; color: var(--muted);">INSPECTION RATING</span>
+                                <span class="condition-grade" id="pdp-condition-grade">Grade A</span>
+                            </div>
+                            <p class="condition-desc" id="pdp-condition-note">Detailed inspector notes.</p>
+                        </div>
+
+                        <!-- Editorial Description -->
+                        <p class="pdp-description" id="pdp-desc">
+                            Description text.
+                        </p>
+
+                        <!-- Interactive Garment Measurement Inspector -->
+                        <div class="specs-section measurement-inspector">
+                            <div class="measurement-inspector-header">
+                                <h3 class="specs-title" style="margin-bottom: 0;">EXACT FLAT MEASUREMENTS</h3>
+                                <div class="unit-toggle" id="pdp-unit-toggle">
+                                    <button class="unit-btn active" data-unit="in">INCHES</button>
+                                    <button class="unit-btn" data-unit="cm">CM</button>
+                                </div>
+                            </div>
+                            <div class="measurement-diagram-box">
+                                <svg class="measurement-diagram-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20.38 3.46 16 2a8 8 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>
+                                </svg>
+                                <span>Precision flat measurements taken from seam to seam. Switch units above to inspect.</span>
+                            </div>
+                            <table class="measurements-table" id="pdp-measurements-table">
+                                <!-- Populated dynamically -->
+                            </table>
+                            <p style="font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-top: -0.5rem;">
+                                * All pieces singular (1-of-1). Compare with your favorite fitting vintage garment before ordering.
+                            </p>
+                        </div>
+
+                        <!-- Fabric & Provenance -->
+                        <div class="specs-section" style="border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                            <h3 class="specs-title">MATERIAL & SOURCING</h3>
+                            <table class="measurements-table">
+                                <tr>
+                                    <td>FABRIC</td>
+                                    <td id="pdp-fabric">100% Cotton</td>
+                                </tr>
+                                <tr>
+                                    <td>PROVENANCE</td>
+                                    <td id="pdp-provenance">Sourced in Nairobi</td>
+                                </tr>
+                                <tr>
+                                    <td>TAGGED SIZE</td>
+                                    <td id="pdp-tagged-size">L</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Action CTAs -->
+                        <div class="pdp-ctas">
+                            <button class="btn btn-accent btn-block btn-lg" id="pdp-add-btn">
+                                ADD TO BAG &rarr;
+                            </button>
+                            <a href="#" class="btn btn-outline btn-block" id="pdp-whatsapp-btn" target="_blank" rel="noopener">
+                                INSTANT BUY ON WHATSAPP
+                            </a>
+                        </div>
+
+                        <!-- Authenticity Guarantees -->
+                        <div class="pdp-guarantees">
+                            <div class="guarantee-item">Guaranteed 100% Authentic vintage curation</div>
+                            <div class="guarantee-item">Ozone sanitized & steam-treated in Nairobi</div>
+                            <div class="guarantee-item">Same-day delivery across Nairobi (order before 3 PM)</div>
+                            <div class="guarantee-item">48-hour return window for store credit</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Pieces -->
+                <div style="margin-top: 8rem; border-top: 1px solid var(--border); padding-top: 4rem;">
+                    <p class="meta">CURATED PAIRINGS</p>
+                    <h2 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">MORE FROM THIS DROP</h2>
+                    <div class="product-grid" id="related-grid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer dark-canvas">
+        <div class="container footer-cols">
+            <div class="footer-col">
+                <p>© 2026 LADHA</p>
+            </div>
+            <div class="footer-col footer-nav">
+                <a href="shop.html">All Drops</a>
+                <a href="index.html#edit">The Edit</a>
+                <a href="index.html#lookbook">Lookbook</a>
+                <a href="about.html">About</a>
+                <a href="checkout.html">Checkout</a>
+                <a href="admin.html" style="color: var(--accent); font-weight: 700;">MANAGER CRM ⚙</a>
+            </div>
+            <div class="footer-col text-right">
+                <p>NAIROBI 🇰🇪</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PDP Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof LADHA_PRODUCTS === 'undefined') return;
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id') || 'product-1';
+
+            let product = (typeof LadhaDB !== "undefined") ? LadhaDB.getProductById(productId) : LADHA_PRODUCTS.find(p => p.id === productId);
+            if (!product) {
+                product = LADHA_PRODUCTS[0];
+            }
+
+            // Update Page Meta & Titles
+            document.title = `${product.name} — LADHA`;
+            document.getElementById('breadcrumb-product-name').textContent = product.name;
+            const pdpImg = document.getElementById('pdp-img');
+            if (pdpImg) {
+                const isVid = product.image && (product.image.endsWith('.mp4') || product.image.endsWith('.webm') || product.image.endsWith('.mov') || product.image.includes('video/mp4'));
+                if (isVid) {
+                    pdpImg.outerHTML = `<video id="pdp-img" src="${product.image}" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>`;
+                } else {
+                    pdpImg.src = product.image;
+                    pdpImg.alt = product.name;
+                }
+            }
+            document.getElementById('pdp-cat-tag').textContent = `${product.category} • ${product.size}`;
+            document.getElementById('pdp-name').textContent = product.name;
+            document.getElementById('pdp-price').textContent = `KES ${product.price.toLocaleString()}`;
+            document.getElementById('pdp-condition-grade').textContent = product.condition;
+            document.getElementById('pdp-condition-note').textContent = product.conditionNote;
+            document.getElementById('pdp-desc').textContent = product.description;
+            document.getElementById('pdp-fabric').textContent = product.fabric;
+            document.getElementById('pdp-provenance').textContent = product.provenance;
+            document.getElementById('pdp-tagged-size').textContent = product.size;
+
+            // Update Stamp
+            const stampCode = document.getElementById('pdp-stamp-code');
+            if (stampCode) stampCode.textContent = product.id.toUpperCase();
+
+            // Render Measurements Table with Interactive IN / CM Unit Toggle
+            let pdpCurrentUnit = 'in';
+            const measurementsTable = document.getElementById('pdp-measurements-table');
+            const renderPdpMeasurements = (unit) => {
+                const data = (unit === 'cm' && product.measurementsCm) ? product.measurementsCm : (product.measurementsIn || product.measurements);
+                if (!data || !measurementsTable) return;
+
+                let rowsHTML = '';
+                for (const [key, value] of Object.entries(data)) {
+                    const label = key.replace(/([A-Z])/g, ' $1').toUpperCase();
+                    rowsHTML += `
+                        <tr>
+                            <td>${label}</td>
+                            <td>${value}</td>
+                        </tr>
+                    `;
+                }
+                measurementsTable.innerHTML = rowsHTML;
+            };
+
+            renderPdpMeasurements('in');
+
+            const pdpUnitToggle = document.getElementById('pdp-unit-toggle');
+            if (pdpUnitToggle) {
+                pdpUnitToggle.querySelectorAll('.unit-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const unit = btn.getAttribute('data-unit');
+                        pdpCurrentUnit = unit;
+                        pdpUnitToggle.querySelectorAll('.unit-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        renderPdpMeasurements(unit);
+                    });
+                });
+            }
+
+            // Bind Add to Cart Button
+            const addBtn = document.getElementById('pdp-add-btn');
+            addBtn.addEventListener('click', () => {
+                if (window.LadhaCart) {
+                    LadhaCart.add(product);
+                }
+            });
+
+            // Bind WhatsApp instant buy
+            const waBtn = document.getElementById('pdp-whatsapp-btn');
+            const waText = `Hello LADHA, I want to instantly buy this 1-of-1 piece:\n\n*${product.name}*\nPrice: KES ${product.price.toLocaleString()}\nSize: ${product.size}\nItem Code: ${product.id}\n\nPlease confirm availability and delivery!`;
+            waBtn.href = `https://wa.me/254700000000?text=${encodeURIComponent(waText)}`;
+
+            // Render Related Products (exclude current)
+            const relatedGrid = document.getElementById('related-grid');
+            const allProds = (typeof LadhaDB !== "undefined") ? LadhaDB.getProducts() : LADHA_PRODUCTS;
+            const related = allProds.filter(p => p.id !== product.id).slice(0, 3);
+            relatedGrid.innerHTML = related.map(item => `
+                <div class="product-card">
+                    <div class="product-img viewfinder-wrap">
+                        <div class="viewfinder-corners"></div>
+                        <div class="vintage-hangtag">
+                            <span class="hangtag-eyelet"></span>
+                            <span>1-OF-1</span>
+                        </div>
+                        <a href="product.html?id=${item.id}">
+                            <img src="${item.image}" alt="${item.name}" loading="lazy">
+                        </a>
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="${item.id}">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="${item.id}">+ BAG</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span class="product-tag">${item.category} • ${item.size}</span>
+                            <span style="font-family: var(--font-mono); font-size: 8px; color: var(--text-muted);">${item.id.toUpperCase()}</span>
+                        </div>
+                        <h3 class="product-name">
+                            <a href="product.html?id=${item.id}">${item.name}</a>
+                        </h3>
+                        <div class="card-live-indicator"><span class="card-live-dot"></span><span>1-OF-1 IN STOCK</span></div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+                            <span class="product-price">KES ${item.price.toLocaleString()}</span>
+                            <a href="product.html?id=${item.id}" style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--text-muted);">SPECS &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+</html>

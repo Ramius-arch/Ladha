@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout — LADHA</title>
+    <meta name="description" content="Secure Checkout. Lipa na M-Pesa payment and same-day delivery across Nairobi at LADHA.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/products-data.js" defer></script>
+    <script src="js/store-db.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body class="deep-canvas">
+    <div class="grain"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <!-- Runway Top Announcement Countdown Ticker -->
+        <div class="announcement-bar">
+            <div class="announcement-item">
+                <span class="card-live-dot"></span>
+                <span>NEXT DROP IN:</span>
+                <span class="countdown-digits">02D 14H 28M 45S</span>
+            </div>
+            <div class="announcement-item announcement-note">
+                <span>GIKOMBA & TOI ARCHIVE BALES UNLOCKED</span>
+                <span>•</span>
+                <span>NAIROBI SAME-DAY DISPATCH</span>
+            </div>
+            <div class="announcement-item">
+                <span>1-OF-1 PIECES • FIRST TO CLAIM WINS</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="logo"><a href="index.html">LADHA</a></div>
+            <div class="nav-links" id="nav-links">
+                <a href="shop.html">Shop Drops</a>
+                <a href="index.html#edit">The Edit</a>
+                <a href="about.html">About</a>
+                <a href="admin.html" style="color: var(--accent); font-weight: 700;">MANAGER CRM ⚙</a>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-live-status">
+                    <span class="live-beacon"></span>
+                    <span class="live-nairobi-clock">NAIROBI --:--:-- EAT</span>
+                </div>
+                <button class="cart-trigger" aria-label="Open Shopping Bag">
+                    <span class="cart-btn-label">BAG</span>
+                    <span class="cart-count-badge" style="display:none">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="checkout-section deep-canvas">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="shop.html">Shop Drops</a>
+                    <span>/</span>
+                    <span>Checkout</span>
+                </div>
+                <div class="section-stamp">
+                    <span class="section-stamp-num">ORDER SECURE</span>
+                    <span class="section-stamp-title">M-PESA & DISPATCH VERIFICATION</span>
+                    <span class="section-stamp-line"></span>
+                    <span>SAME-DAY NAIROBI COURIER</span>
+                </div>
+                <h1 class="page-title" style="margin-bottom: 3rem;">CHECKOUT</h1>
+
+                <!-- Empty Cart Notice (hidden if cart has items) -->
+                <div id="checkout-empty-view" style="display: none; padding: 6rem 2rem; text-align: center;">
+                    <p style="font-family: var(--font-mono); font-size: 11px; color: var(--muted); letter-spacing: var(--tracking-wide);">BAG IS CURRENTLY EMPTY</p>
+                    <h2 style="font-size: 2rem; margin: 1.5rem 0; font-weight: 900;">NO PIECES READY FOR DISPATCH</h2>
+                    <a href="shop.html" class="btn btn-accent">EXPLORE THE ARCHIVE &rarr;</a>
+                </div>
+
+                <!-- Active Checkout Grid -->
+                <div class="checkout-grid" id="checkout-main-grid">
+                    <!-- Left: Delivery & Payment Form -->
+                    <div class="checkout-form-container">
+                        <form id="checkout-form">
+                            <!-- Step 1: Shipping Details -->
+                            <div class="checkout-step">
+                                <h2 class="step-heading">
+                                    <span class="step-badge">STEP 01</span>
+                                    <span>DELIVERY & CONTACT</span>
+                                </h2>
+                                
+                                <div class="checkout-form-grid">
+                                    <div class="form-field">
+                                        <label for="first-name">FIRST NAME *</label>
+                                        <input type="text" id="first-name" required placeholder="Juma">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="last-name">LAST NAME *</label>
+                                        <input type="text" id="last-name" required placeholder="Mwangi">
+                                    </div>
+                                    <div class="form-field form-full">
+                                        <label for="mpesa-phone">M-PESA PHONE NUMBER *</label>
+                                        <input type="tel" id="mpesa-phone" required placeholder="0712 345 678" pattern="[0-9+ ]{10,13}">
+                                        <span style="font-size: 10px; color: var(--muted); margin-top: 4px; font-family: var(--font-mono);">
+                                            Required for STK Push prompt & delivery rider dispatch.
+                                        </span>
+                                    </div>
+                                    <div class="form-field form-full">
+                                        <label for="delivery-region">DESTINATION REGION *</label>
+                                        <select id="delivery-region" required>
+                                            <option value="nairobi-kilimani">Nairobi — Kilimani / Kileleshwa / Lavington (KES 250)</option>
+                                            <option value="nairobi-westlands">Nairobi — Westlands / Parklands / Spring Valley (KES 250)</option>
+                                            <option value="nairobi-cbd">Nairobi — CBD / Ngara / Pangani (KES 200)</option>
+                                            <option value="nairobi-south">Nairobi — South C / South B / Langata (KES 250)</option>
+                                            <option value="nairobi-karen">Nairobi — Karen / Hardy / Rongai (KES 350)</option>
+                                            <option value="nairobi-thika-rd">Nairobi — Roysambu / Kasarani / Garden Estate (KES 250)</option>
+                                            <option value="countrywide-mombasa">Mombasa / Coast Region (KES 450)</option>
+                                            <option value="countrywide-upcountry">Kisumu / Nakuru / Eldoret / Other Counties (KES 450)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field form-full">
+                                        <label for="street-address">STREET / APARTMENT / BUILDING / LANDMARK *</label>
+                                        <input type="text" id="street-address" required placeholder="e.g. Adlife Plaza, Chania Ave, Apt 4B">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Payment Method -->
+                            <div class="checkout-step">
+                                <h2 class="step-heading">
+                                    <span class="step-badge">STEP 02</span>
+                                    <span>PAYMENT METHOD</span>
+                                </h2>
+
+                                <div class="payment-methods">
+                                    <!-- Option 1: Lipa na M-Pesa Online -->
+                                    <label class="payment-card active" id="pay-card-mpesa">
+                                        <div class="payment-card-header">
+                                            <input type="radio" name="payment_method" value="mpesa" checked>
+                                            <span class="payment-card-title">Lipa na M-Pesa (Instant STK Push)</span>
+                                        </div>
+                                        <div class="mpesa-stk-box">
+                                            <p class="mpesa-prompt-info">
+                                                A prompt will be triggered immediately to your phone. Simply enter your M-Pesa PIN to complete payment.
+                                            </p>
+                                             <div style="background: #ecebe6; padding: 1rem; border-left: 2px solid #0a0a0a; font-family: var(--font-mono); font-size: 11px; color: var(--text-primary);">
+                                                <div>BUY GOODS TILL: <strong>987654</strong></div>
+                                                <div style="color: var(--text-muted); margin-top: 4px;">BUSINESS: LADHA ARCHIVE KENYA</div>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <!-- Option 2: Cash on Delivery -->
+                                    <label class="payment-card" id="pay-card-cod">
+                                        <div class="payment-card-header">
+                                            <input type="radio" name="payment_method" value="cod">
+                                            <span class="payment-card-title">Cash / M-Pesa on Delivery (Nairobi Only)</span>
+                                        </div>
+                                        <p style="font-size: 0.85rem; color: var(--muted); margin: 0.75rem 0 0 2rem;">
+                                            Inspect your garment upon arrival with our courier and pay via M-Pesa Send Money or cash.
+                                        </p>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-accent btn-block btn-lg" id="submit-order-btn" style="margin-top: 2rem;">
+                                    AUTHORIZE PAYMENT & PLACE ORDER &rarr;
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Right: Sticky Order Summary -->
+                    <div class="checkout-summary">
+                        <h2 class="summary-title">ORDER SUMMARY</h2>
+                        <div class="summary-items" id="summary-items-list">
+                            <!-- Populated dynamically -->
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="summary-subtotal">KES 0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Estimated Delivery</span>
+                            <span id="summary-shipping">KES 250</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span class="cart-total-value" id="summary-total">KES 0</span>
+                        </div>
+
+                        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 11px; color: var(--muted); line-height: 1.6;">
+                            <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <span style="color: var(--accent);">✓</span>
+                                <span>1-of-1 Piece reserved for 15 minutes during checkout</span>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <span style="color: var(--accent);">✓</span>
+                                <span>Official Safaricom M-Pesa SMS receipt issued</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Order Confirmation Overlay -->
+    <div class="confirmation-overlay" id="order-confirmation-modal">
+        <div class="confirmation-card">
+            <div class="confirmation-icon">✓</div>
+            <h2 class="confirmation-title">ORDER CONFIRMED</h2>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+                M-Pesa STK Prompt sent to <strong id="confirm-phone-display" style="color: var(--text-primary); font-weight: 800;">07XX XXX XXX</strong>.
+            </p>
+            <div class="confirmation-code" id="confirm-order-code">
+                ORDER REF: LDH-8491-KE
+            </div>
+            <p style="font-size: 0.85rem; color: #555550; line-height: 1.6; margin-bottom: 2rem;">
+                Your 1-of-1 pieces are now reserved and packed. Our delivery rider will contact you upon dispatch.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <a href="#" class="btn btn-accent btn-block" id="confirm-whatsapp-btn" target="_blank" rel="noopener">
+                    TRACK ON WHATSAPP &rarr;
+                </a>
+                <a href="shop.html" class="btn btn-outline btn-block" id="confirm-close-btn">
+                    CONTINUE SHOPPING
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer dark-canvas">
+        <div class="container footer-cols">
+            <div class="footer-col">
+                <p>© 2026 LADHA</p>
+            </div>
+            <div class="footer-col footer-nav">
+                <a href="shop.html">All Drops</a>
+                <a href="index.html#edit">The Edit</a>
+                <a href="about.html">About</a>
+                <a href="admin.html" style="color: var(--accent); font-weight: 700;">MANAGER CRM ⚙</a>
+            </div>
+            <div class="footer-col text-right">
+                <p>NAIROBI 🇰🇪</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Checkout Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const emptyView = document.getElementById('checkout-empty-view');
+            const mainGrid = document.getElementById('checkout-main-grid');
+            const itemsList = document.getElementById('summary-items-list');
+            const subtotalEl = document.getElementById('summary-subtotal');
+            const shippingEl = document.getElementById('summary-shipping');
+            const totalEl = document.getElementById('summary-total');
+            const regionSelect = document.getElementById('delivery-region');
+            const checkoutForm = document.getElementById('checkout-form');
+            const modal = document.getElementById('order-confirmation-modal');
+
+            function getDeliveryFee(regionVal) {
+                if (regionVal.startsWith('countrywide')) return 450;
+                if (regionVal === 'nairobi-karen') return 350;
+                if (regionVal === 'nairobi-cbd') return 200;
+                return 250;
+            }
+
+            function refreshSummary() {
+                const cart = window.LadhaCart ? LadhaCart.get() : [];
+
+                if (cart.length === 0) {
+                    emptyView.style.display = 'block';
+                    mainGrid.style.display = 'none';
+                    return;
+                }
+
+                emptyView.style.display = 'none';
+                mainGrid.style.display = 'grid';
+
+                const subtotal = LadhaCart.total();
+                const shippingFee = getDeliveryFee(regionSelect.value);
+                const grandTotal = subtotal + shippingFee;
+
+                subtotalEl.textContent = `KES ${subtotal.toLocaleString()}`;
+                shippingEl.textContent = `KES ${shippingFee.toLocaleString()}`;
+                totalEl.textContent = `KES ${grandTotal.toLocaleString()}`;
+
+                itemsList.innerHTML = cart.map(item => `
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border);">
+                        <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 65px; object-fit: cover; background: var(--surface);">
+                        <div style="flex-grow: 1;">
+                            <div style="font-weight: 700; font-size: 0.9rem; line-height: 1.2;">${item.name}</div>
+                            <div style="font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); margin-top: 2px;">SIZE: ${item.size}</div>
+                            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--text-primary); margin-top: 4px;">KES ${item.price.toLocaleString()}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Bind region change
+            regionSelect.addEventListener('change', refreshSummary);
+
+            // Payment radio card toggle
+            document.querySelectorAll('input[name="payment_method"]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    document.querySelectorAll('.payment-card').forEach(c => c.classList.remove('active'));
+                    e.target.closest('.payment-card').classList.add('active');
+                });
+            });
+
+            // Handle Submit Form
+            checkoutForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const submitBtn = document.getElementById('submit-order-btn');
+                const phone = document.getElementById('mpesa-phone').value;
+                const firstName = document.getElementById('first-name').value;
+                const lastName = document.getElementById('last-name').value;
+                const address = document.getElementById('street-address').value;
+                const region = regionSelect.options[regionSelect.selectedIndex].text;
+                const method = document.querySelector('input[name="payment_method"]:checked').value;
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'TRANSMITTING TO M-PESA...';
+
+                setTimeout(() => {
+                    // Generate random Order Code
+                    const orderCode = 'LDH-' + Math.floor(1000 + Math.random() * 9000) + '-KE';
+                    document.getElementById('confirm-order-code').textContent = `ORDER REF: ${orderCode}`;
+                    document.getElementById('confirm-phone-display').textContent = phone;
+
+                    // Record Order in Store Database & Mark 1-of-1 Pieces as Sold Out
+                    if (typeof LadhaDB !== 'undefined') {
+                        LadhaDB.createOrder({
+                            id: orderCode,
+                            customerName: `${firstName} ${lastName}`,
+                            phone: phone,
+                            estate: region,
+                            address: address,
+                            items: cart,
+                            subtotal: subtotal,
+                            deliveryFee: shippingFee,
+                            total: grandTotal,
+                            paymentMethod: method === 'mpesa' ? 'MPESA' : 'COD',
+                            mpesaReceipt: 'QK' + Math.floor(100000 + Math.random() * 900000) + 'X',
+                            status: 'VERIFIED'
+                        });
+
+                        // Mark claimed 1-of-1 pieces as sold out in database
+                        cart.forEach(item => {
+                            const p = LadhaDB.getProductById(item.id);
+                            if (p) {
+                                p.inStock = false;
+                                LadhaDB.saveProduct(p);
+                            }
+                        });
+                    }
+
+
+                    // WhatsApp confirmation deep-link
+                    const cart = LadhaCart.get();
+                    const subtotal = LadhaCart.total();
+                    const shippingFee = getDeliveryFee(regionSelect.value);
+                    const grandTotal = subtotal + shippingFee;
+
+                    let waMsg = `*LADHA ORDER CONFIRMATION*\n`;
+                    waMsg += `Ref: ${orderCode}\n`;
+                    waMsg += `Customer: ${firstName} ${lastName} (${phone})\n`;
+                    waMsg += `Delivery: ${address}, ${region}\n`;
+                    waMsg += `Payment: ${method === 'mpesa' ? 'Lipa na M-Pesa' : 'Cash on Delivery'}\n\n`;
+                    waMsg += `*Garments:*\n`;
+                    cart.forEach((i, idx) => {
+                        waMsg += `${idx + 1}. ${i.name} (${i.size}) - KES ${i.price.toLocaleString()}\n`;
+                    });
+                    waMsg += `\n*Grand Total: KES ${grandTotal.toLocaleString()}*`;
+
+                    document.getElementById('confirm-whatsapp-btn').href = `https://wa.me/254700000000?text=${encodeURIComponent(waMsg)}`;
+
+                    // Show Modal
+                    modal.classList.add('active');
+
+                    // Clear cart
+                    LadhaCart.clear();
+                }, 1400);
+            });
+
+            // Initial summary load
+            refreshSummary();
+        });
+    </script>
+</body>
+</html>
