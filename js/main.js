@@ -1102,54 +1102,28 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // ==========================================================================
-    // INTERACTIVE VIEWFINDER CURSOR HOVER EFFECT
+    // OPTICAL APERTURE CROSSHAIR '+' SUBTLE PARALLAX
     // ==========================================================================
-    const initCursorFollower = () => {
+    const initApertureCrosshair = () => {
         const wrap = document.querySelector('.hero-lead-img-wrap');
-        const follower = document.getElementById('cursor-follower');
-        if (!wrap || !follower) return;
-
-        let targetX = 0, targetY = 0;
-        let currentX = 0, currentY = 0;
-        let isHovered = false;
-        let rafId = null;
-
-        const render = () => {
-            currentX += (targetX - currentX) * 0.22;
-            currentY += (targetY - currentY) * 0.22;
-            follower.style.left = `${currentX}px`;
-            follower.style.top = `${currentY}px`;
-
-            if (isHovered || Math.abs(targetX - currentX) > 0.5 || Math.abs(targetY - currentY) > 0.5) {
-                rafId = requestAnimationFrame(render);
-            } else {
-                rafId = null;
-            }
-        };
-
-        wrap.addEventListener('mouseenter', (e) => {
-            isHovered = true;
-            const rect = wrap.getBoundingClientRect();
-            targetX = currentX = e.clientX - rect.left;
-            targetY = currentY = e.clientY - rect.top;
-            if (!rafId) rafId = requestAnimationFrame(render);
-        });
+        const crosshair = document.getElementById('viewfinder-crosshair');
+        if (!wrap || !crosshair) return;
 
         wrap.addEventListener('mousemove', (e) => {
             const rect = wrap.getBoundingClientRect();
-            targetX = e.clientX - rect.left;
-            targetY = e.clientY - rect.top;
-            if (!rafId) rafId = requestAnimationFrame(render);
+            const x = e.clientX - rect.left - (rect.width / 2);
+            const y = e.clientY - rect.top - (rect.height / 2);
+            crosshair.style.transform = `translate(-50%, -50%) translate(${x * 0.15}px, ${y * 0.15}px)`;
         });
 
         wrap.addEventListener('mouseleave', () => {
-            isHovered = false;
+            crosshair.style.transform = 'translate(-50%, -50%)';
         });
     };
 
     initHeroShowcase();
     initScrollNavigationEngine();
-    initCursorFollower();
+    initApertureCrosshair();
 
     hydrateStorefront();
     window.addEventListener('ladha-db-updated', hydrateStorefront);

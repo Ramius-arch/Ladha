@@ -28,50 +28,173 @@
   text-shadow: 0 0 14px rgba(255, 56, 0, 0.6) !important;
 }
 
+/* ==========================================================================
+   Optical Camera Viewfinder HUD Elements
+   ========================================================================== */
+
+/* Optical Corner Reticle Brackets */
+.viewfinder-corners {
+  position: absolute;
+  inset: 12px;
+  pointer-events: none;
+  z-index: 5;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+}
+
+.viewfinder-corners::before,
+.viewfinder-corners::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+}
+
+.viewfinder-corners::before {
+  top: 0;
+  left: 0;
+  border-top: 1.5px solid;
+  border-left: 1.5px solid;
+}
+
+.viewfinder-corners::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1.5px solid;
+  border-right: 1.5px solid;
+}
+
+/* Top & Bottom Technical Camera HUD Strips */
+.viewfinder-hud-top,
+.viewfinder-hud-bottom {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  background: rgba(10, 10, 10, 0.62);
+  backdrop-filter: blur(6px);
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 6;
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.viewfinder-hud-top {
+  top: 12px;
+}
+
+.viewfinder-hud-bottom {
+  bottom: 12px;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+/* On hover, bottom HUD seamlessly yields to quick action buttons */
+.hero-lead-img-wrap:hover .viewfinder-hud-bottom {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+/* REC Beacon Dot Animation */
+.hud-rec {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 800;
+}
+
+.rec-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff3800;
+  box-shadow: 0 0 6px #ff3800;
+  animation: pulse-rec 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse-rec {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+}
+
+.hud-optic,
+.hud-shutter,
+.hud-ref {
+  color: #dddddd;
+}
+
+.hud-coord {
+  color: #ff3800;
+  font-weight: 800;
+}
+
 /* Interactive Cursor Hover Effect on Garment Photo */
 .hero-lead-img-wrap {
   cursor: crosshair;
   position: relative;
 }
 
-.viewfinder-cursor-follower {
+/* Center Optical Aperture Crosshair '+' */
+.viewfinder-crosshair {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
-  border-radius: 50%;
-  pointer-events: none;
+  width: 36px;
+  height: 36px;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  z-index: 8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(2px);
-  box-shadow: 0 0 16px rgba(255, 56, 0, 0.35);
+  pointer-events: none;
+  z-index: 7;
+  transition: transform 0.08s ease-out;
 }
 
-.viewfinder-cursor-follower::before {
+.viewfinder-crosshair::before {
   content: '';
   position: absolute;
+  top: 17px;
+  left: 0;
+  width: 36px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.viewfinder-crosshair::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 17px;
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.viewfinder-crosshair-center {
+  position: absolute;
+  top: 14px;
+  left: 14px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #ff3800;
-  box-shadow: 0 0 8px #ff3800;
+  border: 1.5px solid #ff3800;
+  box-shadow: 0 0 6px rgba(255, 56, 0, 0.8);
 }
 
-.hero-lead-img-wrap:hover .viewfinder-cursor-follower {
-  opacity: 1;
-}
-
-/* Hide any legacy camera HUD or switcher tab elements if present */
-.viewfinder-hud-top,
-.viewfinder-hud-bottom,
-.viewfinder-corners,
-.viewfinder-crosshair,
+/* Hide legacy elements if any */
 .vintage-hangtag,
 .hero-switcher-bar {
   display: none !important;
 }
+
