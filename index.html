@@ -20,6 +20,7 @@
     <script src="js/products-data.js" defer></script>
     <script src="js/store-db.js" defer></script>
     <script src="js/cart.js" defer></script>
+    <script src="js/ambient-audio.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 <body class="deep-canvas">
@@ -55,6 +56,15 @@
                     <span class="live-beacon"></span>
                     <span class="live-nairobi-clock">NAIROBI --:--:-- EAT</span>
                 </div>
+                <button class="ambient-sound-btn playing" id="header-sound-btn" aria-label="Toggle Ambient Audio" aria-pressed="true" title="Ambient Sound: Playing Edwardo Atlas - Wild World">
+                    <span class="sound-eq-bars" aria-hidden="true">
+                        <span class="sound-bar bar-1"></span>
+                        <span class="sound-bar bar-2"></span>
+                        <span class="sound-bar bar-3"></span>
+                        <span class="sound-bar bar-4"></span>
+                    </span>
+                    <span class="sound-btn-label">SOUND [ON]</span>
+                </button>
                 <button class="cart-trigger" aria-label="Open Shopping Bag">
                     <span class="cart-btn-label">BAG</span>
                     <span class="cart-count-badge" style="display:none">0</span>
@@ -75,7 +85,6 @@
             <a href="about.html">About</a>
             <a href="#" class="cart-trigger">Shopping Bag</a>
         </div>
-        <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
     </header>
 
                 <section id="hero" class="hero deep-canvas">
@@ -719,6 +728,15 @@
             <span class="dock-dot"></span>
             <span class="dock-label" id="dock-label">01 // HERO</span>
         </div>
+        <button class="dock-sound-btn playing" id="dock-sound-btn" aria-label="Toggle Ambient Audio" aria-pressed="true" title="Ambient Sound: Edwardo Atlas - Wild World">
+            <span class="sound-eq-bars" aria-hidden="true">
+                <span class="sound-bar bar-1"></span>
+                <span class="sound-bar bar-2"></span>
+                <span class="sound-bar bar-3"></span>
+                <span class="sound-bar bar-4"></span>
+            </span>
+            <span id="dock-sound-label">SOUND ON</span>
+        </button>
         <button class="dock-jump-btn" id="dock-top-btn" aria-label="Scroll back to top">
             <span>TOP</span>
             <span class="dock-arrow">↑</span>

@@ -879,7 +879,22 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "feed-3.jpg", path: "assets/feed/feed-3.jpg", category: "FEED", folder: "feed", extension: "JPG", size: 512300, isVideo: false },
     { name: "feed-4.jpg", path: "assets/feed/feed-4.jpg", category: "FEED", folder: "feed", extension: "JPG", size: 549120, isVideo: false },
     { name: "flame.mp4", path: "assets/videos/flame.mp4", category: "VIDEOS", folder: "videos", extension: "MP4", size: 1947850, isVideo: true },
-    { name: "smoke.mp4", path: "assets/videos/smoke.mp4", category: "VIDEOS", folder: "videos", extension: "MP4", size: 1012774, isVideo: true }
+    { name: "smoke.mp4", path: "assets/videos/smoke.mp4", category: "VIDEOS", folder: "videos", extension: "MP4", size: 1012774, isVideo: true },
+    { name: "streetwear-leather.mp4", path: "assets/videos/streetwear-leather.mp4", category: "VIDEOS", folder: "videos", extension: "MP4", size: 3644299, isVideo: true },
+    { name: "streetwear-editorial.mp4", path: "assets/videos/streetwear-editorial.mp4", category: "VIDEOS", folder: "videos", extension: "MP4", size: 4624486, isVideo: true },
+    { name: "streetwear-motion.mp4", path: "assets/videos/streetwear-motion.mp4", category: "VIDEOS", folder: "videos", extension: "MP4", size: 3386163, isVideo: true },
+    { name: "product-10.jpg", path: "assets/products/product-10.jpg", category: "PRODUCTS", folder: "products", extension: "JPG", size: 295424, isVideo: false },
+    { name: "product-11.jpg", path: "assets/products/product-11.jpg", category: "PRODUCTS", folder: "products", extension: "JPG", size: 255385, isVideo: false },
+    { name: "product-12.jpg", path: "assets/products/product-12.jpg", category: "PRODUCTS", folder: "products", extension: "JPG", size: 118579, isVideo: false },
+    { name: "product-13.jpg", path: "assets/products/product-13.jpg", category: "PRODUCTS", folder: "products", extension: "JPG", size: 84377, isVideo: false },
+    { name: "product-14.jpg", path: "assets/products/product-14.jpg", category: "PRODUCTS", folder: "products", extension: "JPG", size: 120934, isVideo: false },
+    { name: "product-15.jpg", path: "assets/products/product-15.jpg", category: "PRODUCTS", folder: "products", extension: "JPG", size: 341504, isVideo: false },
+    { name: "look-5.jpg", path: "assets/lookbook/look-5.jpg", category: "LOOKBOOK", folder: "lookbook", extension: "JPG", size: 214118, isVideo: false },
+    { name: "look-6.jpg", path: "assets/lookbook/look-6.jpg", category: "LOOKBOOK", folder: "lookbook", extension: "JPG", size: 169062, isVideo: false },
+    { name: "look-7.jpg", path: "assets/lookbook/look-7.jpg", category: "LOOKBOOK", folder: "lookbook", extension: "JPG", size: 184524, isVideo: false },
+    { name: "look-8.jpg", path: "assets/lookbook/look-8.jpg", category: "LOOKBOOK", folder: "lookbook", extension: "JPG", size: 243302, isVideo: false },
+    { name: "feed-5.jpg", path: "assets/feed/feed-5.jpg", category: "FEED", folder: "feed", extension: "JPG", size: 57036, isVideo: false },
+    { name: "feed-6.jpg", path: "assets/feed/feed-6.jpg", category: "FEED", folder: "feed", extension: "JPG", size: 133120, isVideo: false }
   ];
 
   // Helper format bytes

@@ -3496,15 +3496,7 @@ section[id] {
 }
 
 .scroll-progress-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2.5px;
-  width: 0%;
-  background: #ff3800;
-  z-index: 105;
-  transition: width 0.05s linear;
-  box-shadow: 0 0 8px rgba(255, 56, 0, 0.6);
+  display: none !important;
 }
 
 .header {
@@ -3544,7 +3536,7 @@ section[id] {
   left: 0;
   width: 0%;
   height: 2px;
-  background: #ff3800;
+  background: #0a0a0a;
   transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -3628,3 +3620,119 @@ section[id] {
   background: #ff3800;
   color: #ffffff;
 }
+
+/* ==========================================================================
+   AMBIENT AUDIO BOUTIQUE SOUND CONTROLLER
+   ========================================================================== */
+.ambient-sound-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-primary);
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  padding: 0.45rem 0.75rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  user-select: none;
+}
+
+.ambient-sound-btn:hover {
+  border-color: #0a0a0a;
+  background: #f7f7f4;
+}
+
+.ambient-sound-btn.playing {
+  background: #0a0a0a;
+  color: #ffffff;
+  border-color: #0a0a0a;
+  box-shadow: 0 0 12px rgba(204, 255, 0, 0.25);
+}
+
+.ambient-sound-btn.playing .sound-btn-label {
+  color: var(--accent);
+}
+
+/* Equalizer Bars Visualizer */
+.sound-eq-bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 12px;
+  width: 14px;
+}
+
+.sound-bar {
+  display: block;
+  width: 2px;
+  height: 3px;
+  background: #0a0a0a;
+  border-radius: 1px;
+  transition: height 0.2s ease, background 0.2s ease;
+}
+
+.ambient-sound-btn.playing .sound-bar {
+  background: var(--accent);
+  animation: eqBounce 1.1s ease-in-out infinite alternate;
+}
+
+.ambient-sound-btn.playing .bar-1 { animation-delay: 0.0s; }
+.ambient-sound-btn.playing .bar-2 { animation-delay: 0.25s; }
+.ambient-sound-btn.playing .bar-3 { animation-delay: 0.5s; }
+.ambient-sound-btn.playing .bar-4 { animation-delay: 0.15s; }
+
+@keyframes eqBounce {
+  0% { height: 3px; }
+  50% { height: 12px; }
+  100% { height: 5px; }
+}
+
+/* Floating Dock Sound Button */
+.dock-sound-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  transition: color 0.2s ease;
+}
+
+.dock-sound-btn:hover {
+  color: var(--accent);
+}
+
+.dock-sound-btn.playing {
+  color: var(--accent);
+}
+
+.dock-sound-btn .sound-eq-bars .sound-bar {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.dock-sound-btn.playing .sound-eq-bars .sound-bar {
+  background: var(--accent);
+  animation: eqBounce 1.1s ease-in-out infinite alternate;
+}
+
+@media (max-width: 900px) {
+  .ambient-sound-btn .sound-btn-label {
+    display: none;
+  }
+  .ambient-sound-btn {
+    padding: 0.45rem 0.55rem;
+  }
+}
+
