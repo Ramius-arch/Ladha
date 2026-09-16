@@ -1,420 +1,77 @@
 /* ==========================================================================
-   LADHA — Hero Section: Authentic Handwritten Graffiti & Clean Editorial Showcase
+   LADHA — Hero Custom Styles: Authentic Handwritten Graffiti Headline & Cursor
+   All card styling, quick-actions, and button colors are governed by style.css
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Syne:wght@700;800;900&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-.hero.deep-canvas {
-  position: relative;
-  background-color: #f5f4f0;
-  padding: 3.5rem 0 4.5rem;
-  border-bottom: 1px solid rgba(10, 10, 10, 0.08);
-  overflow: hidden;
-}
-
-/* Bilateral Layout Grid */
-.hero-split {
-  position: relative;
-  z-index: 5;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-/* --------------------------------------------------------------------------
-   Left Column: Monumental Handwritten Graffiti & Editorial Copy
-   -------------------------------------------------------------------------- */
-.hero-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 10;
-}
-
-/* Micro Editorial Badge */
-.hero-editorial-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #666660;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
-  width: fit-content;
-}
-
-.hero-editorial-badge .badge-live-pulse {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #ff3800;
-  box-shadow: 0 0 8px rgba(255, 56, 0, 0.8);
-  animation: pulse-beacon 2s infinite ease-in-out;
-}
-
-@keyframes pulse-beacon {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
-}
-
-/* Title Container */
-.hero-title-wrap {
-  position: relative;
-  display: block;
-  margin-bottom: 1.75rem;
-}
-
-/* Authentic Handwritten Street Graffiti Headline */
-.hero-graffiti-title {
+/* Hero title — authentic handwritten street graffiti */
+.hero-title {
   font-family: 'Permanent Marker', cursive !important;
-  font-size: clamp(3.8rem, 8.5vw, 6.8rem) !important;
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem) !important;
   font-weight: 400 !important;
-  line-height: 0.86 !important;
-  letter-spacing: 0.015em !important;
+  line-height: 0.9 !important;
+  letter-spacing: 0.02em !important;
   color: #0a0a0a !important;
-  text-transform: uppercase !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  transform: rotate(-2.5deg);
+  transform: rotate(-2deg);
   transform-origin: left bottom;
-  text-shadow: 
-    2px 3px 0 rgba(0, 0, 0, 0.07),
-    0 0 1px rgba(0, 0, 0, 0.35);
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.06);
+  margin-top: 0 !important;
+  margin-bottom: 1.25rem !important;
+  position: relative;
   display: inline-block;
 }
 
-/* Red Accent Drip Dot */
+/* Red accent drip dot */
 .hero-accent-dot {
   color: #ff3800 !important;
-  display: inline-block;
-  text-shadow: 0 0 16px rgba(255, 56, 0, 0.7) !important;
+  text-shadow: 0 0 14px rgba(255, 56, 0, 0.6) !important;
 }
 
-/* Subcopy */
-.hero-sub {
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: clamp(0.95rem, 1.15vw, 1.08rem);
-  line-height: 1.65;
-  color: #4a4a46;
-  max-width: 520px;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-}
-
-/* Primary Action Buttons */
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.75rem;
-}
-
-.hero-actions .btn-accent {
-  background: #0a0a0a;
-  color: #ffffff;
-  border: 1px solid #0a0a0a;
-  padding: 0.95rem 1.85rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  display: inline-flex;
-  align-items: center;
-}
-
-.hero-actions .btn-accent:hover {
-  background: #ff3800;
-  border-color: #ff3800;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 56, 0, 0.25);
-}
-
-.hero-manifesto-link {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #0a0a0a;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding-bottom: 4px;
-  border-bottom: 1px solid rgba(10, 10, 10, 0.2);
-  transition: all 0.2s ease;
-}
-
-.hero-manifesto-link:hover {
-  color: #ff3800;
-  border-bottom-color: #ff3800;
-  gap: 0.85rem;
-}
-
-/* Archival Telemetry Datum Strip */
-.hero-telemetry {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  border-top: 1px solid rgba(10, 10, 10, 0.12);
-  padding-top: 1.5rem;
-  max-width: 520px;
-}
-
-.telemetry-item {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.telemetry-val {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #0a0a0a;
-  letter-spacing: -0.02em;
-}
-
-.telemetry-lbl {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  font-weight: 700;
-  color: #777770;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-/* --------------------------------------------------------------------------
-   Right Column: Clean Editorial Garment Terminal
-   -------------------------------------------------------------------------- */
-.hero-right {
-  position: relative;
-  z-index: 10;
-}
-
-.hero-terminal {
-  position: relative;
-  background: #ffffff;
-  border: 1px solid rgba(10, 10, 10, 0.12);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.07);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-
-.hero-terminal:hover {
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.11);
-}
-
+/* Interactive Cursor Hover Effect on Garment Photo */
 .hero-lead-img-wrap {
+  cursor: crosshair;
   position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  background: #000000;
-  overflow: hidden;
 }
 
-.hero-lead-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-lead-img-wrap:hover .hero-lead-img {
-  transform: scale(1.03);
-}
-
-/* Clean Hover Quick Actions */
-.card-quick-actions {
+.viewfinder-cursor-follower {
   position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
-  display: flex;
-  gap: 0.75rem;
-  opacity: 0;
-  transform: translateY(8px);
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  z-index: 14;
-}
-
-.hero-lead-img-wrap:hover .card-quick-actions {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.card-quick-actions button {
-  flex: 1;
-  background: #ffffff;
-  color: #0a0a0a;
-  border: 1px solid #0a0a0a;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  padding: 0.75rem 0.5rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-}
-
-.card-quick-actions button:hover {
-  background: #0a0a0a;
-  color: #ffffff;
-}
-
-/* Card Metadata Terminal (Below Photo) */
-.hero-lead-meta {
-  padding: 1.25rem 1.5rem;
-  background: #ffffff;
-  border-top: 1px solid rgba(10, 10, 10, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hero-lead-cat {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: #777770;
-  text-transform: uppercase;
-}
-
-.card-live-indicator {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  font-weight: 700;
-  color: #0a0a0a;
-  margin-left: 0.75rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.card-live-dot {
-  width: 5px;
-  height: 5px;
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
   border-radius: 50%;
-  background: #25d366;
-}
-
-.hero-lead-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 800;
-  margin: 5px 0 8px;
-  letter-spacing: -0.02em;
-}
-
-.hero-lead-title a {
-  color: #0a0a0a;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.hero-lead-title a:hover {
-  color: #ff3800;
-}
-
-.hero-piece-spec-tags {
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 8;
   display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
-.hero-spec-tag {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  background: rgba(10, 10, 10, 0.04);
-  border: 1px solid rgba(10, 10, 10, 0.1);
-  padding: 2px 6px;
-  color: #555550;
-}
-
-.hero-lead-price-val {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #0a0a0a;
-  display: block;
-  text-align: right;
-  margin-bottom: 4px;
-}
-
-.hero-lead-cta {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  color: #ff3800;
-  text-decoration: none;
-  display: inline-flex;
   align-items: center;
-  gap: 4px;
-  float: right;
-  transition: gap 0.2s ease;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 16px rgba(255, 56, 0, 0.35);
 }
 
-.hero-lead-cta:hover {
-  gap: 7px;
+.viewfinder-cursor-follower::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff3800;
+  box-shadow: 0 0 8px #ff3800;
 }
 
-/* --------------------------------------------------------------------------
-   Marquee Ticker Clearance (Zero Collision Invariant)
-   -------------------------------------------------------------------------- */
-.marquee-strip {
-  clear: both;
-  position: relative;
-  z-index: 15;
-  background: #0a0a0a;
-  border-top: 1px solid #0a0a0a;
-  border-bottom: 1px solid #0a0a0a;
-  margin: 0;
+.hero-lead-img-wrap:hover .viewfinder-cursor-follower {
+  opacity: 1;
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints
-   -------------------------------------------------------------------------- */
-@media (max-width: 960px) {
-  .hero.deep-canvas {
-    padding: 2rem 0 3.5rem;
-  }
-
-  .hero-split {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .hero-left {
-    padding-right: 0;
-  }
-
-  .hero-graffiti-title {
-    font-size: clamp(3.2rem, 13vw, 5rem) !important;
-  }
-
-  .hero-telemetry {
-    max-width: 100%;
-  }
-
-  .hero-terminal {
-    max-width: 500px;
-    margin: 0 auto;
-  }
+/* Hide any legacy camera HUD or switcher tab elements if present */
+.viewfinder-hud-top,
+.viewfinder-hud-bottom,
+.viewfinder-corners,
+.viewfinder-crosshair,
+.vintage-hangtag,
+.hero-switcher-bar {
+  display: none !important;
 }

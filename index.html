@@ -78,9 +78,9 @@
         <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
     </header>
 
-            <section id="hero" class="hero deep-canvas">
+                <section id="hero" class="hero deep-canvas">
         <div class="container hero-split">
-            <!-- Left Column: Graffiti Headline & Editorial Copy -->
+            <!-- Left Column: Display Statement, Datum, & Archival Telemetry -->
             <div class="hero-left">
                 <div class="hero-editorial-badge">
                     <span class="badge-live-pulse"></span>
@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="hero-title-wrap">
-                    <h1 class="hero-title hero-graffiti-title">
+                    <h1 class="hero-title">
                         TASTE<br>
                         OVER<br>
                         TREND<span class="hero-accent-dot">.</span>
@@ -129,38 +129,39 @@
                 </div>
             </div>
 
-            <!-- Right Column: Clean Prestigious Garment Showcase -->
+            <!-- Right Column: Clean Original Garment Card with Brand Colors -->
             <div class="hero-right" data-animate>
-                <div class="hero-terminal">
-                    <div class="hero-lead-card">
-                        <div class="hero-lead-img-wrap">
-                            <a href="product.html?id=product-1" id="hero-piece-link" style="display:block; width:100%; height:100%;">
-                                <img src="assets/products/product-1.jpg" alt="Featured Drop: Vintage Nike Colorblock Windbreaker" class="hero-lead-img" id="hero-piece-img" loading="eager">
-                            </a>
-                            <div class="card-quick-actions">
-                                <button class="btn-quick-view" data-product-id="product-1">QUICK VIEW</button>
-                                <button class="btn-quick-add" data-product-id="product-1">+ BAG</button>
+                <div class="hero-lead-card product-card">
+                    <div class="hero-lead-img-wrap viewfinder-wrap">
+                        <div class="viewfinder-cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+                        <a href="product.html?id=product-1" id="hero-piece-link" style="display:block; width:100%; height:100%;">
+                            <img src="assets/products/product-1.jpg" alt="Vintage Nike Colorblock Windbreaker" class="hero-lead-img" id="hero-piece-img" loading="eager">
+                        </a>
+
+                        <div class="card-quick-actions">
+                            <button class="btn-quick-view" data-product-id="product-1">QUICK VIEW</button>
+                            <button class="btn-quick-add" data-product-id="product-1">+ BAG</button>
+                        </div>
+                    </div>
+
+                    <div class="hero-lead-meta">
+                        <div class="hero-meta-col-left">
+                            <div class="hero-piece-category-row">
+                                <span class="hero-lead-cat" id="hero-piece-cat">VINTAGE STREETWEAR</span>
+                                <span class="card-live-indicator" id="hero-piece-stock"><span class="card-live-dot"></span>1-OF-1 IN STOCK</span>
+                            </div>
+                            <h3 class="hero-lead-title"><a href="product.html?id=product-1" id="hero-piece-title">Vintage Nike Colorblock Windbreaker</a></h3>
+                            <div class="hero-piece-spec-tags">
+                                <span class="hero-spec-tag" id="hero-piece-grade">GRADE A+ (9.5/10)</span>
+                                <span class="hero-spec-tag" id="hero-piece-size">SIZE L • PIT-TO-PIT 24"</span>
                             </div>
                         </div>
-                        <div class="hero-lead-meta">
-                            <div class="hero-meta-col-left">
-                                <div class="hero-piece-category-row">
-                                    <span class="hero-lead-cat">VINTAGE STREETWEAR</span>
-                                    <span class="card-live-indicator"><span class="card-live-dot"></span>1-OF-1 IN STOCK</span>
-                                </div>
-                                <h3 class="hero-lead-title"><a href="product.html?id=product-1">Vintage Nike Colorblock Windbreaker</a></h3>
-                                <div class="hero-piece-spec-tags">
-                                    <span class="hero-spec-tag">GRADE A+ (9.5/10)</span>
-                                    <span class="hero-spec-tag">SIZE L • PIT-TO-PIT 24"</span>
-                                </div>
-                            </div>
-                            <div class="hero-lead-price-col">
-                                <span class="hero-lead-price-val">KES 3,500</span>
-                                <a href="product.html?id=product-1" class="hero-lead-cta">
-                                    <span>SPECS</span>
-                                    <span class="cta-arrow">&rarr;</span>
-                                </a>
-                            </div>
+                        <div class="hero-lead-price-col">
+                            <span class="hero-lead-price-val" id="hero-piece-price">KES 3,500</span>
+                            <a href="product.html?id=product-1" class="hero-lead-cta" id="hero-piece-cta">
+                                <span>SPECS</span>
+                                <span class="cta-arrow">&rarr;</span>
+                            </a>
                         </div>
                     </div>
                 </div>
