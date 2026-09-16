@@ -17,14 +17,42 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/hero-custom.css">
+    <link rel="stylesheet" href="css/editorial-motion.css">
     <script src="js/products-data.js" defer></script>
     <script src="js/store-db.js" defer></script>
     <script src="js/cart.js" defer></script>
     <script src="js/ambient-audio.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/editorial-motion.js" defer></script>
 </head>
 <body class="deep-canvas">
     <div class="grain"></div>
+
+    <!-- Archival Preloader & Ambient Sound Entry Gate (ciangoon.dev inspired) -->
+    <div class="archival-curtain" id="archival-curtain" aria-label="LADHA Entrance Gate">
+        <div class="curtain-telemetry-top">
+            <span class="live-beacon"></span>
+            <span class="curtain-clock">NAIROBI --:--:-- EAT</span>
+            <span class="curtain-meta">[BOUTIQUE AUDIO: ARMED]</span>
+        </div>
+        <div class="curtain-center">
+            <div class="curtain-progress-num" id="curtain-progress-num">0%</div>
+            <h1 class="curtain-brand">LADHA</h1>
+            <p class="curtain-tagline">1-OF-1 ARCHIVAL STREETWEAR • NAIROBI</p>
+            <button class="curtain-enter-btn" id="curtain-enter-btn">
+                <span>ENTER ARCHIVE</span>
+                <span class="enter-btn-tag">SOUND [ON] &rarr;</span>
+            </button>
+            <p class="curtain-subhint">CLICK ANYWHERE TO ENTER WITH MUSIC</p>
+        </div>
+        <div class="curtain-telemetry-bottom">
+            <span>01/02 EDWARDO ATLAS</span>
+            <span>•</span>
+            <span>02/02 TWOPILOTS</span>
+            <span>•</span>
+            <span>24% VELVET CEILING</span>
+        </div>
+    </div>
 
     <header class="header">
         <!-- Runway Top Announcement Countdown Ticker -->
@@ -56,15 +84,22 @@
                     <span class="live-beacon"></span>
                     <span class="live-nairobi-clock">NAIROBI --:--:-- EAT</span>
                 </div>
-                <button class="ambient-sound-btn playing" id="header-sound-btn" aria-label="Toggle Ambient Audio" aria-pressed="true" title="Ambient Sound: Playing Edwardo Atlas - Wild World">
-                    <span class="sound-eq-bars" aria-hidden="true">
-                        <span class="sound-bar bar-1"></span>
-                        <span class="sound-bar bar-2"></span>
-                        <span class="sound-bar bar-3"></span>
-                        <span class="sound-bar bar-4"></span>
-                    </span>
-                    <span class="sound-btn-label">SOUND [ON]</span>
-                </button>
+                <div class="ambient-player-cluster" id="ambient-player-cluster">
+                    <button class="ambient-sound-btn playing" id="header-sound-btn" aria-label="Toggle Ambient Audio" aria-pressed="true" title="Ambient Sound: Playing &quot;Edwardo Atlas - Wild World&quot;">
+                        <span class="sound-eq-bars" aria-hidden="true">
+                            <span class="sound-bar bar-1"></span>
+                            <span class="sound-bar bar-2"></span>
+                            <span class="sound-bar bar-3"></span>
+                            <span class="sound-bar bar-4"></span>
+                        </span>
+                        <span class="sound-btn-label">SOUND [ON]</span>
+                    </button>
+                    <button class="ambient-track-pill" id="ambient-track-pill" aria-label="Skip to Next Ambient Track" title="Current Track: 01/02 Edwardo Atlas (Click to Skip to Track 02)">
+                        <span class="track-number-badge">01/02</span>
+                        <span class="track-name-ticker">Edwardo Atlas</span>
+                        <span class="track-skip-icon" aria-hidden="true">⏭</span>
+                    </button>
+                </div>
                 <button class="cart-trigger" aria-label="Open Shopping Bag">
                     <span class="cart-btn-label">BAG</span>
                     <span class="cart-count-badge" style="display:none">0</span>
@@ -158,6 +193,7 @@
                             <span class="viewfinder-crosshair-center"></span>
                         </div>
 
+                        <video class="hero-lead-video" id="hero-piece-video" src="assets/videos/streetwear-motion.mp4" loop muted playsinline preload="metadata"></video>
                         <a href="product.html?id=product-1" id="hero-piece-link" style="display:block; width:100%; height:100%;">
                             <img src="assets/products/product-1.jpg" alt="Vintage Nike Colorblock Windbreaker" class="hero-lead-img" id="hero-piece-img" loading="eager">
                         </a>
@@ -226,7 +262,7 @@
             <h2 class="section-title" data-animate>JUST LANDED</h2>
             
                         <div class="product-grid">
-                <!-- Vintage Nike Windbreaker -->
+                                <!-- Vintage Nike Windbreaker -->
                 <div class="product-card" data-animate>
                     <div class="product-img viewfinder-wrap">
                         <div class="viewfinder-corners"></div>
@@ -234,6 +270,8 @@
                             <span class="hangtag-eyelet"></span>
                             <span>1-OF-1</span>
                         </div>
+                        <span class="motion-preview-tag"><span class="motion-dot"></span>MOTION</span>
+                        <video class="product-video-hover" src="assets/videos/streetwear-motion.mp4" loop muted playsinline preload="metadata"></video>
                         <a href="product.html?id=product-1">
                             <img src="assets/products/product-1.jpg" alt="Vintage Nike Windbreaker" loading="lazy">
                         </a>
@@ -263,6 +301,8 @@
                             <span class="hangtag-eyelet"></span>
                             <span>DISTRESSED</span>
                         </div>
+                        <span class="motion-preview-tag"><span class="motion-dot"></span>MOTION</span>
+                        <video class="product-video-hover" src="assets/videos/streetwear-leather.mp4" loop muted playsinline preload="metadata"></video>
                         <a href="product.html?id=product-2">
                             <img src="assets/products/product-2.jpg" alt="Oversized Denim Jacket" loading="lazy">
                         </a>
@@ -342,6 +382,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <!-- Carhartt Work Pants -->
                 <div class="product-card" data-animate>
                     <div class="product-img viewfinder-wrap">
@@ -553,7 +594,25 @@
         </div>
     </section>
 
-    <section id="lookbook" class="lookbook deep-canvas">
+    <!-- Full-Bleed Cinematic Runway Video Interstitial -->
+    <section class="runway-video-strip dark-canvas" aria-label="Runway in Motion">
+        <div class="runway-video-bg">
+            <video src="assets/videos/streetwear-editorial.mp4" autoplay loop muted playsinline preload="metadata"></video>
+            <div class="runway-scrim"></div>
+        </div>
+        <div class="container runway-inner">
+            <div class="runway-stamp" data-animate>
+                <span class="stamp-pill">ARCHIVE 04 // 60FPS MOTION</span>
+                <span class="stamp-loc">GIKOMBA &bull; NAIROBI</span>
+            </div>
+            <h2 class="runway-title" data-animate>FABRIC IN MOTION.<br>TASTE WITHOUT COMPROMISE.</h2>
+            <p class="runway-desc" data-animate>Streetwear isn't static. Raw textures, heavy drape, and unrepeatable patina captured live across Nairobi streets.</p>
+            <a href="#drops" class="btn btn-outline-light" data-animate>EXPLORE THE ARCHIVE &darr;</a>
+        </div>
+    </section>
+
+
+        <section id="lookbook" class="lookbook deep-canvas">
         <div class="container">
             <div class="section-stamp" data-animate>
                 <span class="section-stamp-num">PIECE 04</span>
@@ -561,36 +620,157 @@
                 <span class="section-stamp-line"></span>
                 <span>PHOTOGRAPHED IN NAIROBI</span>
             </div>
-            <h2 class="section-title" data-animate>THIS IS WHAT TASTE LOOKS LIKE</h2>
-            
-            <div class="lookbook-grid">
-                <div class="lookbook-item tall" data-animate>
-                    <div class="lookbook-img viewfinder-wrap">
-                        <div class="viewfinder-corners"></div>
-                        <img src="assets/lookbook/look-1.jpg" alt="LOOK 01 — STREET CLASSIC" loading="lazy">
+
+            <div class="lookbook-controls-row" data-animate>
+                <h2 class="section-title" style="margin-bottom:0;">RUNWAY FILMSTRIP</h2>
+                <div style="display:flex; align-items:center; gap: 1.5rem;">
+                    <div class="lookbook-frame-indicator">
+                        [FRAME <span class="frame-active" id="lookbook-frame-active">01</span> // 10]
                     </div>
-                    <p class="lookbook-caption">LOOK 01 — STREET CLASSIC [ ARCHIVE // NBO ]</p>
+                    <div class="lookbook-nav-btns">
+                        <button class="lookbook-nav-btn" id="lookbook-prev" aria-label="Previous Look">&larr; PREV</button>
+                        <button class="lookbook-nav-btn" id="lookbook-next" aria-label="Next Look">NEXT &rarr;</button>
+                    </div>
                 </div>
-                <div class="lookbook-item" data-animate>
-                    <div class="lookbook-img viewfinder-wrap">
-                        <div class="viewfinder-corners"></div>
-                        <img src="assets/lookbook/look-2.jpg" alt="LOOK 02 — VINTAGE REVIVAL" loading="lazy">
+            </div>
+
+            <!-- Scrub Progress Line -->
+            <div class="lookbook-progress-line" aria-hidden="true">
+                <div class="lookbook-progress-fill" id="lookbook-progress-fill"></div>
+            </div>
+
+            <!-- Draggable Filmstrip Viewport -->
+            <div class="lookbook-slider-viewport" id="lookbook-viewport" data-animate>
+                <div class="lookbook-slider-track" id="lookbook-track">
+                    <!-- Look 01 -->
+                    <div class="lookbook-slide">
+                        <div class="lookbook-slide-media viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <span class="lookbook-slide-badge">01 // STILL</span>
+                            <img src="assets/lookbook/look-1.jpg" alt="LOOK 01 — STREET CLASSIC" loading="lazy">
+                        </div>
+                        <div class="lookbook-slide-caption">
+                            <h4 class="look-caption-title">STREET CLASSIC</h4>
+                            <span class="look-caption-meta">LOOK 01 &bull; ARCHIVE NBO</span>
+                        </div>
                     </div>
-                    <p class="lookbook-caption">LOOK 02 — VINTAGE REVIVAL [ ARCHIVE // NBO ]</p>
-                </div>
-                <div class="lookbook-item" data-animate>
-                    <div class="lookbook-img viewfinder-wrap">
-                        <div class="viewfinder-corners"></div>
-                        <img src="assets/lookbook/look-3.jpg" alt="LOOK 03 — URBAN EDGE" loading="lazy">
+
+                    <!-- Look 02 -->
+                    <div class="lookbook-slide">
+                        <div class="lookbook-slide-media viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <span class="lookbook-slide-badge">02 // STILL</span>
+                            <img src="assets/lookbook/look-2.jpg" alt="LOOK 02 — VINTAGE REVIVAL" loading="lazy">
+                        </div>
+                        <div class="lookbook-slide-caption">
+                            <h4 class="look-caption-title">VINTAGE REVIVAL</h4>
+                            <span class="look-caption-meta">LOOK 02 &bull; ARCHIVE NBO</span>
+                        </div>
                     </div>
-                    <p class="lookbook-caption">LOOK 03 — URBAN EDGE [ ARCHIVE // NBO ]</p>
-                </div>
-                <div class="lookbook-item tall" data-animate>
-                    <div class="lookbook-img viewfinder-wrap">
-                        <div class="viewfinder-corners"></div>
-                        <img src="assets/lookbook/look-4.jpg" alt="LOOK 04 — WEEKEND LAYERS" loading="lazy">
+
+                    <!-- Motion 01 Reel Card -->
+                    <div class="lookbook-slide">
+                        <div class="lookbook-slide-media viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <span class="lookbook-slide-badge" style="background:var(--accent); color:#0a0a0a;">03 // 60FPS MOTION</span>
+                            <video src="assets/videos/streetwear-editorial.mp4" autoplay loop muted playsinline preload="metadata"></video>
+                        </div>
+                        <div class="lookbook-slide-caption">
+                            <h4 class="look-caption-title">RUNWAY SILHOUETTES</h4>
+                            <span class="look-caption-meta">MOTION 01 &bull; 60FPS MOTION REEL</span>
+                        </div>
                     </div>
-                    <p class="lookbook-caption">LOOK 04 — WEEKEND LAYERS [ ARCHIVE // NBO ]</p>
+
+                    <!-- Look 03 -->
+                    <div class="lookbook-slide">
+                        <div class="lookbook-slide-media viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <span class="lookbook-slide-badge">04 // STILL</span>
+                            <img src="assets/lookbook/look-3.jpg" alt="LOOK 03 — URBAN EDGE" loading="lazy">
+                        </div>
+                        <div class="lookbook-slide-caption">
+                            <h4 class="look-caption-title">URBAN EDGE</h4>
+                            <span class="look-caption-meta">LOOK 03 &bull; ARCHIVE NBO</span>
+                        </div>
+                    </div>
+
+                    <!-- Look 04 -->
+                    <div class="lookbook-slide">
+                        <div class="lookbook-slide-media viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <span class="lookbook-slide-badge">05 // STILL</span>
+                            <img src="assets/lookbook/look-4.jpg" alt="LOOK 04 — WEEKEND LAYERS" loading="lazy">
+                        </div>
+                        <div class="lookbook-slide-caption">
+                            <h4 class="look-caption-title">WEEKEND LAYERS</h4>
+                            <span class="look-caption-meta">LOOK 04 &bull; ARCHIVE NBO</span>
+                        </div>
+                    </div>
+
+                    <!-- Motion 02 Reel Card -->
+                    <div class="lookbook-slide">
+                        <div class="lookbook-slide-media viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <span class="lookbook-slide-badge" style="background:var(--accent); color:#0a0a0a;">06 // 60FPS MOTION</span>
+                            <video src="assets/videos/streetwear-motion.mp4" autoplay loop muted playsinline preload="metadata"></video>
+                        </div>
+                        <div class="lookbook-slide-caption">
+                            <h4 class="look-caption-title">KINETIC OVERSIZED</h4>
+                            <span class="look-caption-meta">MOTION 02 &bull; 60FPS MOTION REEL</span>
+                        </div>
+                    </div>
+
+                    <!-- Look 05 -->
+                    <div class="lookbook-slide">
+                        <div class="lookbook-slide-media viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <span class="lookbook-slide-badge">07 // STILL</span>
+                            <img src="assets/lookbook/look-5.jpg" alt="LOOK 05 — MONOCHROME UTILITY" loading="lazy">
+                        </div>
+                        <div class="lookbook-slide-caption">
+                            <h4 class="look-caption-title">MONOCHROME UTILITY</h4>
+                            <span class="look-caption-meta">LOOK 05 &bull; ARCHIVE NBO</span>
+                        </div>
+                    </div>
+
+                    <!-- Look 06 -->
+                    <div class="lookbook-slide">
+                        <div class="lookbook-slide-media viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <span class="lookbook-slide-badge">08 // STILL</span>
+                            <img src="assets/lookbook/look-6.jpg" alt="LOOK 06 — 90s SPORT RUNWAY" loading="lazy">
+                        </div>
+                        <div class="lookbook-slide-caption">
+                            <h4 class="look-caption-title">90s SPORT RUNWAY</h4>
+                            <span class="look-caption-meta">LOOK 06 &bull; ARCHIVE NBO</span>
+                        </div>
+                    </div>
+
+                    <!-- Look 07 -->
+                    <div class="lookbook-slide">
+                        <div class="lookbook-slide-media viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <span class="lookbook-slide-badge">09 // STILL</span>
+                            <img src="assets/lookbook/look-7.jpg" alt="LOOK 07 — DOWNTOWN GRAIL" loading="lazy">
+                        </div>
+                        <div class="lookbook-slide-caption">
+                            <h4 class="look-caption-title">DOWNTOWN GRAIL</h4>
+                            <span class="look-caption-meta">LOOK 07 &bull; ARCHIVE NBO</span>
+                        </div>
+                    </div>
+
+                    <!-- Look 08 -->
+                    <div class="lookbook-slide">
+                        <div class="lookbook-slide-media viewfinder-wrap">
+                            <div class="viewfinder-corners"></div>
+                            <span class="lookbook-slide-badge">10 // STILL</span>
+                            <img src="assets/lookbook/look-8.jpg" alt="LOOK 08 — NIGHT TRANSIT" loading="lazy">
+                        </div>
+                        <div class="lookbook-slide-caption">
+                            <h4 class="look-caption-title">NIGHT TRANSIT</h4>
+                            <span class="look-caption-meta">LOOK 08 &bull; ARCHIVE NBO</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -689,17 +869,19 @@
                     <img src="assets/feed/feed-1.jpg" alt="LADHA Drop 01" loading="lazy">
                 </div>
                 <div class="feed-item" data-animate>
-                    <img src="assets/feed/feed-2.jpg" alt="LADHA Drop 02" loading="lazy">
+                    <div class="feed-reel-badge"><span class="reel-icon"></span><span>0:15 / REEL</span></div>
+                    <video src="assets/videos/streetwear-motion.mp4" autoplay loop muted playsinline preload="metadata"></video>
                 </div>
                 <div class="feed-item" data-animate>
                     <img src="assets/feed/feed-3.jpg" alt="LADHA Drop 03" loading="lazy">
                 </div>
                 <div class="feed-item" data-animate>
-                    <img src="assets/feed/feed-4.jpg" alt="LADHA Drop 04" loading="lazy">
+                    <div class="feed-reel-badge"><span class="reel-icon"></span><span>0:12 / REEL</span></div>
+                    <video src="assets/videos/streetwear-leather.mp4" autoplay loop muted playsinline preload="metadata"></video>
                 </div>
             </div>
             
-            <a href="#" class="link-arrow" data-animate>FOLLOW FOR FIRST ACCESS →</a>
+            <a href="#" class="link-arrow"  data-animate>FOLLOW FOR FIRST ACCESS →</a>
         </div>
     </section>
 

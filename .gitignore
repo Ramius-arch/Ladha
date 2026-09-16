@@ -1,4 +1,4 @@
-﻿# Operating System Files
+# Operating System Files
 .DS_Store
 Thumbs.db
 desktop.ini
@@ -29,3 +29,8 @@ screenshot*.png
 # Vercel
 .vercel/
 .vercel
+
+# Local snapshots & WhatsApp Web download bundles
+*.original
+assets/uploads/WhatsApp.html
+assets/uploads/WhatsApp_files/

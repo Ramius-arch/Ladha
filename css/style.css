@@ -3624,6 +3624,64 @@ section[id] {
 /* ==========================================================================
    AMBIENT AUDIO BOUTIQUE SOUND CONTROLLER
    ========================================================================== */
+.ambient-player-cluster {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ambient-track-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: #333333;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  padding: 0.45rem 0.65rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.ambient-track-pill:hover {
+  color: #000000;
+  border-color: #0a0a0a;
+  background: #f7f7f4;
+}
+
+.track-number-badge {
+  color: var(--accent);
+  background: #0a0a0a;
+  padding: 1px 5px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+}
+
+.track-name-ticker {
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-skip-icon {
+  font-size: 9px;
+  opacity: 0.65;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.ambient-track-pill:hover .track-skip-icon {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
 .ambient-sound-btn {
   display: inline-flex;
   align-items: center;
@@ -3734,5 +3792,131 @@ section[id] {
   .ambient-sound-btn {
     padding: 0.45rem 0.55rem;
   }
+}
+
+/* ==========================================================================
+   ARCHIVAL PRELOADER & AMBIENT SOUND ENTRY GATE (ciangoon.dev inspired)
+   ========================================================================== */
+.archival-curtain {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: #080808;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.archival-curtain.dismissed {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.02);
+}
+
+.curtain-telemetry-top,
+.curtain-telemetry-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: var(--tracking-wide);
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.curtain-telemetry-bottom {
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.curtain-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin: auto 0;
+}
+
+.curtain-progress-num {
+  font-family: var(--font-mono);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -0.04em;
+  text-shadow: 0 0 30px rgba(204, 255, 0, 0.35);
+}
+
+.curtain-brand {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-indent: 0.25em;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.curtain-tagline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.curtain-enter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--accent);
+  color: #0a0a0a;
+  border: 1px solid var(--accent);
+  padding: 1.1rem 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(204, 255, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.curtain-enter-btn:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #0a0a0a;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.curtain-enter-btn .enter-btn-tag {
+  background: #0a0a0a;
+  color: var(--accent);
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 800;
+  border-radius: 2px;
+}
+
+.curtain-subhint {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  margin-top: 0.5rem;
 }
 
