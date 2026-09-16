@@ -842,4 +842,28 @@ document.addEventListener('DOMContentLoaded', () => {
     hydrateStorefront();
     window.addEventListener('ladha-db-updated', hydrateStorefront);
 
+    // --- Discrete Manager CRM Access Gate ---
+    // 1. Keyboard Shortcut: Ctrl + Shift + A (or Cmd + Shift + A)
+    window.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+            e.preventDefault();
+            window.location.href = 'admin.html';
+        }
+    });
+
+    // 2. Secret 3-tap gesture on the footer copyright line
+    const copyrightEl = document.querySelector('.footer-col p');
+    if (copyrightEl && copyrightEl.textContent.includes('LADHA')) {
+        let tapCount = 0;
+        let tapTimeout = null;
+        copyrightEl.style.cursor = 'default';
+        copyrightEl.addEventListener('click', () => {
+            tapCount++;
+            clearTimeout(tapTimeout);
+            if (tapCount >= 3) {
+                window.location.href = 'admin.html';
+            }
+            tapTimeout = setTimeout(() => { tapCount = 0; }, 900);
+        });
+    }
 });

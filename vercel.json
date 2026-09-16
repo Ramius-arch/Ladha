@@ -2,7 +2,9 @@
   "version": 2,
   "cleanUrls": true,
   "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/admin", "dest": "/admin.html" },
+    { "src": "/legal", "dest": "/legal.html" },
     { "src": "/shop", "dest": "/shop.html" },
     { "src": "/about", "dest": "/about.html" },
     { "src": "/checkout", "dest": "/checkout.html" }

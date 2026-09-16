@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LADHA — Legal & Archive Disclosures</title>
+    <meta name="description" content="LADHA — Terms of Service, Privacy Policy (KDPA 2019), and Archival Vintage Curation Disclosures.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/cart.js" defer></script>
+    <script src="js/main.js" defer></script>
+    
+    <style>
+        .legal-header-hero {
+            padding: 5rem 0 3rem;
+            border-bottom: 1px solid var(--border);
+            background: #ffffff;
+        }
+        .legal-title {
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-weight: 900;
+            letter-spacing: var(--tracking-tight);
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin-bottom: 1rem;
+        }
+        .legal-tabs {
+            display: flex;
+            gap: 1rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .legal-tab-btn {
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 1rem 0.5rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: all 0.2s ease;
+        }
+        .legal-tab-btn.active {
+            color: #0a0a0a;
+            border-bottom-color: #0a0a0a;
+        }
+        .legal-section {
+            display: none;
+            max-width: 860px;
+            margin-bottom: 5rem;
+        }
+        .legal-section.active {
+            display: block;
+        }
+        .legal-block {
+            margin-bottom: 2.5rem;
+        }
+        .legal-block h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            margin-bottom: 0.85rem;
+            color: #0a0a0a;
+        }
+        .legal-block p, .legal-block li {
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: #4a4a48;
+            margin-bottom: 0.85rem;
+        }
+        .legal-block ul {
+            padding-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .legal-badge-pill {
+            display: inline-block;
+            background: rgba(10, 10, 10, 0.05);
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body class="deep-canvas">
+    <div class="grain"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="logo"><a href="index.html">LADHA</a></div>
+            <div class="nav-links" id="nav-links">
+                <a href="shop.html">Shop Drops</a>
+                <a href="index.html#edit">The Edit</a>
+                <a href="index.html#lookbook">Lookbook</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-sm" style="font-family: var(--font-mono); font-size: 10px;">← STORE</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="legal-header-hero">
+        <div class="container">
+            <span class="legal-badge-pill">COMPLIANCE & INTEGRITY PROTOCOL</span>
+            <h1 class="legal-title">LEGAL & ARCHIVE<br>DISCLOSURES</h1>
+            <p class="hero-sub" style="margin-bottom: 0;">
+                Comprehensive documentation governing vintage acquisitions, customer privacy under Kenyan law, and 1-of-1 archive claiming rules.
+            </p>
+        </div>
+    </div>
+
+    <main class="container" style="padding-top: 2rem;">
+        <!-- Legal Navigation Tabs -->
+        <div class="legal-tabs" role="tablist">
+            <button class="legal-tab-btn active" data-target="terms">01. Terms & Conditions</button>
+            <button class="legal-tab-btn" data-target="privacy">02. Privacy Policy (KDPA)</button>
+            <button class="legal-tab-btn" data-target="disclosures">03. Vintage Curation Disclosures</button>
+        </div>
+
+        <!-- 01. TERMS & CONDITIONS -->
+        <article id="terms" class="legal-section active">
+            <div class="legal-block">
+                <h2>1. The 1-of-1 Archival Inventory Protocol</h2>
+                <p>
+                    Every garment presented in the LADHA archive is a strictly authenticated <strong>1-of-1 singular vintage piece</strong>. We do not stock mass-produced duplicate inventory or repeat production runs. 
+                </p>
+                <p>
+                    When an order claim is initiated, the selected item is locked under temporary reservation for exactly <strong>30 minutes</strong> to facilitate M-Pesa transaction confirmation. If payment verification is not completed within 30 minutes, the garment is automatically released back to the live public archive for other collectors to claim.
+                </p>
+            </div>
+
+            <div class="legal-block">
+                <h2>2. Order Allocation & Payment Verification</h2>
+                <p>
+                    All retail transactions are finalized in Kenyan Shillings (KES) via direct <strong>M-Pesa Buy Goods / Till</strong> or designated merchant bank transfers. Ownership title transfers upon official verification of the Safaricom M-Pesa transaction code against the store registry.
+                </p>
+                <ul>
+                    <li>No cash on delivery (COD) is supported due to courier security protocol.</li>
+                    <li>Receipt confirmations are issued directly via SMS/WhatsApp within 15 minutes of payment receipt.</li>
+                </ul>
+            </div>
+
+            <div class="legal-block">
+                <h2>3. Nairobi Same-Day Dispatch & Delivery</h2>
+                <p>
+                    Orders placed and verified before <strong>14:00 EAT (East Africa Time)</strong> Monday through Saturday qualify for guaranteed Same-Day Nairobi Courier Dispatch. Nationwide delivery outside Nairobi (Mombasa, Kisumu, Nakuru, Eldoret, etc.) is handled via secured courier with a standard 24–48 hour delivery SLA.
+                </p>
+            </div>
+
+            <div class="legal-block">
+                <h2>4. Archival Exchanges & Returns</h2>
+                <p>
+                    Due to the rare, non-reproducible nature of curated vintage bales, all archive sales are deemed <strong>final</strong> once delivered and accepted. We provide precise centimeter and inch tape measurements (pit-to-pit, length, sleeve) on every product page to ensure sizing accuracy before acquisition.
+                </p>
+                <p>
+                    In the exceptional event that an item has an undisclosed structural defect that compromises wearable integrity, claims must be lodged within <strong>24 hours</strong> of courier delivery for an archive credit or exchange.
+                </p>
+            </div>
+        </article>
+
+        <!-- 02. PRIVACY POLICY -->
+        <article id="privacy" class="legal-section">
+            <div class="legal-block">
+                <h2>1. Kenya Data Protection Act (KDPA 2019) Compliance</h2>
+                <p>
+                    LADHA operates in strict adherence to the Kenya Data Protection Act of 2019. We respect your sovereign privacy and adhere to data minimization principles: we collect only the exact personal identifiers necessary to dispatch your garment.
+                </p>
+            </div>
+
+            <div class="legal-block">
+                <h2>2. Information We Collect</h2>
+                <ul>
+                    <li><strong>Contact Identifiers:</strong> Your full name, direct phone number, and optional WhatsApp contact for dispatch logistics and delivery coordination.</li>
+                    <li><strong>Logistics Coordinates:</strong> Physical delivery address, building name, apartment/suite number, or Nairobi GPS drop point.</li>
+                    <li><strong>Transaction Verification:</strong> Safaricom M-Pesa transaction codes (e.g. QKH789XXXX) strictly used for matching against bank statement ledgers. We <em>never</em> collect, view, or store M-Pesa PINs or private banking credentials.</li>
+                </ul>
+            </div>
+
+            <div class="legal-block">
+                <h2>3. Zero Data Monetization Guarantee</h2>
+                <p>
+                    LADHA never sells, leases, trades, or licenses your customer data to advertising brokers, tracking syndicates, or commercial third parties. Your order data remains strictly in-house for customer fulfillment and logistics.
+                </p>
+            </div>
+
+            <div class="legal-block">
+                <h2>4. Data Retention & Right of Erasure</h2>
+                <p>
+                    Customers possess the full legal right to request the complete expungement of their order history, delivery records, and contact details from our CRM database after fulfillment. To request full erasure, contact our operations team at <a href="mailto:archive@ladha.ke" style="color: #0a0a0a; font-weight: 700;">archive@ladha.ke</a>.
+                </p>
+            </div>
+        </article>
+
+        <!-- 03. VINTAGE CURATION DISCLOSURES -->
+        <article id="disclosures" class="legal-section">
+            <div class="legal-block">
+                <h2>1. The 6% Curation Protocol</h2>
+                <p>
+                    LADHA is not a fast-fashion vendor. Our inventory consists of hand-curated archival vintage garments individually salvaged from heritage bales arriving in Nairobi through East Africa's primary textile trading hubs (Gikomba and Toi Market).
+                </p>
+                <p>
+                    Our curation team manually inspects hundreds of bales weekly and strictly rejects approximately <strong>94% of garments examined</strong> due to excessive wear, inferior synthetics, or derivative silhouettes. Only the top 6% meeting our criteria for archival weight, design distinction, and historical integrity are admitted into the LADHA drops.
+                </p>
+            </div>
+
+            <div class="legal-block">
+                <h2>2. Condition Grading Standard</h2>
+                <p>
+                    Each piece is cataloged with an honest, precise condition assessment:
+                </p>
+                <ul>
+                    <li><strong>GRADE A+ (MINT / NOS):</strong> Deadstock or near-immaculate vintage condition with zero noticeable wear, original color saturation, and pristine seams.</li>
+                    <li><strong>GRADE A (EXCELLENT VINTAGE):</strong> Exceptional vintage wear consistent with age, authentic gentle patina, no holes or structural compromises.</li>
+                    <li><strong>ARCHIVE DISTRESSED:</strong> Intentionally selected pieces featuring natural heritage fading, subtle micro-fraying, or authentic historical distress clearly documented in product photography.</li>
+                </ul>
+            </div>
+
+            <div class="legal-block">
+                <h2>3. Professional Sanitization & Textile Care</h2>
+                <p>
+                    Every single garment accepted through the 6% protocol undergoes an intensive, eco-friendly textile restoration procedure:
+                </p>
+                <ul>
+                    <li>Deep antibacterial steam sanitization at 130°C to eliminate all microbial contaminants.</li>
+                    <li>Hypoallergenic, pH-neutral delicate washing preserving vintage dyes and fiber tension.</li>
+                    <li>Archival garment inspection, seam reinforcement where necessary, and moisture-controlled vault storage until dispatched.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer dark-canvas">
+        <div class="container footer-cols">
+            <div class="footer-col">
+                <p>© 2026 LADHA</p>
+            </div>
+            <div class="footer-col footer-nav">
+                <a href="shop.html">Shop Drops</a>
+                <a href="index.html#edit">The Edit</a>
+                <a href="index.html#lookbook">Lookbook</a>
+                <a href="about.html">About</a>
+                <a href="legal.html#terms">Terms</a>
+                <a href="legal.html#privacy">Privacy</a>
+                <a href="legal.html#disclosures">Disclosures</a>
+            </div>
+            <div class="footer-col text-right">
+                <p>NAIROBI 🇰🇪</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.legal-tab-btn');
+            const sections = document.querySelectorAll('.legal-section');
+
+            function activateTab(targetId) {
+                tabs.forEach(t => t.classList.toggle('active', t.getAttribute('data-target') === targetId));
+                sections.forEach(s => s.classList.toggle('active', s.id === targetId));
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.getAttribute('data-target');
+                    activateTab(target);
+                    window.location.hash = target;
+                });
+            });
+
+            const hash = window.location.hash.replace('#', '');
+            if (hash && ['terms', 'privacy', 'disclosures'].includes(hash)) {
+                activateTab(hash);
+            }
+        });
+    </script>
+</body>
+</html>
