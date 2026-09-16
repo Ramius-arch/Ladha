@@ -817,30 +817,295 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const initHeroSwitcher = () => {
-        const tabs = document.querySelectorAll('.hero-switch-tab');
-        if (!tabs || tabs.length === 0) return;
+        
+    // ==========================================================================
+    // 9. PROJECT-WIDE SCROLL-BASED NAVIGATION ENGINE & POLICIES
+    // ==========================================================================
+    const initScrollNavigationEngine = () => {
+        const header = document.querySelector('.header');
+        const progressBar = document.getElementById('scroll-progress');
+        const floatingDock = document.getElementById('floating-scroll-dock');
+        const dockLabel = document.getElementById('dock-label');
+        const dockTopBtn = document.getElementById('dock-top-btn');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const sections = document.querySelectorAll('section[id]');
 
-        tabs.forEach((tab, idx) => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => {
-                    t.classList.remove('active');
-                    t.setAttribute('aria-selected', 'false');
+        const sectionMap = {
+            'hero': '01 // HERO',
+            'drops': '02 // DROPS',
+            'edit': '03 // THE EDIT',
+            'lookbook': '04 // LOOKBOOK',
+            'manifesto': '05 // MANIFESTO',
+            'order': '06 // PROTOCOL',
+            'feed': '07 // THE FEED'
+        };
+
+        let ticking = false;
+
+        const updateScrollMetrics = () => {
+            const currentY = window.scrollY;
+            const winHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+            const maxScroll = docHeight - winHeight;
+
+            // 1. Real-time Scroll Progress Bar
+            if (progressBar && maxScroll > 0) {
+                const progressPct = Math.min(100, Math.max(0, (currentY / maxScroll) * 100));
+                progressBar.style.width = `${progressPct.toFixed(1)}%`;
+            }
+
+            // 2. Header Docking State Transformation
+            if (header) {
+                if (currentY > 40) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+
+            // 3. Floating Quick Scroll Dock Visibility & Real-time Active Section Tracking
+            if (floatingDock) {
+                if (currentY > 260) {
+                    floatingDock.classList.add('visible');
+                } else {
+                    floatingDock.classList.remove('visible');
+                }
+            }
+
+            // 4. Deterministic Scrollspy Calculation
+            let currentSecId = 'hero';
+            const probeY = currentY + 180;
+            sections.forEach(sec => {
+                const top = sec.offsetTop;
+                const height = sec.offsetHeight;
+                if (probeY >= top && probeY < top + height) {
+                    currentSecId = sec.getAttribute('id');
+                }
+            });
+
+            if (currentY + winHeight >= docHeight - 60) {
+                currentSecId = 'feed';
+            }
+
+            if (dockLabel && sectionMap[currentSecId]) {
+                dockLabel.textContent = sectionMap[currentSecId];
+            }
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === `#${currentSecId}`) {
+                    link.classList.add('active');
+                } else if (href && href.startsWith('#')) {
+                    link.classList.remove('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateScrollMetrics();
+                    ticking = false;
                 });
-                tab.classList.add('active');
-                tab.setAttribute('aria-selected', 'true');
-                activeHeroIdx = idx;
-                updateHeroPieceUI(activeHeroIdx);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Back to top click handler
+        if (dockTopBtn) {
+            dockTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Section Scrollspy using IntersectionObserver
+        if ('IntersectionObserver' in window && sections.length > 0) {
+            const scrollspyObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const secId = entry.target.getAttribute('id');
+                        
+                        // Update floating dock label
+                        if (dockLabel && sectionMap[secId]) {
+                            dockLabel.textContent = sectionMap[secId];
+                        }
+
+                        // Update active state on nav links
+                        navLinks.forEach((link) => {
+                            const href = link.getAttribute('href');
+                            if (href === `#${secId}`) {
+                                link.classList.add('active');
+                            } else if (href.startsWith('#')) {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '-25% 0px -50% 0px',
+                threshold: 0.1
+            });
+
+            sections.forEach(sec => scrollspyObserver.observe(sec));
+        }
+
+        // Initial trigger
+        updateScrollMetrics();
+    };
+
+    // ==========================================================================
+    // 10. SINGLE-STAGE OPTICAL VIEWFINDER GARMENT SHOWCASE
+    // In-Place Look Switcher, Shutter Glitch Flash & Camera HUD Tracking
+    // ==========================================================================
+    const heroPieces = [
+        {
+            id: 'product-1',
+            name: 'Vintage Nike Colorblock Windbreaker',
+            category: 'VINTAGE STREETWEAR',
+            tags: ['GRADE A+ (9.5/10)', 'SIZE L • PIT-TO-PIT 24"'],
+            price: 'KES 3,500',
+            image: 'assets/products/product-1.jpg',
+            optic: 'LENS 50MM F/1.4',
+            shutter: '1/250S // ISO 400',
+            loc: 'LOC: GIKOMBA // NBO',
+            code: 'REF: LADHA-P01',
+            ambient: 'ambient-look-0'
+        },
+        {
+            id: 'product-2',
+            name: 'Vintage Levi\'s 501 Raw Denim',
+            category: 'HERITAGE DENIM',
+            tags: ['GRADE A (9.0/10)', 'WAIST 32 • INSEAM 32"'],
+            price: 'KES 4,200',
+            image: 'assets/products/product-2.jpg',
+            optic: 'LENS 35MM F/1.8',
+            shutter: '1/500S // ISO 200',
+            loc: 'LOC: TOI MARKET // NBO',
+            code: 'REF: LADHA-P02',
+            ambient: 'ambient-look-1'
+        },
+        {
+            id: 'product-5',
+            name: 'Carhartt Double-Knee Work Pants',
+            category: 'RUGGED WORKWEAR',
+            tags: ['HEAVYWEAR (9.2/10)', 'WAIST 34 • INSEAM 32"'],
+            price: 'KES 3,000',
+            image: 'assets/products/product-5.jpg',
+            optic: 'LENS 85MM F/1.4',
+            shutter: '1/160S // ISO 640',
+            loc: 'LOC: NGARA YARD // NBO',
+            code: 'REF: LADHA-P05',
+            ambient: 'ambient-look-2'
+        }
+    ];
+
+    const initHeroShowcase = () => {
+        const heroSection = document.getElementById('hero');
+        const tabs = document.querySelectorAll('.hero-piece-tab');
+        const viewfinderWrap = document.getElementById('hero-viewfinder-wrap');
+        const imgEl = document.getElementById('hero-piece-img');
+        const linkEl = document.getElementById('hero-piece-link');
+        const opticEl = document.getElementById('hero-hud-optic');
+        const shutterEl = document.getElementById('hero-hud-shutter');
+        const coordEl = document.getElementById('hero-hud-coord');
+        const codeEl = document.getElementById('hero-piece-code');
+        const catEl = document.getElementById('hero-piece-cat');
+        const titleEl = document.getElementById('hero-piece-title');
+        const tagsEl = document.getElementById('hero-piece-tags');
+        const priceEl = document.getElementById('hero-piece-price');
+        const ctaEl = document.getElementById('hero-piece-cta');
+        const quickViewBtn = document.getElementById('hero-quick-view-btn');
+        const quickAddBtn = document.getElementById('hero-quick-add-btn');
+
+        if (!heroSection || tabs.length === 0) return;
+
+        const switchLook = (idx) => {
+            const piece = heroPieces[idx];
+            if (!piece) return;
+
+            // 1. Update Tabs
+            tabs.forEach((tab, i) => {
+                const active = i === idx;
+                tab.classList.toggle('active', active);
+                tab.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+
+            // 2. Ambient Canvas Tint
+            heroSection.classList.remove('ambient-look-0', 'ambient-look-1', 'ambient-look-2');
+            heroSection.classList.add(piece.ambient);
+
+            // 3. Shutter Glitch Flash
+            if (viewfinderWrap) {
+                viewfinderWrap.classList.add('glitch-active');
+                setTimeout(() => {
+                    viewfinderWrap.classList.remove('glitch-active');
+                }, 240);
+            }
+
+            // 4. Update Garment Image & Telemetry
+            if (imgEl) {
+                imgEl.src = piece.image;
+                imgEl.alt = piece.name;
+            }
+            if (linkEl) linkEl.href = `product.html?id=${piece.id}`;
+            if (opticEl) opticEl.textContent = piece.optic;
+            if (shutterEl) shutterEl.textContent = piece.shutter;
+            if (coordEl) coordEl.textContent = piece.loc;
+            if (codeEl) codeEl.textContent = piece.code;
+
+            // 5. Update Metadata Specs
+            if (catEl) catEl.textContent = piece.category;
+            if (titleEl) {
+                titleEl.textContent = piece.name;
+                titleEl.href = `product.html?id=${piece.id}`;
+            }
+            if (tagsEl) {
+                tagsEl.innerHTML = piece.tags.map(t => `<span class="hero-spec-tag">${t}</span>`).join('');
+            }
+            if (priceEl) priceEl.textContent = piece.price;
+            if (ctaEl) ctaEl.href = `product.html?id=${piece.id}`;
+
+            if (quickViewBtn) quickViewBtn.setAttribute('data-product-id', piece.id);
+            if (quickAddBtn) quickAddBtn.setAttribute('data-product-id', piece.id);
+        };
+
+        // Attach tab listeners
+        tabs.forEach((tab, idx) => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchLook(idx);
             });
         });
 
-        // Initialize UI with active piece
-        updateHeroPieceUI(activeHeroIdx);
+        // Delicate Cursor Tracking on Viewfinder
+        if (viewfinderWrap) {
+            const crosshair = document.getElementById('viewfinder-crosshair');
+            viewfinderWrap.addEventListener('mousemove', (e) => {
+                if (!crosshair) return;
+                const rect = viewfinderWrap.getBoundingClientRect();
+                const x = e.clientX - rect.left - (rect.width / 2);
+                const y = e.clientY - rect.top - (rect.height / 2);
+                crosshair.style.transform = `translate(-50%, -50%) translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+
+            viewfinderWrap.addEventListener('mouseleave', () => {
+                if (crosshair) {
+                    crosshair.style.transform = `translate(-50%, -50%)`;
+                }
+            });
+        }
+
+        // Set Look 00 as default
+        switchLook(0);
     };
 
-    initHeroSwitcher();
+    initHeroShowcase();
+    initScrollNavigationEngine();
     hydrateStorefront();
     window.addEventListener('ladha-db-updated', hydrateStorefront);
+
 
     // --- Discrete Manager CRM Access Gate ---
     // 1. Keyboard Shortcut: Ctrl + Shift + A (or Cmd + Shift + A)

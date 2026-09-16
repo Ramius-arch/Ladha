@@ -12,7 +12,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&family=Permanent+Marker&family=Sedgwick+Ave+Display&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
     
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
@@ -75,9 +75,10 @@
             <a href="about.html">About</a>
             <a href="#" class="cart-trigger">Shopping Bag</a>
         </div>
+        <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
     </header>
 
-    <section id="hero" class="hero deep-canvas">
+        <section id="hero" class="hero deep-canvas">
         <div class="hero-watermark" aria-hidden="true">LADHA ARCHIVE 04 // SINGULAR TASTE</div>
         <div class="container hero-split">
             <!-- Left Column: Display Statement, Datum, & Archival Telemetry -->
@@ -88,19 +89,13 @@
                 </div>
 
                 <div class="hero-title-wrap">
-                    <h1 class="hero-title">
+                    <h1 class="hero-title hero-graffiti-title">
                         TASTE<br>
                         OVER<br>
                         TREND<span class="hero-accent-dot">.</span>
                     </h1>
-                    <!-- Street-Culture Signature Overlay (Mattis-Tier Parity) -->
-                    <div class="hero-street-signature" aria-hidden="true">
-                        <svg viewBox="0 0 280 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 48 C28 18, 55 12, 45 42 C38 65, 18 68, 28 82 C38 90, 75 45, 82 32 C88 20, 95 38, 92 52 C89 65, 102 38, 115 28 C128 18, 122 48, 130 55 C138 62, 155 35, 168 25 C180 15, 172 45, 182 52 C192 58, 210 32, 225 22 C238 12, 245 28, 252 48" />
-                            <path d="M35 76 C95 68, 165 72, 272 58" stroke-width="3.2" />
-                            <path d="M185 18 L192 12" stroke-width="2.5" />
-                            <path d="M122 18 L126 12" stroke-width="2.5" />
-                        </svg>
+                    <div class="hero-handwritten-tag" aria-hidden="true">
+                        <span>// singular taste only</span>
                     </div>
                 </div>
 
@@ -121,12 +116,27 @@
                     </a>
                 </div>
 
+                <!-- Archival Telemetry Datum Counter Strip -->
+                <div class="hero-telemetry" data-animate>
+                    <div class="telemetry-item">
+                        <span class="telemetry-val counter" data-target="240">240</span>
+                        <span class="telemetry-lbl">BALES INSPECTED</span>
+                    </div>
+                    <div class="telemetry-item">
+                        <span class="telemetry-val counter" data-target="6.2" data-suffix="%">6.2%</span>
+                        <span class="telemetry-lbl">CURATION RATE</span>
+                    </div>
+                    <div class="telemetry-item">
+                        <span class="telemetry-val">SAME-DAY</span>
+                        <span class="telemetry-lbl">NAIROBI DISPATCH</span>
+                    </div>
+                </div>
             </div>
 
             <!-- Right Column: Interactive Optical Viewfinder Garment Terminal -->
             <div class="hero-right" data-animate>
-                <div class="hero-terminal">
-                    <!-- Tactile Look Switcher Tabs -->
+                <div class="hero-terminal" id="hero-terminal">
+                    <!-- Tactile Look Switcher Bar -->
                     <div class="hero-switcher-bar" role="tablist" aria-label="Featured Archive Pieces">
                         <button class="hero-switch-tab hero-piece-tab active" data-hero-piece="0" role="tab" aria-selected="true">
                             <span class="tab-idx">LOOK 01</span>
@@ -144,28 +154,30 @@
 
                     <!-- Optical Viewfinder Card -->
                     <div class="hero-lead-card">
-                        <div class="hero-lead-img-wrap viewfinder-wrap">
+                        <div class="hero-lead-img-wrap viewfinder-wrap" id="hero-viewfinder-wrap">
                             <!-- Technical Camera HUD Overlays -->
                             <div class="viewfinder-corners"></div>
-                            <div class="viewfinder-crosshair"></div>
+                            <div class="viewfinder-crosshair" id="viewfinder-crosshair">
+                                <span class="viewfinder-crosshair-center"></span>
+                            </div>
                             <div class="viewfinder-hud-top">
                                 <span class="hud-rec"><span class="rec-dot"></span>REC [4K 60FPS]</span>
-                                <span class="hud-optic">LENS 50MM F/1.4</span>
-                                <span class="hud-shutter">1/250S // ISO 400</span>
+                                <span class="hud-optic" id="hero-hud-optic">LENS 50MM F/1.4</span>
+                                <span class="hud-shutter" id="hero-hud-shutter">1/250S // ISO 400</span>
                             </div>
                             <div class="viewfinder-hud-bottom">
-                                <span class="hud-coord">LOC: GIKOMBA // NBO</span>
+                                <span class="hud-coord" id="hero-hud-coord">LOC: GIKOMBA // NBO</span>
                                 <span class="hud-ref" id="hero-piece-code">REF: LADHA-P01</span>
                             </div>
 
-                            <!-- Tactile Physical Hangtag -->
-                            <div class="vintage-hangtag" id="hero-piece-hangtag">
-                                <span class="hangtag-eyelet"></span>
-                                <span class="hangtag-text">1-OF-1 ARCHIVE</span>
+                            <!-- Sleek Archival Badge Stamp (Unobtrusive) -->
+                            <div class="archival-mini-stamp" id="hero-piece-hangtag">
+                                <span class="stamp-dot"></span>
+                                <span class="stamp-text">1-OF-1 ARCHIVE</span>
                             </div>
 
                             <a href="product.html?id=product-1" id="hero-piece-link" style="display:block; width:100%; height:100%;">
-                                <img src="assets/products/product-1.jpg" alt="Featured Drop: 90s Nike Windbreaker" class="hero-lead-img" id="hero-piece-img">
+                                <img src="assets/products/product-1.jpg" alt="Vintage Nike Colorblock Windbreaker" class="hero-lead-img" id="hero-piece-img" loading="eager">
                             </a>
 
                             <div class="card-quick-actions">
@@ -179,17 +191,17 @@
                             <div class="hero-meta-col-left">
                                 <div class="hero-piece-category-row">
                                     <span class="hero-lead-cat" id="hero-piece-cat">VINTAGE STREETWEAR</span>
-                                    <span class="card-live-indicator" id="hero-piece-stock"><span class="card-live-dot"></span>1-OF-1 IN STOCK</span>
+                                    <span class="card-live-indicator"><span class="card-live-dot"></span>1-OF-1 IN STOCK</span>
                                 </div>
                                 <h3 class="hero-lead-title"><a href="product.html?id=product-1" id="hero-piece-title">Vintage Nike Colorblock Windbreaker</a></h3>
-                                <div class="hero-piece-spec-tags">
-                                    <span class="hero-spec-tag" id="hero-piece-grade">GRADE A+ (9.5/10)</span>
-                                    <span class="hero-spec-tag" id="hero-piece-size">SIZE L • PIT-TO-PIT 24"</span>
+                                <div class="hero-piece-spec-tags" id="hero-piece-tags">
+                                    <span class="hero-spec-tag">GRADE A+ (9.5/10)</span>
+                                    <span class="hero-spec-tag">SIZE L • PIT-TO-PIT 24"</span>
                                 </div>
                             </div>
                             <div class="hero-lead-price-col">
                                 <span class="hero-lead-price-val" id="hero-piece-price">KES 3,500</span>
-                                <a href="product.html?id=product-1" class="hero-lead-cta" id="hero-piece-cta">
+                                <a href="product.html?id=product-1" id="hero-piece-cta" class="hero-lead-cta">
                                     <span>SPECS</span>
                                     <span class="cta-arrow">&rarr;</span>
                                 </a>
@@ -199,9 +211,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Kinetic Infinite Marquee Ticker -->
+    </section><!-- Kinetic Infinite Marquee Ticker -->
     <div class="marquee-strip" aria-hidden="true">
         <div class="marquee-track">
             <div class="marquee-item">
@@ -732,5 +742,16 @@
             </div>
         </div>
     </footer>
+    <!-- Floating Scroll-Based Navigation Dock & Return-to-Top -->
+    <div class="floating-scroll-dock" id="floating-scroll-dock" aria-label="Page Navigation Dock">
+        <div class="dock-section-info">
+            <span class="dock-dot"></span>
+            <span class="dock-label" id="dock-label">01 // HERO</span>
+        </div>
+        <button class="dock-jump-btn" id="dock-top-btn" aria-label="Scroll back to top">
+            <span>TOP</span>
+            <span class="dock-arrow">↑</span>
+        </button>
+    </div>
 </body>
 </html>

@@ -46,7 +46,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
 }
 
@@ -55,7 +55,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-display);
   line-height: 1.5;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -3484,4 +3484,147 @@ body.cart-open {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+
+/* ==========================================================================
+   Project-Wide Scroll-Based Navigation Engine & Policies
+   ========================================================================== */
+
+section[id] {
+  scroll-margin-top: 85px;
+}
+
+.scroll-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.5px;
+  width: 0%;
+  background: #ff3800;
+  z-index: 105;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 8px rgba(255, 56, 0, 0.6);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(245, 244, 240, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header.scrolled {
+  background: rgba(245, 244, 240, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border-bottom-color: rgba(10, 10, 10, 0.14);
+}
+
+.header.scrolled .nav {
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+}
+
+.nav-links a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ff3800;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-links a.active {
+  color: #0a0a0a !important;
+  font-weight: 700;
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+  width: 100% !important;
+}
+
+/* Floating Scroll-Based Navigation Dock & Return-to-Top */
+.floating-scroll-dock {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 95;
+  display: flex;
+  align-items: center;
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 6px 4px 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-scroll-dock.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dock-section-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 10px;
+}
+
+.dock-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff3800;
+  box-shadow: 0 0 6px #ff3800;
+}
+
+.dock-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.dock-jump-btn {
+  background: #ffffff;
+  color: #0a0a0a;
+  border: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.dock-jump-btn:hover {
+  background: #ff3800;
+  color: #ffffff;
 }
