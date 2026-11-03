@@ -580,4 +580,40 @@ export default defineComponent({
   background: rgba(255, 255, 255, 0.65) !important;
   border-color: rgba(255, 255, 255, 0.9) !important;
 }
+
+:global([data-theme='dark']) .garment-catalog-card {
+  background: 
+    radial-gradient(circle at 90% 10%, rgba(212, 175, 55, 0.08), transparent 280px),
+    var(--surface-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 4px 16px -2px rgba(0, 0, 0, 0.4),
+    0 18px 40px -8px rgba(0, 0, 0, 0.65) !important;
+}
+
+:global([data-theme='dark']) .garment-catalog-card:hover {
+  background: 
+    radial-gradient(circle at 90% 10%, rgba(212, 175, 55, 0.18), transparent 300px),
+    var(--surface-card-hover) !important;
+  border-color: rgba(212, 175, 55, 0.45) !important;
+  box-shadow: 
+    inset 0 2px 1.5px 0 rgba(255, 255, 255, 0.22),
+    0 8px 28px -4px rgba(0, 0, 0, 0.7),
+    0 0 20px -2px rgba(212, 175, 55, 0.25) !important;
+  transform: translateY(-2px);
+}
+
+:global([data-theme='dark']) .pricing-summary-box {
+  background: rgba(255, 255, 255, 0.035) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+:global([data-theme='dark']) .garment-img-box {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
 </style>

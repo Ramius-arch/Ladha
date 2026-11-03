@@ -6,10 +6,10 @@
   --bg-deep: #050811;
   --bg-subtle: #080d1a;
   --surface-card: rgba(13, 19, 34, 0.78);
-  --surface-card-hover: rgba(19, 28, 49, 0.9);
-  --surface-header: rgba(7, 12, 24, 0.82);
+  --surface-card-hover: rgba(20, 29, 52, 0.90);
+  --surface-header: rgba(7, 12, 24, 0.84);
   --surface-sidebar: rgba(6, 10, 20, 0.92);
-  --surface-hover: rgba(255, 255, 255, 0.04);
+  --surface-hover: rgba(255, 255, 255, 0.05);
   
   --primary-color: #6366f1;
   --primary-glow: #818cf8;
@@ -25,24 +25,28 @@
   --text-muted: #64748b;
   
   /* Precision Specular Glass Borders */
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --border-glass-subtle: rgba(255, 255, 255, 0.04);
-  --border-glow: rgba(99, 102, 241, 0.35);
+  --border-glass: rgba(255, 255, 255, 0.10);
+  --border-glass-subtle: rgba(255, 255, 255, 0.05);
+  --border-glow: rgba(99, 102, 241, 0.4);
   
-  --table-header-bg: rgba(9, 14, 28, 0.85);
-  --table-row-hover: rgba(99, 102, 241, 0.06);
-  --input-bg: rgba(7, 12, 24, 0.8);
+  --table-header-bg: rgba(11, 17, 33, 0.85);
+  --table-row-hover: rgba(99, 102, 241, 0.08);
+  --input-bg: rgba(9, 15, 30, 0.8);
   --input-border: rgba(255, 255, 255, 0.12);
   
-  /* Apple Milled Glass Specular Shadow: Inset Hairline Bevel + Ambient Occlusion */
+  /* Apple Obsidian Specular Shadow: Bright Inset Bevel + Deep Ambient Spatial Occlusion */
   --card-shadow: 
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.09),
-    0 1px 2px 0 rgba(0, 0, 0, 0.4),
-    0 12px 36px -8px rgba(0, 0, 0, 0.65);
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 4px 16px -2px rgba(0, 0, 0, 0.5),
+    0 20px 48px -8px rgba(0, 0, 0, 0.75);
 
+  /* Deep Atmospheric Cosmic Substrate: Indigo Nebulae + Champagne Starlight + Deep Obsidian Base */
   --app-bg: 
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.12), transparent 70%),
-    radial-gradient(circle at 90% 20%, rgba(6, 182, 212, 0.05), transparent 400px),
+    radial-gradient(ellipse 90% 60% at 50% -8%, rgba(99, 102, 241, 0.22), transparent 75%),
+    radial-gradient(circle at 92% 22%, rgba(212, 175, 55, 0.09), transparent 480px),
+    radial-gradient(circle at 8% 68%, rgba(6, 182, 212, 0.07), transparent 520px),
+    radial-gradient(circle at 75% 90%, rgba(99, 102, 241, 0.08), transparent 560px),
     #050811;
 }
 
@@ -268,7 +272,20 @@ h2, h3, h4, .page-title, .section-title, .ant-page-header-heading-title, .ant-ty
 }
 
 .bespoke-glass-card:hover, .standard-card:hover, .bespoke-card:hover {
-  border-color: rgba(99, 102, 241, 0.25) !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+}
+
+[data-theme='dark'] .bespoke-glass-card:hover, 
+[data-theme='dark'] .standard-card:hover, 
+[data-theme='dark'] .bespoke-card:hover {
+  background: var(--surface-card-hover) !important;
+  border-color: rgba(129, 140, 248, 0.35) !important;
+  box-shadow: 
+    inset 0 2px 1.5px 0 rgba(255, 255, 255, 0.2), 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08), 
+    0 8px 32px -4px rgba(0, 0, 0, 0.7), 
+    0 0 24px -4px rgba(99, 102, 241, 0.16) !important;
+  transform: translateY(-2px);
 }
 
 [data-theme='light'] .bespoke-glass-card:hover, 

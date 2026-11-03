@@ -979,4 +979,51 @@ export default defineComponent({
   border-radius: 14px !important;
   box-shadow: inset 0 1px 1px #ffffff !important;
 }
+
+/* Dark Mode Obsidian Rules */
+:global([data-theme='dark']) .hero-card,
+:global(html[data-theme='dark']) .hero-card {
+  background: 
+    radial-gradient(circle at 12% 15%, rgba(99, 102, 241, 0.14), transparent 450px),
+    radial-gradient(circle at 88% 85%, rgba(212, 175, 55, 0.06), transparent 420px),
+    var(--surface-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 8px 32px -4px rgba(0, 0, 0, 0.6) !important;
+}
+
+:global([data-theme='dark']) .statement-card,
+:global([data-theme='dark']) .standard-card,
+:global([data-theme='dark']) .institutional-tabs {
+  background: 
+    radial-gradient(circle at 95% 5%, rgba(99, 102, 241, 0.07), transparent 400px),
+    var(--surface-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 4px 16px -2px rgba(0, 0, 0, 0.4),
+    0 18px 40px -8px rgba(0, 0, 0, 0.65) !important;
+}
+
+:global([data-theme='dark']) .diligence-telemetry-bay {
+  background: rgba(6, 10, 22, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+:global([data-theme='dark']) .calligraphic-quote {
+  color: rgba(255, 248, 235, 0.88) !important;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+}
+
+:global([data-theme='dark']) .simulator-box,
+:global([data-theme='dark']) .ratio-pill-card {
+  background: rgba(255, 255, 255, 0.035) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
 </style>

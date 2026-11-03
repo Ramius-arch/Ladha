@@ -530,16 +530,20 @@ export default defineComponent({
 }
 
 [data-theme='dark'] .nav-menu :deep(.ant-menu-item-selected) {
-  background-color: var(--primary-color) !important;
-  color: white !important;
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.24) 0%, rgba(99, 102, 241, 0.05) 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-left: 3.5px solid #818cf8 !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 2px 10px rgba(99, 102, 241, 0.25) !important;
+  border-radius: 8px !important;
 }
 
 [data-theme='dark'] .nav-menu :deep(.ant-menu-title-content a) {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 [data-theme='dark'] .nav-menu :deep(.ant-menu-item-selected .ant-menu-title-content a) {
-  color: white;
+  color: #ffffff;
 }
 
 @media (max-width: 480px) {

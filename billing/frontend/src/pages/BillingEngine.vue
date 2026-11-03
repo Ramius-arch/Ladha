@@ -390,4 +390,25 @@ export default defineComponent({
   border-radius: 14px !important;
   box-shadow: inset 0 1px 1px #ffffff !important;
 }
+
+:global([data-theme='dark']) .trial-balance-card,
+:global([data-theme='dark']) .bespoke-card {
+  background: 
+    radial-gradient(circle at 92% 8%, rgba(99, 102, 241, 0.08), transparent 400px),
+    var(--surface-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 4px 16px -2px rgba(0, 0, 0, 0.4),
+    0 18px 40px -8px rgba(0, 0, 0, 0.65) !important;
+}
+
+:global([data-theme='dark']) .intelligence-card,
+:global([data-theme='dark']) .intelligence-hero {
+  background: rgba(255, 255, 255, 0.035) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
 </style>

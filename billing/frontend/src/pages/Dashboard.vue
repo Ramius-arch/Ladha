@@ -45,17 +45,14 @@
             <span class="pulse-mini"></span> 99.98% NOMINAL
           </span>
         </div>
-        <div class="telemetry-divider"></div>
         <div class="telemetry-item">
           <span class="telemetry-label font-mono">DOUBLE-ENTRY LEDGER</span>
           <span class="telemetry-value text-amber-600 dark:text-amber-400 font-bold">BALANCED (0.00)</span>
         </div>
-        <div class="telemetry-divider"></div>
         <div class="telemetry-item">
           <span class="telemetry-label font-mono">SETTLEMENT RATE</span>
           <span class="telemetry-value text-emerald-600 dark:text-emerald-400 font-bold">100% VERIFIED</span>
         </div>
-        <div class="telemetry-divider"></div>
         <div class="telemetry-item">
           <span class="telemetry-label font-mono">SYNC LATENCY</span>
           <span class="telemetry-value text-indigo-600 dark:text-indigo-400 font-bold">18MS</span>
@@ -568,17 +565,23 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 14px;
+  gap: 12px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .hero-top-row {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
   }
   .hero-right {
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-glass-subtle);
   }
 }
 
@@ -587,11 +590,12 @@ export default defineComponent({
   align-items: center;
   gap: 10px;
   padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 9999px;
-  box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s ease;
 }
 
 .status-indicator-dot {
@@ -599,7 +603,7 @@ export default defineComponent({
   height: 8px;
   border-radius: 9999px;
   background: #10b981;
-  box-shadow: 0 0 8px #10b981;
+  box-shadow: 0 0 10px #10b981, 0 0 18px rgba(16, 185, 129, 0.4);
 }
 
 .status-pill-text {
@@ -610,14 +614,14 @@ export default defineComponent({
 .status-pill-label {
   font-size: 9px;
   font-weight: 800;
-  color: var(--text-muted);
+  color: #94a3b8;
   letter-spacing: 0.1em;
 }
 
 .status-pill-sub {
   font-size: 11px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #ffffff;
   letter-spacing: 0.02em;
 }
 
@@ -632,9 +636,9 @@ export default defineComponent({
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 8px 8px 16px;
+  padding: 7px 7px 7px 16px;
   border-radius: 9999px;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
@@ -642,31 +646,32 @@ export default defineComponent({
 }
 
 .hero-action-pill.primary {
-  background: #4338ca;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
   color: #ffffff;
-  border-color: rgba(99, 102, 241, 0.6);
-  box-shadow: 0 4px 14px -2px rgba(67, 56, 202, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: rgba(129, 140, 248, 0.4);
+  box-shadow: 0 4px 18px -2px rgba(99, 102, 241, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .hero-action-pill.primary:hover {
-  background: #3730a3;
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px -3px rgba(67, 56, 202, 0.45);
+  box-shadow: 0 8px 24px -2px rgba(99, 102, 241, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 .hero-action-pill.secondary {
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(16px);
-  color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.92);
-  box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.04);
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 
 .hero-action-pill.secondary:hover {
-  background: rgba(255, 255, 255, 0.96);
-  border-color: rgba(99, 102, 241, 0.3);
+  background: rgba(255, 255, 255, 0.11);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 8px 20px rgba(0, 0, 0, 0.45);
 }
 
 .pill-icon-circle {
@@ -685,8 +690,8 @@ export default defineComponent({
 }
 
 .hero-action-pill.secondary .pill-icon-circle {
-  background: rgba(15, 23, 42, 0.07);
-  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 .hero-title {
@@ -712,11 +717,12 @@ export default defineComponent({
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   gap: 16px;
-  background: var(--surface-hover);
-  padding: 14px 24px;
+  background: rgba(6, 10, 22, 0.65);
+  backdrop-filter: blur(20px);
+  padding: 14px 22px;
   border-radius: 14px;
   border: 1px solid var(--border-glass);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.04);
   margin-top: 24px;
   width: 100%;
 }
@@ -724,16 +730,33 @@ export default defineComponent({
 @media (max-width: 900px) {
   .hero-telemetry-bar {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
   }
-  .telemetry-divider {
-    display: none;
+}
+
+@media (max-width: 480px) {
+  .hero-telemetry-bar {
+    grid-template-columns: 1fr;
   }
 }
 
 .telemetry-item {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
+  position: relative;
+}
+
+@media (min-width: 901px) {
+  .telemetry-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: var(--border-glass-subtle);
+  }
 }
 
 .telemetry-label {
@@ -1379,6 +1402,48 @@ export default defineComponent({
   color: #475569 !important;
 }
 
+:global([data-theme='light']) .hero-status-pill {
+  background: rgba(255, 255, 255, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+}
+
+:global([data-theme='light']) .status-pill-label {
+  color: #64748b !important;
+}
+
+:global([data-theme='light']) .status-pill-sub {
+  color: #0a0f1d !important;
+}
+
+:global([data-theme='light']) .hero-action-pill.primary {
+  background: #4338ca !important;
+  border-color: rgba(99, 102, 241, 0.6) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px -2px rgba(67, 56, 202, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+:global([data-theme='light']) .hero-action-pill.primary:hover {
+  background: #3730a3 !important;
+}
+
+:global([data-theme='light']) .hero-action-pill.secondary {
+  background: rgba(255, 255, 255, 0.75) !important;
+  color: #0a0f1d !important;
+  border-color: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+}
+
+:global([data-theme='light']) .hero-action-pill.secondary:hover {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+}
+
+:global([data-theme='light']) .hero-action-pill.secondary .pill-icon-circle {
+  background: rgba(15, 23, 42, 0.07) !important;
+  color: #0a0f1d !important;
+}
+
 .badge-micro {
   display: inline-flex;
   align-items: center;
@@ -1400,5 +1465,150 @@ export default defineComponent({
   color: #1e293b !important;
   border: 1px solid rgba(255, 255, 255, 0.92) !important;
   box-shadow: inset 0 1px 0 #ffffff, 0 1px 3px rgba(15, 23, 42, 0.03) !important;
+}
+
+/* ==========================================================================
+   Apple visionOS Dark Obsidian — Bespoke Luminous Aesthetics
+   ========================================================================== */
+:global([data-theme='dark']) .hero-card,
+:global(html[data-theme='dark']) .hero-card {
+  background: 
+    radial-gradient(circle at 12% 15%, rgba(99, 102, 241, 0.14), transparent 450px),
+    radial-gradient(circle at 88% 85%, rgba(212, 175, 55, 0.06), transparent 420px),
+    var(--surface-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 8px 32px -4px rgba(0, 0, 0, 0.6) !important;
+}
+
+:global([data-theme='dark']) .calligraphic-quote {
+  color: rgba(255, 248, 235, 0.88) !important;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+}
+
+:global([data-theme='dark']) .kpi-card {
+  background: 
+    radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--accent) 15%, transparent), transparent 65%),
+    var(--surface-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.13),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 4px 16px -2px rgba(0, 0, 0, 0.4),
+    0 16px 36px -8px rgba(0, 0, 0, 0.6) !important;
+}
+
+:global([data-theme='dark']) .kpi-card:hover {
+  background: 
+    radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 70%),
+    var(--surface-card-hover) !important;
+  border-color: color-mix(in srgb, var(--accent) 55%, rgba(255, 255, 255, 0.25)) !important;
+  box-shadow: 
+    inset 0 2px 1.5px 0 rgba(255, 255, 255, 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 8px 28px -4px rgba(0, 0, 0, 0.7),
+    0 0 24px -4px color-mix(in srgb, var(--accent) 30%, transparent) !important;
+  transform: translateY(-3px) scale(1.002);
+}
+
+:global([data-theme='dark']) .kpi-icon-badge {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 12px !important;
+}
+
+:global([data-theme='dark']) .chart-panel,
+:global([data-theme='dark']) .table-panel,
+:global([data-theme='dark']) .actions-panel {
+  background: 
+    radial-gradient(circle at 95% 5%, rgba(99, 102, 241, 0.07), transparent 400px),
+    var(--surface-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 4px 16px -2px rgba(0, 0, 0, 0.4),
+    0 18px 40px -8px rgba(0, 0, 0, 0.65) !important;
+}
+
+:global([data-theme='dark']) .period-toggle {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 10px !important;
+  padding: 3px !important;
+}
+
+:global([data-theme='dark']) .period-btn {
+  color: #94a3b8 !important;
+}
+
+:global([data-theme='dark']) .period-btn.active {
+  background: rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-radius: 7px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+:global([data-theme='dark']) .forecast-banner {
+  background: rgba(99, 102, 241, 0.09) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(99, 102, 241, 0.25) !important;
+  border-radius: 12px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+:global([data-theme='dark']) .txn-row {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 12px !important;
+}
+
+:global([data-theme='dark']) .txn-row:hover {
+  background: rgba(255, 255, 255, 0.065) !important;
+  border-color: rgba(99, 102, 241, 0.45) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-1px) translateX(2px) !important;
+}
+
+:global([data-theme='dark']) .tile-btn {
+  background: rgba(255, 255, 255, 0.035) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 14px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+:global([data-theme='dark']) .tile-btn:hover {
+  background: rgba(255, 255, 255, 0.075) !important;
+  border-color: #818cf8 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 18px rgba(99, 102, 241, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-2px) !important;
+}
+
+:global([data-theme='dark']) .tile-primary {
+  background: rgba(99, 102, 241, 0.12) !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+}
+
+:global([data-theme='dark']) .tile-icon-box {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #818cf8 !important;
+  border-radius: 10px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+:global([data-theme='dark']) .health-card {
+  background: rgba(255, 255, 255, 0.035) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 12px !important;
 }
 </style>

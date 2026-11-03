@@ -168,3 +168,11 @@ Following user feedback regarding the light theme ("*I've noticed the current on
    - Replaced flat white overrides across `Dashboard.vue`, `ReportsAnalytics.vue`, `BillingEngine.vue`, `UsageTracker.vue`, and `App.vue`.
    - Preserved `#0a0f1d` Retina ink on all numbers and headers so legibility remains razor-sharp over frosted glass.
    - Vitest automated test suite: **3/3 passed (100% green)**.
+
+6. **Dark Mode Obsidian Aesthetic & Telemetry Grid Fix**:
+   - **Fix Grid Wrap Bug**: Removed standalone `<div class="telemetry-divider"></div>` elements that occupied grid columns and caused telemetry items to wrap awkwardly. Replaced with clean CSS `repeat(4, 1fr)` and responsive pseudo-hairline dividers.
+   - **Hero Executive Command Bar**: Re-engineered `.hero-right` for viewports <= 992px to form a balanced horizontal executive toolbar under the narrative instead of a stacked column.
+   - **Obsidian Glass Materials**: Eliminated light-mode hardcoded sticker backgrounds on `.hero-status-pill` and secondary buttons. Converted to translucent smoke glass (`rgba(255, 255, 255, 0.05)`) with pure white top specular hairlines (`inset 0 1px 0 rgba(255, 255, 255, 0.12)`).
+   - **Dynamic Chromatic Signatures**: Each KPI card in dark mode now projects its own distinct glowing radial aura in the upper corner corresponding to its brand metric color (Gold for GMV, Cyan for VIP Shoppers, Emerald for Basket Value, Amber for Dispatched Drops).
+   - **Cosmic Atmospheric Substrate**: Replaced flat dark void with rich multi-stop ambient celestial nebulae (indigo, champagne gold, azure cyan over `#050811`).
+   - **Sidebar Active Item Elevation**: Removed flat solid purple rectangle, replaced with luminous dark obsidian pill (`linear-gradient(90deg, rgba(99, 102, 241, 0.24) 0%, rgba(99, 102, 241, 0.05) 100%)`).
