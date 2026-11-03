@@ -1445,16 +1445,14 @@ export default defineComponent({
 [data-theme='light'] .table-panel,
 [data-theme='light'] .actions-panel,
 [data-theme='light'] .hero-card {
-  background: rgba(255, 255, 255, 0.74) !important;
+  background: rgba(255, 255, 255, 0.82) !important;
   backdrop-filter: blur(28px) saturate(190%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border: 1px solid rgba(226, 232, 240, 0.90) !important;
   border-radius: 20px !important;
   box-shadow: 
-    inset 0 1.5px 1px 0 #ffffff,
-    inset 0 0 0 1px rgba(255, 255, 255, 0.72),
-    0 2px 8px -2px rgba(15, 23, 42, 0.03),
-    0 18px 40px -8px rgba(15, 23, 42, 0.065) !important;
+    0 4px 18px -2px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 #ffffff !important;
 }
 
 [data-theme='light'] .kpi-card:hover,
@@ -1462,13 +1460,12 @@ export default defineComponent({
 [data-theme='light'] .chart-panel:hover,
 [data-theme='light'] .table-panel:hover,
 [data-theme='light'] .actions-panel:hover {
-  background: rgba(255, 255, 255, 0.88) !important;
-  border-color: rgba(99, 102, 241, 0.3) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(203, 213, 225, 1) !important;
   box-shadow: 
-    inset 0 2px 1.5px 0 #ffffff,
-    inset 0 0 0 1px rgba(255, 255, 255, 0.9),
-    0 4px 12px -2px rgba(15, 23, 42, 0.04),
-    0 22px 46px -8px rgba(15, 23, 42, 0.08) !important;
+    0 10px 30px -4px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 #ffffff !important;
+  transform: translateY(-2px);
 }
 
 [data-theme='light'] .hero-telemetry-bar {
@@ -1695,27 +1692,24 @@ export default defineComponent({
 
 [data-theme='dark'] .kpi-card {
   background: 
-    radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--accent) 15%, transparent), transparent 65%),
+    radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 60%),
     var(--surface-card) !important;
-  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   box-shadow: 
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.13),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.12),
     0 4px 16px -2px rgba(0, 0, 0, 0.4),
-    0 16px 36px -8px rgba(0, 0, 0, 0.6) !important;
+    0 16px 36px -8px rgba(0, 0, 0, 0.5) !important;
 }
 
 [data-theme='dark'] .kpi-card:hover {
   background: 
-    radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 70%),
+    radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 65%),
     var(--surface-card-hover) !important;
-  border-color: color-mix(in srgb, var(--accent) 55%, rgba(255, 255, 255, 0.25)) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
   box-shadow: 
-    inset 0 2px 1.5px 0 rgba(255, 255, 255, 0.22),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-    0 8px 28px -4px rgba(0, 0, 0, 0.7),
-    0 0 24px -4px color-mix(in srgb, var(--accent) 30%, transparent) !important;
-  transform: translateY(-3px) scale(1.002);
+    inset 0 2px 1.5px 0 rgba(255, 255, 255, 0.18),
+    0 12px 32px -4px rgba(0, 0, 0, 0.65) !important;
+  transform: translateY(-2px);
 }
 
 [data-theme='dark'] .kpi-icon-badge {

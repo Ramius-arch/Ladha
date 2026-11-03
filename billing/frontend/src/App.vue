@@ -21,6 +21,7 @@
             :trigger="null"
             collapsible
             class="main-sider"
+            :class="{ 'is-collapsed': collapsed }"
             :width="250"
             :collapsedWidth="74"
           >
@@ -150,7 +151,13 @@
             </div>
           </a-drawer>
 
-          <a-layout>
+          <a-layout
+            class="main-layout-body"
+            :class="{
+              'sider-collapsed': collapsed && !isMobile,
+              'sider-expanded': !collapsed && !isMobile
+            }"
+          >
             <a-layout-header :class="['main-header', { 'mobile-header': isMobile }]">
               <div class="header-left">
                 <a-tooltip :title="isMobile ? 'Open Navigation' : (collapsed ? 'Expand Sidebar (Ctrl+B)' : 'Collapse Sidebar (Ctrl+B)')">
@@ -481,17 +488,50 @@ export default defineComponent({
    Main Sider Layout & Ergonomics (Apple Obsidian & Frosted Ceramic Glass)
    ========================================================================== */
 .main-sider {
-  position: sticky !important;
+  position: fixed !important;
   top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
   height: 100vh !important;
+  width: 250px !important;
+  max-width: 250px !important;
+  min-width: 250px !important;
   overflow: hidden !important;
   background: var(--surface-sidebar) !important;
   backdrop-filter: blur(32px) saturate(190%) !important;
   -webkit-backdrop-filter: blur(32px) saturate(190%) !important;
   border-right: 1px solid var(--border-glass) !important;
   box-shadow: 1px 0 16px rgba(15, 23, 42, 0.04);
-  z-index: 100;
+  z-index: 1000 !important;
   transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, border-color 0.2s ease !important;
+}
+
+.main-sider.is-collapsed {
+  width: 74px !important;
+  max-width: 74px !important;
+  min-width: 74px !important;
+}
+
+.main-layout-body {
+  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: margin-left 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  background: var(--bg-deep) !important;
+}
+
+.main-layout-body.sider-expanded {
+  margin-left: 250px !important;
+}
+
+.main-layout-body.sider-collapsed {
+  margin-left: 74px !important;
+}
+
+@media (max-width: 991px) {
+  .main-layout-body {
+    margin-left: 0 !important;
+  }
 }
 
 .main-sider :deep(.ant-layout-sider-children) {
