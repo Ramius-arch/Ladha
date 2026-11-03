@@ -6,14 +6,14 @@
         <div class="hero-left">
           <div class="badge-micro mb-3">
             <span class="status-dot"></span>
-            <span>LEDGER ENGINE v2.4 &bull; REAL-TIME SYNC</span>
+            <span>{{ activeTenant.brand.engineVersion }} &bull; REAL-TIME SYNC</span>
           </div>
-          <h1 class="hero-title">Financial <span class="calligraphic-accent">Intelligence</span> Hub</h1>
+          <h1 class="hero-title">{{ activeTenant.terminology.heroTitle.split(' ')[0] }} <span class="calligraphic-accent">{{ activeTenant.terminology.heroTitle.split(' ').slice(1).join(' ') }}</span></h1>
           <p class="hero-narrative">
-            Autonomous settlement reconciliation, 1-of-1 archival streetwear locks, and real-time double-entry trial balance.
+            {{ activeTenant.terminology.heroNarrative }}
           </p>
           <p class="calligraphic-quote mt-2 mb-0">
-            "You handle the craft. We'll handle the count."
+            {{ activeTenant.brand.tagline }}
           </p>
         </div>
 
@@ -21,8 +21,8 @@
           <div class="hero-status-pill">
             <div class="status-indicator-dot"></div>
             <div class="status-pill-text">
-              <span class="status-pill-label font-mono">STATUTORY COMPLIANCE</span>
-              <span class="status-pill-sub font-mono">KRA eTIMS &bull; REAL-TIME SYNC</span>
+              <span class="status-pill-label font-mono">{{ activeTenant.brand.complianceBadge }}</span>
+              <span class="status-pill-sub font-mono">{{ activeTenant.brand.complianceSub }}</span>
             </div>
           </div>
           <div class="hero-actions-group">
@@ -42,7 +42,7 @@
         <div class="telemetry-item">
           <span class="telemetry-label font-mono">SYSTEM STATE</span>
           <span class="telemetry-value text-emerald-600 dark:text-emerald-400 font-bold">
-            <span class="pulse-mini"></span> 99.98% NOMINAL
+            <span class="pulse-mini"></span> {{ activeTenant.brand.systemState }}
           </span>
         </div>
         <div class="telemetry-item">
@@ -55,7 +55,7 @@
         </div>
         <div class="telemetry-item">
           <span class="telemetry-label font-mono">SYNC LATENCY</span>
-          <span class="telemetry-value text-indigo-600 dark:text-indigo-400 font-bold">18MS</span>
+          <span class="telemetry-value text-indigo-600 dark:text-indigo-400 font-bold">{{ activeTenant.brand.syncLatency }}</span>
         </div>
       </div>
     </div>
@@ -211,10 +211,10 @@
               </div>
               <div class="tile-text">
                 <div class="tile-header-row">
-                  <span class="tile-title">Audit Settlements</span>
-                  <span class="tile-badge-live">LIVE</span>
+                  <span class="tile-title">{{ activeTenant.actions.audit.title }}</span>
+                  <span class="tile-badge-live">{{ activeTenant.actions.audit.badge }}</span>
                 </div>
-                <span class="tile-desc">Reconcile M-Pesa STK</span>
+                <span class="tile-desc">{{ activeTenant.actions.audit.desc }}</span>
               </div>
             </button>
 
@@ -230,10 +230,10 @@
               </div>
               <div class="tile-text">
                 <div class="tile-header-row">
-                  <span class="tile-title">Sweep Holds</span>
-                  <span class="tile-badge-sec">1-of-1</span>
+                  <span class="tile-title">{{ activeTenant.actions.sweep.title }}</span>
+                  <span class="tile-badge-sec">{{ activeTenant.actions.sweep.badge }}</span>
                 </div>
-                <span class="tile-desc">Release expired locks</span>
+                <span class="tile-desc">{{ activeTenant.actions.sweep.desc }}</span>
               </div>
             </button>
 
@@ -249,10 +249,10 @@
               </div>
               <div class="tile-text">
                 <div class="tile-header-row">
-                  <span class="tile-title">Trial Balance</span>
-                  <span class="tile-badge-audit">0.00 VAR</span>
+                  <span class="tile-title">{{ activeTenant.actions.balance.title }}</span>
+                  <span class="tile-badge-audit">{{ activeTenant.actions.balance.badge }}</span>
                 </div>
-                <span class="tile-desc">Verify double-entry</span>
+                <span class="tile-desc">{{ activeTenant.actions.balance.desc }}</span>
               </div>
             </button>
 
@@ -268,17 +268,17 @@
               </div>
               <div class="tile-text">
                 <div class="tile-header-row">
-                  <span class="tile-title">Diligence Pack</span>
-                  <span class="tile-badge-pdf">PDF</span>
+                  <span class="tile-title">{{ activeTenant.actions.dossier.title }}</span>
+                  <span class="tile-badge-pdf">{{ activeTenant.actions.dossier.badge }}</span>
                 </div>
-                <span class="tile-desc">Bank Loans & VC Dossier</span>
+                <span class="tile-desc">{{ activeTenant.actions.dossier.desc }}</span>
               </div>
             </button>
           </div>
 
           <div class="health-card mt-6">
             <div class="health-top">
-              <span class="health-title font-mono">M-PESA LEDGER SYNC</span>
+              <span class="health-title font-mono">{{ activeTenant.terminology.syncTitle }}</span>
               <span class="health-val text-emerald-600 dark:text-emerald-400 font-mono">100.0% BALANCED</span>
             </div>
             <div class="health-bar-track">
@@ -296,6 +296,7 @@ import { defineComponent, ref, computed, watch, onMounted, onUnmounted } from 'v
 import { useRouter } from 'vue-router';
 import api from '../services/api';
 import { message } from 'ant-design-vue';
+import { useTenantConfig } from '../services/tenantConfig';
 import { Bar, Pie } from 'vue-chartjs';
 import { 
   ArrowUpOutlined, 
@@ -345,6 +346,7 @@ export default defineComponent({
   },
   setup() {
     const router = useRouter();
+    const { activeTenant, formatMoney } = useTenantConfig();
     const loading = ref(false);
     const revenuePeriod = ref('30d');
     const chartKey = ref(0);
@@ -365,49 +367,53 @@ export default defineComponent({
       forecast: null
     });
 
-    const stats = computed(() => [
-      {
-        title: revenuePeriod.value === '7d' ? '7-Day Sales GMV' : revenuePeriod.value === '30d' ? '30-Day Sales GMV' : '12-Month GMV Trajectory',
-        value: dashboardData.value.totalRevenue || 72250,
-        prefix: 'KES ',
-        suffix: '',
-        trend: 18.5,
-        icon: DollarCircleOutlined,
-        color: '#d4af37'
-      },
-      {
-        title: 'Nairobi VIP Shoppers',
-        value: dashboardData.value.activeCustomers || 12,
-        prefix: '',
-        suffix: '',
-        trend: 12.2,
-        icon: UsergroupAddOutlined,
-        color: '#06b6d4'
-      },
-      {
-        title: 'Average Basket Value',
-        value: dashboardData.value.averageOrderValue || Math.round((dashboardData.value.totalRevenue || 72250) / Math.max(1, dashboardData.value.ordersFulfilled || 12)),
-        prefix: 'KES ',
-        suffix: '',
-        trend: 14.8,
-        icon: CreditCardOutlined,
-        color: '#10b981'
-      },
-      {
-        title: revenuePeriod.value === '7d' ? '7-Day Drops Dispatched' : revenuePeriod.value === '30d' ? '30-Day Drops Dispatched' : 'Annual Drops Dispatched',
-        value: dashboardData.value.ordersFulfilled || 12,
-        prefix: '',
-        suffix: ' Drops',
-        trend: 25.0,
-        icon: FileDoneOutlined,
-        color: '#f59e0b'
-      }
-    ]);
+    const stats = computed(() => {
+      const presetCards = activeTenant.value.kpiCards || [];
+      const isLadha = activeTenant.value.key === 'd2c_archival';
+
+      const iconMap = {
+        'dollar-circle-outlined': DollarCircleOutlined,
+        'usergroup-add-outlined': UsergroupAddOutlined,
+        'credit-card-outlined': CreditCardOutlined,
+        'file-done-outlined': FileDoneOutlined
+      };
+
+      return presetCards.map((card, idx) => {
+        let val = card.value;
+        let prefix = card.prefix;
+        let suffix = card.suffix;
+        let title = card.title;
+
+        if (isLadha && dashboardData.value) {
+          if (idx === 0) {
+            val = dashboardData.value.totalRevenue || 113000;
+            title = revenuePeriod.value === '7d' ? '7-Day Sales GMV' : revenuePeriod.value === '30d' ? '30-Day Sales GMV' : '12-Month GMV Trajectory';
+          } else if (idx === 1) {
+            val = dashboardData.value.activeCustomers || 12;
+          } else if (idx === 2) {
+            val = dashboardData.value.averageOrderValue || 4036;
+          } else if (idx === 3) {
+            val = dashboardData.value.ordersFulfilled || 28;
+            title = revenuePeriod.value === '7d' ? '7-Day Drops Dispatched' : revenuePeriod.value === '30d' ? '30-Day Drops Dispatched' : 'Annual Drops Dispatched';
+          }
+        }
+
+        return {
+          title,
+          value: val,
+          prefix,
+          suffix,
+          trend: card.trend,
+          icon: iconMap[card.icon] || DollarCircleOutlined,
+          color: card.color
+        };
+      });
+    });
 
     const revenueChartData = ref({
       labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Current'],
       datasets: [{
-        label: 'Revenue (KES) · 30D Velocity',
+        label: 'Revenue · 30D Velocity',
         data: [14200, 18500, 22400, 26800, 31100],
         backgroundColor: '#4f46e5',
         hoverBackgroundColor: '#6366f1',
@@ -416,14 +422,14 @@ export default defineComponent({
       }]
     });
 
-    const usageChartData = ref({
-      labels: ['Archival Retail & Fashion', 'Courier & Logistics Tariffs', 'M-Pesa Merchant Settlement', 'SaaS API & Utilities'],
+    const usageChartData = computed(() => ({
+      labels: activeTenant.value.serviceMix?.labels || ['Archival Retail & Fashion', 'Courier & Logistics Tariffs', 'M-Pesa Merchant Settlement', 'SaaS API & Utilities'],
       datasets: [{
-        data: [45, 25, 20, 10],
-        backgroundColor: ['#4f46e5', '#06b6d4', '#10b981', '#f59e0b'],
+        data: activeTenant.value.serviceMix?.data || [45, 25, 20, 10],
+        backgroundColor: activeTenant.value.serviceMix?.colors || ['#4f46e5', '#06b6d4', '#10b981', '#f59e0b'],
         borderWidth: 0
       }]
-    });
+    }));
 
     const barChartOptions = {
       responsive: true,
@@ -667,7 +673,9 @@ export default defineComponent({
       goToCustomers,
       exportReport,
       CheckOutlined,
-      ClockCircleOutlined
+      ClockCircleOutlined,
+      activeTenant,
+      formatMoney
     };
   }
 });

@@ -33,9 +33,9 @@
                   </div>
                   <div v-if="!collapsed" class="logo-text-group">
                     <span class="logo-text">
-                      LADHA <span class="calligraphic-accent">Ledger</span>
+                      {{ activeTenant.brand.name }} <span class="calligraphic-accent">{{ activeTenant.brand.accent }}</span>
                     </span>
-                    <span class="logo-edition font-mono">FINANCIAL OS</span>
+                    <span class="logo-edition font-mono">{{ activeTenant.brand.edition }}</span>
                   </div>
                 </router-link>
                 <a-tooltip v-if="!collapsed" title="Collapse Sidebar (Ctrl+B)" placement="right">
@@ -120,9 +120,9 @@
                 </div>
                 <div class="logo-text-group">
                   <span class="logo-text">
-                    LADHA <span class="calligraphic-accent">Ledger</span>
+                    {{ activeTenant.brand.name }} <span class="calligraphic-accent">{{ activeTenant.brand.accent }}</span>
                   </span>
-                  <span class="logo-edition font-mono">FINANCIAL OS</span>
+                  <span class="logo-edition font-mono">{{ activeTenant.brand.edition }}</span>
                 </div>
               </router-link>
               <button type="button" class="drawer-close-btn" @click="drawerVisible = false" aria-label="Close Navigation">
@@ -178,6 +178,36 @@
               </div>
               <div class="header-right">
                 <a-space :size="isMobile ? 'small' : 'middle'">
+                  <!-- Multi-Industry White-Label Benchmark Preset Selector -->
+                  <a-dropdown placement="bottomRight" :trigger="['click']">
+                    <button type="button" class="preset-pill-trigger font-mono" :title="'Current SaaS Industry: ' + activeTenant.industryName">
+                      <span class="preset-pill-dot"></span>
+                      <span class="preset-pill-name">{{ activeTenant.brand.name }}</span>
+                      <span class="preset-pill-curr">{{ activeTenant.currency.code }}</span>
+                      <down-outlined class="text-[9px] opacity-60" />
+                    </button>
+                    <template #overlay>
+                      <a-menu @click="({ key }) => switchPreset(key)" class="preset-dropdown-menu">
+                        <div class="px-3 py-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 border-b border-slate-700/20">
+                          SaaS Industry Benchmark
+                        </div>
+                        <a-menu-item 
+                          v-for="p in availablePresets" 
+                          :key="p.key" 
+                          :class="{ 'font-bold bg-indigo-500/10 text-indigo-400': p.key === currentPresetKey }"
+                        >
+                          <div class="flex items-center justify-between gap-4 py-1">
+                            <div>
+                              <div class="text-xs font-bold">{{ p.name }}</div>
+                              <div class="text-[10px] text-slate-400">{{ p.industry }}</div>
+                            </div>
+                            <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-slate-500/15 font-bold">{{ p.currency }}</span>
+                          </div>
+                        </a-menu-item>
+                      </a-menu>
+                    </template>
+                  </a-dropdown>
+
                   <a-tooltip :title="isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
                     <div class="theme-toggle" @click="toggleTheme">
                       <component :is="isDark ? 'bulb-filled' : 'bulb-outlined'" class="header-icon" />
@@ -191,9 +221,9 @@
                   <a-dropdown placement="bottomRight">
                     <div class="user-profile cursor-pointer flex items-center gap-2">
                       <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-amber-600 to-indigo-600 flex items-center justify-center text-[10px] font-extrabold text-white shadow-sm ring-1 ring-white/20">
-                        LD
+                        {{ activeTenant.brand.name.slice(0, 2) }}
                       </div>
-                      <span v-if="!isMobile" class="user-name font-bold text-xs tracking-tight">Controller</span>
+                      <span v-if="!isMobile" class="user-name font-bold text-xs tracking-tight">{{ activeTenant.brand.avatarLabel }}</span>
                     </div>
                     <template #overlay>
                       <a-menu @click="handleUserMenuClick">
@@ -220,8 +250,8 @@
 
             <a-layout-footer class="main-footer">
               <div class="footer-content">
-                <span>LADHA Ledger v2.4 &bull; Quixora Solutions</span>
-                <span class="footer-tagline">1-of-1 Archival Streetwear. Instant M-Pesa Audited Settlements & KRA eTIMS.</span>
+                <span>{{ activeTenant.brand.name }} {{ activeTenant.brand.accent }} &bull; Quixora Solutions</span>
+                <span class="footer-tagline">{{ activeTenant.brand.tagline }}</span>
               </div>
             </a-layout-footer>
           </a-layout>
@@ -236,6 +266,7 @@ import { defineComponent, ref, computed, onMounted, onUnmounted, watch } from 'v
 import { useRoute, useRouter } from 'vue-router';
 import { isRouteLoading } from './router';
 import { theme, message } from 'ant-design-vue';
+import { useTenantConfig } from './services/tenantConfig';
 import Lenis from 'lenis';
 import {
   HomeOutlined,
@@ -258,6 +289,7 @@ import {
   AccountBookOutlined,
   UserOutlined,
   LogoutOutlined,
+  DownOutlined
 } from '@ant-design/icons-vue';
 
 export default defineComponent({
@@ -283,10 +315,12 @@ export default defineComponent({
     AccountBookOutlined,
     UserOutlined,
     LogoutOutlined,
+    DownOutlined,
   },
   setup() {
     const route = useRoute();
     const router = useRouter();
+    const { activeTenant, currentPresetKey, availablePresets, setPreset } = useTenantConfig();
     const windowWidth = ref(window.innerWidth);
     const savedCollapsed = typeof window !== 'undefined' ? localStorage.getItem('sidebar_collapsed') : null;
     const collapsed = ref(savedCollapsed !== null ? savedCollapsed === 'true' : window.innerWidth < 1280);
@@ -463,6 +497,11 @@ export default defineComponent({
       }
     });
 
+    const switchPreset = (key) => {
+      setPreset(key);
+      message.success(`Switched benchmark preset to ${activeTenant.value.brand.name} (${activeTenant.value.industryName})`);
+    };
+
     return {
       collapsed,
       drawerVisible,
@@ -478,6 +517,10 @@ export default defineComponent({
       toggleSidebar,
       isRouteLoading,
       router,
+      activeTenant,
+      currentPresetKey,
+      availablePresets,
+      switchPreset,
     };
   },
 });
@@ -1033,6 +1076,47 @@ export default defineComponent({
   font-size: 12px;
   color: #64748b;
   letter-spacing: 0.02em;
+}
+
+.preset-pill-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: var(--surface-hover);
+  border: 1px solid var(--border-glass);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.preset-pill-trigger:hover {
+  background: var(--surface-card-hover);
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.preset-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+}
+
+.preset-pill-name {
+  letter-spacing: 0.04em;
+}
+
+.preset-pill-curr {
+  font-size: 9px;
+  opacity: 0.65;
+  background: rgba(148, 163, 184, 0.15);
+  padding: 1px 4px;
+  border-radius: 4px;
 }
 
 .theme-toggle {
