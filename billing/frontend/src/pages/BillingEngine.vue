@@ -370,14 +370,24 @@ export default defineComponent({
 
 :global([data-theme='light']) .trial-balance-card,
 :global([data-theme='light']) .bespoke-card {
-  background: #ffffff !important;
-  border-color: rgba(15, 23, 42, 0.1) !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 24px -4px rgba(15, 23, 42, 0.06) !important;
+  background: rgba(255, 255, 255, 0.74) !important;
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border-radius: 20px !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 #ffffff,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.72),
+    0 2px 8px -2px rgba(15, 23, 42, 0.03),
+    0 18px 40px -8px rgba(15, 23, 42, 0.065) !important;
 }
 
 :global([data-theme='light']) .intelligence-card,
 :global([data-theme='light']) .intelligence-hero {
-  background: #f8fafc !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
+  background: rgba(255, 255, 255, 0.58) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border-radius: 14px !important;
+  box-shadow: inset 0 1px 1px #ffffff !important;
 }
 </style>

@@ -541,14 +541,27 @@ export default defineComponent({
 }
 
 :global([data-theme='light']) .garment-catalog-card {
-  background: #ffffff !important;
-  border: 1px solid rgba(15, 23, 42, 0.1) !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 16px -4px rgba(15, 23, 42, 0.05) !important;
+  background: rgba(255, 255, 255, 0.74) !important;
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border-radius: 20px !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 #ffffff,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.72),
+    0 2px 8px -2px rgba(15, 23, 42, 0.03),
+    0 18px 40px -8px rgba(15, 23, 42, 0.065) !important;
 }
 
 :global([data-theme='light']) .garment-catalog-card:hover {
-  border-color: rgba(184, 134, 11, 0.5) !important;
-  box-shadow: 0 10px 24px -4px rgba(15, 23, 42, 0.12) !important;
+  background: rgba(255, 255, 255, 0.90) !important;
+  border-color: rgba(184, 134, 11, 0.45) !important;
+  box-shadow: 
+    inset 0 2px 1.5px 0 #ffffff,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.9),
+    0 4px 12px -2px rgba(15, 23, 42, 0.04),
+    0 22px 46px -8px rgba(15, 23, 42, 0.08) !important;
+  transform: translateY(-2px);
 }
 
 :global([data-theme='light']) .kpi-val {
@@ -556,12 +569,15 @@ export default defineComponent({
 }
 
 :global([data-theme='light']) .pricing-summary-box {
-  background: #f8fafc !important;
-  border-color: rgba(15, 23, 42, 0.1) !important;
+  background: rgba(255, 255, 255, 0.58) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border-radius: 14px !important;
+  box-shadow: inset 0 1px 1px #ffffff !important;
 }
 
 :global([data-theme='light']) .garment-img-box {
-  background: #f1f5f9 !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
+  background: rgba(255, 255, 255, 0.65) !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
 }
 </style>

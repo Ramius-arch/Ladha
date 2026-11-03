@@ -780,8 +780,8 @@ export default defineComponent({
 }
 
 .hero-card {
-  padding: 28px 32px;
-  border-radius: 12px !important;
+  padding: 32px 36px;
+  border-radius: 20px !important;
 }
 
 .hero-title {
@@ -923,7 +923,7 @@ export default defineComponent({
 }
 
 .standard-card, .statement-card {
-  border-radius: 12px !important;
+  border-radius: 20px !important;
   background: var(--surface-card) !important;
   border: 1px solid var(--border-glass) !important;
 }
@@ -933,19 +933,30 @@ export default defineComponent({
   position: relative;
 }
 
-/* Light Mode High-Contrast Rules */
+/* Light Mode Frosted Ceramic Glass Rules */
 :global([data-theme='light']) .hero-card,
 :global([data-theme='light']) .statement-card,
 :global([data-theme='light']) .standard-card,
 :global([data-theme='light']) .institutional-tabs {
-  background: #ffffff !important;
-  border-color: rgba(15, 23, 42, 0.1) !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 24px -4px rgba(15, 23, 42, 0.06) !important;
+  background: rgba(255, 255, 255, 0.74) !important;
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border-radius: 20px !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 #ffffff,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.72),
+    0 2px 8px -2px rgba(15, 23, 42, 0.03),
+    0 18px 40px -8px rgba(15, 23, 42, 0.065) !important;
 }
 
 :global([data-theme='light']) .diligence-telemetry-bay {
-  background: #f1f5f9 !important;
-  border-color: rgba(15, 23, 42, 0.1) !important;
+  background: rgba(255, 255, 255, 0.52) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.03) !important;
+  border-radius: 14px !important;
 }
 
 :global([data-theme='light']) .statement-table td {
@@ -962,7 +973,10 @@ export default defineComponent({
 
 :global([data-theme='light']) .simulator-box,
 :global([data-theme='light']) .ratio-pill-card {
-  background: #f8fafc !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
+  background: rgba(255, 255, 255, 0.62) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border-radius: 14px !important;
+  box-shadow: inset 0 1px 1px #ffffff !important;
 }
 </style>

@@ -336,9 +336,9 @@
     "semantic_hash": "ac96fa81e8dd4224012bce81068fe169"
   },
   "billing/frontend/src/App.vue": {
-    "mtime": 1793716358.541862,
-    "seen": 1793716469.9175348,
-    "ast_hash": "a43ef1a12fa385ecfec2220670f3c6f3",
+    "mtime": 1793719041.262599,
+    "seen": 1793719088.5855625,
+    "ast_hash": "d04305a2543f80bd8801bb8f2ac7d5c7",
     "semantic_hash": ""
   },
   "billing/frontend/src/components/AnimatedNumber.vue": {
@@ -372,27 +372,27 @@
     "semantic_hash": ""
   },
   "billing/frontend/src/components/PaymentStatus.vue": {
-    "mtime": 1793701282.2492924,
-    "seen": 1793701655.841141,
-    "ast_hash": "a5b833409a9cf5d3b55aad2c57714798",
+    "mtime": 1793718968.2643492,
+    "seen": 1793719088.5855625,
+    "ast_hash": "c0a89cafcd74ae05fc2561034f0f4dbf",
     "semantic_hash": ""
   },
   "billing/frontend/src/components/Reports.vue": {
-    "mtime": 1793701282.2523532,
-    "seen": 1793701655.841141,
-    "ast_hash": "d911924cb02cca201b8cbb9163b776ff",
+    "mtime": 1793718944.6894646,
+    "seen": 1793719088.5855625,
+    "ast_hash": "b83760bb55ef787b31a7dc1660a9f64f",
     "semantic_hash": ""
   },
   "billing/frontend/src/components/RevenueSummary.vue": {
-    "mtime": 1793701282.2554097,
-    "seen": 1793701655.841141,
-    "ast_hash": "da94bc34950b9f2327a601ba92e7b40c",
+    "mtime": 1793718953.0899732,
+    "seen": 1793719088.5855625,
+    "ast_hash": "af15caa80c201c04dd444319f6b556d4",
     "semantic_hash": ""
   },
   "billing/frontend/src/components/UsageTrendChart.vue": {
-    "mtime": 1793701282.2584631,
-    "seen": 1793701655.841141,
-    "ast_hash": "e82af358a17d8f768ae8c4f327ffc8ce",
+    "mtime": 1793718960.7948308,
+    "seen": 1793719088.5855625,
+    "ast_hash": "39c487e7cd0926ce13e0847eac0fe04f",
     "semantic_hash": ""
   },
   "billing/frontend/src/components/customer.vue": {
@@ -420,9 +420,9 @@
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/Customers.vue": {
-    "mtime": 1793710530.5352595,
-    "seen": 1793710614.2439096,
-    "ast_hash": "6b469a7f7d3f33d6d7762f54b15e4245",
+    "mtime": 1793718609.8702216,
+    "seen": 1793719088.5855625,
+    "ast_hash": "f0e37064c954403543ffc153b8923181",
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/Dashboard.vue": {
@@ -432,21 +432,21 @@
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/HelpCenter.vue": {
-    "mtime": 1780771552.1855829,
-    "seen": 1792219626.5262733,
-    "ast_hash": "3541a3dc823a7eacbebbcba18c053fd8",
-    "semantic_hash": "3541a3dc823a7eacbebbcba18c053fd8"
+    "mtime": 1793718509.8123863,
+    "seen": 1793719088.5855625,
+    "ast_hash": "5cf25488628677cec88f77cc3ecb41b5",
+    "semantic_hash": ""
   },
   "billing/frontend/src/pages/InvoiceDetail.vue": {
-    "mtime": 1793692554.6215858,
-    "seen": 1793694732.117621,
-    "ast_hash": "a55e989fc1b7b5b10a04c2291a8c35ec",
+    "mtime": 1793718829.6308908,
+    "seen": 1793719088.5855625,
+    "ast_hash": "e51ccf536b98db6fd714f6b79b65d125",
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/InvoiceGenerator.vue": {
-    "mtime": 1793710513.4469333,
-    "seen": 1793710614.2439096,
-    "ast_hash": "835697ce073d7668b2dbe4878dda450f",
+    "mtime": 1793718722.3803945,
+    "seen": 1793719088.5855625,
+    "ast_hash": "12ef112255b6b8417d9d4feea5428420",
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/LandingPage.vue": {
@@ -456,10 +456,10 @@
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/Login.vue": {
-    "mtime": 1767980812.202814,
-    "seen": 1792219626.5272954,
-    "ast_hash": "1153804f69ae6713fefee5312614ff81",
-    "semantic_hash": "1153804f69ae6713fefee5312614ff81"
+    "mtime": 1793718425.3381453,
+    "seen": 1793719088.5855625,
+    "ast_hash": "e32df42d7519aa8794e0ad37d644cc47",
+    "semantic_hash": ""
   },
   "billing/frontend/src/pages/NotFound.vue": {
     "mtime": 1793701282.2693224,
@@ -468,9 +468,9 @@
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/Notifications.vue": {
-    "mtime": 1793701282.2713406,
-    "seen": 1793701655.841141,
-    "ast_hash": "f270f8860942d4174184d760a0ab940b",
+    "mtime": 1793718532.2593052,
+    "seen": 1793719088.5855625,
+    "ast_hash": "a77aefe4dcf986b43f868424c082844e",
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/Offline.vue": {
@@ -480,22 +480,22 @@
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/PaymentProcessing.vue": {
-    "mtime": 1793712650.5426683,
-    "seen": 1793712784.4147303,
-    "ast_hash": "c9981055ddbf7b43ef025f20a0e5e240",
+    "mtime": 1793718850.7455256,
+    "seen": 1793719088.5855625,
+    "ast_hash": "e5bc85b8db1ad9252227c531207c2d92",
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/ProfileSettings.vue": {
-    "mtime": 1793701282.2783377,
-    "seen": 1793701655.841141,
-    "ast_hash": "e43766b53bbcd66eb1a86217ce5e7606",
+    "mtime": 1793718475.435407,
+    "seen": 1793719088.5855625,
+    "ast_hash": "c026beebe2e0855a0e425961493e7aaf",
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/Register.vue": {
-    "mtime": 1767980817.3275018,
-    "seen": 1792219626.5272954,
-    "ast_hash": "c0848607f91b1a3c31f8fd707cc037e9",
-    "semantic_hash": "c0848607f91b1a3c31f8fd707cc037e9"
+    "mtime": 1793718454.389508,
+    "seen": 1793719088.5855625,
+    "ast_hash": "7691d0055e39afa14d0ea940fa0ccad4",
+    "semantic_hash": ""
   },
   "billing/frontend/src/pages/ReportsAnalytics.vue": {
     "mtime": 1793716326.301888,
@@ -528,9 +528,9 @@
     "semantic_hash": ""
   },
   "billing/frontend/src/services/mockData.js": {
-    "mtime": 1793692554.623846,
-    "seen": 1793694732.117621,
-    "ast_hash": "8b659fe2dd605357444cbbf221d28afa",
+    "mtime": 1793718901.1874216,
+    "seen": 1793719088.5855625,
+    "ast_hash": "d84fc405442bdff20b1abecf5a85dddb",
     "semantic_hash": ""
   },
   "billing/frontend/src/tests/App.test.js": {
@@ -1410,9 +1410,9 @@
     "semantic_hash": ""
   },
   "DEVLOG.md": {
-    "mtime": 1793717585.1106577,
-    "seen": 1793717669.8455114,
-    "ast_hash": "b7612839e1c3331737714210dec2afe7",
+    "mtime": 1793719007.0999658,
+    "seen": 1793719088.5855625,
+    "ast_hash": "84c2ee22d067ea31261e1b7d7c16badc",
     "semantic_hash": ""
   },
   "billing/backend/services/commerce/etimsInvoiceService.js": {

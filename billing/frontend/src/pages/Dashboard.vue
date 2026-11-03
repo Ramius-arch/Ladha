@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-page" :data-loading="loading">
-    <!-- 1. Executive Narrative Hero Banner (Editorial Swiss HUD) -->
+    <!-- 1. Executive Narrative Hero Banner (Apple visionOS / Spatial Light HUD) -->
     <div class="hero-card bespoke-glass-card mb-6">
       <div class="hero-top-row">
         <div class="hero-left">
@@ -15,6 +15,26 @@
           <p class="calligraphic-quote mt-2 mb-0">
             "You handle the craft. We'll handle the count."
           </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-status-pill">
+            <div class="status-indicator-dot"></div>
+            <div class="status-pill-text">
+              <span class="status-pill-label font-mono">STATUTORY COMPLIANCE</span>
+              <span class="status-pill-sub font-mono">KRA eTIMS &bull; REAL-TIME SYNC</span>
+            </div>
+          </div>
+          <div class="hero-actions-group">
+            <button class="hero-action-pill primary" @click="goToCreateInvoice">
+              <span>New Tax Invoice</span>
+              <span class="pill-icon-circle"><plus-outlined /></span>
+            </button>
+            <button class="hero-action-pill secondary" @click="exportReport">
+              <span>Export Audit</span>
+              <span class="pill-icon-circle"><export-outlined /></span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -525,10 +545,10 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 28px 32px;
+  padding: 32px 36px;
   background: var(--surface-card) !important;
   border: 1px solid var(--border-glass) !important;
-  border-radius: 12px !important;
+  border-radius: 20px !important;
   margin-bottom: 24px;
 }
 
@@ -537,10 +557,136 @@ export default defineComponent({
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  gap: 24px;
 }
 
 .hero-left {
-  max-width: 720px;
+  max-width: 680px;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .hero-top-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-right {
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+.hero-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 9999px;
+  box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.status-indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.status-pill-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-pill-label {
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.status-pill-sub {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.hero-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 8px 8px 16px;
+  border-radius: 9999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid;
+}
+
+.hero-action-pill.primary {
+  background: #4338ca;
+  color: #ffffff;
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 4px 14px -2px rgba(67, 56, 202, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.hero-action-pill.primary:hover {
+  background: #3730a3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -3px rgba(67, 56, 202, 0.45);
+}
+
+.hero-action-pill.secondary {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.92);
+  box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.hero-action-pill.secondary:hover {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.pill-icon-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.hero-action-pill.primary .pill-icon-circle {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.hero-action-pill.secondary .pill-icon-circle {
+  background: rgba(15, 23, 42, 0.07);
+  color: var(--text-primary);
 }
 
 .hero-title {
@@ -563,15 +709,15 @@ export default defineComponent({
 
 .hero-telemetry-bar {
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   background: var(--surface-hover);
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 14px 24px;
+  border-radius: 14px;
   border: 1px solid var(--border-glass);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
-  margin-top: 20px;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  margin-top: 24px;
   width: 100%;
 }
 
@@ -646,22 +792,23 @@ export default defineComponent({
 .kpi-card {
   position: relative;
   overflow: hidden;
-  padding: 20px 22px;
+  padding: 22px 24px;
   background: var(--surface-card) !important;
   border: 1px solid var(--border-glass) !important;
-  border-radius: 12px !important;
+  border-radius: 20px !important;
   box-shadow: var(--card-shadow) !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 148px;
-  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
-              border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.26s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.26s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.26s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .kpi-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.002);
   border-color: rgba(99, 102, 241, 0.35) !important;
 }
 
@@ -764,7 +911,7 @@ export default defineComponent({
   padding: 28px 32px;
   background: var(--surface-card) !important;
   border: 1px solid var(--border-glass) !important;
-  border-radius: 10px !important;
+  border-radius: 20px !important;
 }
 
 .panel-header {
@@ -1069,15 +1216,39 @@ export default defineComponent({
 :global([data-theme='light']) .table-panel,
 :global([data-theme='light']) .actions-panel,
 :global([data-theme='light']) .hero-card {
-  background: #ffffff !important;
-  border-color: rgba(15, 23, 42, 0.1) !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 24px -4px rgba(15, 23, 42, 0.06) !important;
+  background: rgba(255, 255, 255, 0.74) !important;
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border-radius: 20px !important;
+  box-shadow: 
+    inset 0 1.5px 1px 0 #ffffff,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.72),
+    0 2px 8px -2px rgba(15, 23, 42, 0.03),
+    0 18px 40px -8px rgba(15, 23, 42, 0.065) !important;
+}
+
+:global([data-theme='light']) .kpi-card:hover,
+:global([data-theme='light']) .hero-card:hover,
+:global([data-theme='light']) .chart-panel:hover,
+:global([data-theme='light']) .table-panel:hover,
+:global([data-theme='light']) .actions-panel:hover {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(99, 102, 241, 0.3) !important;
+  box-shadow: 
+    inset 0 2px 1.5px 0 #ffffff,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.9),
+    0 4px 12px -2px rgba(15, 23, 42, 0.04),
+    0 22px 46px -8px rgba(15, 23, 42, 0.08) !important;
 }
 
 :global([data-theme='light']) .hero-telemetry-bar {
-  background: #f1f5f9 !important;
-  border: 1px solid rgba(15, 23, 42, 0.1) !important;
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.52) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  border-radius: 14px !important;
 }
 
 :global([data-theme='light']) .telemetry-label {
@@ -1085,23 +1256,72 @@ export default defineComponent({
 }
 
 :global([data-theme='light']) .telemetry-divider {
-  background: rgba(15, 23, 42, 0.12) !important;
+  background: rgba(15, 23, 42, 0.1) !important;
 }
 
 :global([data-theme='light']) .calligraphic-quote {
   color: #334155 !important;
 }
 
-:global([data-theme='light']) .txn-row {
+:global([data-theme='light']) .kpi-icon-badge {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.03) !important;
+  border-radius: 12px !important;
+}
+
+:global([data-theme='light']) .trend-badge.trend-up {
+  background: rgba(16, 185, 129, 0.12) !important;
+  border: 1px solid rgba(16, 185, 129, 0.25) !important;
+  color: #059669 !important;
+  border-radius: 9999px !important;
+}
+
+:global([data-theme='light']) .trend-badge.trend-down {
+  background: rgba(244, 63, 94, 0.12) !important;
+  border: 1px solid rgba(244, 63, 94, 0.25) !important;
+  color: #e11d48 !important;
+  border-radius: 9999px !important;
+}
+
+:global([data-theme='light']) .period-toggle {
+  background: rgba(15, 23, 42, 0.04) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  border-radius: 10px !important;
+  padding: 3px !important;
+}
+
+:global([data-theme='light']) .period-btn.active {
   background: #ffffff !important;
-  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  color: #0a0f1d !important;
+  font-weight: 700 !important;
+  border-radius: 7px !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08), inset 0 1px 0 #ffffff !important;
+}
+
+:global([data-theme='light']) .forecast-banner {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  border-radius: 12px !important;
+  box-shadow: inset 0 1px 1px #ffffff !important;
+}
+
+:global([data-theme='light']) .txn-row {
+  background: rgba(255, 255, 255, 0.58) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+  border-radius: 12px !important;
 }
 
 :global([data-theme='light']) .txn-row:hover {
-  background: #f8fafc !important;
+  background: rgba(255, 255, 255, 0.92) !important;
   border-color: rgba(99, 102, 241, 0.35) !important;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05) !important;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06), inset 0 1px 0 #ffffff !important;
+  transform: translateY(-1px) translateX(2px) !important;
 }
 
 :global([data-theme='light']) .txn-time {
@@ -1110,25 +1330,31 @@ export default defineComponent({
 }
 
 :global([data-theme='light']) .tile-btn {
-  background: #f8fafc !important;
-  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  background: rgba(255, 255, 255, 0.62) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border-radius: 14px !important;
+  box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.02) !important;
 }
 
 :global([data-theme='light']) .tile-btn:hover {
-  background: #ffffff !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   border-color: #4338ca !important;
-  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.08) !important;
+  box-shadow: 0 6px 18px rgba(67, 56, 202, 0.1), inset 0 1px 0 #ffffff !important;
+  transform: translateY(-2px) !important;
 }
 
 :global([data-theme='light']) .tile-primary {
-  background: #eef2ff !important;
-  border-color: rgba(67, 56, 202, 0.25) !important;
+  background: rgba(238, 242, 255, 0.75) !important;
+  border-color: rgba(67, 56, 202, 0.28) !important;
 }
 
 :global([data-theme='light']) .tile-icon-box {
-  background: #ffffff !important;
-  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 1) !important;
   color: #4338ca !important;
+  border-radius: 10px !important;
+  box-shadow: inset 0 1px 1px #ffffff, 0 2px 5px rgba(0, 0, 0, 0.03) !important;
 }
 
 :global([data-theme='light']) .tile-title {
@@ -1142,8 +1368,11 @@ export default defineComponent({
 }
 
 :global([data-theme='light']) .health-card {
-  background: #f8fafc !important;
-  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  background: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  border-radius: 12px !important;
+  box-shadow: inset 0 1px 1px #ffffff !important;
 }
 
 :global([data-theme='light']) .health-title {
@@ -1153,8 +1382,8 @@ export default defineComponent({
 .badge-micro {
   display: inline-flex;
   align-items: center;
-  padding: 2px 7px;
-  border-radius: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-size: 10px;
   font-weight: 700;
@@ -1166,8 +1395,10 @@ export default defineComponent({
 
 :global([data-theme='light']) .badge-micro,
 :global(html[data-theme='light']) .badge-micro {
-  background: #f1f5f9 !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(12px) !important;
   color: #1e293b !important;
-  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  box-shadow: inset 0 1px 0 #ffffff, 0 1px 3px rgba(15, 23, 42, 0.03) !important;
 }
 </style>

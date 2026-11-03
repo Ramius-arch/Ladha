@@ -1,12 +1,12 @@
 # Graph Report - Storefront  (2026-11-03)
 
 ## Corpus Check
-- 161 files · ~586,705 words
+- 161 files · ~589,877 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 19 file(s) not represented in the graph (top: (none) 6, .css 6, .toml 2)
 
 ## Summary
-- 998 nodes · 1344 edges · 113 communities (81 shown, 32 thin omitted)
+- 1000 nodes · 1353 edges · 110 communities (78 shown, 32 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 69 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
@@ -87,7 +87,7 @@
 - Ladha Storefront Product View
 - ConfigController.js
 - storefront/README.md
-- ant-design-vue
+- LandingPage.vue
 - start-dev.js
 - etimsInvoiceService.js
 - verify-all-pages.js
@@ -96,27 +96,24 @@
 - ReconciliationService
 - ledger.js
 - apply-ladha-ui-refactor.js
-- audit_telecom_all.js
+- ref_fs
 - check-assets.js
 - update-ui-to-ladha-commerce.js
 - fix-dashboard-tags.js
 - fix-billing-engine.js
 - fix-payment-processing.js
 - Frontend Performance, Router Stability, & Commerce Invariants
+- find_telecom.js
 - ref_path
-- ref_fs
 - sms_service.js
 - patch-frontend.js
 - checkoutService.js
 - health.routes.js
-- devDependencies
 - app.test.js
 - devDependencies
 - PlanController.js
 - scripts
-- scripts
 - duka.routes.js
-- fix-usagetracker-icons.js
 - patch-api-client.js
 - reports.routes.js
 
@@ -124,16 +121,16 @@
 1. `clearCache()` - 24 edges
 2. `sequelize` - 23 edges
 3. `vue` - 23 edges
-4. `LadhaAmbientPlaylistEngine` - 19 edges
-5. `LADHA_PRODUCTS` - 17 edges
-6. `ErrorResponse` - 15 edges
-7. `express` - 15 edges
-8. `@ant-design/icons-vue` - 14 edges
-9. `ant-design-vue` - 14 edges
+4. `ant-design-vue` - 19 edges
+5. `LadhaAmbientPlaylistEngine` - 19 edges
+6. `LADHA_PRODUCTS` - 17 edges
+7. `ErrorResponse` - 15 edges
+8. `express` - 15 edges
+9. `@ant-design/icons-vue` - 14 edges
 10. `DukaClient` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `9. Production Readiness & Quality Audit Metrics` --references--> `ReservationSweeper`  [INFERRED]
+- `10. Production Readiness & Quality Audit Metrics` --references--> `ReservationSweeper`  [INFERRED]
   DEVLOG.md → billing/backend/services/commerce/reservationSweeper.js
 - `7. Dynamic Graph Period Switching & High-Contrast Ink Remediation` --references--> `getBillingTrends()`  [INFERRED]
   DEVLOG.md → billing/backend/controllers/Reports/report_controller.js
@@ -151,7 +148,7 @@
 - **Archival Commerce to Double-Entry Ledger Pipeline** — storefront_js_duka_client_dukaclient, billing_backend_routes_duka_routes, billing_backend_services_ladhaservice, storefront_server_ladhaserverhandler [INFERRED 0.95]
 - **Enterprise Billing & Compliance Ledger Suite** — billing_backend_models_bill, billing_backend_models_invoice, billing_backend_models_customer, billing_backend_models_payment [INFERRED 0.95]
 
-## Communities (113 total, 32 thin omitted)
+## Communities (110 total, 32 thin omitted)
 
 ### Community 0 - "fix-app-icons.js"
 Cohesion: 0.40
@@ -182,8 +179,8 @@ Cohesion: 0.08
 Nodes (25): app, billRoutes, bodyParser, configRoutes, cors, customerRoutes, db, dbConfig (+17 more)
 
 ### Community 7 - "reservationSweeper.js"
-Cohesion: 0.07
-Nodes (23): { clearCache }, db, ladhaService, { Op }, ReservationSweeper, http, https, url (+15 more)
+Cohesion: 0.09
+Nodes (21): { clearCache }, db, ladhaService, { Op }, http, https, url, ref_http (+13 more)
 
 ### Community 9 - "dependencies"
 Cohesion: 0.11
@@ -210,8 +207,8 @@ Cohesion: 0.13
 Nodes (14): author, description, keywords, license, main, name, version, autoprefixer (+6 more)
 
 ### Community 15 - "vue"
-Cohesion: 0.17
-Nodes (3): @ant-design/icons-vue, papaparse, vue
+Cohesion: 0.14
+Nodes (5): @ant-design/icons-vue, ant-design-vue, ref_dayjs, papaparse, vue
 
 ### Community 16 - "package.json"
 Cohesion: 0.12
@@ -219,7 +216,7 @@ Nodes (15): author, description, keywords, license, name, private, scripts, dev 
 
 ### Community 17 - "router.js"
 Cohesion: 0.15
-Nodes (8): setup(), router, isRouteLoading, router, routes, billing_frontend_src_style, lenis, vue-router
+Nodes (6): router, isRouteLoading, router, routes, billing_frontend_src_style, vue-router
 
 ### Community 18 - "api.js"
 Cohesion: 0.22
@@ -250,8 +247,8 @@ Cohesion: 0.20
 Nodes (10): handleDateRangeChange(), loadData(), paymentStatus, ReportData, revenueData, usageData, ref_components_paymentstatus_vue, ref_components_revenuesummary_vue (+2 more)
 
 ### Community 26 - "dependencies"
-Cohesion: 0.20
-Nodes (10): dependencies, @ant-design/icons-vue, ant-design-vue, axios, chart.js, lenis, papaparse, vue (+2 more)
+Cohesion: 0.07
+Nodes (25): dependencies, @ant-design/icons-vue, ant-design-vue, axios, chart.js, lenis, papaparse, vue (+17 more)
 
 ### Community 27 - "sequelize"
 Cohesion: 0.05
@@ -262,15 +259,15 @@ Cohesion: 0.15
 Nodes (11): billingRoutes, customersRoutes, express, invoicesRoutes, paymentsRoutes, reportsRoutes, router, usageRoutes (+3 more)
 
 ### Community 29 - "report_controller.js"
-Cohesion: 0.08
-Nodes (14): asyncHandler, db, { ErrorResponse }, getBillingTrends(), { Op }, 1. Executive Summary & Philosophy, 2. Forensic Defect Resolutions (Screenshots 1 through 8), 3. Steve Jobs / Apple Typography & Craft Upgrades (+6 more)
+Cohesion: 0.06
+Nodes (17): asyncHandler, db, { ErrorResponse }, getBillingTrends(), { Op }, ReservationSweeper, 10. Production Readiness & Quality Audit Metrics, 1. Executive Summary & Philosophy (+9 more)
 
 ### Community 30 - "express"
 Cohesion: 0.13
 Nodes (12): configController, express, router, checkoutService, db, express, ladhaService, router (+4 more)
 
 ### Community 31 - "Dashboard.vue"
-Cohesion: 0.25
+Cohesion: 0.33
 Nodes (3): Qx Billing Mobile Portrait & Layout Plan, chart.js, vue-chartjs
 
 ### Community 32 - "payments.routes.js"
@@ -385,9 +382,9 @@ Nodes (8): db, ensureAccounts(), getTrialBalance(), postJournalEntry(), postReve
 Cohesion: 0.20
 Nodes (9): appVue, appVuePath, dashboardVue, dashboardVuePath, fs, headerVuePath, path, reportsVue (+1 more)
 
-### Community 90 - "audit_telecom_all.js"
-Cohesion: 0.50
-Nodes (4): checkFile(), fs, path, walk()
+### Community 90 - "ref_fs"
+Cohesion: 0.20
+Nodes (9): ref_fs, checkFile(), fs, path, walk(), c, fs, p (+1 more)
 
 ### Community 91 - "check-assets.js"
 Cohesion: 0.33
@@ -413,13 +410,13 @@ Nodes (4): c, fs, p, path
 Cohesion: 0.15
 Nodes (12): 10. Strict Light-Mode Ink Contrast & Surface Elevation, 11. Production-Grade Operations Automation & Redundancy Prevention, 1. Zero-Jank Animation & Reactive Performance Guardrails, 2. Router & View Stability Invariants, 3. Financial & Commerce Domain Modeling Invariants, 4. Modern Tailwind v4 Engine Invariants, 5. Dual-Theme (Light / Dark) Synchronization Protocol, 6. Static Asset Mirroring & Image Fail-Safe Integrity (+4 more)
 
-### Community 97 - "ref_path"
-Cohesion: 0.29
-Nodes (5): path, ref_path, fs, path, searchMatches()
+### Community 97 - "find_telecom.js"
+Cohesion: 0.50
+Nodes (3): fs, path, searchMatches()
 
-### Community 98 - "ref_fs"
-Cohesion: 0.22
-Nodes (7): ref_fs, fs, p, path, fs, p, path
+### Community 98 - "ref_path"
+Cohesion: 0.18
+Nodes (8): path, ref_path, fs, p, path, fs, p, path
 
 ### Community 99 - "sms_service.js"
 Cohesion: 0.33
@@ -437,10 +434,6 @@ Nodes (8): { clearCache }, db, ladhaService, ledger, pricing, calculateShippingF
 Cohesion: 0.40
 Nodes (4): db, express, redis, router
 
-### Community 103 - "devDependencies"
-Cohesion: 0.20
-Nodes (10): devDependencies, autoprefixer, happy-dom, postcss, tailwindcss, @tailwindcss/postcss, vite, @vitejs/plugin-vue (+2 more)
-
 ### Community 104 - "app.test.js"
 Cohesion: 0.50
 Nodes (3): app, request, supertest
@@ -457,17 +450,9 @@ Nodes (4): db, { ErrorHandler }, errorHandler(), logger
 Cohesion: 0.67
 Nodes (3): scripts, start, test
 
-### Community 108 - "scripts"
-Cohesion: 0.40
-Nodes (5): scripts, build, dev, preview, test
-
 ### Community 109 - "duka.routes.js"
 Cohesion: 0.18
 Nodes (10): checkoutService, db, express, handleReconcile(), idempotency, ledger, router, db (+2 more)
-
-### Community 110 - "fix-usagetracker-icons.js"
-Cohesion: 0.40
-Nodes (4): c, fs, p, path
 
 ### Community 111 - "patch-api-client.js"
 Cohesion: 0.40
@@ -478,8 +463,8 @@ Cohesion: 0.50
 Nodes (3): express, reportController, router
 
 ## Knowledge Gaps
-- **508 isolated node(s):** `db`, `db`, `{ Sequelize }`, `path`, `path` (+503 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 634 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **509 isolated node(s):** `db`, `db`, `{ Sequelize }`, `path`, `path` (+504 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 636 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **32 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -488,11 +473,11 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `sequelize` connect `sequelize` to `backend/package.json`, `reservationSweeper.js`, `index.js`, `invoices.routes.js`, `billing_controller.js`, `report_controller.js`?**
   _High betweenness centrality (0.067) - this node is a cross-community bridge._
 - **Why does `express` connect `express` to `payments.routes.js`, `backend/package.json`, `customers.routes.js`, `health.routes.js`, `usage.routes.js`, `billing/backend/server.js`, `src/backend/server.js`, `duka.routes.js`, `invoices.routes.js`, `reports.routes.js`, `routes.config.js`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
 - **Why does `LadhaService` connect `LadhaService` to `reservationSweeper.js`?**
   _High betweenness centrality (0.026) - this node is a cross-community bridge._
 - **What connects `db`, `db`, `{ Sequelize }` to the rest of the system?**
-  _508 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _509 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `backend/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `server.py` be split into smaller, more focused modules?**

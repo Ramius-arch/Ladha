@@ -1,7 +1,7 @@
 # Graph Report - Storefront  (2026-11-03)
 
 ## Corpus Check
-- 161 files · ~589,877 words
+- 161 files · ~590,922 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 19 file(s) not represented in the graph (top: (none) 6, .css 6, .toml 2)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a08c8d61`
+- Built from commit: `75f7b6eb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

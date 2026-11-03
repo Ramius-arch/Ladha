@@ -1786,7 +1786,7 @@
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L287"
+      "source_location": "L307"
     },
     {
       "id": "billing_frontend_src_pages_reportsanalytics_setup",
@@ -14562,7 +14562,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L244",
+      "source_location": "L264",
       "weight": 1.0
     },
     {
@@ -17262,7 +17262,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L242",
+      "source_location": "L262",
       "weight": 1.0
     },
     {
@@ -17274,7 +17274,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L243",
+      "source_location": "L263",
       "weight": 1.0
     },
     {
@@ -17286,7 +17286,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L244",
+      "source_location": "L264",
       "weight": 1.0
     },
     {
@@ -17298,7 +17298,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L245",
+      "source_location": "L265",
       "weight": 1.0
     },
     {
@@ -17310,7 +17310,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L246",
+      "source_location": "L266",
       "weight": 1.0
     },
     {
@@ -17322,7 +17322,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L247",
+      "source_location": "L267",
       "weight": 1.0
     },
     {
@@ -17334,7 +17334,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L262",
+      "source_location": "L282",
       "weight": 1.0
     },
     {
@@ -17346,7 +17346,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L263",
+      "source_location": "L283",
       "weight": 1.0
     },
     {
@@ -22654,7 +22654,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L287",
+      "source_location": "L307",
       "weight": 1.0
     },
     {
@@ -27103,5 +27103,5 @@
       "source_file": "ARCHITECTURE.md"
     }
   ],
-  "built_at_commit": "a08c8d610fd244ef2e15693d02b0e961ce5d9e39"
+  "built_at_commit": "75f7b6eb31d6826800299d7a725fc015bce66a72"
 }

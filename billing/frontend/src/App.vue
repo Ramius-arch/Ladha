@@ -374,7 +374,10 @@ export default defineComponent({
 
 <style scoped>
 .main-sider {
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.02);
+  background: var(--surface-sidebar) !important;
+  backdrop-filter: blur(32px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(190%) !important;
+  box-shadow: 1px 0 16px rgba(15, 23, 42, 0.03);
 }
 
 .logo-container {
@@ -402,8 +405,11 @@ export default defineComponent({
 .main-header {
   justify-content: space-between;
   background: var(--surface-header);
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
   padding: 0 24px;
   border-bottom: 1px solid var(--border-glass);
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.02);
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
@@ -513,6 +519,14 @@ export default defineComponent({
   color: #818cf8 !important;
   font-weight: 600 !important;
   border-left: 3px solid #818cf8 !important;
+}
+
+[data-theme='light'] .nav-menu :deep(.ant-menu-item-selected) {
+  background: rgba(255, 255, 255, 0.94) !important;
+  color: #4338ca !important;
+  font-weight: 700 !important;
+  border-left: 3.5px solid #4338ca !important;
+  box-shadow: inset 0 1px 1px 0 #ffffff, 0 3px 10px -2px rgba(67, 56, 202, 0.12) !important;
 }
 
 [data-theme='dark'] .nav-menu :deep(.ant-menu-item-selected) {

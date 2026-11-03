@@ -125,3 +125,46 @@ This release resolves all visual and structural defects reported across 8 real-d
 - **Vitest Unit Suite**: 3/3 passed (100% green) in 11.13s.
 - **Git Branching Strategy**: Baseline release v2.4.0 committed to `main` (`f5d18c6`); switched to active local workspace branch `experimental/ui-design` for UI exploration and rapid prototyping.
 - **Zero Unauthorized Push / Deploy**: Local verification gate verified against `http://localhost:5174`, `http://localhost:5000`, and `http://localhost:3001`.
+
+---
+
+## Release 2.4.1 (Experimental UI Design) — Apple visionOS / Frosted Ceramic Glass Overhaul
+**Date:** November 3, 2026  
+**Active Branch:** `experimental/ui-design`  
+**Status:** Locally Verified on `http://localhost:5174/dashboard`
+
+### 1. Aesthetic Pivot: From Brutalist Blocks to Frosted Ceramic Glass
+Following user feedback regarding the light theme ("*I've noticed the current one is a brutalist design. That or an empty canvas. Frosted ceramic glass*"), the interface was systematically elevated from flat opaque white rectangular blocks into multi-layered, luminous **Frosted Ceramic Glass** (Apple visionOS / Keynote Spatial Light):
+
+1. **Pearlescent Titanium Spatial Substrate**:
+   - Replaced flat `#eef2f6` with a stationary, fixed multi-stop ambient aurora mesh bloom:
+     - Celestial Indigo (`rgba(99, 102, 241, 0.12)`) at top center.
+     - Warm Champagne Gold (`rgba(212, 175, 55, 0.08)`) at top right.
+     - Azure Cyan (`rgba(6, 182, 212, 0.07)`) at bottom left.
+     - Substrate Titanium (`#f0f3f8`) with `background-attachment: fixed`.
+   - As cards scroll across the viewport, the translucent glass physically bends and catches these ambient hues, providing authentic depth and refraction.
+
+2. **Concentric Double-Bezel Architecture & Specular Highlights**:
+   - Elevated all major cards (`.hero-card`, `.kpi-card`, `.chart-panel`, `.table-panel`, `.actions-panel`) with `border-radius: 20px`.
+   - Translucent ceramic surface: `background: rgba(255, 255, 255, 0.74)` with heavy hardware-accelerated `backdrop-filter: blur(28px) saturate(190%)`.
+   - Dual-bezel specular reflections:
+     - Top-edge refraction hairline: `inset 0 1.5px 1px 0 #ffffff`.
+     - Inner concentric border: `inset 0 0 0 1px rgba(255, 255, 255, 0.72)`.
+     - Soft spatial drop: `0 2px 8px -2px rgba(15, 23, 42, 0.03), 0 18px 40px -8px rgba(15, 23, 42, 0.065)`.
+   - Hover kinetics: gentle `translateY(-3px) scale(1.002)` with brightened surface (`rgba(255, 255, 255, 0.88)`).
+
+3. **Elimination of the "Empty Canvas" Hero Void**:
+   - Re-architected `.hero-top-row` into a balanced executive split:
+     - Left: Narrative title, calligraphic serif accent, ethos epigraph, and live engine status pill.
+     - Right: Added **Executive Telemetry & Action Station** featuring real-time `KRA eTIMS V2.4` statutory compliance badge and button-in-button luxury CTA pills ("New Tax Invoice" and "Export Audit") with nested circular icon containers.
+   - Refactored `.hero-telemetry-bar` into a recessed frosted ceramic tray (`rgba(255, 255, 255, 0.52)` with `blur(20px)`) spanning 4 balanced telemetry stations.
+
+4. **Floating Segmented visionOS Controls & Micro-Interactions**:
+   - Transformed the period toggle (`7D`, `30D`, `12M`) into a floating segmented glass pill container with an elevated pure white ceramic active chip (`box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08), inset 0 1px 0 #ffffff`).
+   - M-Pesa STK transaction stream rows upgraded to frosted glass tiles with smooth directional translation and glow highlights on hover.
+   - Command Center action tiles upgraded with nested squircle icon containers and high-contrast text.
+
+5. **Universal Component Harmonization**:
+   - Replaced flat white overrides across `Dashboard.vue`, `ReportsAnalytics.vue`, `BillingEngine.vue`, `UsageTracker.vue`, and `App.vue`.
+   - Preserved `#0a0f1d` Retina ink on all numbers and headers so legibility remains razor-sharp over frosted glass.
+   - Vitest automated test suite: **3/3 passed (100% green)**.

@@ -84,7 +84,20 @@
       "file_type": "code",
       "norm_label": "reportdata",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L29"
+      "source_location": "L34"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper",
+      "label": "ReservationSweeper",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "report_controller.js",
+      "file_type": "code",
+      "norm_label": "reservationsweeper",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L16"
     },
     {
       "id": "billing_backend_services_commerce_diligenceservice_diligenceservice",
@@ -136,7 +149,7 @@
       "file_type": "code",
       "norm_label": "usagedatapoint",
       "source_file": "billing/frontend/src/components/UsageTrendChart.vue",
-      "source_location": "L15"
+      "source_location": "L19"
     },
     {
       "id": "billing_backend_middleware_errorhandler_errorresponse",
@@ -150,19 +163,6 @@
       "norm_label": "errorresponse",
       "source_file": "billing/backend/middleware/errorHandler.js",
       "source_location": "L5"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper",
-      "label": "ReservationSweeper",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "reservationSweeper.js",
-      "file_type": "code",
-      "norm_label": "reservationsweeper",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L16"
     },
     {
       "id": "storefront_js_ambient_audio_ladhaambientplaylistengine",
@@ -565,6 +565,18 @@
       "source_location": "L64"
     },
     {
+      "id": "billing_frontend_src_components_animatednumber_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/components/AnimatedNumber.vue",
+      "source_location": "L24"
+    },
+    {
       "id": "billing_frontend_src_components_dataimporter_setup",
       "label": "setup()",
       "_callable": true,
@@ -577,7 +589,7 @@
       "source_location": "L38"
     },
     {
-      "id": "billing_frontend_src_pages_billingengine_setup",
+      "id": "billing_frontend_src_components_notificationtray_setup",
       "label": "setup()",
       "_callable": true,
       "_origin": "ast",
@@ -585,8 +597,8 @@
       "community_name": "vue",
       "file_type": "code",
       "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/BillingEngine.vue",
-      "source_location": "L204"
+      "source_file": "billing/frontend/src/components/NotificationTray.vue",
+      "source_location": "L27"
     },
     {
       "id": "billing_frontend_src_pages_helpcenter_setup",
@@ -598,10 +610,10 @@
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/pages/HelpCenter.vue",
-      "source_location": "L84"
+      "source_location": "L183"
     },
     {
-      "id": "billing_frontend_src_pages_login_setup",
+      "id": "billing_frontend_src_pages_invoicedetail_setup",
       "label": "setup()",
       "_callable": true,
       "_origin": "ast",
@@ -609,8 +621,20 @@
       "community_name": "vue",
       "file_type": "code",
       "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/Login.vue",
-      "source_location": "L59"
+      "source_file": "billing/frontend/src/pages/InvoiceDetail.vue",
+      "source_location": "L105"
+    },
+    {
+      "id": "billing_frontend_src_pages_invoicegenerator_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/pages/InvoiceGenerator.vue",
+      "source_location": "L226"
     },
     {
       "id": "billing_frontend_src_pages_notifications_setup",
@@ -622,10 +646,10 @@
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/pages/Notifications.vue",
-      "source_location": "L39"
+      "source_location": "L88"
     },
     {
-      "id": "billing_frontend_src_pages_register_setup",
+      "id": "billing_frontend_src_pages_paymentprocessing_setup",
       "label": "setup()",
       "_callable": true,
       "_origin": "ast",
@@ -633,8 +657,20 @@
       "community_name": "vue",
       "file_type": "code",
       "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/Register.vue",
-      "source_location": "L74"
+      "source_file": "billing/frontend/src/pages/PaymentProcessing.vue",
+      "source_location": "L122"
+    },
+    {
+      "id": "billing_frontend_src_pages_profilesettings_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/pages/ProfileSettings.vue",
+      "source_location": "L112"
     },
     {
       "id": "billing_frontend_src_app_setup",
@@ -646,10 +682,10 @@
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/App.vue",
-      "source_location": "L192"
+      "source_location": "L206"
     },
     {
-      "id": "billing_frontend_src_pages_invoicedetail_setup",
+      "id": "billing_frontend_src_pages_billingengine_setup",
       "label": "setup()",
       "_callable": true,
       "_origin": "ast",
@@ -657,11 +693,11 @@
       "community_name": "router.js",
       "file_type": "code",
       "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/InvoiceDetail.vue",
-      "source_location": "L104"
+      "source_file": "billing/frontend/src/pages/BillingEngine.vue",
+      "source_location": "L204"
     },
     {
-      "id": "billing_frontend_src_pages_landingpage_setup",
+      "id": "billing_frontend_src_pages_login_setup",
       "label": "setup()",
       "_callable": true,
       "_origin": "ast",
@@ -669,20 +705,8 @@
       "community_name": "router.js",
       "file_type": "code",
       "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/LandingPage.vue",
-      "source_location": "L234"
-    },
-    {
-      "id": "billing_frontend_src_pages_landingpage_setup_updatephysics",
-      "label": "updatePhysics()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "router.js",
-      "file_type": "code",
-      "norm_label": "updatephysics()",
-      "source_file": "billing/frontend/src/pages/LandingPage.vue",
-      "source_location": "L318"
+      "source_file": "billing/frontend/src/pages/Login.vue",
+      "source_location": "L102"
     },
     {
       "id": "billing_frontend_src_pages_offline_retry",
@@ -695,6 +719,18 @@
       "norm_label": "retry()",
       "source_file": "billing/frontend/src/pages/Offline.vue",
       "source_location": "L14"
+    },
+    {
+      "id": "billing_frontend_src_pages_register_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "router.js",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/pages/Register.vue",
+      "source_location": "L134"
     },
     {
       "id": "billing_frontend_src_pages_customers_setup",
@@ -1210,7 +1246,7 @@
       "file_type": "code",
       "norm_label": "handledaterangechange()",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L58"
+      "source_location": "L63"
     },
     {
       "id": "billing_frontend_src_components_reports_loaddata",
@@ -1222,7 +1258,7 @@
       "file_type": "code",
       "norm_label": "loaddata()",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L39"
+      "source_location": "L44"
     },
     {
       "id": "billing_backend_models_bill_get",
@@ -1403,6 +1439,66 @@
       "norm_label": "importmetrics()",
       "source_file": "billing/backend/controllers/Reports/report_controller.js",
       "source_location": "L255"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "report_controller.js",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L17"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_getstatus",
+      "label": ".getStatus()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "report_controller.js",
+      "file_type": "code",
+      "norm_label": ".getstatus()",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L145"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_startsweeper",
+      "label": ".startSweeper()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "report_controller.js",
+      "file_type": "code",
+      "norm_label": ".startsweeper()",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L108"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_stopsweeper",
+      "label": ".stopSweeper()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "report_controller.js",
+      "file_type": "code",
+      "norm_label": ".stopsweeper()",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L133"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_sweepexpiredreservations",
+      "label": ".sweepExpiredReservations()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "report_controller.js",
+      "file_type": "code",
+      "norm_label": ".sweepexpiredreservations()",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L28"
     },
     {
       "id": "storefront_js_admin_applyassettotarget",
@@ -1679,18 +1775,6 @@
       "norm_label": "updatesidebarinspector()",
       "source_file": "storefront/js/admin.js",
       "source_location": "L1011"
-    },
-    {
-      "id": "billing_frontend_src_components_animatednumber_setup",
-      "label": "setup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "Dashboard.vue",
-      "file_type": "code",
-      "norm_label": "setup()",
-      "source_file": "billing/frontend/src/components/AnimatedNumber.vue",
-      "source_location": "L24"
     },
     {
       "id": "billing_frontend_src_pages_dashboard_setup",
@@ -2329,66 +2413,6 @@
       "source_location": "L134"
     },
     {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "reservationSweeper.js",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L17"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_getstatus",
-      "label": ".getStatus()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "reservationSweeper.js",
-      "file_type": "code",
-      "norm_label": ".getstatus()",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L145"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_startsweeper",
-      "label": ".startSweeper()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "reservationSweeper.js",
-      "file_type": "code",
-      "norm_label": ".startsweeper()",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L108"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_stopsweeper",
-      "label": ".stopSweeper()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "reservationSweeper.js",
-      "file_type": "code",
-      "norm_label": ".stopsweeper()",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L133"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_sweepexpiredreservations",
-      "label": ".sweepExpiredReservations()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "reservationSweeper.js",
-      "file_type": "code",
-      "norm_label": ".sweepexpiredreservations()",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L28"
-    },
-    {
       "id": "scripts_operational_scrutiny_demo_getjson",
       "label": "getJSON()",
       "_callable": true,
@@ -2641,40 +2665,28 @@
       "source_location": "L274"
     },
     {
-      "id": "billing_frontend_src_components_notificationtray_setup",
+      "id": "billing_frontend_src_pages_landingpage_setup",
       "label": "setup()",
       "_callable": true,
       "_origin": "ast",
       "community": 81,
-      "community_name": "ant-design-vue",
+      "community_name": "LandingPage.vue",
       "file_type": "code",
       "norm_label": "setup()",
-      "source_file": "billing/frontend/src/components/NotificationTray.vue",
-      "source_location": "L27"
+      "source_file": "billing/frontend/src/pages/LandingPage.vue",
+      "source_location": "L234"
     },
     {
-      "id": "billing_frontend_src_pages_invoicegenerator_setup",
-      "label": "setup()",
+      "id": "billing_frontend_src_pages_landingpage_setup_updatephysics",
+      "label": "updatePhysics()",
       "_callable": true,
       "_origin": "ast",
       "community": 81,
-      "community_name": "ant-design-vue",
+      "community_name": "LandingPage.vue",
       "file_type": "code",
-      "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/InvoiceGenerator.vue",
-      "source_location": "L226"
-    },
-    {
-      "id": "billing_frontend_src_pages_paymentprocessing_setup",
-      "label": "setup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "ant-design-vue",
-      "file_type": "code",
-      "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/PaymentProcessing.vue",
-      "source_location": "L122"
+      "norm_label": "updatephysics()",
+      "source_file": "billing/frontend/src/pages/LandingPage.vue",
+      "source_location": "L318"
     },
     {
       "id": "billing_backend_middleware_idempotency_idempotency",
@@ -2874,7 +2886,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 90,
-      "community_name": "audit_telecom_all.js",
+      "community_name": "ref_fs",
       "file_type": "code",
       "norm_label": "checkfile()",
       "source_file": "scripts/audit_telecom_all.js",
@@ -2886,7 +2898,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 90,
-      "community_name": "audit_telecom_all.js",
+      "community_name": "ref_fs",
       "file_type": "code",
       "norm_label": "walk()",
       "source_file": "scripts/audit_telecom_all.js",
@@ -2898,7 +2910,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "ref_path",
+      "community_name": "find_telecom.js",
       "file_type": "code",
       "norm_label": "searchmatches()",
       "source_file": "scripts/find_telecom.js",
@@ -3538,116 +3550,6 @@
       "source_location": "L2"
     },
     {
-      "id": "billing_frontend_package_devdependencies",
-      "label": "devDependencies",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "devdependencies",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L26"
-    },
-    {
-      "id": "billing_frontend_package_devdependencies_autoprefixer",
-      "label": "autoprefixer",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "autoprefixer",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L30"
-    },
-    {
-      "id": "billing_frontend_package_devdependencies_happy_dom",
-      "label": "happy-dom",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "happy-dom",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L31"
-    },
-    {
-      "id": "billing_frontend_package_devdependencies_postcss",
-      "label": "postcss",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "postcss",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L32"
-    },
-    {
-      "id": "billing_frontend_package_devdependencies_tailwindcss",
-      "label": "tailwindcss",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "tailwindcss",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L33"
-    },
-    {
-      "id": "billing_frontend_package_devdependencies_tailwindcss_postcss",
-      "label": "@tailwindcss/postcss",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@tailwindcss/postcss",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L27"
-    },
-    {
-      "id": "billing_frontend_package_devdependencies_vite",
-      "label": "vite",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "vite",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L34"
-    },
-    {
-      "id": "billing_frontend_package_devdependencies_vitejs_plugin_vue",
-      "label": "@vitejs/plugin-vue",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@vitejs/plugin-vue",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L28"
-    },
-    {
-      "id": "billing_frontend_package_devdependencies_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "vitest",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L35"
-    },
-    {
-      "id": "billing_frontend_package_devdependencies_vue_test_utils",
-      "label": "@vue/test-utils",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@vue/test-utils",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L29"
-    },
-    {
       "id": "billing_backend_tests_app_test",
       "label": "app.test.js",
       "_origin": "ast",
@@ -3813,61 +3715,6 @@
       "source_location": "L8"
     },
     {
-      "id": "billing_frontend_package_scripts",
-      "label": "scripts",
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "scripts",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "billing_frontend_package_scripts_build",
-      "label": "build",
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "build",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "billing_frontend_package_scripts_dev",
-      "label": "dev",
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "dev",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "billing_frontend_package_scripts_preview",
-      "label": "preview",
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "preview",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "billing_frontend_package_scripts_test",
-      "label": "test",
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "test",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L10"
-    },
-    {
       "id": "billing_backend_routes_duka_routes",
       "label": "duka.routes.js",
       "_origin": "ast",
@@ -4009,61 +3856,6 @@
       "norm_label": "ladha_products",
       "source_file": "storefront/js/products-data.js",
       "source_location": "L7"
-    },
-    {
-      "id": "scripts_fix_usagetracker_icons",
-      "label": "fix-usagetracker-icons.js",
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "fix-usagetracker-icons.js",
-      "file_type": "code",
-      "norm_label": "fix-usagetracker-icons.js",
-      "source_file": "scripts/fix-usagetracker-icons.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_fix_usagetracker_icons_c",
-      "label": "c",
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "fix-usagetracker-icons.js",
-      "file_type": "code",
-      "norm_label": "c",
-      "source_file": "scripts/fix-usagetracker-icons.js",
-      "source_location": "L5"
-    },
-    {
-      "id": "scripts_fix_usagetracker_icons_fs",
-      "label": "fs",
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "fix-usagetracker-icons.js",
-      "file_type": "code",
-      "norm_label": "fs",
-      "source_file": "scripts/fix-usagetracker-icons.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_fix_usagetracker_icons_p",
-      "label": "p",
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "fix-usagetracker-icons.js",
-      "file_type": "code",
-      "norm_label": "p",
-      "source_file": "scripts/fix-usagetracker-icons.js",
-      "source_location": "L4"
-    },
-    {
-      "id": "scripts_fix_usagetracker_icons_path",
-      "label": "path",
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "fix-usagetracker-icons.js",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "scripts/fix-usagetracker-icons.js",
-      "source_location": "L2"
     },
     {
       "id": "scripts_patch_api_client",
@@ -4528,6 +4320,17 @@
       "source_location": "L28"
     },
     {
+      "id": "billing_frontend_src_components_animatednumber",
+      "label": "AnimatedNumber.vue",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "animatednumber.vue",
+      "source_file": "billing/frontend/src/components/AnimatedNumber.vue",
+      "source_location": "L1"
+    },
+    {
       "id": "billing_frontend_src_components_dataimporter",
       "label": "DataImporter.vue",
       "_origin": "ast",
@@ -4539,14 +4342,14 @@
       "source_location": "L1"
     },
     {
-      "id": "billing_frontend_src_pages_billingengine",
-      "label": "BillingEngine.vue",
+      "id": "billing_frontend_src_components_notificationtray",
+      "label": "NotificationTray.vue",
       "_origin": "ast",
       "community": 15,
       "community_name": "vue",
       "file_type": "code",
-      "norm_label": "billingengine.vue",
-      "source_file": "billing/frontend/src/pages/BillingEngine.vue",
+      "norm_label": "notificationtray.vue",
+      "source_file": "billing/frontend/src/components/NotificationTray.vue",
       "source_location": "L1"
     },
     {
@@ -4561,14 +4364,25 @@
       "source_location": "L1"
     },
     {
-      "id": "billing_frontend_src_pages_login",
-      "label": "Login.vue",
+      "id": "billing_frontend_src_pages_invoicedetail",
+      "label": "InvoiceDetail.vue",
       "_origin": "ast",
       "community": 15,
       "community_name": "vue",
       "file_type": "code",
-      "norm_label": "login.vue",
-      "source_file": "billing/frontend/src/pages/Login.vue",
+      "norm_label": "invoicedetail.vue",
+      "source_file": "billing/frontend/src/pages/InvoiceDetail.vue",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_frontend_src_pages_invoicegenerator",
+      "label": "InvoiceGenerator.vue",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "invoicegenerator.vue",
+      "source_file": "billing/frontend/src/pages/InvoiceGenerator.vue",
       "source_location": "L1"
     },
     {
@@ -4583,6 +4397,17 @@
       "source_location": "L1"
     },
     {
+      "id": "billing_frontend_src_pages_paymentprocessing",
+      "label": "PaymentProcessing.vue",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "paymentprocessing.vue",
+      "source_file": "billing/frontend/src/pages/PaymentProcessing.vue",
+      "source_location": "L1"
+    },
+    {
       "id": "billing_frontend_src_pages_profilesettings",
       "label": "ProfileSettings.vue",
       "_origin": "ast",
@@ -4591,17 +4416,6 @@
       "file_type": "code",
       "norm_label": "profilesettings.vue",
       "source_file": "billing/frontend/src/pages/ProfileSettings.vue",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_frontend_src_pages_register",
-      "label": "Register.vue",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "vue",
-      "file_type": "code",
-      "norm_label": "register.vue",
-      "source_file": "billing/frontend/src/pages/Register.vue",
       "source_location": "L1"
     },
     {
@@ -4614,6 +4428,17 @@
       "norm_label": "@ant-design/icons-vue",
       "source_file": "billing/frontend/package.json",
       "source_location": "L16"
+    },
+    {
+      "id": "ref_ant_design_vue",
+      "label": "ant-design-vue",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "vue",
+      "file_type": "concept",
+      "norm_label": "ant-design-vue",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L17"
     },
     {
       "id": "ref_papaparse",
@@ -4836,25 +4661,25 @@
       "source_location": "L1"
     },
     {
-      "id": "billing_frontend_src_pages_invoicedetail",
-      "label": "InvoiceDetail.vue",
+      "id": "billing_frontend_src_pages_billingengine",
+      "label": "BillingEngine.vue",
       "_origin": "ast",
       "community": 17,
       "community_name": "router.js",
       "file_type": "code",
-      "norm_label": "invoicedetail.vue",
-      "source_file": "billing/frontend/src/pages/InvoiceDetail.vue",
+      "norm_label": "billingengine.vue",
+      "source_file": "billing/frontend/src/pages/BillingEngine.vue",
       "source_location": "L1"
     },
     {
-      "id": "billing_frontend_src_pages_landingpage",
-      "label": "LandingPage.vue",
+      "id": "billing_frontend_src_pages_login",
+      "label": "Login.vue",
       "_origin": "ast",
       "community": 17,
       "community_name": "router.js",
       "file_type": "code",
-      "norm_label": "landingpage.vue",
-      "source_file": "billing/frontend/src/pages/LandingPage.vue",
+      "norm_label": "login.vue",
+      "source_file": "billing/frontend/src/pages/Login.vue",
       "source_location": "L1"
     },
     {
@@ -4888,6 +4713,17 @@
       "file_type": "code",
       "norm_label": "offline.vue",
       "source_file": "billing/frontend/src/pages/Offline.vue",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_frontend_src_pages_register",
+      "label": "Register.vue",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "router.js",
+      "file_type": "code",
+      "norm_label": "register.vue",
+      "source_file": "billing/frontend/src/pages/Register.vue",
       "source_location": "L1"
     },
     {
@@ -4933,17 +4769,6 @@
       "norm_label": "routes",
       "source_file": "billing/frontend/src/router.js",
       "source_location": "L6"
-    },
-    {
-      "id": "ref_lenis",
-      "label": "lenis",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "router.js",
-      "file_type": "concept",
-      "norm_label": "lenis",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L20"
     },
     {
       "id": "ref_vue_router",
@@ -5581,7 +5406,7 @@
       "file_type": "code",
       "norm_label": "paymentstatus",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L36"
+      "source_location": "L41"
     },
     {
       "id": "billing_frontend_src_components_reports_revenuedata",
@@ -5592,7 +5417,7 @@
       "file_type": "code",
       "norm_label": "revenuedata",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L34"
+      "source_location": "L39"
     },
     {
       "id": "billing_frontend_src_components_reports_usagedata",
@@ -5603,7 +5428,7 @@
       "file_type": "code",
       "norm_label": "usagedata",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L35"
+      "source_location": "L40"
     },
     {
       "id": "billing_frontend_package_dependencies",
@@ -5714,6 +5539,171 @@
       "norm_label": "vue-router",
       "source_file": "billing/frontend/package.json",
       "source_location": "L24"
+    },
+    {
+      "id": "billing_frontend_package_devdependencies",
+      "label": "devDependencies",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "devdependencies",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "billing_frontend_package_devdependencies_autoprefixer",
+      "label": "autoprefixer",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "autoprefixer",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "billing_frontend_package_devdependencies_happy_dom",
+      "label": "happy-dom",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "happy-dom",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "billing_frontend_package_devdependencies_postcss",
+      "label": "postcss",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "postcss",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L32"
+    },
+    {
+      "id": "billing_frontend_package_devdependencies_tailwindcss",
+      "label": "tailwindcss",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "tailwindcss",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "billing_frontend_package_devdependencies_tailwindcss_postcss",
+      "label": "@tailwindcss/postcss",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "@tailwindcss/postcss",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "billing_frontend_package_devdependencies_vite",
+      "label": "vite",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "vite",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L34"
+    },
+    {
+      "id": "billing_frontend_package_devdependencies_vitejs_plugin_vue",
+      "label": "@vitejs/plugin-vue",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "@vitejs/plugin-vue",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "billing_frontend_package_devdependencies_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "vitest",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "billing_frontend_package_devdependencies_vue_test_utils",
+      "label": "@vue/test-utils",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "@vue/test-utils",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "billing_frontend_package_scripts",
+      "label": "scripts",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "scripts",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "billing_frontend_package_scripts_build",
+      "label": "build",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "build",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "billing_frontend_package_scripts_dev",
+      "label": "dev",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "dev",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "billing_frontend_package_scripts_preview",
+      "label": "preview",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "preview",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "billing_frontend_package_scripts_test",
+      "label": "test",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "test",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L10"
     },
     {
       "id": "billing_backend_models_bill",
@@ -6322,6 +6312,18 @@
       "source_location": "L1"
     },
     {
+      "id": "devlog_10_production_readiness_quality_audit_metrics",
+      "label": "10. Production Readiness & Quality Audit Metrics",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "report_controller.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10. production readiness & quality audit metrics",
+      "source_file": "DEVLOG.md",
+      "source_location": "L115"
+    },
+    {
       "id": "devlog_1_executive_summary_philosophy",
       "label": "1. Executive Summary & Philosophy",
       "_origin": "ast",
@@ -6404,6 +6406,18 @@
       "norm_label": "8. institutional capital, commercial loan underwriting & vc diligence suite",
       "source_file": "DEVLOG.md",
       "source_location": "L88"
+    },
+    {
+      "id": "devlog_9_trust_breaking_placeholder_overhaul_authentication_hardening",
+      "label": "9. Trust-Breaking Placeholder Overhaul & Authentication Hardening",
+      "_origin": "ast",
+      "community": 29,
+      "community_name": "report_controller.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9. trust-breaking placeholder overhaul & authentication hardening",
+      "source_file": "DEVLOG.md",
+      "source_location": "L100"
     },
     {
       "id": "devlog_ladha_commerce_ledger_platform_engineering_dev_log",
@@ -6604,17 +6618,6 @@
       "norm_label": "express",
       "source_file": "billing/backend/package.json",
       "source_location": "L23"
-    },
-    {
-      "id": "billing_frontend_src_components_animatednumber",
-      "label": "AnimatedNumber.vue",
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "Dashboard.vue",
-      "file_type": "code",
-      "norm_label": "animatednumber.vue",
-      "source_file": "billing/frontend/src/components/AnimatedNumber.vue",
-      "source_location": "L1"
     },
     {
       "id": "billing_frontend_src_pages_dashboard",
@@ -6856,7 +6859,7 @@
       "file_type": "code",
       "norm_label": "billingtrendsdata",
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L27"
+      "source_location": "L33"
     },
     {
       "id": "billing_frontend_src_services_mockdata_customers",
@@ -6867,7 +6870,7 @@
       "file_type": "code",
       "norm_label": "customers",
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L3"
+      "source_location": "L9"
     },
     {
       "id": "billing_frontend_src_services_mockdata_invoices",
@@ -6878,7 +6881,7 @@
       "file_type": "code",
       "norm_label": "invoices",
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L15"
+      "source_location": "L21"
     },
     {
       "id": "billing_frontend_src_services_mockdata_outstandingduesdata",
@@ -6889,7 +6892,7 @@
       "file_type": "code",
       "norm_label": "outstandingduesdata",
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L46"
+      "source_location": "L52"
     },
     {
       "id": "billing_frontend_src_services_mockdata_payments",
@@ -6900,7 +6903,7 @@
       "file_type": "code",
       "norm_label": "payments",
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L22"
+      "source_location": "L28"
     },
     {
       "id": "billing_frontend_src_services_mockdata_usagelogs",
@@ -6911,7 +6914,7 @@
       "file_type": "code",
       "norm_label": "usagelogs",
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L9"
+      "source_location": "L15"
     },
     {
       "id": "billing_frontend_src_services_mockdata_usagereportsdata",
@@ -6922,7 +6925,7 @@
       "file_type": "code",
       "norm_label": "usagereportsdata",
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L38"
+      "source_location": "L44"
     },
     {
       "id": "billing_package",
@@ -7539,7 +7542,7 @@
       "file_type": "code",
       "norm_label": "activecustomers",
       "source_file": "billing/frontend/src/components/RevenueSummary.vue",
-      "source_location": "L20"
+      "source_location": "L24"
     },
     {
       "id": "billing_frontend_src_components_revenuesummary_outstandingdues",
@@ -7550,7 +7553,7 @@
       "file_type": "code",
       "norm_label": "outstandingdues",
       "source_file": "billing/frontend/src/components/RevenueSummary.vue",
-      "source_location": "L19"
+      "source_location": "L23"
     },
     {
       "id": "billing_frontend_src_components_revenuesummary_props",
@@ -7561,7 +7564,7 @@
       "file_type": "code",
       "norm_label": "props",
       "source_file": "billing/frontend/src/components/RevenueSummary.vue",
-      "source_location": "L14"
+      "source_location": "L18"
     },
     {
       "id": "billing_frontend_src_components_revenuesummary_totalrevenue",
@@ -7572,7 +7575,7 @@
       "file_type": "code",
       "norm_label": "totalrevenue",
       "source_file": "billing/frontend/src/components/RevenueSummary.vue",
-      "source_location": "L18"
+      "source_location": "L22"
     },
     {
       "id": "billing_frontend_src_components_usagetrendchart",
@@ -7594,7 +7597,7 @@
       "file_type": "code",
       "norm_label": "chartoptions",
       "source_file": "billing/frontend/src/components/UsageTrendChart.vue",
-      "source_location": "L24"
+      "source_location": "L28"
     },
     {
       "id": "billing_frontend_src_components_usagetrendchart_series",
@@ -7605,7 +7608,7 @@
       "file_type": "code",
       "norm_label": "series",
       "source_file": "billing/frontend/src/components/UsageTrendChart.vue",
-      "source_location": "L33"
+      "source_location": "L37"
     },
     {
       "id": "billing_src_backend_server",
@@ -8265,7 +8268,7 @@
       "file_type": "code",
       "norm_label": "props",
       "source_file": "billing/frontend/src/components/PaymentStatus.vue",
-      "source_location": "L12"
+      "source_location": "L16"
     },
     {
       "id": "tailwindcss",
@@ -8829,18 +8832,6 @@
       "source_location": "L13"
     },
     {
-      "id": "devlog_9_production_readiness_quality_audit_metrics",
-      "label": "9. Production Readiness & Quality Audit Metrics",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "reservationSweeper.js",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9. production readiness & quality audit metrics",
-      "source_file": "DEVLOG.md",
-      "source_location": "L101"
-    },
-    {
       "id": "storefront_js_main",
       "label": "js/main.js",
       "_origin": "ast",
@@ -9014,48 +9005,26 @@
       "source_location": "L92"
     },
     {
-      "id": "billing_frontend_src_components_notificationtray",
-      "label": "NotificationTray.vue",
+      "id": "billing_frontend_src_pages_landingpage",
+      "label": "LandingPage.vue",
       "_origin": "ast",
       "community": 81,
-      "community_name": "ant-design-vue",
+      "community_name": "LandingPage.vue",
       "file_type": "code",
-      "norm_label": "notificationtray.vue",
-      "source_file": "billing/frontend/src/components/NotificationTray.vue",
+      "norm_label": "landingpage.vue",
+      "source_file": "billing/frontend/src/pages/LandingPage.vue",
       "source_location": "L1"
     },
     {
-      "id": "billing_frontend_src_pages_invoicegenerator",
-      "label": "InvoiceGenerator.vue",
+      "id": "ref_lenis",
+      "label": "lenis",
       "_origin": "ast",
       "community": 81,
-      "community_name": "ant-design-vue",
-      "file_type": "code",
-      "norm_label": "invoicegenerator.vue",
-      "source_file": "billing/frontend/src/pages/InvoiceGenerator.vue",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_frontend_src_pages_paymentprocessing",
-      "label": "PaymentProcessing.vue",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "ant-design-vue",
-      "file_type": "code",
-      "norm_label": "paymentprocessing.vue",
-      "source_file": "billing/frontend/src/pages/PaymentProcessing.vue",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_ant_design_vue",
-      "label": "ant-design-vue",
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "ant-design-vue",
+      "community_name": "LandingPage.vue",
       "file_type": "concept",
-      "norm_label": "ant-design-vue",
+      "norm_label": "lenis",
       "source_file": "billing/frontend/package.json",
-      "source_location": "L17"
+      "source_location": "L20"
     },
     {
       "id": "scripts_start_dev",
@@ -9770,7 +9739,7 @@
       "label": "audit_telecom_all.js",
       "_origin": "ast",
       "community": 90,
-      "community_name": "audit_telecom_all.js",
+      "community_name": "ref_fs",
       "file_type": "code",
       "norm_label": "audit_telecom_all.js",
       "source_file": "scripts/audit_telecom_all.js",
@@ -9781,7 +9750,7 @@
       "label": "fs",
       "_origin": "ast",
       "community": 90,
-      "community_name": "audit_telecom_all.js",
+      "community_name": "ref_fs",
       "file_type": "code",
       "norm_label": "fs",
       "source_file": "scripts/audit_telecom_all.js",
@@ -9792,10 +9761,65 @@
       "label": "path",
       "_origin": "ast",
       "community": 90,
-      "community_name": "audit_telecom_all.js",
+      "community_name": "ref_fs",
       "file_type": "code",
       "norm_label": "path",
       "source_file": "scripts/audit_telecom_all.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "scripts_fix_usagetracker_icons",
+      "label": "fix-usagetracker-icons.js",
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "fix-usagetracker-icons.js",
+      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_fix_usagetracker_icons_c",
+      "label": "c",
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "c",
+      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "scripts_fix_usagetracker_icons_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_fix_usagetracker_icons_p",
+      "label": "p",
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "p",
+      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "scripts_fix_usagetracker_icons_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "scripts/fix-usagetracker-icons.js",
       "source_location": "L2"
     },
     {
@@ -10296,33 +10320,11 @@
       "source_location": "L1"
     },
     {
-      "id": "billing_backend_config_db_config",
-      "label": "db.config.js",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "ref_path",
-      "file_type": "code",
-      "norm_label": "db.config.js",
-      "source_file": "billing/backend/config/db.config.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_backend_config_db_config_path",
-      "label": "path",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "ref_path",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "billing/backend/config/db.config.js",
-      "source_location": "L2"
-    },
-    {
       "id": "scripts_find_telecom",
       "label": "find_telecom.js",
       "_origin": "ast",
       "community": 97,
-      "community_name": "ref_path",
+      "community_name": "find_telecom.js",
       "file_type": "code",
       "norm_label": "find_telecom.js",
       "source_file": "scripts/find_telecom.js",
@@ -10333,7 +10335,7 @@
       "label": "fs",
       "_origin": "ast",
       "community": 97,
-      "community_name": "ref_path",
+      "community_name": "find_telecom.js",
       "file_type": "code",
       "norm_label": "fs",
       "source_file": "scripts/find_telecom.js",
@@ -10344,10 +10346,32 @@
       "label": "path",
       "_origin": "ast",
       "community": 97,
-      "community_name": "ref_path",
+      "community_name": "find_telecom.js",
       "file_type": "code",
       "norm_label": "path",
       "source_file": "scripts/find_telecom.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "billing_backend_config_db_config",
+      "label": "db.config.js",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "db.config.js",
+      "source_file": "billing/backend/config/db.config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_backend_config_db_config_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "billing/backend/config/db.config.js",
       "source_location": "L2"
     },
     {
@@ -10355,7 +10379,7 @@
       "label": "patch-billing-engine-tb.js",
       "_origin": "ast",
       "community": 98,
-      "community_name": "ref_fs",
+      "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "patch-billing-engine-tb.js",
       "source_file": "scripts/patch-billing-engine-tb.js",
@@ -10366,7 +10390,7 @@
       "label": "fs",
       "_origin": "ast",
       "community": 98,
-      "community_name": "ref_fs",
+      "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "fs",
       "source_file": "scripts/patch-billing-engine-tb.js",
@@ -10377,7 +10401,7 @@
       "label": "p",
       "_origin": "ast",
       "community": 98,
-      "community_name": "ref_fs",
+      "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "p",
       "source_file": "scripts/patch-billing-engine-tb.js",
@@ -10388,7 +10412,7 @@
       "label": "path",
       "_origin": "ast",
       "community": 98,
-      "community_name": "ref_fs",
+      "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "path",
       "source_file": "scripts/patch-billing-engine-tb.js",
@@ -10399,7 +10423,7 @@
       "label": "patch-system-settings.js",
       "_origin": "ast",
       "community": 98,
-      "community_name": "ref_fs",
+      "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "patch-system-settings.js",
       "source_file": "scripts/patch-system-settings.js",
@@ -10410,7 +10434,7 @@
       "label": "fs",
       "_origin": "ast",
       "community": 98,
-      "community_name": "ref_fs",
+      "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "fs",
       "source_file": "scripts/patch-system-settings.js",
@@ -10421,7 +10445,7 @@
       "label": "p",
       "_origin": "ast",
       "community": 98,
-      "community_name": "ref_fs",
+      "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "p",
       "source_file": "scripts/patch-system-settings.js",
@@ -10432,7 +10456,7 @@
       "label": "path",
       "_origin": "ast",
       "community": 98,
-      "community_name": "ref_fs",
+      "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "path",
       "source_file": "scripts/patch-system-settings.js",
@@ -11192,6 +11216,18 @@
       "source_url": null
     },
     {
+      "id": "ref_dayjs",
+      "label": "ref_dayjs",
+      "_origin": "semantic",
+      "community": 15,
+      "community_name": "vue",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_dayjs",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "billing_frontend_src_style",
       "label": "billing_frontend_src_style",
       "_origin": "semantic",
@@ -11468,18 +11504,6 @@
       "type": "external"
     },
     {
-      "id": "ref_dayjs",
-      "label": "ref_dayjs",
-      "_origin": "semantic",
-      "community": 81,
-      "community_name": "ant-design-vue",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_dayjs",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_child_process",
       "label": "ref_child_process",
       "_origin": "semantic",
@@ -11540,26 +11564,26 @@
       "type": "external"
     },
     {
-      "id": "ref_path",
-      "label": "ref_path",
-      "_origin": "semantic",
-      "community": 97,
-      "community_name": "ref_path",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_path",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_fs",
       "label": "ref_fs",
       "_origin": "semantic",
-      "community": 98,
+      "community": 90,
       "community_name": "ref_fs",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_fs",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_path",
+      "label": "ref_path",
+      "_origin": "semantic",
+      "community": 98,
+      "community_name": "ref_path",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_path",
       "source_file": "",
       "type": "external"
     }
@@ -12150,7 +12174,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L60",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -14478,7 +14502,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/App.vue",
-      "source_location": "L150",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -14550,7 +14574,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/InvoiceDetail.vue",
-      "source_location": "L98",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -16818,7 +16842,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/App.vue",
-      "source_location": "L148",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -16830,7 +16854,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/App.vue",
-      "source_location": "L149",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -16842,7 +16866,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/App.vue",
-      "source_location": "L150",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -16854,7 +16878,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/App.vue",
-      "source_location": "L151",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -16866,7 +16890,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/App.vue",
-      "source_location": "L152",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -16878,7 +16902,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/App.vue",
-      "source_location": "L153",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -16986,7 +17010,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L23",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -16998,7 +17022,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L24",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -17010,7 +17034,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L25",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -17022,7 +17046,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L26",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -17034,7 +17058,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L27",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -17046,7 +17070,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/components/UsageTrendChart.vue",
-      "source_location": "L13",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -17334,7 +17358,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/HelpCenter.vue",
-      "source_location": "L77",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -17346,7 +17370,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/HelpCenter.vue",
-      "source_location": "L78",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -17358,7 +17382,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/HelpCenter.vue",
-      "source_location": "L79",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "billing_frontend_src_pages_invoicedetail",
+      "target": "ref_dayjs",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "billing/frontend/src/pages/InvoiceDetail.vue",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
@@ -17399,7 +17435,7 @@
     },
     {
       "source": "billing_frontend_src_pages_invoicedetail",
-      "target": "billing_frontend_src_services_api",
+      "target": "ref_ant_design_vue",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -17411,7 +17447,7 @@
     },
     {
       "source": "billing_frontend_src_pages_invoicedetail",
-      "target": "ref_dayjs",
+      "target": "billing_frontend_src_services_api",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -17514,7 +17550,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Login.vue",
-      "source_location": "L51",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "billing_frontend_src_pages_login",
+      "target": "ref_vue_router",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "billing/frontend/src/pages/Login.vue",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -17526,7 +17574,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Login.vue",
-      "source_location": "L52",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "billing_frontend_src_pages_login",
+      "target": "ref_ant_design_vue",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "billing/frontend/src/pages/Login.vue",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -17550,7 +17610,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Notifications.vue",
-      "source_location": "L29",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -17562,7 +17622,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Notifications.vue",
-      "source_location": "L30",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "billing_frontend_src_pages_notifications",
+      "target": "ref_ant_design_vue",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "billing/frontend/src/pages/Notifications.vue",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -17622,7 +17694,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/ProfileSettings.vue",
-      "source_location": "L22",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "billing_frontend_src_pages_profilesettings",
+      "target": "ref_ant_design_vue",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "billing/frontend/src/pages/ProfileSettings.vue",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -17634,7 +17718,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Register.vue",
-      "source_location": "L65",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "billing_frontend_src_pages_register",
+      "target": "ref_vue_router",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "billing/frontend/src/pages/Register.vue",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -17646,7 +17742,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "billing/frontend/src/pages/Register.vue",
-      "source_location": "L66",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "billing_frontend_src_pages_register",
+      "target": "ref_ant_design_vue",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "billing/frontend/src/pages/Register.vue",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -22282,7 +22390,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/App.vue",
-      "source_location": "L192",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -22359,7 +22467,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/PaymentStatus.vue",
-      "source_location": "L12",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -22370,7 +22478,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L29",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -22381,7 +22489,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L34",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -22392,7 +22500,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L35",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -22403,7 +22511,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L36",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -22414,7 +22522,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L39",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -22425,7 +22533,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/Reports.vue",
-      "source_location": "L58",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -22436,7 +22544,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/RevenueSummary.vue",
-      "source_location": "L14",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -22447,7 +22555,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/RevenueSummary.vue",
-      "source_location": "L18",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -22458,7 +22566,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/RevenueSummary.vue",
-      "source_location": "L19",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -22469,7 +22577,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/RevenueSummary.vue",
-      "source_location": "L20",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -22480,7 +22588,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/UsageTrendChart.vue",
-      "source_location": "L15",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -22491,7 +22599,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/UsageTrendChart.vue",
-      "source_location": "L24",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -22502,7 +22610,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/components/UsageTrendChart.vue",
-      "source_location": "L33",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -22557,7 +22665,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/pages/HelpCenter.vue",
-      "source_location": "L84",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -22568,7 +22676,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/pages/InvoiceDetail.vue",
-      "source_location": "L104",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -22601,7 +22709,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/pages/Login.vue",
-      "source_location": "L59",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -22623,7 +22731,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/pages/Notifications.vue",
-      "source_location": "L39",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -22649,6 +22757,17 @@
       "weight": 1.0
     },
     {
+      "source": "billing_frontend_src_pages_profilesettings",
+      "target": "billing_frontend_src_pages_profilesettings_setup",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "billing/frontend/src/pages/ProfileSettings.vue",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
       "source": "billing_frontend_src_pages_register",
       "target": "billing_frontend_src_pages_register_setup",
       "relation": "contains",
@@ -22656,7 +22775,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/pages/Register.vue",
-      "source_location": "L74",
+      "source_location": "L134",
       "weight": 1.0
     },
     {
@@ -22749,7 +22868,7 @@
     },
     {
       "source": "billing_frontend_src_services_mockdata",
-      "target": "billing_frontend_src_services_mockdata_invoices",
+      "target": "billing_frontend_src_services_mockdata_usagelogs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -22760,13 +22879,24 @@
     },
     {
       "source": "billing_frontend_src_services_mockdata",
+      "target": "billing_frontend_src_services_mockdata_invoices",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "billing/frontend/src/services/mockData.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "billing_frontend_src_services_mockdata",
       "target": "billing_frontend_src_services_mockdata_payments",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L22",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -22777,18 +22907,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "billing_frontend_src_services_mockdata",
-      "target": "billing_frontend_src_services_mockdata_customers",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L3",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -22799,7 +22918,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L38",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -22810,12 +22929,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "billing/frontend/src/services/mockData.js",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
       "source": "billing_frontend_src_services_mockdata",
-      "target": "billing_frontend_src_services_mockdata_usagelogs",
+      "target": "billing_frontend_src_services_mockdata_customers",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23112,13 +23231,24 @@
     },
     {
       "source": "devlog_release_2_4_0_apple_human_interface_swiss_brutalism_milestone",
-      "target": "devlog_9_production_readiness_quality_audit_metrics",
+      "target": "devlog_9_trust_breaking_placeholder_overhaul_authentication_hardening",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "DEVLOG.md",
-      "source_location": "L101",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "devlog_release_2_4_0_apple_human_interface_swiss_brutalism_milestone",
+      "target": "devlog_10_production_readiness_quality_audit_metrics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEVLOG.md",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -26542,7 +26672,7 @@
       "weight": 1.0
     },
     {
-      "source": "devlog_9_production_readiness_quality_audit_metrics",
+      "source": "devlog_10_production_readiness_quality_audit_metrics",
       "target": "billing_backend_services_commerce_reservationsweeper_reservationsweeper",
       "relation": "references",
       "_origin": "ast",
@@ -26550,7 +26680,7 @@
       "confidence_score": 0.95,
       "context": "ReservationSweeper",
       "source_file": "DEVLOG.md",
-      "source_location": "L107",
+      "source_location": "L121",
       "weight": 1.0
     },
     {

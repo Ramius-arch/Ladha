@@ -47,51 +47,59 @@
 }
 
 :root[data-theme='light'], html[data-theme='light'], body[data-theme='light'], [data-theme='light'] {
-  /* Steve Jobs / Apple Human Interface & Swiss Precision Tokens (Ceramic White / Titanium) */
-  --bg-deep: #eef2f6;
+  /* Apple visionOS / Keynote Spatial Light — Frosted Ceramic Glass Tokens */
+  --bg-deep: #f0f3f8;
   --bg-subtle: #f8fafc;
-  --surface-card: #ffffff;
-  --surface-card-hover: #ffffff;
-  --surface-header: rgba(255, 255, 255, 0.94);
-  --surface-sidebar: #ffffff;
-  --surface-hover: rgba(15, 23, 42, 0.04);
+  --surface-card: rgba(255, 255, 255, 0.74);
+  --surface-card-hover: rgba(255, 255, 255, 0.90);
+  --surface-header: rgba(248, 250, 252, 0.80);
+  --surface-sidebar: rgba(255, 255, 255, 0.82);
+  --surface-hover: rgba(255, 255, 255, 0.55);
   
   --primary-color: #4338ca;
-  --primary-glow: #4f46e5;
+  --primary-glow: #6366f1;
   --accent-gold: #b8860b;
   --accent-cyan: #0284c7;
   --accent-emerald: #059669;
   --accent-amber: #d97706;
   --accent-rose: #e11d48;
   
-  /* High-Contrast Ink Characters (Crisp Apple Retina Ink) */
+  /* High-Contrast Crisp Apple Retina Ink */
   --text-primary: #0a0f1d;
   --text-secondary: #334155;
   --text-muted: #64748b;
   
-  /* Precision Specular Ceramic Borders */
-  --border-glass: rgba(15, 23, 42, 0.12);
-  --border-glass-subtle: rgba(15, 23, 42, 0.06);
-  --border-glow: rgba(67, 56, 202, 0.25);
+  /* Luminous Frosted Ceramic Specular Hairlines */
+  --border-glass: rgba(255, 255, 255, 0.88);
+  --border-glass-subtle: rgba(255, 255, 255, 0.65);
+  --border-glow: rgba(99, 102, 241, 0.25);
   
-  --table-header-bg: #f1f5f9;
+  --table-header-bg: rgba(241, 245, 249, 0.85);
   --table-row-hover: rgba(67, 56, 202, 0.04);
-  --input-bg: #ffffff;
-  --input-border: rgba(15, 23, 42, 0.16);
+  --input-bg: rgba(255, 255, 255, 0.88);
+  --input-border: rgba(15, 23, 42, 0.12);
   
-  /* Apple Ceramic Specular Shadow: Bright Top Specular Bevel + Soft Ambient Drop */
+  /* Apple Ceramic Specular Shadow: Bright Top Specular Bevel + Concentric Hairline + Soft Ambient Spatial Drop */
   --card-shadow: 
-    inset 0 1px 0 0 #ffffff,
-    0 1px 3px 0 rgba(0, 0, 0, 0.04),
-    0 10px 24px -4px rgba(15, 23, 42, 0.06);
+    inset 0 1.5px 1px 0 #ffffff,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.72),
+    0 2px 8px -2px rgba(15, 23, 42, 0.03),
+    0 18px 40px -8px rgba(15, 23, 42, 0.065);
 
-  --app-bg: #eef2f6;
+  /* Pearlescent Titanium Spatial Substrate with Multi-Stop Ambient Aurora Mesh Blooms */
+  --app-bg: 
+    radial-gradient(ellipse 80% 50% at 50% -6%, rgba(99, 102, 241, 0.12), transparent 70%),
+    radial-gradient(circle at 92% 18%, rgba(212, 175, 55, 0.08), transparent 460px),
+    radial-gradient(circle at 8% 66%, rgba(6, 182, 212, 0.07), transparent 500px),
+    radial-gradient(circle at 75% 90%, rgba(99, 102, 241, 0.05), transparent 550px),
+    #f0f3f8;
 }
 
 /* Base Typography & Canvas Setup (Apple SF Pro, Steve Jobs Calligraphic Heritage & Swiss Architecture) */
 html, body {
   margin: 0;
-  background-color: var(--bg-deep) !important;
+  background: var(--app-bg) !important;
+  background-attachment: fixed !important;
   color: var(--text-primary) !important;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Icons', 'Plus Jakarta Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -244,18 +252,19 @@ h2, h3, h4, .page-title, .section-title, .ant-page-header-heading-title, .ant-ty
   border-left: 3px solid var(--primary-color) !important;
 }
 
-/* Bespoke Luxury Card System (Apple Continuous Squircle & Specular Bevel) */
+/* Bespoke Luxury Card System (Apple Continuous Squircle & Specular Ceramic Bevel) */
 .bespoke-glass-card, .ant-card, .standard-card, .bespoke-card {
   background: var(--surface-card) !important;
-  backdrop-filter: blur(24px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
   border: 1px solid var(--border-glass) !important;
-  border-radius: 12px !important;
+  border-radius: 18px !important;
   box-shadow: var(--card-shadow) !important;
   color: var(--text-primary) !important;
-  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
-              border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.26s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.26s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.26s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .bespoke-glass-card:hover, .standard-card:hover, .bespoke-card:hover {
@@ -265,8 +274,14 @@ h2, h3, h4, .page-title, .section-title, .ant-page-header-heading-title, .ant-ty
 [data-theme='light'] .bespoke-glass-card:hover, 
 [data-theme='light'] .standard-card:hover, 
 [data-theme='light'] .bespoke-card:hover {
-  border-color: rgba(67, 56, 202, 0.2) !important;
-  box-shadow: inset 0 1px 0 0 #ffffff, 0 2px 6px rgba(0, 0, 0, 0.03), 0 16px 36px -8px rgba(15, 23, 42, 0.07) !important;
+  background: var(--surface-card-hover) !important;
+  border-color: rgba(99, 102, 241, 0.28) !important;
+  box-shadow: 
+    inset 0 2px 1.5px 0 #ffffff, 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.9), 
+    0 4px 12px -2px rgba(15, 23, 42, 0.04), 
+    0 22px 46px -8px rgba(15, 23, 42, 0.08) !important;
+  transform: translateY(-2px);
 }
 
 .ant-card-head {
