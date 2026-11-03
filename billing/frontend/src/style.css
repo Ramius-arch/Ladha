@@ -1,0 +1,592 @@
+/* Google Fonts loaded via index.html preconnect */
+@import "tailwindcss";
+
+:root, :root[data-theme='dark'], html[data-theme='dark'], body[data-theme='dark'] {
+  /* Steve Jobs / Apple Human Interface & Swiss Precision Tokens (Dark Obsidian) */
+  --bg-deep: #050811;
+  --bg-subtle: #080d1a;
+  --surface-card: rgba(13, 19, 34, 0.78);
+  --surface-card-hover: rgba(19, 28, 49, 0.9);
+  --surface-header: rgba(7, 12, 24, 0.82);
+  --surface-sidebar: rgba(6, 10, 20, 0.92);
+  --surface-hover: rgba(255, 255, 255, 0.04);
+  
+  --primary-color: #6366f1;
+  --primary-glow: #818cf8;
+  --accent-gold: #d4af37;
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-rose: #f43f5e;
+  
+  /* High-Contrast Typographic Tokens (Optical SF Pro Scale) */
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Precision Specular Glass Borders */
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glass-subtle: rgba(255, 255, 255, 0.04);
+  --border-glow: rgba(99, 102, 241, 0.35);
+  
+  --table-header-bg: rgba(9, 14, 28, 0.85);
+  --table-row-hover: rgba(99, 102, 241, 0.06);
+  --input-bg: rgba(7, 12, 24, 0.8);
+  --input-border: rgba(255, 255, 255, 0.12);
+  
+  /* Apple Milled Glass Specular Shadow: Inset Hairline Bevel + Ambient Occlusion */
+  --card-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.09),
+    0 1px 2px 0 rgba(0, 0, 0, 0.4),
+    0 12px 36px -8px rgba(0, 0, 0, 0.65);
+
+  --app-bg: 
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.12), transparent 70%),
+    radial-gradient(circle at 90% 20%, rgba(6, 182, 212, 0.05), transparent 400px),
+    #050811;
+}
+
+:root[data-theme='light'], html[data-theme='light'], body[data-theme='light'], [data-theme='light'] {
+  /* Steve Jobs / Apple Human Interface & Swiss Precision Tokens (Ceramic White / Titanium) */
+  --bg-deep: #eef2f6;
+  --bg-subtle: #f8fafc;
+  --surface-card: #ffffff;
+  --surface-card-hover: #ffffff;
+  --surface-header: rgba(255, 255, 255, 0.94);
+  --surface-sidebar: #ffffff;
+  --surface-hover: rgba(15, 23, 42, 0.04);
+  
+  --primary-color: #4338ca;
+  --primary-glow: #4f46e5;
+  --accent-gold: #b8860b;
+  --accent-cyan: #0284c7;
+  --accent-emerald: #059669;
+  --accent-amber: #d97706;
+  --accent-rose: #e11d48;
+  
+  /* High-Contrast Ink Characters (Crisp Apple Retina Ink) */
+  --text-primary: #0a0f1d;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  
+  /* Precision Specular Ceramic Borders */
+  --border-glass: rgba(15, 23, 42, 0.12);
+  --border-glass-subtle: rgba(15, 23, 42, 0.06);
+  --border-glow: rgba(67, 56, 202, 0.25);
+  
+  --table-header-bg: #f1f5f9;
+  --table-row-hover: rgba(67, 56, 202, 0.04);
+  --input-bg: #ffffff;
+  --input-border: rgba(15, 23, 42, 0.16);
+  
+  /* Apple Ceramic Specular Shadow: Bright Top Specular Bevel + Soft Ambient Drop */
+  --card-shadow: 
+    inset 0 1px 0 0 #ffffff,
+    0 1px 3px 0 rgba(0, 0, 0, 0.04),
+    0 10px 24px -4px rgba(15, 23, 42, 0.06);
+
+  --app-bg: #eef2f6;
+}
+
+/* Base Typography & Canvas Setup (Apple SF Pro, Steve Jobs Calligraphic Heritage & Swiss Architecture) */
+html, body {
+  margin: 0;
+  background-color: var(--bg-deep) !important;
+  color: var(--text-primary) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Icons', 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'ss01', 'tnum', 'liga', 'dlig', 'kern', 'calt';
+  font-kerning: normal;
+  letter-spacing: -0.012em;
+  min-height: 100vh;
+  transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Steve Jobs Reed College Calligraphic Heritage & Editorial Tension */
+.calligraphic-accent, em.editorial-serif, .editorial-italic {
+  font-family: 'Cormorant Garamond', 'New York', Georgia, 'Times New Roman', serif !important;
+  font-style: italic !important;
+  font-weight: 600 !important;
+  font-size: 1.08em !important;
+  letter-spacing: -0.015em;
+  padding: 0 4px;
+  color: inherit;
+}
+
+.calligraphic-quote, .editorial-narrative {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+  font-size: 16px !important;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: var(--text-secondary);
+}
+
+.calligraphic-title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em;
+}
+
+/* Apple Inertial Momentum Scroll Architecture (Lenis Smooth Physics) */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+h1, .hero-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Plus Jakarta Sans', sans-serif !important;
+  letter-spacing: -0.04em !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  color: var(--text-primary) !important;
+}
+
+h2, h3, h4, .page-title, .section-title, .ant-page-header-heading-title, .ant-typography {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Plus Jakarta Sans', sans-serif !important;
+  letter-spacing: -0.028em !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Ambient Radial Background Light */
+.app-root {
+  background: var(--app-bg);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  transition: background 0.2s ease;
+}
+
+/* Custom Thin Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+/* Ant Design Global Layout Overrides */
+.ant-layout {
+  background: transparent !important;
+}
+
+.ant-layout-header {
+  background: var(--surface-header) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid var(--border-glass) !important;
+  padding: 0 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 68px !important;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ant-layout-sider {
+  background: var(--surface-sidebar) !important;
+  border-right: 1px solid var(--border-glass) !important;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ant-menu {
+  background: transparent !important;
+  border-inline-end: none !important;
+  color: var(--text-secondary) !important;
+}
+
+.ant-menu-item {
+  border-radius: 6px !important;
+  margin: 4px 8px !important;
+  width: calc(100% - 16px) !important;
+  color: var(--text-secondary) !important;
+  font-weight: 600 !important;
+  font-size: 13.5px !important;
+  height: 42px !important;
+  line-height: 42px !important;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ant-menu-item:hover {
+  color: var(--text-primary) !important;
+  background: var(--surface-hover) !important;
+}
+
+.ant-menu-item-selected {
+  background: var(--surface-hover) !important;
+  color: var(--primary-color) !important;
+  font-weight: 700 !important;
+  border-left: 3px solid var(--primary-color) !important;
+}
+
+/* Bespoke Luxury Card System (Apple Continuous Squircle & Specular Bevel) */
+.bespoke-glass-card, .ant-card, .standard-card, .bespoke-card {
+  background: var(--surface-card) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid var(--border-glass) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--card-shadow) !important;
+  color: var(--text-primary) !important;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.bespoke-glass-card:hover, .standard-card:hover, .bespoke-card:hover {
+  border-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+[data-theme='light'] .bespoke-glass-card:hover, 
+[data-theme='light'] .standard-card:hover, 
+[data-theme='light'] .bespoke-card:hover {
+  border-color: rgba(67, 56, 202, 0.2) !important;
+  box-shadow: inset 0 1px 0 0 #ffffff, 0 2px 6px rgba(0, 0, 0, 0.03), 0 16px 36px -8px rgba(15, 23, 42, 0.07) !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid var(--border-glass) !important;
+  color: var(--text-primary) !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  padding: 0 24px !important;
+  min-height: 52px !important;
+  letter-spacing: -0.02em;
+}
+
+.ant-card-head-title {
+  color: var(--text-primary) !important;
+  font-weight: 800 !important;
+}
+
+.ant-card-body {
+  padding: 24px !important;
+}
+
+/* Ant Design Table Overhaul */
+.ant-table,
+.ant-table-container,
+.ant-table-content,
+.ant-table-thead,
+.ant-table-tbody,
+.ant-table-cell {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.ant-table-thead > tr > th,
+.ant-table-thead th.ant-table-cell {
+  background: var(--table-header-bg) !important;
+  background-color: var(--table-header-bg) !important;
+  color: var(--text-secondary) !important;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  border-bottom: 1px solid var(--border-glass) !important;
+  border-top: none !important;
+  padding: 14px 18px !important;
+}
+
+.ant-table-thead th.ant-table-cell::before {
+  display: none !important;
+}
+
+.ant-table-tbody > tr > td,
+.ant-table-tbody td.ant-table-cell {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--border-glass-subtle) !important;
+  color: var(--text-primary) !important;
+  font-size: 13.5px !important;
+  padding: 16px 18px !important;
+}
+
+.ant-table-tbody > tr:hover > td,
+.ant-table-tbody > tr.ant-table-row-hover > td {
+  background: var(--table-row-hover) !important;
+}
+
+/* Inputs, Selects & Search Bars */
+.ant-input, 
+.ant-input-number, 
+.ant-select-selector, 
+.ant-picker,
+.ant-input-affix-wrapper {
+  background: var(--input-bg) !important;
+  background-color: var(--input-bg) !important;
+  border: 1px solid var(--input-border) !important;
+  border-radius: 6px !important;
+  color: var(--text-primary) !important;
+  font-size: 13.5px !important;
+  transition: all 0.15s ease;
+}
+
+.ant-input::placeholder,
+.ant-select-selection-placeholder {
+  color: var(--text-muted) !important;
+}
+
+.ant-input:focus, 
+.ant-input-focused,
+.ant-select-focused .ant-select-selector, 
+.ant-picker-focused,
+.ant-input-affix-wrapper-focused {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25) !important;
+}
+
+.ant-input-search .ant-input-search-button {
+  background: var(--surface-hover) !important;
+  border: 1px solid var(--input-border) !important;
+  color: var(--text-secondary) !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.ant-input-search .ant-input-search-button:hover {
+  background: rgba(99, 102, 241, 0.15) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Primary Action Buttons (Tactile Apple Milled Press) */
+.ant-btn-primary {
+  background: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 0 rgba(255, 255, 255, 0.22) !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ant-btn-primary:hover {
+  background: #3730a3 !important;
+  border-color: #3730a3 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px 0 rgba(67, 56, 202, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.ant-btn-default {
+  background: var(--surface-hover) !important;
+  border: 1px solid var(--border-glass) !important;
+  border-radius: 8px !important;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02), inset 0 1px 0 0 rgba(255, 255, 255, 0.06) !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ant-btn-default:hover {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  transform: translateY(-1px);
+}
+
+.ant-btn:active, .tile-btn:active, .action-tile:active, button:active {
+  transform: scale(0.982) !important;
+}
+
+/* Page Container Animation */
+.page-container {
+  padding: 32px;
+  animation: pageEnter 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography & Visual Helpers (Apple Proportional & Tabular) */
+.tabular-num {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: 'tnum' 1;
+  letter-spacing: -0.025em;
+}
+
+.hero-gradient-text {
+  color: var(--text-primary) !important;
+  letter-spacing: -0.035em;
+}
+
+/* Architectural Micro-Badge (Apple Precision Tag / Cian Goon Monospace) */
+.ambient-pill, .badge-micro {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #047857;
+  height: 23px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .ambient-pill, [data-theme='dark'] .badge-micro {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #34d399;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  display: inline-block;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Modal and Drawer overrides */
+.ant-modal-content, .ant-drawer-content {
+  background: var(--surface-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-glass) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.main-footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 12.5px;
+  border-top: 1px solid var(--border-glass);
+  background: var(--surface-header);
+  padding: 16px 24px;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 16px !important;
+  }
+}
+
+/* ==========================================================================
+   Explicit Light Mode Ink Contrast & Apple Titanium Hierarchy (Steve Jobs Quality)
+   ========================================================================== */
+[data-theme='light'] .kpi-value,
+[data-theme='light'] .kpi-val,
+[data-theme='light'] .txn-desc,
+[data-theme='light'] .tile-title,
+[data-theme='light'] .panel-title,
+[data-theme='light'] .hero-title,
+[data-theme='light'] .forecast-title,
+[data-theme='light'] .section-title,
+[data-theme='light'] .page-title,
+[data-theme='light'] .animated-num-span,
+[data-theme='light'] h1, 
+[data-theme='light'] h2, 
+[data-theme='light'] h3, 
+[data-theme='light'] h4 {
+  color: #0a0f1d !important;
+}
+
+[data-theme='light'] .kpi-prefix {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .kpi-title,
+[data-theme='light'] .trend-subtext,
+[data-theme='light'] .txn-time,
+[data-theme='light'] .tile-desc,
+[data-theme='light'] .panel-subtitle,
+[data-theme='light'] .telemetry-label {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .txn-row {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+[data-theme='light'] .txn-row:hover {
+  background: #ffffff !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05) !important;
+}
+
+[data-theme='light'] .tile-btn {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+[data-theme='light'] .tile-btn:hover {
+  background: #ffffff !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.08) !important;
+}
+
+[data-theme='light'] .tile-icon-box {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+}
+
+[data-theme='light'] .hero-telemetry,
+[data-theme='light'] .health-card {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+[data-theme='light'] .badge-micro,
+[data-theme='light'] .ambient-pill {
+  background: #f1f5f9 !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+  color: #334155 !important;
+}
+
+[data-theme='light'] .garment-catalog-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 20px -4px rgba(15, 23, 42, 0.06) !important;
+}
+
+[data-theme='light'] .intelligence-card,
+[data-theme='light'] .intelligence-hero {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+}
+

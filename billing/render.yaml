@@ -1,0 +1,45 @@
+services:
+  - type: web
+    name: qx-billing-backend
+    env: node
+    plan: free
+    region: oregon
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: qx-billing-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: qx-billing-cache
+          property: connectionString
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+
+  - type: web
+    name: qx-billing-frontend
+    env: static
+    plan: free
+    region: oregon
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://qx-billing-backend.onrender.com/api
+
+databases:
+  - name: qx-billing-db
+    plan: free
+    region: oregon
+
+redis:
+  - name: qx-billing-cache
+    plan: free
+    region: oregon

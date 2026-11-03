@@ -1,0 +1,36 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Editor & IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary Test & Audit Files
+*.tmp
+hero*.png
+test*.png
+full_page*.png
+audit*.png
+screenshot*.png
+
+# Netlify
+.netlify/
+
+# Vercel
+.vercel/
+.vercel
+
+# Local snapshots & WhatsApp Web download bundles
+*.original
+assets/uploads/WhatsApp.html
+assets/uploads/WhatsApp_files/

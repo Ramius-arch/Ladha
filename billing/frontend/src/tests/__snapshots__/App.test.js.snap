@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`mount component 1`] = `
+"<div id="app">
+  <!-- Header -->
+  <header class="bg-gray-800 text-white p-4">
+    <h1>Telecom Billing System</h1>
+  </header>
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 min-h-screen p-4">
+      <ul class="space-y-2">
+        <li>
+          <router-link-stub to="/dashboard" class="block w-full text-left px-4 py-2 rounded hover:bg-gray-700"></router-link-stub>
+        </li>
+        <li>
+          <router-link-stub to="/customers" class="block w-full text-left px-4 py-2 rounded hover:bg-gray-700"></router-link-stub>
+        </li>
+        <li>
+          <router-link-stub to="/usage-tracker" class="block w-full text-left px-4 py-2 rounded hover:bg-gray-700"></router-link-stub>
+        </li>
+        <li>
+          <router-link-stub to="/billing-engine" class="block w-full text-left px-4 py-2 rounded hover:bg-gray-700"></router-link-stub>
+        </li>
+        <li>
+          <router-link-stub to="/reports" class="block w-full text-left px-4 py-2 rounded hover:bg-gray-700"></router-link-stub>
+        </li>
+      </ul>
+    </aside><!-- Main Content -->
+    <main class="flex-1 p-8">
+      <router-view-stub></router-view-stub>
+    </main>
+  </div>
+</div>"
+`;

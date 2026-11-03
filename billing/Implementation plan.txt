@@ -1,0 +1,97 @@
+Qx_Billing: Mobile Portrait Fix, Backend Logic & Static Buttons
+Fix all three categories of issues in the Qx_Billing app: mobile portrait layout proportions, empty/non-functional form fields, and static (non-wired) buttons.
+
+User Review Required
+IMPORTANT
+
+This is a significant pass across all frontend pages and the API service layer. The backend routes and controllers are already wired up correctly — the problems are almost entirely on the frontend side (missing mobile CSS, broken API signatures, dummy data instead of live API calls, and un-wired click handlers).
+
+Proposed Changes
+Component 1 — Mobile Portrait Layout Fixes
+The root cause is that several pages use fixed widths, hardcoded span values without responsive breakpoints, and missing @media queries for the < 576px portrait range.
+
+[MODIFY] 
+style.css
+Add global mobile portrait overrides for Ant Design cards, modals, tables, and form items at max-width: 480px.
+Ensure .page-container padding goes down to 12px on very small screens.
+Force Ant modal widths to 100% !important at < 576px.
+[MODIFY] 
+App.vue
+The main-header flex layout clips the page title on narrow portrait screens — add min-width: 0 to .header-left and overflow: hidden with text-overflow: ellipsis on .page-title (partially present but needs mobile-specific font-size reduction).
+Reduce header icon sizes and spacing in the < 480px range.
+[MODIFY] 
+Dashboard.vue
+.stats-grid uses minmax(240px, 1fr) which forces horizontal scroll on phones < 360px. Change breakpoint to minmax(140px, 1fr) at < 480px (partially done at 576px, needs refinement).
+Stat card .stat-value font-size should scale down from 24px to 18px on < 480px.
+.actions-grid (2-col grid) should go to 1fr on < 480px.
+Mock pie chart should shrink on mobile.
+[MODIFY] 
+BillingEngine.vue
+The forecast section uses <a-col :span="12"> without responsive breakpoints — both columns will be 50% width even on a 320px phone. Change to :xs="24" :sm="12".
+.projected-value .amount at 36px is too large for portrait — reduce to 24px at < 576px.
+.cost-breakdown hardcoded background: #f8fafc — needs dark mode variable.
+[MODIFY] 
+Customers.vue
+Modal width="600px" overflows on mobile portrait. Change to :width="isMobile ? '100%' : '600px'" and add isMobile computed.
+Table actions column clipping — already has scroll, but on very narrow screens the action buttons overlap.
+[MODIFY] 
+InvoiceGenerator.vue
+a-page-header extra buttons stack poorly on mobile — hide "Reset" and "Draft Preview" text on mobile, use icon-only.
+Line items row uses :xs="2" for total and delete cols which renders 2/24 = 8.3% (too narrow). Fix to :xs="12" for total and :xs="4" for delete so they stack properly.
+Preview modal width="800px" overflows on mobile — use responsive width.
+[MODIFY] 
+PaymentProcessing.vue
+Cards use style="max-width: 600px; width: 90%" inline — works reasonably but margin centering breaks the visual flow on portrait. Change to responsive class-based approach.
+[MODIFY] 
+UsageTracker.vue
+Pagination "Previous / Page X of Y / Next" flex layout breaks on narrow screens — needs wrapping and centered alignment on mobile.
+[MODIFY] 
+ReportsAnalytics.vue
+Chart containers have no min-height reduction for mobile, causing excessive blank space.
+Component 2 — Empty Fields & Non-Functional Backend Logic
+The frontend API service (api.js) has mismatched method signatures vs. what the pages call. The pages call methods with pagination params but the API functions don't forward them. Additionally, PaymentProcessing uses dummy hardcoded data instead of hitting the API.
+
+[MODIFY] 
+api.js
+getUsage() — needs (page, pageSize) params forwarded as query string (backend's getAllUsage supports pagination).
+getUsageByCustomerId(customerId) — needs (customerId, page, pageSize) params forwarded.
+getInvoices() — needs pagination support and result is expected as { invoices: [...] }.
+getPayments() — needs to return actual data structure the PaymentProcessing page expects.
+[MODIFY] 
+PaymentProcessing.vue
+CRITICAL: Uses const invoices = ref([...dummy data...]) instead of fetching from API. Wire up api.getInvoices() in onMounted.
+processPayment() uses setTimeout simulation — wire to api.createPayment().
+Credit card form fields exist but are never validated or sent to backend.
+[MODIFY] 
+InvoiceGenerator.vue
+handleCustomerChange tries to destructure res.data.data.currentCosts.breakdown which doesn't match the backend response shape (res.data.data.currentCosts has basePrice and usageCharges directly, not nested under breakdown). This silently fails, leaving invoice items with rate 0 (the "empty fields" symptom).
+[MODIFY] 
+Dashboard.vue
+recentTransactions list uses icons via string component names ('check-outlined', 'clock-circle-outlined') in template <component :is="...">. These need to be the actual imported component references, not strings — currently renders blank/broken.
+Component 3 — Static / Non-Functional Buttons
+[MODIFY] 
+Dashboard.vue
+"Export Report" button — has no @click handler. Wire to download a CSV/JSON from the reports API or show a "coming soon" message.
+Revenue period radio group (7D / 30D / 12M) — changes revenuePeriod ref but nothing reacts to it. Add a watcher that re-fetches dashboard data with the period parameter, or show a message.
+[MODIFY] 
+ReportsAnalytics.vue
+"View Details" link in All Customers table is a plain <a> with no href or @click — wire to navigate to /customers?search=<customer_name> or show customer detail.
+[MODIFY] 
+HelpCenter.vue
+"View Guide" buttons use href="#" — they navigate nowhere. Either link to actual docs or show an in-app tutorial modal.
+Verification Plan
+Manual Verification
+Run npm run dev from the frontend directory.
+Open Chrome DevTools, enable device emulation with iPhone SE (375×667), Galaxy S20 (360×800), and iPhone 14 Pro (393×852) to verify portrait layout proportions.
+Navigate to every page and confirm:
+No horizontal overflow or clipped elements.
+All form inputs accept user input (not empty/disabled).
+All buttons perform an action (navigate, call API, or show feedback).
+Test the Customers modal form — add and edit a customer.
+Test the Invoice Generator — select a customer and verify line items auto-populate with correct rates.
+Test Payment Processing — verify invoices load from API and payment submission calls the backend.
+Automated Tests
+bash
+
+cd c:\Users\ADMIN\Documents\GitHub\Qx_Billing\backend
+npm test

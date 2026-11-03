@@ -1,0 +1,25 @@
+{
+  "name": "storefront-workspace",
+  "version": "1.0.0",
+  "description": "Unified E-Commerce & Telecommunications Invoicing Ecosystem combining Ladha Storefront and Qx Billing Engine",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/start-dev.js",
+    "dev:storefront": "python storefront/server.py 3001",
+    "dev:billing-backend": "cd billing/backend && npm start",
+    "dev:billing-frontend": "cd billing/frontend && npm run dev",
+    "install:all": "npm run install:billing-backend && npm run install:billing-frontend",
+    "install:billing-backend": "cd billing/backend && npm install",
+    "install:billing-frontend": "cd billing/frontend && npm install"
+  },
+  "keywords": [
+    "ladha",
+    "qx-billing",
+    "storefront",
+    "mpesa",
+    "invoicing",
+    "ecommerce"
+  ],
+  "author": "Ramius-arch",
+  "license": "ISC"
+}
