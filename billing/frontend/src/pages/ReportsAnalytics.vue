@@ -934,10 +934,10 @@ export default defineComponent({
 }
 
 /* Light Mode Frosted Ceramic Glass Rules */
-:global([data-theme='light']) .hero-card,
-:global([data-theme='light']) .statement-card,
-:global([data-theme='light']) .standard-card,
-:global([data-theme='light']) .institutional-tabs {
+[data-theme='light'] .hero-card,
+[data-theme='light'] .statement-card,
+[data-theme='light'] .standard-card,
+[data-theme='light'] .institutional-tabs {
   background: rgba(255, 255, 255, 0.74) !important;
   backdrop-filter: blur(28px) saturate(190%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
@@ -950,7 +950,7 @@ export default defineComponent({
     0 18px 40px -8px rgba(15, 23, 42, 0.065) !important;
 }
 
-:global([data-theme='light']) .diligence-telemetry-bay {
+[data-theme='light'] .diligence-telemetry-bay {
   background: rgba(255, 255, 255, 0.52) !important;
   backdrop-filter: blur(20px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
@@ -959,20 +959,20 @@ export default defineComponent({
   border-radius: 14px !important;
 }
 
-:global([data-theme='light']) .statement-table td {
+[data-theme='light'] .statement-table td {
   color: #0a0f1d !important;
 }
 
-:global([data-theme='light']) .hero-title {
+[data-theme='light'] .hero-title {
   color: #0a0f1d !important;
 }
 
-:global([data-theme='light']) .calligraphic-quote {
+[data-theme='light'] .calligraphic-quote {
   color: #334155 !important;
 }
 
-:global([data-theme='light']) .simulator-box,
-:global([data-theme='light']) .ratio-pill-card {
+[data-theme='light'] .simulator-box,
+[data-theme='light'] .ratio-pill-card {
   background: rgba(255, 255, 255, 0.62) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.88) !important;
@@ -981,8 +981,7 @@ export default defineComponent({
 }
 
 /* Dark Mode Obsidian Rules */
-:global([data-theme='dark']) .hero-card,
-:global(html[data-theme='dark']) .hero-card {
+[data-theme='dark'] .hero-card {
   background: 
     radial-gradient(circle at 12% 15%, rgba(99, 102, 241, 0.14), transparent 450px),
     radial-gradient(circle at 88% 85%, rgba(212, 175, 55, 0.06), transparent 420px),
@@ -994,9 +993,9 @@ export default defineComponent({
     0 8px 32px -4px rgba(0, 0, 0, 0.6) !important;
 }
 
-:global([data-theme='dark']) .statement-card,
-:global([data-theme='dark']) .standard-card,
-:global([data-theme='dark']) .institutional-tabs {
+[data-theme='dark'] .statement-card,
+[data-theme='dark'] .standard-card,
+[data-theme='dark'] .institutional-tabs {
   background: 
     radial-gradient(circle at 95% 5%, rgba(99, 102, 241, 0.07), transparent 400px),
     var(--surface-card) !important;
@@ -1008,19 +1007,19 @@ export default defineComponent({
     0 18px 40px -8px rgba(0, 0, 0, 0.65) !important;
 }
 
-:global([data-theme='dark']) .diligence-telemetry-bay {
+[data-theme='dark'] .diligence-telemetry-bay {
   background: rgba(6, 10, 22, 0.7) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.04) !important;
 }
 
-:global([data-theme='dark']) .calligraphic-quote {
+[data-theme='dark'] .calligraphic-quote {
   color: rgba(255, 248, 235, 0.88) !important;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
 }
 
-:global([data-theme='dark']) .simulator-box,
-:global([data-theme='dark']) .ratio-pill-card {
+[data-theme='dark'] .simulator-box,
+[data-theme='dark'] .ratio-pill-card {
   background: rgba(255, 255, 255, 0.035) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;

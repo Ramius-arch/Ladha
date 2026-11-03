@@ -211,7 +211,9 @@ export default defineComponent({
     const drawerVisible = ref(false);
     const selectedKeys = ref([route.path.split('/')[1] || 'dashboard']);
     
-    const isDark = ref(localStorage.getItem('theme') !== 'light');
+    const queryTheme = new URLSearchParams(window.location.search).get('theme');
+    const initialDark = queryTheme ? (queryTheme !== 'light') : (localStorage.getItem('theme') !== 'light');
+    const isDark = ref(initialDark);
 
     const themeConfig = computed(() => ({
       algorithm: isDark.value ? theme.darkAlgorithm : theme.defaultAlgorithm,

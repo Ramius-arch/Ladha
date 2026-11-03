@@ -590,11 +590,11 @@ export default defineComponent({
   align-items: center;
   gap: 10px;
   padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface-pill);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border-glass);
   border-radius: 9999px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 14px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow-pill);
   transition: all 0.2s ease;
 }
 
@@ -614,14 +614,14 @@ export default defineComponent({
 .status-pill-label {
   font-size: 9px;
   font-weight: 800;
-  color: #94a3b8;
+  color: var(--text-muted);
   letter-spacing: 0.1em;
 }
 
 .status-pill-sub {
   font-size: 11px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-primary);
   letter-spacing: 0.02em;
 }
 
@@ -659,19 +659,19 @@ export default defineComponent({
 }
 
 .hero-action-pill.secondary {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--surface-pill);
   backdrop-filter: blur(16px);
-  color: #f1f5f9;
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 14px rgba(0, 0, 0, 0.3);
+  color: var(--text-primary);
+  border-color: var(--border-glass);
+  box-shadow: var(--shadow-pill);
 }
 
 .hero-action-pill.secondary:hover {
-  background: rgba(255, 255, 255, 0.11);
-  border-color: rgba(255, 255, 255, 0.25);
-  color: #ffffff;
+  background: var(--surface-pill-hover);
+  border-color: var(--border-glow);
+  color: var(--text-primary);
   transform: translateY(-2px);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 8px 20px rgba(0, 0, 0, 0.45);
+  box-shadow: var(--shadow-pill);
 }
 
 .pill-icon-circle {
@@ -690,8 +690,8 @@ export default defineComponent({
 }
 
 .hero-action-pill.secondary .pill-icon-circle {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: var(--surface-hover);
+  color: var(--text-primary);
 }
 
 .hero-title {
@@ -717,12 +717,12 @@ export default defineComponent({
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   gap: 16px;
-  background: rgba(6, 10, 22, 0.65);
+  background: var(--surface-telemetry);
   backdrop-filter: blur(20px);
   padding: 14px 22px;
   border-radius: 14px;
   border: 1px solid var(--border-glass);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.04);
+  box-shadow: var(--shadow-telemetry);
   margin-top: 24px;
   width: 100%;
 }
@@ -1218,27 +1218,21 @@ export default defineComponent({
 /* ==========================================================================
    Explicit High-Contrast Light Mode Ink & Apple Titanium Overrides
    ========================================================================== */
-:global([data-theme='light']) .kpi-value,
-:global(html[data-theme='light']) .kpi-value,
-:global([data-theme='light']) .kpi-val,
-:global([data-theme='light']) .txn-desc,
-:global(html[data-theme='light']) .txn-desc,
-:global([data-theme='light']) .tile-title,
-:global(html[data-theme='light']) .tile-title,
-:global([data-theme='light']) .panel-title,
-:global(html[data-theme='light']) .panel-title,
-:global([data-theme='light']) .hero-title,
-:global(html[data-theme='light']) .hero-title,
-:global([data-theme='light']) .forecast-title {
+[data-theme='light'] .kpi-value,
+[data-theme='light'] .kpi-val,
+[data-theme='light'] .txn-desc,
+[data-theme='light'] .tile-title,
+[data-theme='light'] .panel-title,
+[data-theme='light'] .hero-title,
+[data-theme='light'] .forecast-title {
   color: #0a0f1d !important;
 }
 
-:global([data-theme='light']) .kpi-card,
-:global(html[data-theme='light']) .kpi-card,
-:global([data-theme='light']) .chart-panel,
-:global([data-theme='light']) .table-panel,
-:global([data-theme='light']) .actions-panel,
-:global([data-theme='light']) .hero-card {
+[data-theme='light'] .kpi-card,
+[data-theme='light'] .chart-panel,
+[data-theme='light'] .table-panel,
+[data-theme='light'] .actions-panel,
+[data-theme='light'] .hero-card {
   background: rgba(255, 255, 255, 0.74) !important;
   backdrop-filter: blur(28px) saturate(190%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
@@ -1251,11 +1245,11 @@ export default defineComponent({
     0 18px 40px -8px rgba(15, 23, 42, 0.065) !important;
 }
 
-:global([data-theme='light']) .kpi-card:hover,
-:global([data-theme='light']) .hero-card:hover,
-:global([data-theme='light']) .chart-panel:hover,
-:global([data-theme='light']) .table-panel:hover,
-:global([data-theme='light']) .actions-panel:hover {
+[data-theme='light'] .kpi-card:hover,
+[data-theme='light'] .hero-card:hover,
+[data-theme='light'] .chart-panel:hover,
+[data-theme='light'] .table-panel:hover,
+[data-theme='light'] .actions-panel:hover {
   background: rgba(255, 255, 255, 0.88) !important;
   border-color: rgba(99, 102, 241, 0.3) !important;
   box-shadow: 
@@ -1265,7 +1259,7 @@ export default defineComponent({
     0 22px 46px -8px rgba(15, 23, 42, 0.08) !important;
 }
 
-:global([data-theme='light']) .hero-telemetry-bar {
+[data-theme='light'] .hero-telemetry-bar {
   background: rgba(255, 255, 255, 0.52) !important;
   backdrop-filter: blur(20px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
@@ -1274,19 +1268,20 @@ export default defineComponent({
   border-radius: 14px !important;
 }
 
-:global([data-theme='light']) .telemetry-label {
-  color: #64748b !important;
+[data-theme='light'] .telemetry-label {
+  color: #475569 !important;
+  font-weight: 750 !important;
 }
 
-:global([data-theme='light']) .telemetry-divider {
+[data-theme='light'] .telemetry-divider {
   background: rgba(15, 23, 42, 0.1) !important;
 }
 
-:global([data-theme='light']) .calligraphic-quote {
+[data-theme='light'] .calligraphic-quote {
   color: #334155 !important;
 }
 
-:global([data-theme='light']) .kpi-icon-badge {
+[data-theme='light'] .kpi-icon-badge {
   background: rgba(255, 255, 255, 0.85) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.95) !important;
@@ -1294,21 +1289,21 @@ export default defineComponent({
   border-radius: 12px !important;
 }
 
-:global([data-theme='light']) .trend-badge.trend-up {
+[data-theme='light'] .trend-badge.trend-up {
   background: rgba(16, 185, 129, 0.12) !important;
   border: 1px solid rgba(16, 185, 129, 0.25) !important;
   color: #059669 !important;
   border-radius: 9999px !important;
 }
 
-:global([data-theme='light']) .trend-badge.trend-down {
+[data-theme='light'] .trend-badge.trend-down {
   background: rgba(244, 63, 94, 0.12) !important;
   border: 1px solid rgba(244, 63, 94, 0.25) !important;
   color: #e11d48 !important;
   border-radius: 9999px !important;
 }
 
-:global([data-theme='light']) .period-toggle {
+[data-theme='light'] .period-toggle {
   background: rgba(15, 23, 42, 0.04) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.85) !important;
@@ -1316,7 +1311,7 @@ export default defineComponent({
   padding: 3px !important;
 }
 
-:global([data-theme='light']) .period-btn.active {
+[data-theme='light'] .period-btn.active {
   background: #ffffff !important;
   color: #0a0f1d !important;
   font-weight: 700 !important;
@@ -1324,7 +1319,7 @@ export default defineComponent({
   box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08), inset 0 1px 0 #ffffff !important;
 }
 
-:global([data-theme='light']) .forecast-banner {
+[data-theme='light'] .forecast-banner {
   background: rgba(255, 255, 255, 0.6) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.85) !important;
@@ -1332,7 +1327,7 @@ export default defineComponent({
   box-shadow: inset 0 1px 1px #ffffff !important;
 }
 
-:global([data-theme='light']) .txn-row {
+[data-theme='light'] .txn-row {
   background: rgba(255, 255, 255, 0.58) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.85) !important;
@@ -1340,19 +1335,19 @@ export default defineComponent({
   border-radius: 12px !important;
 }
 
-:global([data-theme='light']) .txn-row:hover {
+[data-theme='light'] .txn-row:hover {
   background: rgba(255, 255, 255, 0.92) !important;
   border-color: rgba(99, 102, 241, 0.35) !important;
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06), inset 0 1px 0 #ffffff !important;
   transform: translateY(-1px) translateX(2px) !important;
 }
 
-:global([data-theme='light']) .txn-time {
+[data-theme='light'] .txn-time {
   color: #64748b !important;
   font-weight: 500 !important;
 }
 
-:global([data-theme='light']) .tile-btn {
+[data-theme='light'] .tile-btn {
   background: rgba(255, 255, 255, 0.62) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.88) !important;
@@ -1360,19 +1355,19 @@ export default defineComponent({
   box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.02) !important;
 }
 
-:global([data-theme='light']) .tile-btn:hover {
+[data-theme='light'] .tile-btn:hover {
   background: rgba(255, 255, 255, 0.95) !important;
   border-color: #4338ca !important;
   box-shadow: 0 6px 18px rgba(67, 56, 202, 0.1), inset 0 1px 0 #ffffff !important;
   transform: translateY(-2px) !important;
 }
 
-:global([data-theme='light']) .tile-primary {
+[data-theme='light'] .tile-primary {
   background: rgba(238, 242, 255, 0.75) !important;
   border-color: rgba(67, 56, 202, 0.28) !important;
 }
 
-:global([data-theme='light']) .tile-icon-box {
+[data-theme='light'] .tile-icon-box {
   background: rgba(255, 255, 255, 0.95) !important;
   border: 1px solid rgba(255, 255, 255, 1) !important;
   color: #4338ca !important;
@@ -1380,17 +1375,17 @@ export default defineComponent({
   box-shadow: inset 0 1px 1px #ffffff, 0 2px 5px rgba(0, 0, 0, 0.03) !important;
 }
 
-:global([data-theme='light']) .tile-title {
+[data-theme='light'] .tile-title {
   color: #0a0f1d !important;
   font-weight: 700 !important;
 }
 
-:global([data-theme='light']) .tile-desc {
+[data-theme='light'] .tile-desc {
   color: #64748b !important;
   font-weight: 500 !important;
 }
 
-:global([data-theme='light']) .health-card {
+[data-theme='light'] .health-card {
   background: rgba(255, 255, 255, 0.55) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.88) !important;
@@ -1398,48 +1393,48 @@ export default defineComponent({
   box-shadow: inset 0 1px 1px #ffffff !important;
 }
 
-:global([data-theme='light']) .health-title {
+[data-theme='light'] .health-title {
   color: #475569 !important;
 }
 
-:global([data-theme='light']) .hero-status-pill {
+[data-theme='light'] .hero-status-pill {
   background: rgba(255, 255, 255, 0.72) !important;
   border: 1px solid rgba(255, 255, 255, 0.92) !important;
   box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.04) !important;
 }
 
-:global([data-theme='light']) .status-pill-label {
+[data-theme='light'] .status-pill-label {
   color: #64748b !important;
 }
 
-:global([data-theme='light']) .status-pill-sub {
+[data-theme='light'] .status-pill-sub {
   color: #0a0f1d !important;
 }
 
-:global([data-theme='light']) .hero-action-pill.primary {
+[data-theme='light'] .hero-action-pill.primary {
   background: #4338ca !important;
   border-color: rgba(99, 102, 241, 0.6) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px -2px rgba(67, 56, 202, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
 }
 
-:global([data-theme='light']) .hero-action-pill.primary:hover {
+[data-theme='light'] .hero-action-pill.primary:hover {
   background: #3730a3 !important;
 }
 
-:global([data-theme='light']) .hero-action-pill.secondary {
+[data-theme='light'] .hero-action-pill.secondary {
   background: rgba(255, 255, 255, 0.75) !important;
   color: #0a0f1d !important;
   border-color: rgba(255, 255, 255, 0.92) !important;
   box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.04) !important;
 }
 
-:global([data-theme='light']) .hero-action-pill.secondary:hover {
+[data-theme='light'] .hero-action-pill.secondary:hover {
   background: rgba(255, 255, 255, 0.96) !important;
   border-color: rgba(99, 102, 241, 0.35) !important;
 }
 
-:global([data-theme='light']) .hero-action-pill.secondary .pill-icon-circle {
+[data-theme='light'] .hero-action-pill.secondary .pill-icon-circle {
   background: rgba(15, 23, 42, 0.07) !important;
   color: #0a0f1d !important;
 }
@@ -1458,8 +1453,7 @@ export default defineComponent({
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-:global([data-theme='light']) .badge-micro,
-:global(html[data-theme='light']) .badge-micro {
+[data-theme='light'] .badge-micro {
   background: rgba(255, 255, 255, 0.78) !important;
   backdrop-filter: blur(12px) !important;
   color: #1e293b !important;
@@ -1470,8 +1464,7 @@ export default defineComponent({
 /* ==========================================================================
    Apple visionOS Dark Obsidian — Bespoke Luminous Aesthetics
    ========================================================================== */
-:global([data-theme='dark']) .hero-card,
-:global(html[data-theme='dark']) .hero-card {
+[data-theme='dark'] .hero-card {
   background: 
     radial-gradient(circle at 12% 15%, rgba(99, 102, 241, 0.14), transparent 450px),
     radial-gradient(circle at 88% 85%, rgba(212, 175, 55, 0.06), transparent 420px),
@@ -1483,12 +1476,12 @@ export default defineComponent({
     0 8px 32px -4px rgba(0, 0, 0, 0.6) !important;
 }
 
-:global([data-theme='dark']) .calligraphic-quote {
+[data-theme='dark'] .calligraphic-quote {
   color: rgba(255, 248, 235, 0.88) !important;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
 }
 
-:global([data-theme='dark']) .kpi-card {
+[data-theme='dark'] .kpi-card {
   background: 
     radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--accent) 15%, transparent), transparent 65%),
     var(--surface-card) !important;
@@ -1500,7 +1493,7 @@ export default defineComponent({
     0 16px 36px -8px rgba(0, 0, 0, 0.6) !important;
 }
 
-:global([data-theme='dark']) .kpi-card:hover {
+[data-theme='dark'] .kpi-card:hover {
   background: 
     radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 70%),
     var(--surface-card-hover) !important;
@@ -1513,7 +1506,7 @@ export default defineComponent({
   transform: translateY(-3px) scale(1.002);
 }
 
-:global([data-theme='dark']) .kpi-icon-badge {
+[data-theme='dark'] .kpi-icon-badge {
   background: rgba(255, 255, 255, 0.06) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
@@ -1521,9 +1514,9 @@ export default defineComponent({
   border-radius: 12px !important;
 }
 
-:global([data-theme='dark']) .chart-panel,
-:global([data-theme='dark']) .table-panel,
-:global([data-theme='dark']) .actions-panel {
+[data-theme='dark'] .chart-panel,
+[data-theme='dark'] .table-panel,
+[data-theme='dark'] .actions-panel {
   background: 
     radial-gradient(circle at 95% 5%, rgba(99, 102, 241, 0.07), transparent 400px),
     var(--surface-card) !important;
@@ -1535,7 +1528,7 @@ export default defineComponent({
     0 18px 40px -8px rgba(0, 0, 0, 0.65) !important;
 }
 
-:global([data-theme='dark']) .period-toggle {
+[data-theme='dark'] .period-toggle {
   background: rgba(255, 255, 255, 0.04) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -1543,11 +1536,11 @@ export default defineComponent({
   padding: 3px !important;
 }
 
-:global([data-theme='dark']) .period-btn {
+[data-theme='dark'] .period-btn {
   color: #94a3b8 !important;
 }
 
-:global([data-theme='dark']) .period-btn.active {
+[data-theme='dark'] .period-btn.active {
   background: rgba(255, 255, 255, 0.14) !important;
   color: #ffffff !important;
   font-weight: 700 !important;
@@ -1555,7 +1548,7 @@ export default defineComponent({
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
 }
 
-:global([data-theme='dark']) .forecast-banner {
+[data-theme='dark'] .forecast-banner {
   background: rgba(99, 102, 241, 0.09) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(99, 102, 241, 0.25) !important;
@@ -1563,21 +1556,21 @@ export default defineComponent({
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
 }
 
-:global([data-theme='dark']) .txn-row {
+[data-theme='dark'] .txn-row {
   background: rgba(255, 255, 255, 0.03) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
   border-radius: 12px !important;
 }
 
-:global([data-theme='dark']) .txn-row:hover {
+[data-theme='dark'] .txn-row:hover {
   background: rgba(255, 255, 255, 0.065) !important;
   border-color: rgba(99, 102, 241, 0.45) !important;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
   transform: translateY(-1px) translateX(2px) !important;
 }
 
-:global([data-theme='dark']) .tile-btn {
+[data-theme='dark'] .tile-btn {
   background: rgba(255, 255, 255, 0.035) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.07) !important;
@@ -1585,19 +1578,19 @@ export default defineComponent({
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 2px 6px rgba(0, 0, 0, 0.2) !important;
 }
 
-:global([data-theme='dark']) .tile-btn:hover {
+[data-theme='dark'] .tile-btn:hover {
   background: rgba(255, 255, 255, 0.075) !important;
   border-color: #818cf8 !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 18px rgba(99, 102, 241, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
   transform: translateY(-2px) !important;
 }
 
-:global([data-theme='dark']) .tile-primary {
+[data-theme='dark'] .tile-primary {
   background: rgba(99, 102, 241, 0.12) !important;
   border-color: rgba(99, 102, 241, 0.35) !important;
 }
 
-:global([data-theme='dark']) .tile-icon-box {
+[data-theme='dark'] .tile-icon-box {
   background: rgba(255, 255, 255, 0.06) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   color: #818cf8 !important;
@@ -1605,7 +1598,7 @@ export default defineComponent({
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
-:global([data-theme='dark']) .health-card {
+[data-theme='dark'] .health-card {
   background: rgba(255, 255, 255, 0.035) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.07) !important;

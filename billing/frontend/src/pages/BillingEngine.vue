@@ -368,8 +368,8 @@ export default defineComponent({
   justify-content: center;
 }
 
-:global([data-theme='light']) .trial-balance-card,
-:global([data-theme='light']) .bespoke-card {
+[data-theme='light'] .trial-balance-card,
+[data-theme='light'] .bespoke-card {
   background: rgba(255, 255, 255, 0.74) !important;
   backdrop-filter: blur(28px) saturate(190%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
@@ -382,8 +382,8 @@ export default defineComponent({
     0 18px 40px -8px rgba(15, 23, 42, 0.065) !important;
 }
 
-:global([data-theme='light']) .intelligence-card,
-:global([data-theme='light']) .intelligence-hero {
+[data-theme='light'] .intelligence-card,
+[data-theme='light'] .intelligence-hero {
   background: rgba(255, 255, 255, 0.58) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.88) !important;
@@ -391,8 +391,8 @@ export default defineComponent({
   box-shadow: inset 0 1px 1px #ffffff !important;
 }
 
-:global([data-theme='dark']) .trial-balance-card,
-:global([data-theme='dark']) .bespoke-card {
+[data-theme='dark'] .trial-balance-card,
+[data-theme='dark'] .bespoke-card {
   background: 
     radial-gradient(circle at 92% 8%, rgba(99, 102, 241, 0.08), transparent 400px),
     var(--surface-card) !important;
@@ -404,8 +404,8 @@ export default defineComponent({
     0 18px 40px -8px rgba(0, 0, 0, 0.65) !important;
 }
 
-:global([data-theme='dark']) .intelligence-card,
-:global([data-theme='dark']) .intelligence-hero {
+[data-theme='dark'] .intelligence-card,
+[data-theme='dark'] .intelligence-hero {
   background: rgba(255, 255, 255, 0.035) !important;
   backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
