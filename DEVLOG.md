@@ -123,4 +123,5 @@ This release resolves all visual and structural defects reported across 8 real-d
 - **KRA eTIMS PDF Generation Benchmark**: 6,026 bytes generated in **14ms** via native `pdfmake` stream.
 - **Due Diligence PDF Generation Benchmark**: 8,661 bytes generated in **18ms** via native `pdfmake` stream.
 - **Vitest Unit Suite**: 3/3 passed (100% green) in 11.13s.
+- **Git Branching Strategy**: Baseline release v2.4.0 committed to `main` (`f5d18c6`); switched to active local workspace branch `experimental/ui-design` for UI exploration and rapid prototyping.
 - **Zero Unauthorized Push / Deploy**: Local verification gate verified against `http://localhost:5174`, `http://localhost:5000`, and `http://localhost:3001`.
