@@ -183,3 +183,23 @@ Following user feedback regarding the light theme ("*I've noticed the current on
    - **Scoped Selector Correction**: Replaced all `:global([data-theme='...']) .class` patterns across `Dashboard.vue`, `ReportsAnalytics.vue`, `BillingEngine.vue`, and `UsageTracker.vue` with standard Vue SFC ancestor selectors `[data-theme='...'] .class`, compiling properly to `[data-theme='...'] .class[data-v-xxxxxx]`.
    - **Dual-Mode Headless Verification**: Verified both Light Mode (Frosted Ceramic Glass) and Dark Mode (Luminous Apple Obsidian Glass) via headless Chrome image capture (`verified_light.png`, `verified_dark.png`, `verified_reports_light.png`, `verified_reports_dark.png`).
    - **Vitest Automated Test Suite**: 3/3 passed (100% green).
+
+8. **Sticky Viewport Sidebar Navigation & Operational Command Center Hub**:
+   - **Sticky Viewport Sidebar & Pinned Bottom Trigger**:
+     - Configured `.main-sider` with `position: sticky !important; top: 0 !important; height: 100vh !important; overflow-y: auto !important; z-index: 100;`, preventing the sidebar from stretching with the document or pushing controls off-screen.
+     - Pinned Ant Design's `.ant-layout-sider-trigger` to the viewport so users never have to scroll to the bottom of the page to expand/collapse.
+     - Added a top hamburger/collapse toggle button directly in `<a-layout-header>` adjacent to the page title with dynamic icon switching (`MenuOutlined`, `MenuFoldOutlined`, `MenuUnfoldOutlined`) and tooltip.
+     - Added a top quick-collapse button in `.sider-top-bar` adjacent to the brand logo.
+     - Added a global `Ctrl+B` / `Cmd+B` keyboard shortcut handler to toggle navigation from anywhere.
+     - Implemented responsive initialization (`window.innerWidth < 1280`) with `localStorage` persistence (`sidebar_collapsed`), keeping the sidebar naturally open on desktop displays.
+   - **Operational Command Center Transformation**:
+     - Fixed `router` missing from Vue 3 `setup()` return object in `Dashboard.vue`, eliminating console runtime exceptions.
+     - Converted static placeholder divs into accessible `<button type="button" class="tile-btn">` components with active press physics (`scale(0.98)`), loading spinners, and disabled states.
+     - Wired real production backend operations into all 4 Command Center tiles:
+       1. **Audit Settlements [LIVE]**: Calls `api.reconcileCommerce()` (`POST /api/commerce/reconcile`), audits M-Pesa STK transactions against double-entry journal entries, refreshes metrics, and reports settlement status.
+       2. **Sweep Holds [1-of-1]**: Calls `api.sweepReservations('ladha-main')` (`POST /api/stores/ladha-main/reservations/sweep`), releases expired streetwear locks back to catalog, and syncs inventory.
+       3. **Trial Balance [0.00 VAR]**: Calls `api.getTrialBalance()` (`GET /api/ledger/trial-balance`), checks assets vs liabilities & equity, and confirms zero variance.
+       4. **Diligence Pack [PDF]**: Calls `api.downloadDiligenceDossierPdf()` (`GET /api/commerce/diligence/dossier-pdf`), compiles and streams the institutional bank loan & VC due diligence underwriting PDF.
+   - **Headless Visual & Automated Testing Verification**:
+     - Verified sticky viewport sidebar and operational command center in both Frosted Ceramic Light Mode and Apple Obsidian Dark Mode (`verify_expanded_light.png`, `verify_expanded_dark.png`, `verify_live_light_cmd.png`).
+     - Vitest automated test suite: 3/3 passed (100% green).

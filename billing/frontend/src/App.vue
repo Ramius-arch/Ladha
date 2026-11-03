@@ -23,12 +23,24 @@
             width="260"
             :collapsedWidth="80"
           >
-            <router-link to="/dashboard" class="logo-container">
-              <img src="/assets/logo.png" alt="Quixora Logo" class="sidebar-logo" />
-              <span v-if="!collapsed" class="logo-text" style="font-weight: 800; letter-spacing: 0.08em; color: #d4af37;">
-                LADHA <span class="calligraphic-accent" style="font-size: 15px; font-weight: 600; color: #94a3b8;">Ledger</span>
-              </span>
-            </router-link>
+            <div class="sider-top-bar">
+              <router-link to="/dashboard" class="logo-container">
+                <img src="/assets/logo.png" alt="Quixora Logo" class="sidebar-logo" />
+                <span v-if="!collapsed" class="logo-text" style="font-weight: 800; letter-spacing: 0.08em; color: #d4af37;">
+                  LADHA <span class="calligraphic-accent" style="font-size: 15px; font-weight: 600; color: #94a3b8;">Ledger</span>
+                </span>
+              </router-link>
+              <a-tooltip :title="collapsed ? 'Expand Sidebar (Ctrl+B)' : 'Collapse Sidebar (Ctrl+B)'" placement="right">
+                <button
+                  type="button"
+                  class="sider-collapse-btn"
+                  @click.stop.prevent="collapsed = !collapsed"
+                  :aria-label="collapsed ? 'Expand Sidebar' : 'Collapse Sidebar'"
+                >
+                  <component :is="collapsed ? 'menu-unfold-outlined' : 'menu-fold-outlined'" />
+                </button>
+              </a-tooltip>
+            </div>
             
             <a-menu
               v-model:selectedKeys="selectedKeys"
@@ -85,14 +97,16 @@
           <a-layout>
             <a-layout-header :class="['main-header', { 'mobile-header': isMobile }]">
               <div class="header-left">
-                <a-button 
-                  v-if="isMobile" 
-                  type="text" 
-                  @click="drawerVisible = true" 
-                  class="menu-toggle"
-                >
-                  <menu-outlined />
-                </a-button>
+                <a-tooltip :title="isMobile ? 'Open Navigation' : (collapsed ? 'Expand Sidebar (Ctrl+B)' : 'Collapse Sidebar (Ctrl+B)')">
+                  <button 
+                    type="button" 
+                    @click="toggleSidebar" 
+                    class="menu-toggle"
+                    :aria-label="collapsed ? 'Expand Sidebar' : 'Collapse Sidebar'"
+                  >
+                    <component :is="isMobile ? 'menu-outlined' : (collapsed ? 'menu-unfold-outlined' : 'menu-fold-outlined')" />
+                  </button>
+                </a-tooltip>
                 <h2 class="page-title">{{ isMobile ? 'Ladha Ledger' : currentPageTitle }}</h2>
                 <div v-if="!isMobile" class="ambient-pill ml-3">
                   <span class="status-dot"></span>
@@ -174,6 +188,8 @@ import {
   BulbOutlined,
   BulbFilled,
   MenuOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
   ShoppingOutlined,
   ShoppingCartOutlined,
   AccountBookOutlined,
@@ -197,6 +213,8 @@ export default defineComponent({
     BulbOutlined,
     BulbFilled,
     MenuOutlined,
+    MenuFoldOutlined,
+    MenuUnfoldOutlined,
     ShoppingOutlined,
     ShoppingCartOutlined,
     AccountBookOutlined,
@@ -207,7 +225,8 @@ export default defineComponent({
     const route = useRoute();
     const router = useRouter();
     const windowWidth = ref(window.innerWidth);
-    const collapsed = ref(true);
+    const savedCollapsed = typeof window !== 'undefined' ? localStorage.getItem('sidebar_collapsed') : null;
+    const collapsed = ref(savedCollapsed !== null ? savedCollapsed === 'true' : window.innerWidth < 1280);
     const drawerVisible = ref(false);
     const selectedKeys = ref([route.path.split('/')[1] || 'dashboard']);
     
@@ -289,6 +308,14 @@ export default defineComponent({
       updateThemeAttribute();
     }, { immediate: true });
 
+    watch(collapsed, (val) => {
+      try {
+        localStorage.setItem('sidebar_collapsed', val ? 'true' : 'false');
+      } catch (e) {
+        // Safe fallback in restricted environments
+      }
+    });
+
     const updateWidth = () => {
       windowWidth.value = window.innerWidth;
     };
@@ -296,8 +323,24 @@ export default defineComponent({
     let lenisInstance = null;
     let rafId = null;
 
+    const toggleSidebar = () => {
+      if (isMobile.value) {
+        drawerVisible.value = true;
+      } else {
+        collapsed.value = !collapsed.value;
+      }
+    };
+
+    const handleKeydown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'b' || e.key === 'B')) {
+        e.preventDefault();
+        toggleSidebar();
+      }
+    };
+
     onMounted(() => {
       window.addEventListener('resize', updateWidth);
+      window.addEventListener('keydown', handleKeydown);
       updateThemeAttribute();
 
       // Apple Inertial Momentum Smooth Scroll Engine
@@ -328,6 +371,7 @@ export default defineComponent({
 
     onUnmounted(() => {
       window.removeEventListener('resize', updateWidth);
+      window.removeEventListener('keydown', handleKeydown);
       if (rafId) cancelAnimationFrame(rafId);
       if (lenisInstance) {
         lenisInstance.destroy();
@@ -367,6 +411,7 @@ export default defineComponent({
       isDark,
       themeConfig,
       toggleTheme,
+      toggleSidebar,
       isRouteLoading,
       router,
     };
@@ -376,18 +421,57 @@ export default defineComponent({
 
 <style scoped>
 .main-sider {
+  position: sticky !important;
+  top: 0 !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
   background: var(--surface-sidebar) !important;
   backdrop-filter: blur(32px) saturate(190%) !important;
   -webkit-backdrop-filter: blur(32px) saturate(190%) !important;
   box-shadow: 1px 0 16px rgba(15, 23, 42, 0.03);
+  z-index: 100;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.sider-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  height: 64px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border-glass-subtle);
+}
+
+.sider-collapse-btn {
+  background: var(--surface-hover);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.sider-collapse-btn:hover {
+  background: var(--surface-card-hover);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: scale(1.05);
 }
 
 .logo-container {
   height: 64px;
   display: flex;
   align-items: center;
-  padding: 0 16px;
-  margin-bottom: 8px;
+  padding: 0 4px;
 }
 
 .sidebar-logo {
@@ -405,6 +489,9 @@ export default defineComponent({
 }
 
 .main-header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
   justify-content: space-between;
   background: var(--surface-header);
   backdrop-filter: blur(28px) saturate(190%) !important;
@@ -432,9 +519,25 @@ export default defineComponent({
 }
 
 .menu-toggle {
-  font-size: 20px;
-  padding: 4px;
-  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  color: var(--text-primary);
+  background: var(--surface-hover);
+  border: 1px solid var(--border-glass);
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu-toggle:hover {
+  background: var(--surface-card-hover);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-1px);
 }
 
 .page-title {

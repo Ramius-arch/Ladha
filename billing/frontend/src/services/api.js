@@ -36,6 +36,12 @@ const api = {
   getOrders() {
     return apiClient.get('/orders');
   },
+  reconcileCommerce() {
+    return apiClient.post('/commerce/reconcile');
+  },
+  sweepReservations(storeId = 'ladha-main') {
+    return apiClient.post(`/stores/${storeId}/reservations/sweep`);
+  },
   getTrialBalance() {
     return apiClient.get('/ledger/trial-balance');
   },
