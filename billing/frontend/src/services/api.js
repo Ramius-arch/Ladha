@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { MockStore } from './mockData';
+import { createDiligenceDossierDoc, createEtimsInvoiceDoc } from './pdfGenerator';
 
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL || '/api',
@@ -115,11 +116,21 @@ const api = {
 
   async downloadDiligenceDossierPdf() {
     try {
-      return await apiClient.get('/commerce/diligence/dossier-pdf', { responseType: 'blob' });
+      const res = await apiClient.get('/commerce/diligence/dossier-pdf', { responseType: 'blob' });
+      if (res && res.data && res.data.size > 100) {
+        const header = await res.data.slice(0, 5).text();
+        if (header.startsWith('%PDF-')) {
+          return { data: res.data };
+        }
+      }
+      console.warn('Backend returned non-PDF or SPA catchall HTML, generating client-side diligence PDF...');
     } catch (err) {
-      const blob = new Blob(['LADHA LEDGER - VC DILIGENCE PACK DRAFT'], { type: 'application/pdf' });
-      return { data: blob };
+      console.warn('Backend diligence PDF API unavailable, generating client-side diligence PDF...');
     }
+
+    const doc = createDiligenceDossierDoc();
+    const blob = doc.output('blob');
+    return { data: blob };
   },
 
   async getLadhaProducts() {
@@ -211,7 +222,23 @@ const api = {
   },
 
   async downloadInvoicePdf(id) {
-    const blob = new Blob(['LADHA TAX INVOICE SAMPLE'], { type: 'application/pdf' });
+    try {
+      const res = await apiClient.get(`/invoices/${id}/download-pdf`, { responseType: 'blob' });
+      if (res && res.data && res.data.size > 100) {
+        const header = await res.data.slice(0, 5).text();
+        if (header.startsWith('%PDF-')) {
+          return { data: res.data };
+        }
+      }
+      console.warn('Backend returned non-PDF for invoice, generating client-side eTIMS PDF...');
+    } catch (err) {
+      console.warn('Backend invoice PDF API unavailable, generating client-side eTIMS PDF...');
+    }
+
+    const list = MockStore.getInvoices().invoices;
+    const inv = list.find(i => i.id === Number(id)) || list[0] || {};
+    const doc = createEtimsInvoiceDoc(inv);
+    const blob = doc.output('blob');
     return { data: blob };
   },
 

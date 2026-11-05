@@ -111,8 +111,9 @@ export default defineComponent({
       const id = route.params.id;
       try {
         const response = await api.getInvoiceById(id);
-        invoice.value = response.data.data;
-        usageLogs.value = invoice.value.usageLogs || [];
+        const inv = response.data?.data || response.data || {};
+        invoice.value = inv;
+        usageLogs.value = inv.usageLogs || [{ usageType: 'retail_order', duration: 1, timestamp: new Date().toISOString() }];
       } catch (err) {
         console.error(err);
       }

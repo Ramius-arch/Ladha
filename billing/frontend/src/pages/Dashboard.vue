@@ -30,7 +30,7 @@
               <span>New Tax Invoice</span>
               <span class="pill-icon-circle"><plus-outlined /></span>
             </button>
-            <button class="hero-action-pill secondary" @click="exportReport">
+            <button class="hero-action-pill secondary" @click="handleExportDossier">
               <span>Export Audit</span>
               <span class="pill-icon-circle"><export-outlined /></span>
             </button>
