@@ -108,6 +108,8 @@ class DukaClient {
         const idempotencyKey = 'idemp_' + Date.now() + '_' + Math.random().toString(36).substring(2, 10);
 
         try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 2000);
             const res = await fetch(`${this.apiUrl}/api/stores/${this.storeId}/checkout`, {
                 method: 'POST',
                 headers: {
@@ -119,8 +121,10 @@ class DukaClient {
                     customer,
                     items: normalizedItems,
                     payment: { method: paymentMethod }
-                })
+                }),
+                signal: controller.signal
             });
+            clearTimeout(timeoutId);
 
             const data = await res.json();
             if (!res.ok || !data.success) {

@@ -1,17 +1,17 @@
 # Graph Report - Storefront  (2026-11-03)
 
 ## Corpus Check
-- 161 files · ~590,922 words
+- 161 files · ~595,185 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 19 file(s) not represented in the graph (top: (none) 6, .css 6, .toml 2)
 
 ## Summary
-- 1000 nodes · 1353 edges · 110 communities (78 shown, 32 thin omitted)
+- 1002 nodes · 1355 edges · 115 communities (82 shown, 33 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 69 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `75f7b6eb`
+- Built from commit: `1a9bb436`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,9 +21,9 @@
 - customers.routes.js
 - admin.js
 - server.py
-- invoice_contoller.js
+- customer_contoller.js
 - billing/backend/server.js
-- reservationSweeper.js
+- operational-scrutiny-demo.js
 - LadhaAmbientPlaylistEngine
 - dependencies
 - LadhaService
@@ -39,13 +39,13 @@
 - DukaClient
 - clearCache
 - cart.js
-- cacheHandler.js
+- redis.js
 - check-page-vars.js
 - Reports.vue
 - dependencies
 - sequelize
 - routes.config.js
-- report_controller.js
+- Release 2.4.0 — Apple Human Interface & Swiss Brutalism Milestone
 - express
 - Dashboard.vue
 - payments.routes.js
@@ -64,7 +64,7 @@
 - admin-guard.js
 - invoices.routes.js
 - billing_controller.js
-- customer_contoller.js
+- report_controller.js
 - App.js
 - vercel.json
 - Qx_Billing
@@ -87,7 +87,7 @@
 - Ladha Storefront Product View
 - ConfigController.js
 - storefront/README.md
-- LandingPage.vue
+- devDependencies
 - start-dev.js
 - etimsInvoiceService.js
 - verify-all-pages.js
@@ -109,13 +109,18 @@
 - patch-frontend.js
 - checkoutService.js
 - health.routes.js
+- cacheHandler.js
 - app.test.js
 - devDependencies
-- PlanController.js
+- idempotency.js
+- scripts
 - scripts
 - duka.routes.js
+- fix-usagetracker-icons.js
 - patch-api-client.js
-- reports.routes.js
+- pricing.js
+- seed-ladha-commerce.js
+- engines
 
 ## God Nodes (most connected - your core abstractions)
 1. `clearCache()` - 24 edges
@@ -148,15 +153,15 @@
 - **Archival Commerce to Double-Entry Ledger Pipeline** — storefront_js_duka_client_dukaclient, billing_backend_routes_duka_routes, billing_backend_services_ladhaservice, storefront_server_ladhaserverhandler [INFERRED 0.95]
 - **Enterprise Billing & Compliance Ledger Suite** — billing_backend_models_bill, billing_backend_models_invoice, billing_backend_models_customer, billing_backend_models_payment [INFERRED 0.95]
 
-## Communities (110 total, 32 thin omitted)
+## Communities (115 total, 33 thin omitted)
 
 ### Community 0 - "fix-app-icons.js"
 Cohesion: 0.40
 Nodes (4): c, fs, p, path
 
 ### Community 1 - "backend/package.json"
-Cohesion: 0.10
-Nodes (19): author, description, engines, node, keywords, license, main, name (+11 more)
+Cohesion: 0.11
+Nodes (17): author, description, keywords, license, main, name, type, version (+9 more)
 
 ### Community 2 - "customers.routes.js"
 Cohesion: 0.15
@@ -170,17 +175,17 @@ Nodes (20): Ladha Storefront Admin View, applyAssetToTarget(), checkIsVideo(), f
 Cohesion: 0.12
 Nodes (17): base64, hashlib, hmac, http_server, json, os, re, SimpleHTTPRequestHandler (+9 more)
 
-### Community 5 - "invoice_contoller.js"
-Cohesion: 0.21
-Nodes (10): getCustomerById, asyncHandler, { clearCache }, db, generateInvoice(), generatePDF(), getInvoiceById(), updateInvoiceStatus() (+2 more)
+### Community 5 - "customer_contoller.js"
+Cohesion: 0.13
+Nodes (18): asyncHandler, { clearCache }, createCustomer, db, deleteCustomer, { ErrorResponse }, getCustomerById, getCustomers (+10 more)
 
 ### Community 6 - "billing/backend/server.js"
 Cohesion: 0.08
 Nodes (25): app, billRoutes, bodyParser, configRoutes, cors, customerRoutes, db, dbConfig (+17 more)
 
-### Community 7 - "reservationSweeper.js"
-Cohesion: 0.09
-Nodes (21): { clearCache }, db, ladhaService, { Op }, http, https, url, ref_http (+13 more)
+### Community 7 - "operational-scrutiny-demo.js"
+Cohesion: 0.16
+Nodes (12): ref_http, fs, html, http, ports, urls, colors, fs (+4 more)
 
 ### Community 9 - "dependencies"
 Cohesion: 0.11
@@ -195,31 +200,31 @@ Cohesion: 0.11
 Nodes (17): Asset: product-1.jpg, Asset: product-10.jpg, Asset: product-11.jpg, Asset: product-12.jpg, Asset: product-13.jpg, Asset: product-14.jpg, Asset: product-15.jpg, Asset: product-2.jpg (+9 more)
 
 ### Community 12 - "index.js"
-Cohesion: 0.12
-Nodes (7): db, db, path, { Sequelize }, db, sequelize, db
+Cohesion: 0.17
+Nodes (5): db, db, db, sequelize, db
 
 ### Community 13 - "usage_controller.js"
-Cohesion: 0.17
-Nodes (6): { clearCache }, createUsage(), db, deleteUsage(), { ErrorHandler }, updateUsage()
+Cohesion: 0.12
+Nodes (10): db, { ErrorHandler }, { clearCache }, createUsage(), db, deleteUsage(), { ErrorHandler }, updateUsage() (+2 more)
 
 ### Community 14 - "frontend/package.json"
-Cohesion: 0.13
-Nodes (14): author, description, keywords, license, main, name, version, autoprefixer (+6 more)
+Cohesion: 0.12
+Nodes (15): author, description, keywords, license, main, name, version, autoprefixer (+7 more)
 
 ### Community 15 - "vue"
 Cohesion: 0.14
-Nodes (5): @ant-design/icons-vue, ant-design-vue, ref_dayjs, papaparse, vue
+Nodes (4): @ant-design/icons-vue, ant-design-vue, ref_dayjs, vue
 
 ### Community 16 - "package.json"
 Cohesion: 0.12
 Nodes (15): author, description, keywords, license, name, private, scripts, dev (+7 more)
 
 ### Community 17 - "router.js"
-Cohesion: 0.15
-Nodes (6): router, isRouteLoading, router, routes, billing_frontend_src_style, vue-router
+Cohesion: 0.19
+Nodes (6): setup(), isRouteLoading, router, routes, billing_frontend_src_style, lenis
 
 ### Community 18 - "api.js"
-Cohesion: 0.22
+Cohesion: 0.17
 Nodes (5): columns, api, apiClient, vitest, @vue/test-utils
 
 ### Community 19 - "Ladha Storefront Index View"
@@ -234,9 +239,9 @@ Nodes (8): { clearCache }, createPayment(), db, { ErrorHandler }, mpesaCallback(
 Cohesion: 0.34
 Nodes (13): addToCart(), clearCart(), closeDrawer(), getCart(), getCartCount(), getCartTotal(), injectDrawer(), openDrawer() (+5 more)
 
-### Community 23 - "cacheHandler.js"
-Cohesion: 0.18
-Nodes (8): logger, Redis, logger, redis, logger, winston, ioredis, winston
+### Community 23 - "redis.js"
+Cohesion: 0.25
+Nodes (6): logger, Redis, logger, winston, ioredis, winston
 
 ### Community 24 - "check-page-vars.js"
 Cohesion: 0.17
@@ -247,28 +252,28 @@ Cohesion: 0.20
 Nodes (10): handleDateRangeChange(), loadData(), paymentStatus, ReportData, revenueData, usageData, ref_components_paymentstatus_vue, ref_components_revenuesummary_vue (+2 more)
 
 ### Community 26 - "dependencies"
-Cohesion: 0.07
-Nodes (25): dependencies, @ant-design/icons-vue, ant-design-vue, axios, chart.js, lenis, papaparse, vue (+17 more)
+Cohesion: 0.20
+Nodes (10): dependencies, @ant-design/icons-vue, ant-design-vue, axios, chart.js, lenis, papaparse, vue (+2 more)
 
 ### Community 27 - "sequelize"
-Cohesion: 0.05
-Nodes (19): { DataTypes }, { DataTypes }, { DataTypes }, { DataTypes }, { DataTypes }, { DataTypes }, { DataTypes }, { DataTypes } (+11 more)
+Cohesion: 0.04
+Nodes (22): path, { Sequelize }, { DataTypes }, { DataTypes }, { DataTypes }, { DataTypes }, { DataTypes }, { DataTypes } (+14 more)
 
 ### Community 28 - "routes.config.js"
 Cohesion: 0.15
 Nodes (11): billingRoutes, customersRoutes, express, invoicesRoutes, paymentsRoutes, reportsRoutes, router, usageRoutes (+3 more)
 
-### Community 29 - "report_controller.js"
-Cohesion: 0.06
-Nodes (17): asyncHandler, db, { ErrorResponse }, getBillingTrends(), { Op }, ReservationSweeper, 10. Production Readiness & Quality Audit Metrics, 1. Executive Summary & Philosophy (+9 more)
+### Community 29 - "Release 2.4.0 — Apple Human Interface & Swiss Brutalism Milestone"
+Cohesion: 0.10
+Nodes (15): getBillingTrends(), ReservationSweeper, 10. Production Readiness & Quality Audit Metrics, 1. Aesthetic Pivot: From Brutalist Blocks to Frosted Ceramic Glass, 1. Executive Summary & Philosophy, 2. Forensic Defect Resolutions (Screenshots 1 through 8), 3. Steve Jobs / Apple Typography & Craft Upgrades, 4. Automated Testing & Verification Suite (+7 more)
 
 ### Community 30 - "express"
-Cohesion: 0.13
-Nodes (12): configController, express, router, checkoutService, db, express, ladhaService, router (+4 more)
+Cohesion: 0.15
+Nodes (10): configController, express, router, express, planController, router, express, reportController (+2 more)
 
 ### Community 31 - "Dashboard.vue"
-Cohesion: 0.33
-Nodes (3): Qx Billing Mobile Portrait & Layout Plan, chart.js, vue-chartjs
+Cohesion: 0.24
+Nodes (5): router, Qx Billing Mobile Portrait & Layout Plan, chart.js, vue-chartjs, vue-router
 
 ### Community 32 - "payments.routes.js"
 Cohesion: 0.25
@@ -327,16 +332,16 @@ Cohesion: 0.80
 Nodes (4): createAuthModal(), initSecurityHandshake(), setupLockControl(), unlockDashboard()
 
 ### Community 46 - "invoices.routes.js"
-Cohesion: 0.17
-Nodes (8): Customer, isAdmin(), { DataTypes }, auth, express, invoicesController, { isAdmin }, router
+Cohesion: 0.25
+Nodes (7): Customer, isAdmin(), auth, express, invoicesController, { isAdmin }, router
 
 ### Community 47 - "billing_controller.js"
 Cohesion: 0.31
 Nodes (8): asyncHandler, calculateCharges(), calculateCustomerCharges(), { clearCache }, db, generateBill(), getForecast(), { Op }
 
-### Community 49 - "customer_contoller.js"
-Cohesion: 0.18
-Nodes (8): asyncHandler, { clearCache }, createCustomer, db, deleteCustomer, { ErrorResponse }, getCustomers, updateCustomer
+### Community 49 - "report_controller.js"
+Cohesion: 0.14
+Nodes (4): asyncHandler, db, { ErrorResponse }, { Op }
 
 ### Community 50 - "App.js"
 Cohesion: 0.50
@@ -354,13 +359,17 @@ Nodes (10): Backend, Backend Setup, Features, Frontend, Frontend Setup, Getting 
 Cohesion: 0.25
 Nodes (7): Architectural & Aesthetic System, Brand Manifesto, Key Features, License, Local Development, Project Structure, Static Deployment (GitHub Pages / Vercel / Netlify)
 
+### Community 81 - "devDependencies"
+Cohesion: 0.20
+Nodes (10): devDependencies, autoprefixer, happy-dom, postcss, tailwindcss, @tailwindcss/postcss, vite, @vitejs/plugin-vue (+2 more)
+
 ### Community 82 - "start-dev.js"
 Cohesion: 0.29
 Nodes (6): ref_child_process, path, rootDir, runningProcesses, services, { spawn }
 
 ### Community 83 - "etimsInvoiceService.js"
-Cohesion: 0.15
-Nodes (10): crypto, db, crypto, db, fonts, generateEtimsInvoicePdf(), PdfPrinter, printer (+2 more)
+Cohesion: 0.25
+Nodes (7): crypto, db, fonts, generateEtimsInvoicePdf(), PdfPrinter, printer, pdfmake
 
 ### Community 84 - "verify-all-pages.js"
 Cohesion: 0.22
@@ -375,16 +384,16 @@ Cohesion: 0.32
 Nodes (3): EmailService, nodemailer, nodemailer
 
 ### Community 88 - "ledger.js"
-Cohesion: 0.25
-Nodes (8): db, ensureAccounts(), getTrialBalance(), postJournalEntry(), postReversalEntry(), STANDARD_ACCOUNTS, db, ledgerService
+Cohesion: 0.48
+Nodes (6): db, ensureAccounts(), getTrialBalance(), postJournalEntry(), postReversalEntry(), STANDARD_ACCOUNTS
 
 ### Community 89 - "apply-ladha-ui-refactor.js"
 Cohesion: 0.20
 Nodes (9): appVue, appVuePath, dashboardVue, dashboardVuePath, fs, headerVuePath, path, reportsVue (+1 more)
 
 ### Community 90 - "ref_fs"
-Cohesion: 0.20
-Nodes (9): ref_fs, checkFile(), fs, path, walk(), c, fs, p (+1 more)
+Cohesion: 0.40
+Nodes (5): ref_fs, checkFile(), fs, path, walk()
 
 ### Community 91 - "check-assets.js"
 Cohesion: 0.33
@@ -427,12 +436,16 @@ Cohesion: 0.40
 Nodes (4): apiPath, code, fs, path
 
 ### Community 101 - "checkoutService.js"
-Cohesion: 0.24
-Nodes (8): { clearCache }, db, ladhaService, ledger, pricing, calculateShippingFee(), calculateVatInclusive(), computeOrderTotals()
+Cohesion: 0.12
+Nodes (15): checkoutService, db, express, ladhaService, router, { clearCache }, db, ladhaService (+7 more)
 
 ### Community 102 - "health.routes.js"
 Cohesion: 0.40
 Nodes (4): db, express, redis, router
+
+### Community 103 - "cacheHandler.js"
+Cohesion: 0.22
+Nodes (6): logger, redis, { clearCache }, db, ladhaService, { Op }
 
 ### Community 104 - "app.test.js"
 Cohesion: 0.50
@@ -442,45 +455,53 @@ Nodes (3): app, request, supertest
 Cohesion: 0.67
 Nodes (3): devDependencies, jest, supertest
 
-### Community 106 - "PlanController.js"
-Cohesion: 0.33
-Nodes (4): db, { ErrorHandler }, errorHandler(), logger
+### Community 106 - "idempotency.js"
+Cohesion: 0.40
+Nodes (3): crypto, db, ref_crypto
 
 ### Community 107 - "scripts"
 Cohesion: 0.67
 Nodes (3): scripts, start, test
 
+### Community 108 - "scripts"
+Cohesion: 0.40
+Nodes (5): scripts, build, dev, preview, test
+
 ### Community 109 - "duka.routes.js"
 Cohesion: 0.18
 Nodes (10): checkoutService, db, express, handleReconcile(), idempotency, ledger, router, db (+2 more)
+
+### Community 110 - "fix-usagetracker-icons.js"
+Cohesion: 0.40
+Nodes (4): c, fs, p, path
 
 ### Community 111 - "patch-api-client.js"
 Cohesion: 0.40
 Nodes (4): c, fs, p, path
 
-### Community 112 - "reports.routes.js"
-Cohesion: 0.50
-Nodes (3): express, reportController, router
+### Community 112 - "pricing.js"
+Cohesion: 0.83
+Nodes (3): calculateShippingFee(), calculateVatInclusive(), computeOrderTotals()
 
 ## Knowledge Gaps
-- **509 isolated node(s):** `db`, `db`, `{ Sequelize }`, `path`, `path` (+504 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 636 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **32 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **510 isolated node(s):** `db`, `db`, `{ Sequelize }`, `path`, `path` (+505 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 637 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `sequelize` connect `sequelize` to `backend/package.json`, `reservationSweeper.js`, `index.js`, `invoices.routes.js`, `billing_controller.js`, `report_controller.js`?**
-  _High betweenness centrality (0.067) - this node is a cross-community bridge._
-- **Why does `express` connect `express` to `payments.routes.js`, `backend/package.json`, `customers.routes.js`, `health.routes.js`, `usage.routes.js`, `billing/backend/server.js`, `src/backend/server.js`, `duka.routes.js`, `invoices.routes.js`, `reports.routes.js`, `routes.config.js`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
-- **Why does `LadhaService` connect `LadhaService` to `reservationSweeper.js`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **Why does `sequelize` connect `sequelize` to `report_controller.js`, `cacheHandler.js`, `backend/package.json`, `billing_controller.js`?**
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `express` connect `express` to `payments.routes.js`, `backend/package.json`, `customers.routes.js`, `checkoutService.js`, `health.routes.js`, `usage.routes.js`, `billing/backend/server.js`, `src/backend/server.js`, `duka.routes.js`, `invoices.routes.js`, `routes.config.js`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **Why does `ReservationSweeper` connect `Release 2.4.0 — Apple Human Interface & Swiss Brutalism Milestone` to `cacheHandler.js`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **What connects `db`, `db`, `{ Sequelize }` to the rest of the system?**
-  _509 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _510 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `backend/package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `server.py` be split into smaller, more focused modules?**
   _Cohesion score 0.12 - nodes in this community are weakly interconnected._
-- **Should `billing/backend/server.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
+- **Should `customer_contoller.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.12648221343873517 - nodes in this community are weakly interconnected._
