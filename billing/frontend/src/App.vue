@@ -27,27 +27,44 @@
           >
             <div class="sider-inner">
               <div class="sider-top-bar" :class="{ 'is-collapsed': collapsed }">
-                <router-link to="/dashboard" class="logo-container" :title="collapsed ? 'LADHA Ledger - Sales Dashboard' : ''">
-                  <div class="sidebar-logo-frame">
-                    <img src="/assets/logo.png" alt="LADHA Logo" class="sidebar-logo" />
-                  </div>
-                  <div v-if="!collapsed" class="logo-text-group">
-                    <span class="logo-text">
-                      {{ activeTenant.brand.name }} <span class="calligraphic-accent">{{ activeTenant.brand.accent }}</span>
-                    </span>
-                    <span class="logo-edition font-mono">{{ activeTenant.brand.edition }}</span>
-                  </div>
-                </router-link>
-                <a-tooltip v-if="!collapsed" title="Collapse Sidebar (Ctrl+B)" placement="right">
-                  <button
-                    type="button"
-                    class="sider-collapse-btn"
-                    @click.stop.prevent="collapsed = true"
-                    aria-label="Collapse Sidebar"
-                  >
-                    <menu-fold-outlined />
-                  </button>
-                </a-tooltip>
+                <template v-if="!collapsed">
+                  <router-link to="/dashboard" class="logo-container" title="LADHA Ledger - Sales Dashboard">
+                    <div class="sidebar-logo-frame">
+                      <img src="/assets/logo.png" alt="LADHA Logo" class="sidebar-logo" />
+                    </div>
+                    <div class="logo-text-group">
+                      <span class="logo-text">
+                        {{ activeTenant.brand.name }} <span class="calligraphic-accent">{{ activeTenant.brand.accent }}</span>
+                      </span>
+                      <span class="logo-edition font-mono">{{ activeTenant.brand.edition }}</span>
+                    </div>
+                  </router-link>
+                  <a-tooltip title="Collapse Sidebar (Ctrl+B)" placement="right">
+                    <button
+                      type="button"
+                      class="sider-collapse-btn"
+                      @click.stop.prevent="collapsed = true"
+                      aria-label="Collapse Sidebar"
+                    >
+                      <menu-fold-outlined />
+                    </button>
+                  </a-tooltip>
+                </template>
+                <template v-else>
+                  <a-tooltip title="Expand Sidebar (Ctrl+B)" placement="right">
+                    <button
+                      type="button"
+                      class="sider-rail-toggle-top"
+                      @click.stop.prevent="collapsed = false"
+                      aria-label="Expand Sidebar"
+                    >
+                      <img src="/assets/logo.png" alt="LADHA Logo" class="sidebar-logo-compact" />
+                      <div class="rail-expand-badge">
+                        <menu-unfold-outlined />
+                      </div>
+                    </button>
+                  </a-tooltip>
+                </template>
               </div>
 
               <div class="sider-nav-scroll">
@@ -589,8 +606,8 @@ export default defineComponent({
   flex-direction: column;
   height: 100%;
   width: 100%;
+  position: relative;
   overflow: hidden;
-  justify-content: space-between;
 }
 
 /* Sider Top Header & Branding */
@@ -619,27 +636,81 @@ export default defineComponent({
 }
 
 .sidebar-logo-frame {
-  width: 34px;
-  height: 34px;
-  border-radius: 9px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.22);
   flex-shrink: 0;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: transparent;
+  border: none;
+  transition: transform 0.2s ease;
 }
 
 .logo-container:hover .sidebar-logo-frame {
   transform: scale(1.04);
-  box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
 }
 
 .sidebar-logo {
-  height: 22px;
+  height: 24px;
   width: auto;
   object-fit: contain;
+}
+
+.sider-rail-toggle-top {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+.sider-rail-toggle-top:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-glass);
+}
+
+.sidebar-logo-compact {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.18s ease;
+}
+
+.sider-rail-toggle-top:hover .sidebar-logo-compact {
+  transform: scale(0.92);
+}
+
+.rail-expand-badge {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  background: var(--surface-card);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  transition: all 0.18s ease;
+}
+
+.sider-rail-toggle-top:hover .rail-expand-badge {
+  background: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+  transform: scale(1.12);
 }
 
 .logo-text-group {
@@ -698,10 +769,10 @@ export default defineComponent({
 
 /* Sider Scrollable Navigation Body */
 .sider-nav-scroll {
-  flex: 1;
+  flex: 1 1 auto;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 8px 0;
+  padding: 6px 0 56px 0;
 }
 
 .sider-nav-scroll::-webkit-scrollbar {
@@ -721,9 +792,9 @@ export default defineComponent({
 }
 
 .nav-menu :deep(.ant-menu-item) {
-  height: 40px !important;
-  line-height: 40px !important;
-  margin: 3px 8px !important;
+  height: 38px !important;
+  line-height: 38px !important;
+  margin: 2px 8px !important;
   width: calc(100% - 16px) !important;
   border-radius: 8px !important;
   font-size: 13px !important;
@@ -740,13 +811,13 @@ export default defineComponent({
 
 .nav-menu :deep(.ant-menu-item .sider-nav-icon),
 .nav-menu :deep(.ant-menu-item .anticon) {
-  font-size: 16px !important;
-  min-width: 16px !important;
+  font-size: 15px !important;
+  min-width: 15px !important;
   transition: transform 0.16s ease, color 0.16s ease !important;
 }
 
 .nav-menu :deep(.ant-menu-item:hover .anticon) {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .nav-label {
@@ -771,27 +842,43 @@ export default defineComponent({
 }
 
 .main-sider :deep(.ant-menu-inline-collapsed .ant-menu-item) {
-  width: 44px !important;
-  height: 44px !important;
-  line-height: 44px !important;
-  margin: 5px auto !important;
-  border-radius: 9px !important;
+  width: 40px !important;
+  height: 38px !important;
+  line-height: 38px !important;
+  margin: 3px auto !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
 }
 
 .main-sider :deep(.ant-menu-inline-collapsed .ant-menu-item .anticon) {
-  font-size: 17px !important;
-  line-height: 44px !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  margin: 0 !important;
 }
 
-/* Sider Bottom Bar / Footer */
+.main-sider :deep(.ant-menu-inline-collapsed .ant-menu-item-divider) {
+  margin: 6px 14px !important;
+}
+
+/* Sider Bottom Bar / Footer (Pinned Permanently) */
 .sider-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 48px;
+  background: var(--surface-sidebar);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-top: 1px solid var(--border-glass-subtle);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
-  flex-shrink: 0;
+  z-index: 20;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -872,20 +959,20 @@ export default defineComponent({
 }
 
 [data-theme='light'] .nav-menu :deep(.ant-menu-item:not(.ant-menu-item-selected):hover .anticon) {
-  color: #4f46e5 !important;
+  color: #0f172a !important;
 }
 
 [data-theme='light'] .nav-menu :deep(.ant-menu-item-selected) {
   background: #ffffff !important;
-  color: #4338ca !important;
-  font-weight: 700 !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
   border-radius: 8px !important;
-  border: 1px solid rgba(203, 213, 225, 0.90) !important;
-  box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.06), inset 0 1px 0 #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.09) !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04) !important;
 }
 
 [data-theme='light'] .nav-menu :deep(.ant-menu-item-selected .anticon) {
-  color: #4338ca !important;
+  color: #0f172a !important;
 }
 
 [data-theme='light'] .nav-menu :deep(.ant-menu-item-divider) {
@@ -913,20 +1000,20 @@ export default defineComponent({
 }
 
 [data-theme='dark'] .nav-menu :deep(.ant-menu-item:not(.ant-menu-item-selected):hover .anticon) {
-  color: #a5b4fc !important;
+  color: #ffffff !important;
 }
 
 [data-theme='dark'] .nav-menu :deep(.ant-menu-item-selected) {
-  background: linear-gradient(90deg, rgba(99, 102, 241, 0.22) 0%, rgba(99, 102, 241, 0.06) 100%) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
   color: #ffffff !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   border-radius: 8px !important;
-  border: 1px solid rgba(129, 140, 248, 0.32) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 3px 12px rgba(99, 102, 241, 0.22) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: none !important;
 }
 
 [data-theme='dark'] .nav-menu :deep(.ant-menu-item-selected .anticon) {
-  color: #a5b4fc !important;
+  color: #ffffff !important;
 }
 
 [data-theme='dark'] .nav-menu :deep(.ant-menu-item-divider) {

@@ -17,16 +17,13 @@
       <!-- Atmospheric Gradient Scrim & Vignette -->
       <div class="ambient-scrim"></div>
       <div class="ambient-radial-glow"></div>
-      <div class="ambient-film-grain"></div>
     </div>
 
     <!-- 2. Minimalist Luxury Header -->
     <header class="landing-header">
       <div class="header-inner">
         <router-link to="/" class="brand-group">
-          <div class="brand-logo-frame">
-            <img src="/assets/logo.png" alt="LADHA Logo" class="brand-logo" />
-          </div>
+          <img src="/assets/logo.png" alt="LADHA Logo" class="brand-logo-clean" />
           <div class="brand-text-block">
             <span class="brand-name font-mono">LADHA <span class="brand-accent">Ledger</span></span>
             <span class="brand-sub font-mono">FINANCIAL OS v2.4</span>
@@ -41,16 +38,6 @@
         </nav>
 
         <div class="header-actions">
-          <button 
-            type="button" 
-            class="ambient-toggle-btn"
-            @click="toggleAmbientVideo"
-            :title="ambientVideoActive ? 'Pause ambient motion' : 'Resume ambient motion'"
-          >
-            <span class="pulse-dot" :class="{ 'pulse-active': ambientVideoActive }"></span>
-            <span class="hidden sm:inline font-mono text-[10px]">{{ ambientVideoActive ? 'CINEMATIC MOTION' : 'STATIC MODE' }}</span>
-          </button>
-          
           <router-link to="/loading?redirect=/dashboard" class="btn-launch-terminal">
             <span>ENTER TERMINAL</span>
             <span class="btn-arrow">&rarr;</span>
@@ -63,9 +50,8 @@
     <main class="landing-main">
       <section id="overview" class="hero-section">
         <div class="hero-content">
-          <div class="hero-eyebrow-pill">
-            <span class="pill-dot"></span>
-            <span class="font-mono">SOVEREIGN FINANCIAL OS &bull; AUTONOMOUS REVENUE ENGINE</span>
+          <div class="hero-eyebrow font-mono">
+            SOVEREIGN FINANCIAL OS &bull; AUTONOMOUS REVENUE ENGINE
           </div>
 
           <h1 class="hero-headline">
@@ -625,27 +611,15 @@ export default defineComponent({
   text-decoration: none;
 }
 
-.brand-logo-frame {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.brand-group:hover .brand-logo-frame {
-  transform: scale(1.05);
-  box-shadow: 0 0 16px rgba(212, 175, 55, 0.3);
-}
-
-.brand-logo {
-  height: 24px;
+.brand-logo-clean {
+  height: 28px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.brand-group:hover .brand-logo-clean {
+  transform: scale(1.05);
 }
 
 .brand-text-block {
@@ -774,28 +748,13 @@ export default defineComponent({
   align-items: center;
 }
 
-.hero-eyebrow-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #d4af37;
-  font-size: 10px;
+.hero-eyebrow {
+  display: inline-block;
+  color: #a1a1aa;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.16em;
   margin-bottom: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.pill-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #d4af37;
-  box-shadow: 0 0 6px rgba(212, 175, 55, 0.8);
 }
 
 .hero-headline {

@@ -8,11 +8,11 @@
             <span class="status-dot"></span>
             <span>{{ activeTenant.brand.engineVersion }} &bull; REAL-TIME SYNC</span>
           </div>
-          <h1 class="hero-title">{{ activeTenant.terminology.heroTitle.split(' ')[0] }} <span class="calligraphic-accent">{{ activeTenant.terminology.heroTitle.split(' ').slice(1).join(' ') }}</span></h1>
+          <h1 class="hero-title">{{ activeTenant.terminology.heroTitle }}</h1>
           <p class="hero-narrative">
             {{ activeTenant.terminology.heroNarrative }}
           </p>
-          <p class="calligraphic-quote mt-2 mb-0">
+          <p class="hero-tagline mt-2 mb-0 font-mono text-xs opacity-70">
             {{ activeTenant.brand.tagline }}
           </p>
         </div>
@@ -101,7 +101,7 @@
           <div class="panel-header">
             <div>
               <div class="flex items-center gap-2">
-                <h3 class="panel-title">Revenue <span class="calligraphic-accent">Trajectory</span> & Forecast</h3>
+                <h3 class="panel-title">Revenue Trajectory & Forecast</h3>
                 <span class="period-badge-subtle font-mono text-[10.5px] font-bold px-2 py-0.5 rounded">{{ activePeriodLabel }}</span>
               </div>
               <p class="panel-subtitle">Audited cash flow and projected incoming settlements</p>
@@ -136,7 +136,7 @@
         <div class="chart-panel bespoke-glass-card">
           <div class="panel-header">
             <div>
-              <h3 class="panel-title">Revenue Stream <span class="calligraphic-accent">Mix</span></h3>
+              <h3 class="panel-title">Revenue Stream Mix</h3>
               <p class="panel-subtitle">Distribution by service category</p>
             </div>
           </div>
@@ -154,7 +154,7 @@
         <div class="table-panel bespoke-glass-card">
           <div class="panel-header">
             <div>
-              <h3 class="panel-title">Live <span class="calligraphic-accent">Settlement</span> Stream</h3>
+              <h3 class="panel-title">Live Settlement Stream</h3>
               <p class="panel-subtitle">Real-time audited transactions</p>
             </div>
             <router-link to="/payment-processing" class="action-link font-mono font-bold">FULL LEDGER &rarr;</router-link>
@@ -193,7 +193,7 @@
         <div class="actions-panel bespoke-glass-card">
           <div class="panel-header">
             <div>
-              <h3 class="panel-title">Command <span class="calligraphic-accent">Center</span></h3>
+              <h3 class="panel-title">Command Center</h3>
               <p class="panel-subtitle">Instant settlement actions</p>
             </div>
           </div>
@@ -691,10 +691,10 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 32px 36px;
+  padding: 28px 32px;
   background: var(--surface-card) !important;
   border: 1px solid var(--border-glass) !important;
-  border-radius: 20px !important;
+  border-radius: 14px !important;
   margin-bottom: 24px;
 }
 
@@ -866,12 +866,16 @@ export default defineComponent({
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   gap: 16px;
-  background: var(--surface-telemetry);
-  backdrop-filter: blur(20px);
-  padding: 14px 22px;
-  border-radius: 14px;
-  border: 1px solid var(--border-glass);
-  box-shadow: var(--shadow-telemetry);
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 18px 0 0 0 !important;
+  border-top: 1px solid var(--border-glass-subtle) !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   margin-top: 24px;
   width: 100%;
 }
@@ -967,7 +971,7 @@ export default defineComponent({
   padding: 22px 24px;
   background: var(--surface-card) !important;
   border: 1px solid var(--border-glass) !important;
-  border-radius: 20px !important;
+  border-radius: 14px !important;
   box-shadow: var(--card-shadow) !important;
   display: flex;
   flex-direction: column;
@@ -1453,13 +1457,13 @@ export default defineComponent({
 [data-theme='light'] .table-panel,
 [data-theme='light'] .actions-panel,
 [data-theme='light'] .hero-card {
-  background: rgba(255, 255, 255, 0.82) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
   backdrop-filter: blur(28px) saturate(190%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
   border: 1px solid rgba(226, 232, 240, 0.90) !important;
-  border-radius: 20px !important;
+  border-radius: 14px !important;
   box-shadow: 
-    0 4px 18px -2px rgba(15, 23, 42, 0.04),
+    0 2px 12px -2px rgba(15, 23, 42, 0.03),
     inset 0 1px 0 #ffffff !important;
 }
 
@@ -1468,21 +1472,23 @@ export default defineComponent({
 [data-theme='light'] .chart-panel:hover,
 [data-theme='light'] .table-panel:hover,
 [data-theme='light'] .actions-panel:hover {
-  background: rgba(255, 255, 255, 0.95) !important;
+  background: rgba(255, 255, 255, 0.96) !important;
   border-color: rgba(203, 213, 225, 1) !important;
   box-shadow: 
-    0 10px 30px -4px rgba(15, 23, 42, 0.08),
+    0 8px 24px -4px rgba(15, 23, 42, 0.06),
     inset 0 1px 0 #ffffff !important;
   transform: translateY(-2px);
 }
 
 [data-theme='light'] .hero-telemetry-bar {
-  background: rgba(255, 255, 255, 0.52) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.92) !important;
-  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02) !important;
-  border-radius: 14px !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-top: 1px solid rgba(226, 232, 240, 0.90) !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 18px 0 0 0 !important;
 }
 
 [data-theme='light'] .telemetry-label {
@@ -1640,20 +1646,37 @@ export default defineComponent({
 }
 
 [data-theme='light'] .hero-action-pill.secondary {
-  background: rgba(255, 255, 255, 0.75) !important;
-  color: #0a0f1d !important;
-  border-color: rgba(255, 255, 255, 0.92) !important;
-  box-shadow: inset 0 1px 1px #ffffff, 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(15, 23, 42, 0.16) !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05) !important;
 }
 
 [data-theme='light'] .hero-action-pill.secondary:hover {
-  background: rgba(255, 255, 255, 0.96) !important;
-  border-color: rgba(99, 102, 241, 0.35) !important;
+  background: #f8fafc !important;
+  border-color: rgba(15, 23, 42, 0.32) !important;
 }
 
 [data-theme='light'] .hero-action-pill.secondary .pill-icon-circle {
-  background: rgba(15, 23, 42, 0.07) !important;
-  color: #0a0f1d !important;
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+[data-theme='dark'] .hero-action-pill.secondary {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #f4f4f5 !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: none !important;
+}
+
+[data-theme='dark'] .hero-action-pill.secondary:hover {
+  background: rgba(255, 255, 255, 0.10) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+[data-theme='dark'] .hero-action-pill.secondary .pill-icon-circle {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #f4f4f5 !important;
 }
 
 .badge-micro {
