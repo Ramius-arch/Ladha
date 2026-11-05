@@ -261,7 +261,7 @@
               </div>
             </a-layout-header>
 
-            <a-layout-content :style="{ marginTop: isMobile ? '64px' : '0' }">
+            <a-layout-content class="main-content-wrapper">
               <router-view class="page-container" />
             </a-layout-content>
 
@@ -429,6 +429,10 @@ export default defineComponent({
       } catch (e) {
         // Safe fallback in restricted environments
       }
+      setTimeout(() => {
+        const scrollEl = document.querySelector('.sider-nav-scroll');
+        if (scrollEl) scrollEl.scrollTop = 0;
+      }, 50);
     });
 
     const updateWidth = () => {
@@ -772,7 +776,9 @@ export default defineComponent({
   flex: 1 1 auto;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 6px 0 56px 0;
+  padding: 8px 0 52px 0;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
 }
 
 .sider-nav-scroll::-webkit-scrollbar {
@@ -839,13 +845,14 @@ export default defineComponent({
 /* Collapsed Icon-Rail State */
 .main-sider :deep(.ant-menu-inline-collapsed) {
   width: 100% !important;
+  padding: 0 !important;
 }
 
 .main-sider :deep(.ant-menu-inline-collapsed .ant-menu-item) {
-  width: 40px !important;
-  height: 38px !important;
-  line-height: 38px !important;
-  margin: 3px auto !important;
+  width: 42px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  margin: 2px auto !important;
   border-radius: 8px !important;
   display: flex !important;
   align-items: center !important;
@@ -860,7 +867,7 @@ export default defineComponent({
 }
 
 .main-sider :deep(.ant-menu-inline-collapsed .ant-menu-item-divider) {
-  margin: 6px 14px !important;
+  margin: 4px 14px !important;
 }
 
 /* Sider Bottom Bar / Footer (Pinned Permanently) */
@@ -1020,28 +1027,52 @@ export default defineComponent({
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-/* Header & Mobile Drawer Styles */
+/* Header & Content Layout Styles */
 .main-header {
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  justify-content: space-between;
-  background: var(--surface-header);
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 250px !important;
+  height: 64px !important;
+  z-index: 990 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background: var(--surface-header) !important;
   backdrop-filter: blur(28px) saturate(190%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
-  padding: 0 24px;
-  border-bottom: 1px solid var(--border-glass);
-  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.02);
-  transition: background 0.2s ease, border-color 0.2s ease;
+  padding: 0 24px !important;
+  border-bottom: 1px solid var(--border-glass) !important;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.02) !important;
+  transition: left 0.22s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, border-color 0.2s ease !important;
+}
+
+.main-layout-body.sider-collapsed .main-header {
+  left: 74px !important;
+}
+
+.main-content-wrapper {
+  margin-top: 64px !important;
+  min-height: calc(100vh - 64px - 48px);
+  position: relative;
+  z-index: 1;
 }
 
 .mobile-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
   padding: 0 16px !important;
+}
+
+@media (max-width: 991px) {
+  .main-header {
+    left: 0 !important;
+    padding: 0 16px !important;
+  }
 }
 
 .header-left {
