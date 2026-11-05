@@ -360,7 +360,7 @@ export default defineComponent({
     }));
 
     const menuItems = [
-      { key: 'storefront', label: 'Storefront (Shop)', icon: ShoppingOutlined, href: 'http://localhost:3001/shop', badge: 'LIVE' },
+      { key: 'storefront', label: 'Storefront (Shop)', icon: ShoppingOutlined, href: '/shop', badge: 'LIVE' },
       { key: 'divider-1', type: 'divider' },
       { key: 'dashboard', label: 'Sales Dashboard', icon: DashboardOutlined, path: '/dashboard' },
       { key: 'usage-tracker', label: 'Orders & Drops', icon: ShoppingCartOutlined, path: '/usage-tracker' },

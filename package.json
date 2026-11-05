@@ -4,7 +4,7 @@
   "description": "Unified E-Commerce & Telecommunications Invoicing Ecosystem combining Ladha Storefront and Qx Billing Engine",
   "private": true,
   "scripts": {
-    "build": "npm --prefix billing/frontend run build",
+    "build": "node scripts/build-unified.js",
     "dev": "node scripts/start-dev.js",
     "dev:storefront": "python storefront/server.py 3001",
     "dev:billing-backend": "cd billing/backend && npm start",

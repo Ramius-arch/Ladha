@@ -1,10 +1,19 @@
 {
   "version": 2,
+  "cleanUrls": true,
   "installCommand": "npm --prefix billing/frontend install",
-  "buildCommand": "npm --prefix billing/frontend run build",
-  "outputDirectory": "billing/frontend/dist",
+  "buildCommand": "node scripts/build-unified.js",
+  "outputDirectory": "dist",
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+    { "src": "/admin/ledger/(.*)", "dest": "/admin/ledger/index.html" },
+    { "src": "/admin/ledger", "dest": "/admin/ledger/index.html" },
+    { "src": "/admin", "dest": "/admin.html" },
+    { "src": "/shop", "dest": "/shop.html" },
+    { "src": "/checkout", "dest": "/checkout.html" },
+    { "src": "/product", "dest": "/product.html" },
+    { "src": "/about", "dest": "/about.html" },
+    { "src": "/legal", "dest": "/legal.html" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
