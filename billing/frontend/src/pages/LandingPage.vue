@@ -51,7 +51,7 @@
             <span class="hidden sm:inline font-mono text-[10px]">{{ ambientVideoActive ? 'CINEMATIC MOTION' : 'STATIC MODE' }}</span>
           </button>
           
-          <router-link to="/dashboard" class="btn-launch-terminal">
+          <router-link to="/loading?redirect=/dashboard" class="btn-launch-terminal">
             <span>ENTER TERMINAL</span>
             <span class="btn-arrow">&rarr;</span>
           </router-link>
@@ -78,7 +78,7 @@
           </p>
 
           <div class="hero-cta-group">
-            <router-link to="/dashboard" class="btn-primary-glow">
+            <router-link to="/loading?redirect=/dashboard" class="btn-primary-glow">
               <span>Launch Live Terminal</span>
               <span class="cta-arrow">&rarr;</span>
             </router-link>
@@ -448,7 +448,7 @@
             Launch the interactive terminal right now to review live settlement records, trial balance equilibrium, and underwriting models.
           </p>
           <div class="cta-buttons">
-            <router-link to="/dashboard" class="btn-primary-large">
+            <router-link to="/loading?redirect=/dashboard" class="btn-primary-large">
               <span>ENTER LIVE TERMINAL</span>
               <span>&rarr;</span>
             </router-link>
@@ -466,6 +466,11 @@
         <div class="footer-left">
           <span class="footer-brand font-mono">LADHA LEDGER &bull; FINANCIAL OS</span>
           <span class="footer-tagline">Engineered for autonomous revenue, double-entry invariance, and institutional capital.</span>
+          <div class="mt-2 flex items-center gap-3 text-[11px] font-mono">
+            <router-link to="/loading" class="text-indigo-400 hover:text-indigo-300 transition-colors">&bull; Initial Boot Sequence</router-link>
+            <span class="text-slate-600">/</span>
+            <router-link to="/dashboard" class="text-slate-400 hover:text-slate-200 transition-colors">Direct Terminal</router-link>
+          </div>
         </div>
 
         <div class="footer-center">

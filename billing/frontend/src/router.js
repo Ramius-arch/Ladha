@@ -36,6 +36,17 @@ const routes = [
     },
   },
 
+  // Loading / System Bootstrap Route
+  {
+    path: '/loading',
+    name: 'Loading',
+    component: () => import('./pages/LoadingPage.vue'),
+    meta: {
+      title: 'Initializing Ledger Kernel',
+      layout: false, // Fullscreen cinematic boot
+    },
+  },
+
   // Dashboard route
   {
     path: '/dashboard',
