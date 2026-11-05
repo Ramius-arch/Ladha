@@ -4,16 +4,13 @@
   "installCommand": "npm --prefix billing/frontend install",
   "buildCommand": "node scripts/build-unified.js",
   "outputDirectory": "dist",
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/admin/ledger/(.*)", "dest": "/admin/ledger/index.html" },
-    { "src": "/admin/ledger", "dest": "/admin/ledger/index.html" },
-    { "src": "/admin", "dest": "/admin.html" },
-    { "src": "/shop", "dest": "/shop.html" },
-    { "src": "/checkout", "dest": "/checkout.html" },
-    { "src": "/product", "dest": "/product.html" },
-    { "src": "/about", "dest": "/about.html" },
-    { "src": "/legal", "dest": "/legal.html" },
-    { "src": "/(.*)", "dest": "/$1" }
+  "rewrites": [
+    { "source": "/admin/ledger/:path*", "destination": "/admin/ledger/index.html" },
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/shop", "destination": "/shop.html" },
+    { "source": "/checkout", "destination": "/checkout.html" },
+    { "source": "/product", "destination": "/product.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/legal", "destination": "/legal.html" }
   ]
 }
