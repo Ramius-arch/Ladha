@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "cleanUrls": true,
   "installCommand": "npm --prefix billing/frontend install",
   "buildCommand": "node scripts/build-unified.js",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/admin/ledger/:path*", "destination": "/admin/ledger/index.html" },
+    { "source": "/admin/ledger/(.*)", "destination": "/admin/ledger/" },
     { "source": "/admin", "destination": "/admin.html" },
     { "source": "/shop", "destination": "/shop.html" },
     { "source": "/checkout", "destination": "/checkout.html" },
