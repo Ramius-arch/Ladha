@@ -1,0 +1,90 @@
+// Global Variables
+$primary-color: #2563eb !default;
+$secondary-color: #7c3aed !default;
+$text-color: #1f2937 !default;
+
+// Base Styles
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: $text-color;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.Header {
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.Navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Content Styles */
+.content {
+    margin-top: 64px; // Header height
+    padding-right: 250px; // Sidebar width
+}
+
+/* Sidebar Styles */
+.Sidebar {
+    width: 250px;
+    height: calc(100vh - 64px);
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 64px;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Grid */
+.grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content {
+        padding-right: 0;
+    }
+}

@@ -1,104 +1,140 @@
-﻿# LADHA — TASTE OVER TREND.
+# STOREFRONT — Unified Commerce & Billing Ecosystem
 
-> **Curated Kenyan Archival & Vintage Streetwear Platform**  
-> Provenance: Nairobi, Kenya (01°17′S 36°49′E)  
-> Repository: [github.com/Ramius-arch/Ladha](https://github.com/Ramius-arch/Ladha)
+A unified monorepo integrating **Ladha** (curated Kenyan archival streetwear storefront) with **Qx_Billing** (enterprise billing, invoicing, ledger, and automated payment engine).
 
 ---
 
-## Brand Manifesto
-
-In a sea of fast-fashion sameness, singular taste is currency. We inspect hundreds of vintage bales across Nairobi's archival epicenters (Gikomba, Toi, Ngara), reject 94% of what we touch, and archive only the 1-of-1 pieces worth owning.
-
----
-
-## Architectural & Aesthetic System
-
-Crafted under high-discipline Swiss Brutalist principles and editorial kinetic design:
-
-* **Atmospheric 3-Canvas Discipline**: Architectural Bone canvas (`#f5f4f0`) grounded in deep ink typography (`#0a0a0a`), subtle 35mm analogue grain, and surgical Acid Lime (`#ccff00`) interaction accents.
-* **50% Bilateral Grid Tension**: Desktop viewport divided cleanly down the center with a 1px physical hairline and architectural corner crosshairs (`+`).
-* **Tactile Optical Viewfinder Terminal**: Interactive garment terminal featuring a 3-look switcher (`[ LOOK 01 // NIKE 90s ]`, `[ LOOK 02 // LEVI'S RAW ]`, `[ LOOK 03 // CARHARTT ]`), technical camera HUD (`● REC [4K 60FPS]`, `LENS 50MM F/1.4`, `1/250S // ISO 400`), GPS coordinates, and textured kraft hangtags.
-* **Kinetic Micro-Interactions**: Two-state kinetic rolling text buttons (`SEE WHAT JUST DROPPED ↓`), infinite marquee tickers, and live Nairobi operational clock.
-* **Zero Viewport Clipping**: Sized with strict responsive parity across 1366x768, 1440x900, 1080p, and ultra-wide displays.
-
----
-
-## Project Structure
+## Ecosystem Overview
 
 ```
-ladha/
-├── index.html            # Editorial Runway Homepage & Viewfinder Terminal
-├── shop.html             # Archive Drops Catalog with Filter & Search
-├── product.html          # Deep-Dive Garment Specs & 1-of-1 Detail View
-├── about.html            # The 6% Protocol Manifesto & Nairobi Heritage
-├── checkout.html         # M-Pesa Instant Checkout & Order Review
-├── admin.html            # Store Manager CRM & Media Asset Management Suite
-├── server.py             # Python HTTP Server with Multipart Upload & DB API
-├── css/
-│   └── style.css         # Unified Design System & Atelier Responsive Engine
-├── js/
-│   ├── main.js           # Runway Terminal Switcher, Smooth Scroll & UI Observers
-│   ├── store-db.js       # Autonomous Client DB with LocalStorage Persistence
-│   ├── cart.js           # Shopping Bag Drawer, Cart State & Persistence
-│   ├── admin.js          # Full CRM Suite Controller (Products, Feed, Lookbook)
-│   └── products-data.js  # Factory Archival Catalog Seed Dataset
-└── assets/
-    ├── products/         # 4K Textured Garment Photography (Nike, Levi's, Carhartt)
-    ├── lookbook/         # Editorial Runway Looks & Nairobi Street Style
-    ├── feed/             # Community Studio Photography
-    ├── videos/           # Cinematic Grain & Atmospheric Video Loops
-    └── uploads/          # Store Manager CRM Upload Destination
+                                      +---------------------------------------------+
+                                      |              LADHA STOREFRONT               |
+                                      |   Swiss Brutalist E-Commerce Experience     |
+                                      |   - Nairobi Archival Garment Catalog        |
+                                      |   - Optical Viewfinder Terminal & Looks     |
+                                      |   - Shopping Cart & M-Pesa STK Modal        |
+                                      +----------------------+----------------------+
+                                                             |
+                                         POST /api/stores/ladha-nairobi/checkout
+                                         STK Push Telemetry & Real-Time Polling
+                                                             v
+                                      +---------------------------------------------+
+                                      |             QX BILLING ENGINE               |
+                                      |   Node.js / Express Ledger & Commerce Core  |
+                                      |   - Customer Auto-Provisioning & Ledger     |
+                                      |   - Automated Bill & Invoice Generation     |
+                                      |   - PDFMake Invoicing & Email Dispatch      |
+                                      |   - M-Pesa Callback & STK Simulator Engine  |
+                                      +----------------------+----------------------+
+                                                             |
+                                                             v
+                                      +---------------------------------------------+
+                                      |            QX LEDGER DASHBOARD              |
+                                      |   Vue 3 / Vite Operations Management        |
+                                      |   - Real-time Revenue & Usage Reports       |
+                                      |   - Customer Accounts & Invoice History     |
+                                      +---------------------------------------------+
 ```
 
 ---
 
-## Key Features
+## Repository Structure
 
-1. **Autonomous Client-Side Database (`js/store-db.js`)**:
-   * Works 100% client-side out of the box with zero setup.
-   * Changes in `admin.html` instantly synchronize across the storefront, cart, and checkout in real time.
-   * Full JSON export/import for catalog portability.
-
-2. **Store Manager CRM Suite (`admin.html`)**:
-   * **Inventory & Drops**: Add, edit, or archive products with custom prices, condition grades, and stock states.
-   * **Media Uploader**: Drag-and-drop image and video asset uploader with instant client-side preview.
-   * **Lookbook & Community Feed**: Reorganize gallery slides and studio highlights on the fly.
-   * **Telemetry & Orders**: Real-time stats on total catalog valuation, active pieces, and M-Pesa transactions.
-
-3. **Seamless E-Commerce Flow**:
-   * Instant slide-out shopping bag drawer (`BAG (0)`).
-   * Streamlined checkout funnel with M-Pesa prompt simulation, Nairobi same-day dispatch notes, and immediate receipt generation.
+```
+Storefront/
+├── storefront/              # Ladha Headless Storefront (HTML5 / Vanilla JS / CSS)
+│   ├── index.html           # Editorial Homepage & Optical Viewfinder Terminal
+│   ├── shop.html            # Garment Catalog with Filter & Search
+│   ├── product.html         # 1-of-1 Piece Details & Size Guides
+│   ├── checkout.html        # Unified Order & Payment Checkout
+│   ├── admin.html           # Media Asset Manager & Catalog Suite
+│   ├── js/
+│   │   ├── duka-client.js   # Headless STK Push SDK & Commerce Bridge
+│   │   ├── cart.js          # Persistent Cart Engine
+│   │   └── products-data.js # Curated Product Catalog
+│   ├── css/style.css        # Swiss Brutalist Design System
+│   └── server.py            # Local multithreaded server (Port 3001)
+│
+├── billing/                 # Qx_Billing Engine & Dashboard
+│   ├── backend/             # Express.js Commerce & Billing API (Port 5000)
+│   │   ├── server.js        # Main server entry point
+│   │   ├── models/          # Sequelize Models (Customer, Bill, Invoice, Payment, etc.)
+│   │   ├── routes/          # API Routes (including duka.routes.js commerce bridge)
+│   │   ├── controllers/     # Billing, Invoicing, Payment controllers
+│   │   └── services/        # PDF Invoicing, Africa's Talking SMS, Demo Data
+│   └── frontend/            # Vue 3 / Vite Management Dashboard (Port 5173)
+│       └── src/             # Analytics, Customer Ledger, Usage Trends
+│
+├── scripts/
+│   └── start-dev.js         # Concurrent multi-service development launcher
+├── ARCHITECTURE.md          # In-depth architectural blueprint and API contract
+└── package.json             # Root workspace scripts and dependencies
+```
 
 ---
 
-## Local Development
+## Upstream Git Remotes
 
-To run the local server with full upload and API support:
+This workspace tracks the original repositories via dedicated remotes:
 
+- **Ladha Upstream**: `https://github.com/Ramius-arch/Ladha.git` (`ladha/main`)
+- **Qx_Billing Upstream**: `https://github.com/Ramius-arch/Qx_Billing.git` (`qx-billing/main`)
+
+To view configured remotes:
 ```bash
-# Clone the repository
-git clone https://github.com/Ramius-arch/Ladha.git
-cd Ladha
-
-# Launch the local server
-python server.py 3001
+git remote -v
 ```
 
-Open [http://localhost:3001](http://localhost:3001) in your browser.
+To fetch updates from upstreams:
+```bash
+git fetch ladha
+git fetch qx-billing
+```
 
 ---
 
-## Static Deployment (GitHub Pages / Vercel / Netlify)
+## Quick Start (Local Development)
 
-Because LADHA is architected with a resilient client-side storage engine (`store-db.js`), it deploys statically with zero build steps required:
+### Prerequisites
+- Node.js >= 20.0.0
+- Python 3.9+
 
-1. Push to GitHub (`main` branch).
-2. Under **Repository Settings** > **Pages**, set **Source** to **Deploy from a branch** (`main` / root).
-3. The site will be live instantly at `https://ramius-arch.github.io/Ladha/`.
+### 1. Install Dependencies
+```bash
+npm run install:all
+```
+
+### 2. Start Unified Development Environment
+```bash
+npm run dev
+```
+
+This launches:
+- **Ladha Storefront**: [http://localhost:3001](http://localhost:3001)
+- **Billing Commerce API**: [http://localhost:5000](http://localhost:5000)
+
+### 3. Individual Service Scripts
+```bash
+npm run dev:storefront        # Run only Ladha Storefront (Port 3001)
+npm run dev:billing-backend   # Run only Billing Engine (Port 5000)
+npm run dev:billing-frontend  # Run only Vue Dashboard (Port 5173)
+```
+
+---
+
+## Commerce Bridge API
+
+The Qx_Billing backend exposes the Duka commerce gateway for headless storefronts:
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/api/stores/:storeId/checkout` | Accepts cart items, creates customer, generates bill & invoice, triggers STK push |
+| `GET` | `/api/mpesa/query/:checkoutRequestId` | Polls STK push status (`PENDING`, `PAID`, `FAILED`) |
+| `POST` | `/api/mpesa/simulate-action` | Simulates customer PIN entry or cancellation during local testing |
+| `GET` | `/api/stores/:storeId/orders` | Retrieves all bills, orders, and receipts for the store |
 
 ---
 
 ## License
 
-All rights reserved © LADHA Nairobi Archive. Taste Over Trend.
+ISC License &copy; 2026 Ramius-arch.

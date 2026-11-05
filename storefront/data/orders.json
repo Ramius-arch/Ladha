@@ -1,0 +1,114 @@
+[
+  {
+    "id": "LDH-6796-KE",
+    "customerName": "Kevin Ochieng",
+    "phone": "254722998877",
+    "address": "Dennis Pritt Road, Kilimani",
+    "items": [
+      {
+        "id": "product-1",
+        "title": "Vintage Nike Colorblock Windbreaker",
+        "price": 3500,
+        "quantity": 1
+      }
+    ],
+    "total": 3750,
+    "paymentMethod": "MPESA",
+    "mpesaReceipt": "QK160892X",
+    "status": "VERIFIED",
+    "createdAt": "2026-11-03T08:31:25.146Z"
+  },
+  {
+    "id": "LDH-4481-KE",
+    "customerName": "Sarah Mwangi",
+    "phone": "254712334455",
+    "address": "Kilimani, Nairobi",
+    "items": [
+      {
+        "id": "product-1",
+        "title": "Vintage Nike Colorblock Windbreaker",
+        "price": 3500,
+        "quantity": 1
+      }
+    ],
+    "total": 3750,
+    "paymentMethod": "MPESA",
+    "mpesaReceipt": "QK102568X",
+    "status": "VERIFIED",
+    "createdAt": "2026-11-03T08:30:34.396Z"
+  },
+  {
+    "id": "LDH-3869-KE",
+    "customerName": "Kevin Ochieng",
+    "phone": "254722998877",
+    "address": "Dennis Pritt Road, Kilimani",
+    "items": [
+      {
+        "id": "product-1",
+        "name": "Vintage Nike Colorblock Windbreaker",
+        "price": 3500,
+        "quantity": 1
+      }
+    ],
+    "total": 3750,
+    "paymentMethod": "MPESA",
+    "mpesaReceipt": "QK781689X",
+    "status": "VERIFIED",
+    "createdAt": "2026-11-03T07:58:59.303Z"
+  },
+  {
+    "id": "LDH-8245-KE",
+    "customerName": "Kevin Ochieng",
+    "phone": "254722998877",
+    "address": "Dennis Pritt Road, Kilimani",
+    "items": [
+      {
+        "id": "product-1",
+        "name": "Vintage Nike Colorblock Windbreaker",
+        "price": 3500,
+        "quantity": 1
+      }
+    ],
+    "total": 3750,
+    "paymentMethod": "MPESA",
+    "mpesaReceipt": "QK575062X",
+    "status": "VERIFIED",
+    "createdAt": "2026-10-24T14:32:45.110Z"
+  },
+  {
+    "id": "LDH-4908-KE",
+    "customerName": "Kevin Ochieng",
+    "phone": "254722998877",
+    "address": "Dennis Pritt Road, Kilimani",
+    "items": [
+      {
+        "id": "product-1",
+        "name": "Vintage Nike Colorblock Windbreaker",
+        "price": 3500,
+        "quantity": 1
+      }
+    ],
+    "total": 3750,
+    "paymentMethod": "MPESA",
+    "mpesaReceipt": "QK325495X",
+    "status": "VERIFIED",
+    "createdAt": "2026-10-12T20:01:14.696Z"
+  },
+  {
+    "id": "LADHA-ORD-9821",
+    "customerName": "Ian Macharia",
+    "phone": "+254 712 345 678",
+    "address": "Kilimani",
+    "items": [
+      {
+        "id": "product-1",
+        "name": "Vintage Nike Colorblock Windbreaker",
+        "price": 3500
+      }
+    ],
+    "total": 3750,
+    "paymentMethod": "MPESA",
+    "mpesaReceipt": "QFK482J9X1",
+    "status": "VERIFIED"
+  }
+]

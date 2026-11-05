@@ -1,0 +1,27 @@
+/* Color Palette */
+--primary-color: #2563eb;
+--secondary-color: #7c3aed;
+--accent-color: #f59e0b;
+--text-color: #1f2937;
+--background-color: #f8fafc;
+--border-color: #e2e8f0;
+
+/* Spacing */
+--space-0: 0px;
+--space-4: 4px;
+--space-8: 8px;
+--space-16: 16px;
+--space-32: 32px;
+--space-64: 64px;
+
+/* Typography */
+--font-size-12: 12px;
+--font-size-14: 14px;
+--font-size-16: 16px;
+--font-size-18: 18px;
+--font-size-20: 20px;
+
+/* Transitions */
+--transition-fast: 0.2s ease-in-out;
+--transition-normal: 0.3s ease-in-out;
+--transition-slow: 0.5s ease-in-out;
