@@ -1,17 +1,17 @@
 # Graph Report - Storefront  (2026-11-15)
 
 ## Corpus Check
-- 243 files · ~1,945,452 words
+- 244 files · ~1,948,521 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 20 file(s) not represented in the graph (top: .css 7, (none) 6, .toml 2)
 
 ## Summary
-- 1684 nodes · 2912 edges · 149 communities (110 shown, 39 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 205 edges (avg confidence: 0.85)
+- 1689 nodes · 2923 edges · 157 communities (117 shown, 40 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 210 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `56766b91`
+- Built from commit: `2e7d4484`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -103,12 +103,12 @@
 - fix-billing-engine.js
 - jspdf.umd.min.js
 - Frontend Performance, Router Stability, & Commerce Invariants
-- useRouter
+- App.tsx
 - audit_telecom_all.js
 - sms_service.js
 - patch-frontend.js
 - checkoutService.js
-- HomePage.tsx
+- react
 - ref_c
 - app.test.js
 - devDependencies
@@ -125,7 +125,7 @@
 - generate_portfolio_video.js
 - patch-api-pdf-validator.js
 - patch-checkout-and-invoicedetail.js
-- App.tsx
+- main.tsx
 - test-unified-dist.js
 - fix-etims-generator.js
 - patch-api-client.js
@@ -146,11 +146,19 @@
 - operational-scrutiny-demo.js
 - storefront_app_src_data_sitecontent_lookbookitem
 - patch-checkout-pdf.js
-- reports.routes.js
+- r
 - ref_vite
 - find_telecom.js
 - scripts
+- HomePage.tsx
 - tsconfig.json
+- reservationSweeper.js
+- ge
+- 3. Subtle Nuances & Compatibility Logic
+- storefront-app/README.md
+- SYSTEM ARCHITECTURE — LADHA & QX BILLING INTEGRATION
+- health.routes.js
+- Ladha Commerce & Ledger Platform — Engineering Dev Log
 
 ## God Nodes (most connected - your core abstractions)
 1. `Oa()` - 110 edges
@@ -167,14 +175,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `10. Production Readiness & Quality Audit Metrics` --references--> `ReservationSweeper`  [INFERRED]
   DEVLOG.md → billing/backend/services/commerce/reservationSweeper.js
+- `1. Architectural Migration (`storefront-app/`)` --references--> `ProductCard()`  [INFERRED]
+  DEVLOG.md → storefront-app/src/components/ui/ProductCard.tsx
+- `1. Architectural Migration (`storefront-app/`)` --references--> `RollingTextButton()`  [INFERRED]
+  DEVLOG.md → storefront-app/src/components/ui/RollingTextButton.tsx
 - `7. Dynamic Graph Period Switching & High-Contrast Ink Remediation` --references--> `getBillingTrends()`  [INFERRED]
   DEVLOG.md → billing/backend/controllers/Reports/report_controller.js
-- `Asset: product-1.jpg` --conceptually_related_to--> `LADHA_PRODUCTS`  [INFERRED]
-  storefront/assets/products/product-1.jpg → storefront/js/products-data.js
-- `Asset: product-10.jpg` --conceptually_related_to--> `LADHA_PRODUCTS`  [INFERRED]
-  storefront/assets/products/product-10.jpg → storefront/js/products-data.js
-- `Asset: product-11.jpg` --conceptually_related_to--> `LADHA_PRODUCTS`  [INFERRED]
-  storefront/assets/products/product-11.jpg → storefront/js/products-data.js
+- `1. Architectural Migration (`storefront-app/`)` --references--> `CurationProcessSection()`  [INFERRED]
+  DEVLOG.md → storefront-app/src/components/home/CurationProcessSection.tsx
 
 ## Import Cycles
 - None detected.
@@ -183,11 +191,11 @@
 - **Archival Commerce to Double-Entry Ledger Pipeline** — storefront_js_duka_client_dukaclient, billing_backend_routes_duka_routes, billing_backend_services_ladhaservice, storefront_server_ladhaserverhandler [INFERRED 0.95]
 - **Enterprise Billing & Compliance Ledger Suite** — billing_backend_models_bill, billing_backend_models_invoice, billing_backend_models_customer, billing_backend_models_payment [INFERRED 0.95]
 
-## Communities (149 total, 39 thin omitted)
+## Communities (157 total, 40 thin omitted)
 
 ### Community 0 - "Se"
-Cohesion: 0.06
-Nodes (5): fa, ha(), Se, ua(), Vi()
+Cohesion: 0.05
+Nodes (7): ea(), fa, ha(), Se, ua(), Vi(), xe()
 
 ### Community 1 - "backend/package.json"
 Cohesion: 0.10
@@ -221,17 +229,13 @@ Nodes (24): ref_http, fs, html, http, ports, urls, { chromium }, DIST_DIR (+16 m
 Cohesion: 0.11
 Nodes (19): dependencies, africastalking, bcryptjs, cors, dotenv, express, @faker-js/faker, ioredis (+11 more)
 
-### Community 10 - "LadhaService"
-Cohesion: 0.12
-Nodes (11): 1. Executive Summary, 2. Component Architecture, 3. Subtle Nuances & Compatibility Logic, 4. API Specification for Qx_Billing to Ladha Bridge, 5. Directory Structure in Unified Workspace, Nuance 1: 1-of-1 Archival Pieces vs. Telecom Plans & Quantities, Nuance 2: Kenyan E.164 Phone Normalization & Customer Unification, Nuance 3: Nairobi Regional Delivery Tariffs vs. Flat Invoicing (+3 more)
-
 ### Community 11 - "LADHA_PRODUCTS"
 Cohesion: 0.11
 Nodes (17): Asset: product-1.jpg, Asset: product-10.jpg, Asset: product-11.jpg, Asset: product-12.jpg, Asset: product-13.jpg, Asset: product-14.jpg, Asset: product-15.jpg, Asset: product-2.jpg (+9 more)
 
 ### Community 12 - "index.js"
-Cohesion: 0.12
-Nodes (9): db, db, db, sequelize, db, { clearCache }, db, ladhaService (+1 more)
+Cohesion: 0.17
+Nodes (5): db, db, db, sequelize, db
 
 ### Community 13 - "usage_controller.js"
 Cohesion: 0.12
@@ -250,8 +254,8 @@ Cohesion: 0.11
 Nodes (18): author, description, keywords, license, name, private, scripts, build (+10 more)
 
 ### Community 18 - "api.js"
-Cohesion: 0.19
-Nodes (11): apiClient, createDiligenceDossierDoc(), createEtimsInvoiceDoc(), downloadBlob(), downloadDiligenceDossier(), downloadEtimsInvoice(), App(), axios (+3 more)
+Cohesion: 0.21
+Nodes (10): apiClient, createDiligenceDossierDoc(), createEtimsInvoiceDoc(), downloadBlob(), downloadDiligenceDossier(), downloadEtimsInvoice(), App(), axios (+2 more)
 
 ### Community 19 - "Ladha Storefront Index View"
 Cohesion: 0.13
@@ -266,8 +270,8 @@ Cohesion: 0.34
 Nodes (13): addToCart(), clearCart(), closeDrawer(), getCart(), getCartCount(), getCartTotal(), injectDrawer(), openDrawer() (+5 more)
 
 ### Community 23 - "cacheHandler.js"
-Cohesion: 0.12
-Nodes (12): logger, Redis, logger, redis, db, express, redis, router (+4 more)
+Cohesion: 0.18
+Nodes (8): logger, Redis, logger, redis, logger, winston, ioredis, winston
 
 ### Community 24 - "check-page-vars.js"
 Cohesion: 0.17
@@ -290,12 +294,12 @@ Cohesion: 0.15
 Nodes (11): billingRoutes, customersRoutes, express, invoicesRoutes, paymentsRoutes, reportsRoutes, router, usageRoutes (+3 more)
 
 ### Community 29 - "Release 2.4.0 — Apple Human Interface & Swiss Brutalism Milestone"
-Cohesion: 0.10
-Nodes (15): getBillingTrends(), ReservationSweeper, 10. Production Readiness & Quality Audit Metrics, 1. Aesthetic Pivot: From Brutalist Blocks to Frosted Ceramic Glass, 1. Executive Summary & Philosophy, 2. Forensic Defect Resolutions (Screenshots 1 through 8), 3. Steve Jobs / Apple Typography & Craft Upgrades, 4. Automated Testing & Verification Suite (+7 more)
+Cohesion: 0.20
+Nodes (10): getBillingTrends(), 1. Executive Summary & Philosophy, 2. Forensic Defect Resolutions (Screenshots 1 through 8), 3. Steve Jobs / Apple Typography & Craft Upgrades, 4. Automated Testing & Verification Suite, 6. Production Operations Automation & Defect Resolution (Screenshots 9 through 13), 7. Dynamic Graph Period Switching & High-Contrast Ink Remediation, 8. Institutional Capital, Commercial Loan Underwriting & VC Diligence Suite (+2 more)
 
 ### Community 30 - "express"
-Cohesion: 0.22
-Nodes (7): configController, express, router, express, planController, router, express
+Cohesion: 0.15
+Nodes (10): configController, express, router, express, planController, router, express, reportController (+2 more)
 
 ### Community 31 - "Dashboard.vue"
 Cohesion: 0.25
@@ -334,7 +338,7 @@ Cohesion: 0.33
 Nodes (5): billing_backend_controllers_usage_usage_controller_usagecontroller, auth, express, router, { UsageController }
 
 ### Community 40 - "STOREFRONT — Unified Commerce & Billing Ecosystem"
-Cohesion: 0.17
+Cohesion: 0.18
 Nodes (11): 1. Install Dependencies, 2. Start Unified Development Environment, 3. Individual Service Scripts, Commerce Bridge API, Ecosystem Overview, License, Prerequisites, Quick Start (Local Development) (+3 more)
 
 ### Community 41 - "apply-commerce-fixes.js"
@@ -386,8 +390,8 @@ Cohesion: 0.25
 Nodes (7): Architectural & Aesthetic System, Brand Manifesto, Key Features, License, Local Development, Project Structure, Static Deployment (GitHub Pages / Vercel / Netlify)
 
 ### Community 81 - "Oa"
-Cohesion: 0.08
-Nodes (56): Dt(), Et(), Oa(), at(), be(), ce(), de(), dn() (+48 more)
+Cohesion: 0.11
+Nodes (43): Dt(), Et(), Oa(), be(), ce(), dn(), ee(), en() (+35 more)
 
 ### Community 82 - "build-unified.js"
 Cohesion: 0.08
@@ -418,8 +422,8 @@ Cohesion: 0.20
 Nodes (9): appVue, appVuePath, dashboardVue, dashboardVuePath, fs, headerVuePath, path, reportsVue (+1 more)
 
 ### Community 90 - "e"
-Cohesion: 0.20
-Nodes (28): a(), e(), n(), b(), bn(), bt(), ct(), dt() (+20 more)
+Cohesion: 0.14
+Nodes (30): C(), l(), n(), o(), at(), b(), bt(), ct() (+22 more)
 
 ### Community 91 - "check-assets.js"
 Cohesion: 0.33
@@ -438,16 +442,16 @@ Cohesion: 0.40
 Nodes (4): c, fs, p, path
 
 ### Community 95 - "jspdf.umd.min.js"
-Cohesion: 0.08
-Nodes (23): aa(), C(), Ca(), ea(), Gi(), I(), Ia(), j() (+15 more)
+Cohesion: 0.10
+Nodes (18): aa(), Ca(), Gi(), I(), Ia(), Ji(), Ki(), La() (+10 more)
 
 ### Community 96 - "Frontend Performance, Router Stability, & Commerce Invariants"
 Cohesion: 0.15
 Nodes (12): 10. Strict Light-Mode Ink Contrast & Surface Elevation, 11. Production-Grade Operations Automation & Redundancy Prevention, 1. Zero-Jank Animation & Reactive Performance Guardrails, 2. Router & View Stability Invariants, 3. Financial & Commerce Domain Modeling Invariants, 4. Modern Tailwind v4 Engine Invariants, 5. Dual-Theme (Light / Dark) Synchronization Protocol, 6. Static Asset Mirroring & Image Fail-Safe Integrity (+4 more)
 
-### Community 97 - "useRouter"
-Cohesion: 0.20
-Nodes (17): CartDrawer(), CATEGORIES, DropsCatalogSection(), DropsCatalogSectionProps, HeroProps, QuickViewModal(), QuickViewModalProps, ProductCard() (+9 more)
+### Community 97 - "App.tsx"
+Cohesion: 0.19
+Nodes (20): PAGE_TITLES, CartDrawer(), Header(), DropsCatalogSectionProps, QuickViewModal(), QuickViewModalProps, ProductCard(), ProductCardProps (+12 more)
 
 ### Community 98 - "audit_telecom_all.js"
 Cohesion: 0.50
@@ -465,9 +469,9 @@ Nodes (4): apiPath, code, fs, path
 Cohesion: 0.12
 Nodes (14): checkoutService, db, express, ladhaService, router, { clearCache }, db, ladhaService (+6 more)
 
-### Community 102 - "HomePage.tsx"
-Cohesion: 0.14
-Nodes (15): framer-motion, lucide-react, CurationProcessSection(), FaqSection(), Hero(), ProofNumbersSection(), ReputationProofSection(), SelectionProtocolSection() (+7 more)
+### Community 102 - "react"
+Cohesion: 0.16
+Nodes (15): framer-motion, lucide-react, react, HeaderProps, CATEGORIES, ReputationProofSection(), AnimatedCounter(), AnimatedCounterProps (+7 more)
 
 ### Community 103 - "ref_c"
 Cohesion: 0.08
@@ -494,8 +498,8 @@ Cohesion: 0.18
 Nodes (10): checkoutService, db, express, handleReconcile(), idempotency, ledger, router, db (+2 more)
 
 ### Community 110 - "s"
-Cohesion: 0.16
-Nodes (20): d(), ja(), B(), E(), M(), O(), R(), m() (+12 more)
+Cohesion: 0.26
+Nodes (13): b(), B(), an(), cn(), hn(), ln(), nn(), rn() (+5 more)
 
 ### Community 111 - "patch-admin-html.js"
 Cohesion: 0.40
@@ -510,12 +514,12 @@ Cohesion: 0.11
 Nodes (15): c_users_admin_documents_github_storefront_billing_frontend_node_modules_jspdf, c_users_admin_documents_github_storefront_billing_frontend_node_modules_jspdf_jspdf, buffer, doc, fs, { jsPDF }, buffer, doc (+7 more)
 
 ### Community 114 - "a"
-Cohesion: 0.16
-Nodes (21): o(), a(), c(), d(), f(), ft(), h(), j() (+13 more)
+Cohesion: 0.21
+Nodes (16): a(), c(), d(), f(), h(), ke(), l(), ot() (+8 more)
 
 ### Community 115 - "i"
-Cohesion: 0.18
-Nodes (15): b(), er(), g(), ae(), g(), i(), k(), kt() (+7 more)
+Cohesion: 0.19
+Nodes (15): er(), g(), ae(), et(), g(), i(), k(), kt() (+7 more)
 
 ### Community 116 - "patch-pdf-generation.js"
 Cohesion: 0.17
@@ -533,9 +537,9 @@ Nodes (6): apiContent, apiPath, dashContent, dashPath, fs, path
 Cohesion: 0.29
 Nodes (6): chkContent, chkPath, fs, invContent, invPath, path
 
-### Community 120 - "App.tsx"
-Cohesion: 0.14
-Nodes (17): react, react-dom, App(), PAGE_TITLES, Header(), HeaderProps, RollingTextButton(), RollingTextButtonProps (+9 more)
+### Community 120 - "main.tsx"
+Cohesion: 0.50
+Nodes (3): react-dom, App(), storefront_app_src_index
 
 ### Community 121 - "test-unified-dist.js"
 Cohesion: 0.29
@@ -550,8 +554,8 @@ Cohesion: 0.40
 Nodes (4): c, fs, p, path
 
 ### Community 124 - "CheckoutPage.tsx"
-Cohesion: 0.18
-Nodes (15): CartContextValue, CheckoutPage(), CheckoutPageProps, REGIONS, BILLING_API_URL, DukaCheckoutRequest, DukaCheckoutResult, initiateDukaCheckout() (+7 more)
+Cohesion: 0.17
+Nodes (15): ref_jspdf, CartContextValue, CheckoutPage(), CheckoutPageProps, REGIONS, BILLING_API_URL, DukaCheckoutRequest, DukaCheckoutResult (+7 more)
 
 ### Community 125 - "pricing.js"
 Cohesion: 0.83
@@ -567,15 +571,15 @@ Nodes (16): clsx, tailwind-merge, @types/node, @types/react, @types/react-dom, t
 
 ### Community 129 - "siteContent.ts"
 Cohesion: 0.15
-Nodes (16): LookbookShowcase(), LookSlideProps, useIsDesktop(), CartContext, CartProvider(), loadPersistedCart(), storefront_app_src_data_defaultproducts, CURATION_STEPS (+8 more)
+Nodes (15): FaqSection(), LookSlideProps, CartContext, CartProvider(), loadPersistedCart(), storefront_app_src_data_defaultproducts, CURATION_STEPS, DEFAULT_PRODUCTS (+7 more)
 
 ### Community 130 - "compilerOptions"
 Cohesion: 0.14
 Nodes (13): compilerOptions, allowImportingTsExtensions, isolatedModules, lib, module, moduleDetection, moduleResolution, noEmit (+5 more)
 
 ### Community 131 - "storeDb.ts"
-Cohesion: 0.36
-Nodes (11): StorefrontShell(), FooterContact(), fetchLiveCatalog(), getStoredProducts(), KEYS, markProductsSoldOut(), normalizeProduct(), readStorage() (+3 more)
+Cohesion: 0.24
+Nodes (14): StorefrontShell(), FooterContact(), useLenis(), raf(), fetchLiveCatalog(), getStoredProducts(), KEYS, markProductsSoldOut() (+6 more)
 
 ### Community 132 - "devDependencies"
 Cohesion: 0.20
@@ -613,9 +617,9 @@ Nodes (6): colors, fs, getJSON(), http, postJSON(), runProofOfConcept()
 Cohesion: 0.40
 Nodes (4): checkoutPath, content, fs, path
 
-### Community 142 - "reports.routes.js"
-Cohesion: 0.50
-Nodes (3): express, reportController, router
+### Community 142 - "r"
+Cohesion: 0.16
+Nodes (16): a(), e(), j(), ja(), E(), M(), O(), R() (+8 more)
 
 ### Community 144 - "find_telecom.js"
 Cohesion: 0.50
@@ -625,20 +629,52 @@ Nodes (3): fs, path, searchMatches()
 Cohesion: 0.50
 Nodes (4): scripts, build, dev, preview
 
+### Community 146 - "HomePage.tsx"
+Cohesion: 0.21
+Nodes (10): 1. Architectural Migration (`storefront-app/`), CurationProcessSection(), DropsCatalogSection(), Hero(), HeroProps, LookbookShowcase(), ProofNumbersSection(), SelectionProtocolSection() (+2 more)
+
+### Community 150 - "reservationSweeper.js"
+Cohesion: 0.18
+Nodes (6): { clearCache }, db, ladhaService, { Op }, ReservationSweeper, 10. Production Readiness & Quality Audit Metrics
+
+### Community 151 - "ge"
+Cohesion: 0.29
+Nodes (10): d(), ge(), pe(), qe(), ve(), we(), x(), Te() (+2 more)
+
+### Community 152 - "3. Subtle Nuances & Compatibility Logic"
+Cohesion: 0.29
+Nodes (5): 3. Subtle Nuances & Compatibility Logic, Nuance 1: 1-of-1 Archival Pieces vs. Telecom Plans & Quantities, Nuance 2: Kenyan E.164 Phone Normalization & Customer Unification, Nuance 3: Nairobi Regional Delivery Tariffs vs. Flat Invoicing, Nuance 4: Direct API Bridge (Qx_Billing -> Ladha)
+
+### Community 153 - "storefront-app/README.md"
+Cohesion: 0.33
+Nodes (3): Commands, Key Capabilities, Ladha Storefront App (`storefront-app/`)
+
+### Community 154 - "SYSTEM ARCHITECTURE — LADHA & QX BILLING INTEGRATION"
+Cohesion: 0.40
+Nodes (5): 1. Executive Summary, 2. Component Architecture, 4. API Specification for Qx_Billing to Ladha Bridge, 5. Directory Structure in Unified Workspace, SYSTEM ARCHITECTURE — LADHA & QX BILLING INTEGRATION
+
+### Community 155 - "health.routes.js"
+Cohesion: 0.40
+Nodes (4): db, express, redis, router
+
+### Community 156 - "Ladha Commerce & Ledger Platform — Engineering Dev Log"
+Cohesion: 0.40
+Nodes (4): 1. Aesthetic Pivot: From Brutalist Blocks to Frosted Ceramic Glass, Ladha Commerce & Ledger Platform — Engineering Dev Log, Release 2.4.1 (Experimental UI Design) — Apple visionOS / Frosted Ceramic Glass Overhaul, Release 3.0.0 (`experimental/mattis-storefront`) — Mattis Editorial Architecture & Kinetic Storefront Migration
+
 ## Knowledge Gaps
-- **730 isolated node(s):** `db`, `db`, `{ Sequelize }`, `path`, `path` (+725 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 906 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **39 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **732 isolated node(s):** `db`, `db`, `{ Sequelize }`, `path`, `path` (+727 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 905 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **40 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `f()` connect `a` to `Oa`, `verify-all-pages.js`, `jspdf.umd.min.js`?**
-  _High betweenness centrality (0.156) - this node is a cross-community bridge._
-- **Why does `sequelize` connect `sequelize` to `report_controller.js`, `index.js`, `backend/package.json`, `billing_controller.js`?**
-  _High betweenness centrality (0.059) - this node is a cross-community bridge._
-- **Why does `r()` connect `Oa` to `Se`, `s`, `a`, `i`, `e`, `jspdf.umd.min.js`?**
-  _High betweenness centrality (0.051) - this node is a cross-community bridge._
+- **Why does `Ladha Commerce & Ledger Platform — Engineering Dev Log` connect `Ladha Commerce & Ledger Platform — Engineering Dev Log` to `Release 2.4.0 — Apple Human Interface & Swiss Brutalism Milestone`?**
+  _High betweenness centrality (0.276) - this node is a cross-community bridge._
+- **Why does `Release 2.4.0 — Apple Human Interface & Swiss Brutalism Milestone` connect `Release 2.4.0 — Apple Human Interface & Swiss Brutalism Milestone` to `Ladha Commerce & Ledger Platform — Engineering Dev Log`, `reservationSweeper.js`?**
+  _High betweenness centrality (0.270) - this node is a cross-community bridge._
+- **Why does `Release 3.0.0 (`experimental/mattis-storefront`) — Mattis Editorial Architecture & Kinetic Storefront Migration` connect `Ladha Commerce & Ledger Platform — Engineering Dev Log` to `HomePage.tsx`?**
+  _High betweenness centrality (0.254) - this node is a cross-community bridge._
 - **Are the 8 inferred relationships involving `Oa()` (e.g. with `Dt()` and `kn()`) actually correct?**
   _`Oa()` has 8 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 31 inferred relationships involving `r()` (e.g. with `Dt()` and `O()`) actually correct?**
@@ -646,4 +682,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 7 inferred relationships involving `e()` (e.g. with `jspdf.umd.min.js` and `e()`) actually correct?**
   _`e()` has 7 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `db`, `db`, `{ Sequelize }` to the rest of the system?**
-  _730 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _732 weakly-connected nodes found - possible documentation gaps or missing edges._

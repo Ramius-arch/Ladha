@@ -74,13 +74,26 @@
       "source_location": "L16"
     },
     {
+      "id": "storefront_app_src_components_header_headerprops",
+      "label": "HeaderProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "headerprops",
+      "source_file": "storefront-app/src/components/Header.tsx",
+      "source_location": "L9"
+    },
+    {
       "id": "storefront_app_src_components_ui_animatedcounter_animatedcounterprops",
       "label": "AnimatedCounterProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "animatedcounterprops",
       "source_file": "storefront-app/src/components/ui/AnimatedCounter.tsx",
@@ -93,37 +106,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "motionrevealprops",
       "source_file": "storefront-app/src/components/ui/MotionReveal.tsx",
       "source_location": "L4"
-    },
-    {
-      "id": "storefront_app_src_pages_homepage_homepageprops",
-      "label": "HomePageProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "HomePage.tsx",
-      "file_type": "code",
-      "norm_label": "homepageprops",
-      "source_file": "storefront-app/src/pages/HomePage.tsx",
-      "source_location": "L12"
-    },
-    {
-      "id": "storefront_app_src_components_header_headerprops",
-      "label": "HeaderProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "headerprops",
-      "source_file": "storefront-app/src/components/Header.tsx",
-      "source_location": "L9"
     },
     {
       "id": "storefront_app_src_components_ui_rollingtextbutton_rollingtextbuttonprops",
@@ -131,8 +118,8 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
+      "community": 102,
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "rollingtextbuttonprops",
       "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
@@ -144,25 +131,12 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
+      "community": 102,
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "ambienttrack",
       "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
       "source_location": "L3"
-    },
-    {
-      "id": "storefront_app_src_pages_legalpage_legaltab",
-      "label": "LegalTab",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "legaltab",
-      "source_file": "storefront-app/src/pages/LegalPage.tsx",
-      "source_location": "L4"
     },
     {
       "id": "storefront_app_src_context_cartcontext_cartcontextvalue",
@@ -279,7 +253,7 @@
       "file_type": "code",
       "norm_label": "lookslideprops",
       "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
-      "source_location": "L18"
+      "source_location": "L7"
     },
     {
       "id": "storefront_app_src_types_store_lookbookentry",
@@ -334,6 +308,45 @@
       "source_location": "L5"
     },
     {
+      "id": "storefront_app_src_components_home_hero_heroprops",
+      "label": "HeroProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "heroprops",
+      "source_file": "storefront-app/src/components/home/Hero.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "storefront_app_src_pages_homepage_homepageprops",
+      "label": "HomePageProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "homepageprops",
+      "source_file": "storefront-app/src/pages/HomePage.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper",
+      "label": "ReservationSweeper",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": "reservationsweeper",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L16"
+    },
+    {
       "id": "storefront_js_duka_client_dukaclient",
       "label": "DukaClient",
       "_callable": true,
@@ -371,19 +384,6 @@
       "norm_label": "reportdata",
       "source_file": "billing/frontend/src/components/Reports.vue",
       "source_location": "L34"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper",
-      "label": "ReservationSweeper",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "code",
-      "norm_label": "reservationsweeper",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L16"
     },
     {
       "id": "billing_backend_services_commerce_diligenceservice_diligenceservice",
@@ -496,24 +496,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "dropscatalogsectionprops",
       "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
       "source_location": "L9"
-    },
-    {
-      "id": "storefront_app_src_components_home_hero_heroprops",
-      "label": "HeroProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "useRouter",
-      "file_type": "code",
-      "norm_label": "heroprops",
-      "source_file": "storefront-app/src/components/home/Hero.tsx",
-      "source_location": "L6"
     },
     {
       "id": "storefront_app_src_components_quickviewmodal_quickviewmodalprops",
@@ -522,7 +509,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "quickviewmodalprops",
       "source_file": "storefront-app/src/components/QuickViewModal.tsx",
@@ -535,11 +522,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "productcardprops",
       "source_file": "storefront-app/src/components/ui/ProductCard.tsx",
       "source_location": "L7"
+    },
+    {
+      "id": "storefront_app_src_pages_legalpage_legaltab",
+      "label": "LegalTab",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "legaltab",
+      "source_file": "storefront-app/src/pages/LegalPage.tsx",
+      "source_location": "L4"
     },
     {
       "id": "storefront_app_src_pages_productpage_productpageprops",
@@ -548,7 +548,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "productpageprops",
       "source_file": "storefront-app/src/pages/ProductPage.tsx",
@@ -561,7 +561,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "shoppageprops",
       "source_file": "storefront-app/src/pages/ShopPage.tsx",
@@ -574,7 +574,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "product",
       "source_file": "storefront-app/src/types/store.ts",
@@ -592,6 +592,18 @@
       "norm_label": "smsservice",
       "source_file": "billing/backend/services/SMS/sms_service.js",
       "source_location": "L3"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ea",
+      "label": "ea()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Se",
+      "file_type": "code",
+      "norm_label": "ea()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L176"
     },
     {
       "id": "storefront_js_jspdf_umd_min_fa_addframedatatocanvas",
@@ -1482,16 +1494,16 @@
       "source_location": "L176"
     },
     {
-      "id": "billing_backend_services_ladhaservice_ladhaservice_calculateshippingfee",
-      "label": ".calculateShippingFee()",
+      "id": "storefront_js_jspdf_umd_min_xe",
+      "label": "xe()",
       "_callable": true,
       "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
+      "community": 0,
+      "community_name": "Se",
       "file_type": "code",
-      "norm_label": ".calculateshippingfee()",
-      "source_file": "billing/backend/services/ladhaService.js",
-      "source_location": "L170"
+      "norm_label": "xe()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L125"
     },
     {
       "id": "billing_backend_services_ladhaservice_ladhaservice_checkhealth",
@@ -1554,18 +1566,6 @@
       "source_location": "L89"
     },
     {
-      "id": "billing_backend_services_ladhaservice_ladhaservice_normalizephone",
-      "label": ".normalizePhone()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "code",
-      "norm_label": ".normalizephone()",
-      "source_file": "billing/backend/services/ladhaService.js",
-      "source_location": "L152"
-    },
-    {
       "id": "billing_backend_services_ladhaservice_ladhaservice_recordorder",
       "label": ".recordOrder()",
       "_callable": true,
@@ -1614,76 +1614,16 @@
       "source_location": "L105"
     },
     {
-      "id": "storefront_app_src_components_home_curationprocesssection_curationprocesssection",
-      "label": "CurationProcessSection()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "HomePage.tsx",
-      "file_type": "code",
-      "norm_label": "curationprocesssection()",
-      "source_file": "storefront-app/src/components/home/CurationProcessSection.tsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "storefront_app_src_components_home_faqsection_faqsection",
-      "label": "FaqSection()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "HomePage.tsx",
-      "file_type": "code",
-      "norm_label": "faqsection()",
-      "source_file": "storefront-app/src/components/home/FaqSection.tsx",
-      "source_location": "L12"
-    },
-    {
-      "id": "storefront_app_src_components_home_hero_hero",
-      "label": "Hero()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "HomePage.tsx",
-      "file_type": "code",
-      "norm_label": "hero()",
-      "source_file": "storefront-app/src/components/home/Hero.tsx",
-      "source_location": "L21"
-    },
-    {
-      "id": "storefront_app_src_components_home_proofnumberssection_proofnumberssection",
-      "label": "ProofNumbersSection()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "HomePage.tsx",
-      "file_type": "code",
-      "norm_label": "proofnumberssection()",
-      "source_file": "storefront-app/src/components/home/ProofNumbersSection.tsx",
-      "source_location": "L12"
-    },
-    {
       "id": "storefront_app_src_components_home_reputationproofsection_reputationproofsection",
       "label": "ReputationProofSection()",
       "_callable": true,
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "reputationproofsection()",
       "source_file": "storefront-app/src/components/home/ReputationProofSection.tsx",
       "source_location": "L17"
-    },
-    {
-      "id": "storefront_app_src_components_home_selectionprotocolsection_selectionprotocolsection",
-      "label": "SelectionProtocolSection()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "HomePage.tsx",
-      "file_type": "code",
-      "norm_label": "selectionprotocolsection()",
-      "source_file": "storefront-app/src/components/home/SelectionProtocolSection.tsx",
-      "source_location": "L14"
     },
     {
       "id": "storefront_app_src_components_ui_animatedcounter_animatedcounter",
@@ -1691,7 +1631,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "animatedcounter()",
       "source_file": "storefront-app/src/components/ui/AnimatedCounter.tsx",
@@ -1703,23 +1643,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "motionreveal()",
       "source_file": "storefront-app/src/components/ui/MotionReveal.tsx",
       "source_location": "L14"
     },
     {
-      "id": "storefront_app_src_pages_homepage_homepage",
-      "label": "HomePage()",
+      "id": "storefront_app_src_components_ui_rollingtextbutton_rollingtextbutton",
+      "label": "RollingTextButton()",
       "_callable": true,
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
-      "norm_label": "homepage()",
-      "source_file": "storefront-app/src/pages/HomePage.tsx",
-      "source_location": "L23"
+      "norm_label": "rollingtextbutton()",
+      "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "storefront_app_src_hooks_useambientaudio_useambientaudio",
+      "label": "useAmbientAudio()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "useambientaudio()",
+      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
+      "source_location": "L14"
     },
     {
       "id": "portfolio_assets_capture_screenshots_capture",
@@ -1842,28 +1794,16 @@
       "source_location": "L270"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_d",
-      "label": "d()",
+      "id": "storefront_js_jspdf_umd_min_b",
+      "label": "b()",
       "_callable": true,
       "_origin": "ast",
       "community": 110,
       "community_name": "s",
       "file_type": "code",
-      "norm_label": "d()",
+      "norm_label": "b()",
       "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L358"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ja",
-      "label": "ja()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "ja()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L236"
+      "source_location": "L67"
     },
     {
       "id": "storefront_js_jspdf_umd_min_ja_b",
@@ -1876,78 +1816,6 @@
       "norm_label": "b()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L236"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ja_e",
-      "label": "E()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "e()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L236"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ja_j",
-      "label": "j()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "j()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L236"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ja_m",
-      "label": "M()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "m()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L236"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ja_o",
-      "label": "O()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "o()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L236"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ja_r",
-      "label": "R()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "r()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L236"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_m",
-      "label": "m()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "m()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L67"
     },
     {
       "id": "storefront_js_jspdf_umd_min_oa_an",
@@ -2082,18 +1950,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_r_he",
-      "label": "He()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "he()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L86"
-    },
-    {
       "id": "scripts_test_diligence_gen_creatediligencepdf",
       "label": "createDiligencePdf()",
       "_callable": true,
@@ -2116,18 +1972,6 @@
       "norm_label": "createetimsinvoicepdf()",
       "source_file": "scripts/test-etims-gen.js",
       "source_location": "L4"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_o",
-      "label": "o()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "a",
-      "file_type": "code",
-      "norm_label": "o()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L51"
     },
     {
       "id": "storefront_js_jspdf_umd_min_oa_a",
@@ -2178,18 +2022,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_ft",
-      "label": "ft()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "a",
-      "file_type": "code",
-      "norm_label": "ft()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_h",
       "label": "h()",
       "_callable": true,
@@ -2198,18 +2030,6 @@
       "community_name": "a",
       "file_type": "code",
       "norm_label": "h()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_j",
-      "label": "j()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "a",
-      "file_type": "code",
-      "norm_label": "j()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -2234,18 +2054,6 @@
       "community_name": "a",
       "file_type": "code",
       "norm_label": "l()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_mn",
-      "label": "mn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "a",
-      "file_type": "code",
-      "norm_label": "mn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -2322,18 +2130,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_vn",
-      "label": "vn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "a",
-      "file_type": "code",
-      "norm_label": "vn()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_zt",
       "label": "zt()",
       "_callable": true,
@@ -2382,18 +2178,6 @@
       "source_location": "L57"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_b",
-      "label": "b()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 115,
-      "community_name": "i",
-      "file_type": "code",
-      "norm_label": "b()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L67"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_er",
       "label": "er()",
       "_callable": true,
@@ -2426,6 +2210,18 @@
       "community_name": "i",
       "file_type": "code",
       "norm_label": "ae()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_et",
+      "label": "et()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "i",
+      "file_type": "code",
+      "norm_label": "et()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -2663,95 +2459,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 120,
-      "community_name": "App.tsx",
+      "community_name": "main.tsx",
       "file_type": "code",
       "norm_label": "app()",
       "source_file": "storefront-app/src/App.tsx",
       "source_location": "L111"
-    },
-    {
-      "id": "storefront_app_src_components_header_header",
-      "label": "Header()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "header()",
-      "source_file": "storefront-app/src/components/Header.tsx",
-      "source_location": "L21"
-    },
-    {
-      "id": "storefront_app_src_components_ui_rollingtextbutton_rollingtextbutton",
-      "label": "RollingTextButton()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "rollingtextbutton()",
-      "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "storefront_app_src_hooks_useambientaudio_useambientaudio",
-      "label": "useAmbientAudio()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "useambientaudio()",
-      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
-      "source_location": "L14"
-    },
-    {
-      "id": "storefront_app_src_hooks_uselenis_uselenis",
-      "label": "useLenis()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "uselenis()",
-      "source_file": "storefront-app/src/hooks/useLenis.ts",
-      "source_location": "L4"
-    },
-    {
-      "id": "storefront_app_src_hooks_uselenis_uselenis_raf",
-      "label": "raf()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "raf()",
-      "source_file": "storefront-app/src/hooks/useLenis.ts",
-      "source_location": "L15"
-    },
-    {
-      "id": "storefront_app_src_pages_legalpage_legalpage",
-      "label": "LegalPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "legalpage()",
-      "source_file": "storefront-app/src/pages/LegalPage.tsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "storefront_app_src_pages_notfoundpage_notfoundpage",
-      "label": "NotFoundPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "notfoundpage()",
-      "source_file": "storefront-app/src/pages/NotFoundPage.tsx",
-      "source_location": "L5"
     },
     {
       "id": "storefront_app_src_pages_checkoutpage_checkoutpage",
@@ -2814,18 +2526,6 @@
       "source_location": "L18"
     },
     {
-      "id": "storefront_app_src_services_storedb_submitorderrecord",
-      "label": "submitOrderRecord()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 124,
-      "community_name": "CheckoutPage.tsx",
-      "file_type": "code",
-      "norm_label": "submitorderrecord()",
-      "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L109"
-    },
-    {
       "id": "billing_backend_services_commerce_pricing_calculateshippingfee",
       "label": "calculateShippingFee()",
       "_callable": true,
@@ -2862,16 +2562,16 @@
       "source_location": "L42"
     },
     {
-      "id": "storefront_app_src_components_home_lookbookshowcase_lookbookshowcase",
-      "label": "LookbookShowcase()",
+      "id": "storefront_app_src_components_home_faqsection_faqsection",
+      "label": "FaqSection()",
       "_callable": true,
       "_origin": "ast",
       "community": 129,
       "community_name": "siteContent.ts",
       "file_type": "code",
-      "norm_label": "lookbookshowcase()",
-      "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
-      "source_location": "L192"
+      "norm_label": "faqsection()",
+      "source_file": "storefront-app/src/components/home/FaqSection.tsx",
+      "source_location": "L12"
     },
     {
       "id": "storefront_app_src_components_home_lookbookshowcase_lookslide",
@@ -2883,19 +2583,7 @@
       "file_type": "code",
       "norm_label": "lookslide()",
       "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
-      "source_location": "L36"
-    },
-    {
-      "id": "storefront_app_src_components_home_lookbookshowcase_useisdesktop",
-      "label": "useIsDesktop()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 129,
-      "community_name": "siteContent.ts",
-      "file_type": "code",
-      "norm_label": "useisdesktop()",
-      "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
-      "source_location": "L7"
+      "source_location": "L25"
     },
     {
       "id": "storefront_app_src_context_cartcontext_cartprovider",
@@ -2932,18 +2620,6 @@
       "norm_label": "resolveasseturl()",
       "source_file": "storefront-app/src/data/siteContent.ts",
       "source_location": "L4"
-    },
-    {
-      "id": "storefront_app_src_pages_aboutpage_aboutpage",
-      "label": "AboutPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 129,
-      "community_name": "siteContent.ts",
-      "file_type": "code",
-      "norm_label": "aboutpage()",
-      "source_file": "storefront-app/src/pages/AboutPage.tsx",
-      "source_location": "L6"
     },
     {
       "id": "billing_backend_controllers_plancontroller_getplans",
@@ -3090,6 +2766,30 @@
       "source_location": "L6"
     },
     {
+      "id": "storefront_app_src_hooks_uselenis_uselenis",
+      "label": "useLenis()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "storeDb.ts",
+      "file_type": "code",
+      "norm_label": "uselenis()",
+      "source_file": "storefront-app/src/hooks/useLenis.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "storefront_app_src_hooks_uselenis_uselenis_raf",
+      "label": "raf()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "storeDb.ts",
+      "file_type": "code",
+      "norm_label": "raf()",
+      "source_file": "storefront-app/src/hooks/useLenis.ts",
+      "source_location": "L15"
+    },
+    {
       "id": "storefront_app_src_services_storedb_fetchlivecatalog",
       "label": "fetchLiveCatalog()",
       "_callable": true,
@@ -3172,6 +2872,18 @@
       "norm_label": "saveorderlocally()",
       "source_file": "storefront-app/src/services/storeDb.ts",
       "source_location": "L85"
+    },
+    {
+      "id": "storefront_app_src_services_storedb_submitorderrecord",
+      "label": "submitOrderRecord()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "storeDb.ts",
+      "file_type": "code",
+      "norm_label": "submitorderrecord()",
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L109"
     },
     {
       "id": "storefront_app_src_services_storedb_writestorage",
@@ -3330,6 +3042,210 @@
       "source_location": "L70"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_a",
+      "label": "a()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "a()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L51"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_e",
+      "label": "e()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "e()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L51"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_j",
+      "label": "j()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "j()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L86"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ja",
+      "label": "ja()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "ja()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L236"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ja_e",
+      "label": "E()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "e()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L236"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ja_j",
+      "label": "j()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "j()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L236"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ja_m",
+      "label": "M()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "m()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L236"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ja_o",
+      "label": "O()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "o()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L236"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ja_r",
+      "label": "R()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "r()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L236"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_m",
+      "label": "m()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "m()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L67"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_bn",
+      "label": "bn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "bn()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_de",
+      "label": "de()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "de()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_dt",
+      "label": "dt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "dt()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_j",
+      "label": "j()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "j()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_r",
+      "label": "r()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "r()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_r_he",
+      "label": "He()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "he()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L86"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_t",
+      "label": "t()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "r",
+      "file_type": "code",
+      "norm_label": "t()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L372"
+    },
+    {
       "id": "scripts_find_telecom_searchmatches",
       "label": "searchMatches()",
       "_callable": true,
@@ -3340,6 +3256,90 @@
       "norm_label": "searchmatches()",
       "source_file": "scripts/find_telecom.js",
       "source_location": "L4"
+    },
+    {
+      "id": "storefront_app_src_components_home_curationprocesssection_curationprocesssection",
+      "label": "CurationProcessSection()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "curationprocesssection()",
+      "source_file": "storefront-app/src/components/home/CurationProcessSection.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "storefront_app_src_components_home_dropscatalogsection_dropscatalogsection",
+      "label": "DropsCatalogSection()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "dropscatalogsection()",
+      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
+      "source_location": "L23"
+    },
+    {
+      "id": "storefront_app_src_components_home_hero_hero",
+      "label": "Hero()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "hero()",
+      "source_file": "storefront-app/src/components/home/Hero.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "storefront_app_src_components_home_lookbookshowcase_lookbookshowcase",
+      "label": "LookbookShowcase()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "lookbookshowcase()",
+      "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
+      "source_location": "L200"
+    },
+    {
+      "id": "storefront_app_src_components_home_proofnumberssection_proofnumberssection",
+      "label": "ProofNumbersSection()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "proofnumberssection()",
+      "source_file": "storefront-app/src/components/home/ProofNumbersSection.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "storefront_app_src_components_home_selectionprotocolsection_selectionprotocolsection",
+      "label": "SelectionProtocolSection()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "selectionprotocolsection()",
+      "source_file": "storefront-app/src/components/home/SelectionProtocolSection.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "storefront_app_src_pages_homepage_homepage",
+      "label": "HomePage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "homepage()",
+      "source_file": "storefront-app/src/pages/HomePage.tsx",
+      "source_location": "L23"
     },
     {
       "id": "billing_frontend_src_components_notificationtray_setup",
@@ -3472,6 +3472,210 @@
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/pages/UsageTracker.vue",
       "source_location": "L274"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L17"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_getstatus",
+      "label": ".getStatus()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": ".getstatus()",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L145"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_startsweeper",
+      "label": ".startSweeper()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": ".startsweeper()",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L108"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_stopsweeper",
+      "label": ".stopSweeper()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": ".stopsweeper()",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L133"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_sweepexpiredreservations",
+      "label": ".sweepExpiredReservations()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": ".sweepexpiredreservations()",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L28"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_d",
+      "label": "d()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ge",
+      "file_type": "code",
+      "norm_label": "d()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L358"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_ge",
+      "label": "ge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ge",
+      "file_type": "code",
+      "norm_label": "ge()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_pe",
+      "label": "pe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ge",
+      "file_type": "code",
+      "norm_label": "pe()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_qe",
+      "label": "qe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ge",
+      "file_type": "code",
+      "norm_label": "qe()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_ve",
+      "label": "ve()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ge",
+      "file_type": "code",
+      "norm_label": "ve()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_we",
+      "label": "we()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ge",
+      "file_type": "code",
+      "norm_label": "we()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_r_x",
+      "label": "x()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ge",
+      "file_type": "code",
+      "norm_label": "x()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L86"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_te",
+      "label": "Te()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ge",
+      "file_type": "code",
+      "norm_label": "te()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L176"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ue",
+      "label": "Ue()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ge",
+      "file_type": "code",
+      "norm_label": "ue()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L176"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ye",
+      "label": "ye()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "ge",
+      "file_type": "code",
+      "norm_label": "ye()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L117"
+    },
+    {
+      "id": "billing_backend_services_ladhaservice_ladhaservice_calculateshippingfee",
+      "label": ".calculateShippingFee()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "3. Subtle Nuances & Compatibility Logic",
+      "file_type": "code",
+      "norm_label": ".calculateshippingfee()",
+      "source_file": "billing/backend/services/ladhaService.js",
+      "source_location": "L170"
+    },
+    {
+      "id": "billing_backend_services_ladhaservice_ladhaservice_normalizephone",
+      "label": ".normalizePhone()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "3. Subtle Nuances & Compatibility Logic",
+      "file_type": "code",
+      "norm_label": ".normalizephone()",
+      "source_file": "billing/backend/services/ladhaService.js",
+      "source_location": "L152"
     },
     {
       "id": "billing_frontend_src_services_pdfgenerator_creatediligencedossierdoc",
@@ -4144,66 +4348,6 @@
       "norm_label": "getbillingtrends()",
       "source_file": "billing/backend/controllers/Reports/report_controller.js",
       "source_location": "L85"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L17"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_getstatus",
-      "label": ".getStatus()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "code",
-      "norm_label": ".getstatus()",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L145"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_startsweeper",
-      "label": ".startSweeper()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "code",
-      "norm_label": ".startsweeper()",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L108"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_stopsweeper",
-      "label": ".stopSweeper()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "code",
-      "norm_label": ".stopsweeper()",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L133"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_reservationsweeper_sweepexpiredreservations",
-      "label": ".sweepExpiredReservations()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "code",
-      "norm_label": ".sweepexpiredreservations()",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L28"
     },
     {
       "id": "storefront_js_admin_applyassettotarget",
@@ -5502,18 +5646,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_at",
-      "label": "at()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "at()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_be",
       "label": "be()",
       "_callable": true,
@@ -5534,18 +5666,6 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "ce()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_de",
-      "label": "de()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "de()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -5610,18 +5730,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_ge",
-      "label": "ge()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "ge()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_gn",
       "label": "gn()",
       "_callable": true,
@@ -5666,18 +5774,6 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "ie()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_in",
-      "label": "In()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "in()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -5742,18 +5838,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_lt",
-      "label": "lt()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "lt()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_me",
       "label": "me()",
       "_callable": true,
@@ -5790,6 +5874,18 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_o",
+      "label": "o()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "o()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_oe",
       "label": "oe()",
       "_callable": true,
@@ -5798,18 +5894,6 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "oe()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_pe",
-      "label": "pe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "pe()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -5834,18 +5918,6 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "pt()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_qe",
-      "label": "qe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "qe()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -5930,30 +6002,6 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "ue()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_ve",
-      "label": "ve()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "ve()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_we",
-      "label": "we()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "we()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6054,18 +6102,6 @@
       "source_location": "L86"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_r_k",
-      "label": "k()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "k()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L86"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_r_ln",
       "label": "Ln()",
       "_callable": true,
@@ -6090,18 +6126,6 @@
       "source_location": "L86"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_r_x",
-      "label": "x()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "x()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L86"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_r_xn",
       "label": "xn()",
       "_callable": true,
@@ -6122,42 +6146,6 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "rt()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L117"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_te",
-      "label": "Te()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "te()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L176"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ue",
-      "label": "Ue()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "ue()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L176"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ye",
-      "label": "ye()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "ye()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L117"
     },
@@ -6354,26 +6342,26 @@
       "source_location": "L4"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_a",
-      "label": "a()",
+      "id": "storefront_js_jspdf_umd_min_c",
+      "label": "C()",
       "_callable": true,
       "_origin": "ast",
       "community": 90,
       "community_name": "e",
       "file_type": "code",
-      "norm_label": "a()",
+      "norm_label": "c()",
       "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L51"
+      "source_location": "L86"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_e",
-      "label": "e()",
+      "id": "storefront_js_jspdf_umd_min_l",
+      "label": "l()",
       "_callable": true,
       "_origin": "ast",
       "community": 90,
       "community_name": "e",
       "file_type": "code",
-      "norm_label": "e()",
+      "norm_label": "l()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L51"
     },
@@ -6390,6 +6378,30 @@
       "source_location": "L51"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_o",
+      "label": "o()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "o()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L51"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_at",
+      "label": "at()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "at()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_b",
       "label": "b()",
       "_callable": true,
@@ -6398,18 +6410,6 @@
       "community_name": "e",
       "file_type": "code",
       "norm_label": "b()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_bn",
-      "label": "bn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "e",
-      "file_type": "code",
-      "norm_label": "bn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6438,18 +6438,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_dt",
-      "label": "dt()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "e",
-      "file_type": "code",
-      "norm_label": "dt()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_e",
       "label": "e()",
       "_callable": true,
@@ -6462,14 +6450,14 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_et",
-      "label": "et()",
+      "id": "storefront_js_jspdf_umd_min_oa_ft",
+      "label": "ft()",
       "_callable": true,
       "_origin": "ast",
       "community": 90,
       "community_name": "e",
       "file_type": "code",
-      "norm_label": "et()",
+      "norm_label": "ft()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6486,6 +6474,18 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_in",
+      "label": "In()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "in()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_it",
       "label": "it()",
       "_callable": true,
@@ -6494,6 +6494,30 @@
       "community_name": "e",
       "file_type": "code",
       "norm_label": "it()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_lt",
+      "label": "lt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "lt()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_mn",
+      "label": "mn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "mn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6522,18 +6546,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_o",
-      "label": "o()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "e",
-      "file_type": "code",
-      "norm_label": "o()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_on",
       "label": "on()",
       "_callable": true,
@@ -6542,18 +6554,6 @@
       "community_name": "e",
       "file_type": "code",
       "norm_label": "on()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_r",
-      "label": "r()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "e",
-      "file_type": "code",
-      "norm_label": "r()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6590,6 +6590,18 @@
       "community_name": "e",
       "file_type": "code",
       "norm_label": "v()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_vn",
+      "label": "vn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "vn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6666,6 +6678,18 @@
       "source_location": "L86"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_r_k",
+      "label": "k()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "k()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L86"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_r_l",
       "label": "L()",
       "_callable": true,
@@ -6676,18 +6700,6 @@
       "norm_label": "l()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L86"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_t",
-      "label": "t()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "e",
-      "file_type": "code",
-      "norm_label": "t()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L372"
     },
     {
       "id": "storefront_js_jspdf_umd_min_aa",
@@ -6726,18 +6738,6 @@
       "source_location": "L176"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_c",
-      "label": "C()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "jspdf.umd.min.js",
-      "file_type": "code",
-      "norm_label": "c()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L86"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_ca",
       "label": "Ca()",
       "_callable": true,
@@ -6748,18 +6748,6 @@
       "norm_label": "ca()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L204"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ea",
-      "label": "ea()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "jspdf.umd.min.js",
-      "file_type": "code",
-      "norm_label": "ea()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L176"
     },
     {
       "id": "storefront_js_jspdf_umd_min_gi",
@@ -6808,18 +6796,6 @@
       "norm_label": "ia()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L204"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_j",
-      "label": "j()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "jspdf.umd.min.js",
-      "file_type": "code",
-      "norm_label": "j()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L86"
     },
     {
       "id": "storefront_js_jspdf_umd_min_ji",
@@ -6904,18 +6880,6 @@
       "norm_label": "kt()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L86"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_l",
-      "label": "l()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "jspdf.umd.min.js",
-      "file_type": "code",
-      "norm_label": "l()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L51"
     },
     {
       "id": "storefront_js_jspdf_umd_min_la",
@@ -7038,18 +7002,6 @@
       "source_location": "L176"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_xe",
-      "label": "xe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 95,
-      "community_name": "jspdf.umd.min.js",
-      "file_type": "code",
-      "norm_label": "xe()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L125"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_xi",
       "label": "Xi()",
       "_callable": true,
@@ -7115,23 +7067,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "cartdrawer()",
       "source_file": "storefront-app/src/components/CartDrawer.tsx",
       "source_location": "L8"
     },
     {
-      "id": "storefront_app_src_components_home_dropscatalogsection_dropscatalogsection",
-      "label": "DropsCatalogSection()",
+      "id": "storefront_app_src_components_header_header",
+      "label": "Header()",
       "_callable": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
-      "norm_label": "dropscatalogsection()",
-      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
-      "source_location": "L23"
+      "norm_label": "header()",
+      "source_file": "storefront-app/src/components/Header.tsx",
+      "source_location": "L21"
     },
     {
       "id": "storefront_app_src_components_quickviewmodal_quickviewmodal",
@@ -7139,7 +7091,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "quickviewmodal()",
       "source_file": "storefront-app/src/components/QuickViewModal.tsx",
@@ -7151,7 +7103,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "productcard()",
       "source_file": "storefront-app/src/components/ui/ProductCard.tsx",
@@ -7163,7 +7115,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "usecart()",
       "source_file": "storefront-app/src/context/CartContext.tsx",
@@ -7175,11 +7127,47 @@
       "_callable": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "userouter()",
       "source_file": "storefront-app/src/context/RouterContext.tsx",
       "source_location": "L101"
+    },
+    {
+      "id": "storefront_app_src_pages_aboutpage_aboutpage",
+      "label": "AboutPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "aboutpage()",
+      "source_file": "storefront-app/src/pages/AboutPage.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "storefront_app_src_pages_legalpage_legalpage",
+      "label": "LegalPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "legalpage()",
+      "source_file": "storefront-app/src/pages/LegalPage.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "storefront_app_src_pages_notfoundpage_notfoundpage",
+      "label": "NotFoundPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "notfoundpage()",
+      "source_file": "storefront-app/src/pages/NotFoundPage.tsx",
+      "source_location": "L5"
     },
     {
       "id": "storefront_app_src_pages_productpage_productpage",
@@ -7187,7 +7175,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "productpage()",
       "source_file": "storefront-app/src/pages/ProductPage.tsx",
@@ -7199,7 +7187,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "shoppage()",
       "source_file": "storefront-app/src/pages/ShopPage.tsx",
@@ -7489,138 +7477,6 @@
       "source_location": "L34"
     },
     {
-      "id": "architecture",
-      "label": "ARCHITECTURE.md",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "architecture.md",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "architecture_1_executive_summary",
-      "label": "1. Executive Summary",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. executive summary",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L3"
-    },
-    {
-      "id": "architecture_2_component_architecture",
-      "label": "2. Component Architecture",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. component architecture",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "architecture_3_subtle_nuances_compatibility_logic",
-      "label": "3. Subtle Nuances & Compatibility Logic",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. subtle nuances & compatibility logic",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L80"
-    },
-    {
-      "id": "architecture_4_api_specification_for_qx_billing_to_ladha_bridge",
-      "label": "4. API Specification for Qx_Billing to Ladha Bridge",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. api specification for qx_billing to ladha bridge",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L125"
-    },
-    {
-      "id": "architecture_5_directory_structure_in_unified_workspace",
-      "label": "5. Directory Structure in Unified Workspace",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5. directory structure in unified workspace",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L138"
-    },
-    {
-      "id": "architecture_nuance_1_1_of_1_archival_pieces_vs_telecom_plans_quantities",
-      "label": "Nuance 1: 1-of-1 Archival Pieces vs. Telecom Plans & Quantities",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "nuance 1: 1-of-1 archival pieces vs. telecom plans & quantities",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L84"
-    },
-    {
-      "id": "architecture_nuance_2_kenyan_e_164_phone_normalization_customer_unification",
-      "label": "Nuance 2: Kenyan E.164 Phone Normalization & Customer Unification",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "nuance 2: kenyan e.164 phone normalization & customer unification",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L93"
-    },
-    {
-      "id": "architecture_nuance_3_nairobi_regional_delivery_tariffs_vs_flat_invoicing",
-      "label": "Nuance 3: Nairobi Regional Delivery Tariffs vs. Flat Invoicing",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "nuance 3: nairobi regional delivery tariffs vs. flat invoicing",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L101"
-    },
-    {
-      "id": "architecture_nuance_4_direct_api_bridge_qx_billing_ladha",
-      "label": "Nuance 4: Direct API Bridge (Qx_Billing -> Ladha)",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "nuance 4: direct api bridge (qx_billing -> ladha)",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L112"
-    },
-    {
-      "id": "architecture_system_architecture_ladha_qx_billing_integration",
-      "label": "SYSTEM ARCHITECTURE \u2014 LADHA & QX BILLING INTEGRATION",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "LadhaService",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "system architecture \u2014 ladha & qx billing integration",
-      "source_file": "ARCHITECTURE.md",
-      "source_location": "L1"
-    },
-    {
       "id": "scripts_patch_frontend",
       "label": "patch-frontend.js",
       "_origin": "ast",
@@ -7852,44 +7708,66 @@
       "source_location": "L14"
     },
     {
+      "id": "storefront_app_src_components_cartdrawer",
+      "label": "CartDrawer.tsx",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "cartdrawer.tsx",
+      "source_file": "storefront-app/src/components/CartDrawer.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_src_components_header",
+      "label": "Header.tsx",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "header.tsx",
+      "source_file": "storefront-app/src/components/Header.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "storefront_app_src_components_home_curationprocesssection",
       "label": "CurationProcessSection.tsx",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "curationprocesssection.tsx",
       "source_file": "storefront-app/src/components/home/CurationProcessSection.tsx",
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_components_home_faqsection",
-      "label": "FaqSection.tsx",
+      "id": "storefront_app_src_components_home_dropscatalogsection",
+      "label": "DropsCatalogSection.tsx",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
-      "norm_label": "faqsection.tsx",
-      "source_file": "storefront-app/src/components/home/FaqSection.tsx",
+      "norm_label": "dropscatalogsection.tsx",
+      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_components_home_proofnumberssection",
-      "label": "ProofNumbersSection.tsx",
+      "id": "storefront_app_src_components_home_dropscatalogsection_categories",
+      "label": "CATEGORIES",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
-      "norm_label": "proofnumberssection.tsx",
-      "source_file": "storefront-app/src/components/home/ProofNumbersSection.tsx",
-      "source_location": "L1"
+      "norm_label": "categories",
+      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
+      "source_location": "L14"
     },
     {
       "id": "storefront_app_src_components_home_reputationproofsection",
       "label": "ReputationProofSection.tsx",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "reputationproofsection.tsx",
       "source_file": "storefront-app/src/components/home/ReputationProofSection.tsx",
@@ -7900,7 +7778,7 @@
       "label": "SelectionProtocolSection.tsx",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "selectionprotocolsection.tsx",
       "source_file": "storefront-app/src/components/home/SelectionProtocolSection.tsx",
@@ -7911,7 +7789,7 @@
       "label": "AnimatedCounter.tsx",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "animatedcounter.tsx",
       "source_file": "storefront-app/src/components/ui/AnimatedCounter.tsx",
@@ -7922,32 +7800,54 @@
       "label": "MotionReveal.tsx",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "motionreveal.tsx",
       "source_file": "storefront-app/src/components/ui/MotionReveal.tsx",
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_data_sitecontent_faq_items",
-      "label": "FAQ_ITEMS",
+      "id": "storefront_app_src_components_ui_rollingtextbutton",
+      "label": "RollingTextButton.tsx",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
-      "norm_label": "faq_items",
-      "source_file": "storefront-app/src/data/siteContent.ts",
-      "source_location": "L78"
+      "norm_label": "rollingtextbutton.tsx",
+      "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
+      "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_pages_homepage",
-      "label": "HomePage.tsx",
+      "id": "storefront_app_src_hooks_useambientaudio",
+      "label": "useAmbientAudio.ts",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "code",
-      "norm_label": "homepage.tsx",
-      "source_file": "storefront-app/src/pages/HomePage.tsx",
+      "norm_label": "useambientaudio.ts",
+      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_src_hooks_useambientaudio_playlist",
+      "label": "PLAYLIST",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "playlist",
+      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "storefront_app_src_pages_notfoundpage",
+      "label": "NotFoundPage.tsx",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "notfoundpage.tsx",
+      "source_file": "storefront-app/src/pages/NotFoundPage.tsx",
       "source_location": "L1"
     },
     {
@@ -7955,7 +7855,7 @@
       "label": "framer-motion",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "concept",
       "norm_label": "framer-motion",
       "source_file": "storefront-app/package.json",
@@ -7966,11 +7866,22 @@
       "label": "lucide-react",
       "_origin": "ast",
       "community": 102,
-      "community_name": "HomePage.tsx",
+      "community_name": "react",
       "file_type": "concept",
       "norm_label": "lucide-react",
       "source_file": "storefront-app/package.json",
       "source_location": "L16"
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "concept",
+      "norm_label": "react",
+      "source_file": "storefront-app/package.json",
+      "source_location": "L17"
     },
     {
       "id": "portfolio_assets_capture_screenshots",
@@ -9502,198 +9413,22 @@
       "source_location": "L1"
     },
     {
-      "id": "billing_backend_services_commerce_reservationsweeper",
-      "label": "reservationSweeper.js",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "reservationsweeper.js",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_clearcache",
-      "label": "{ clearCache }",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "{ clearcache }",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L10"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_db",
-      "label": "db",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "db",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L8"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_ladhaservice",
-      "label": "ladhaService",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "ladhaservice",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L9"
-    },
-    {
-      "id": "billing_backend_services_commerce_reservationsweeper_op",
-      "label": "{ Op }",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "{ op }",
-      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
-      "source_location": "L7"
-    },
-    {
-      "id": "storefront_app_src_app",
-      "label": "App.tsx",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "app.tsx",
-      "source_file": "storefront-app/src/App.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_app_page_titles",
-      "label": "PAGE_TITLES",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "page_titles",
-      "source_file": "storefront-app/src/App.tsx",
-      "source_location": "L22"
-    },
-    {
-      "id": "storefront_app_src_components_cartdrawer",
-      "label": "CartDrawer.tsx",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "cartdrawer.tsx",
-      "source_file": "storefront-app/src/components/CartDrawer.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_components_header",
-      "label": "Header.tsx",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "header.tsx",
-      "source_file": "storefront-app/src/components/Header.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_components_ui_rollingtextbutton",
-      "label": "RollingTextButton.tsx",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "rollingtextbutton.tsx",
-      "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_hooks_useambientaudio",
-      "label": "useAmbientAudio.ts",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "useambientaudio.ts",
-      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_hooks_useambientaudio_playlist",
-      "label": "PLAYLIST",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "playlist",
-      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "storefront_app_src_hooks_uselenis",
-      "label": "useLenis.ts",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "uselenis.ts",
-      "source_file": "storefront-app/src/hooks/useLenis.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "storefront_app_src_main",
       "label": "main.tsx",
       "_origin": "ast",
       "community": 120,
-      "community_name": "App.tsx",
+      "community_name": "main.tsx",
       "file_type": "code",
       "norm_label": "main.tsx",
       "source_file": "storefront-app/src/main.tsx",
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_pages_legalpage",
-      "label": "LegalPage.tsx",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "legalpage.tsx",
-      "source_file": "storefront-app/src/pages/LegalPage.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_pages_notfoundpage",
-      "label": "NotFoundPage.tsx",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "notfoundpage.tsx",
-      "source_file": "storefront-app/src/pages/NotFoundPage.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_react",
-      "label": "react",
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "App.tsx",
-      "file_type": "concept",
-      "norm_label": "react",
-      "source_file": "storefront-app/package.json",
-      "source_location": "L17"
-    },
-    {
       "id": "ref_react_dom",
       "label": "react-dom",
       "_origin": "ast",
       "community": 120,
-      "community_name": "App.tsx",
+      "community_name": "main.tsx",
       "file_type": "concept",
       "norm_label": "react-dom",
       "source_file": "storefront-app/package.json",
@@ -10371,6 +10106,17 @@
       "source_location": "L30"
     },
     {
+      "id": "storefront_app_src_components_home_faqsection",
+      "label": "FaqSection.tsx",
+      "_origin": "ast",
+      "community": 129,
+      "community_name": "siteContent.ts",
+      "file_type": "code",
+      "norm_label": "faqsection.tsx",
+      "source_file": "storefront-app/src/components/home/FaqSection.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "storefront_app_src_components_home_lookbookshowcase",
       "label": "LookbookShowcase.tsx",
       "_origin": "ast",
@@ -10446,6 +10192,17 @@
       "norm_label": "editorial_gallery",
       "source_file": "storefront-app/src/data/siteContent.ts",
       "source_location": "L71"
+    },
+    {
+      "id": "storefront_app_src_data_sitecontent_faq_items",
+      "label": "FAQ_ITEMS",
+      "_origin": "ast",
+      "community": 129,
+      "community_name": "siteContent.ts",
+      "file_type": "code",
+      "norm_label": "faq_items",
+      "source_file": "storefront-app/src/data/siteContent.ts",
+      "source_location": "L78"
     },
     {
       "id": "storefront_app_src_data_sitecontent_grading_matrix",
@@ -10753,6 +10510,17 @@
       "file_type": "code",
       "norm_label": "footercontact.tsx",
       "source_file": "storefront-app/src/components/FooterContact.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_src_hooks_uselenis",
+      "label": "useLenis.ts",
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "storeDb.ts",
+      "file_type": "code",
+      "norm_label": "uselenis.ts",
+      "source_file": "storefront-app/src/hooks/useLenis.ts",
       "source_location": "L1"
     },
     {
@@ -11603,50 +11371,6 @@
       "source_location": "L2"
     },
     {
-      "id": "billing_backend_routes_reports_routes",
-      "label": "reports.routes.js",
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "reports.routes.js",
-      "file_type": "code",
-      "norm_label": "reports.routes.js",
-      "source_file": "billing/backend/routes/reports.routes.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_backend_routes_reports_routes_express",
-      "label": "express",
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "reports.routes.js",
-      "file_type": "code",
-      "norm_label": "express",
-      "source_file": "billing/backend/routes/reports.routes.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_backend_routes_reports_routes_reportcontroller",
-      "label": "reportController",
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "reports.routes.js",
-      "file_type": "code",
-      "norm_label": "reportcontroller",
-      "source_file": "billing/backend/routes/reports.routes.js",
-      "source_location": "L3"
-    },
-    {
-      "id": "billing_backend_routes_reports_routes_router",
-      "label": "router",
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "reports.routes.js",
-      "file_type": "code",
-      "norm_label": "router",
-      "source_file": "billing/backend/routes/reports.routes.js",
-      "source_location": "L2"
-    },
-    {
       "id": "billing_frontend_vite_config",
       "label": "vite.config.js",
       "_origin": "ast",
@@ -11755,6 +11479,51 @@
       "norm_label": "preview",
       "source_file": "storefront-app/package.json",
       "source_location": "L9"
+    },
+    {
+      "id": "storefront_app_src_components_home_hero",
+      "label": "Hero.tsx",
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "hero.tsx",
+      "source_file": "storefront-app/src/components/home/Hero.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_src_components_home_proofnumberssection",
+      "label": "ProofNumbersSection.tsx",
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "proofnumberssection.tsx",
+      "source_file": "storefront-app/src/components/home/ProofNumbersSection.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_src_pages_homepage",
+      "label": "HomePage.tsx",
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "code",
+      "norm_label": "homepage.tsx",
+      "source_file": "storefront-app/src/pages/HomePage.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "devlog_1_architectural_migration_storefront_app",
+      "label": "1. Architectural Migration (`storefront-app/`)",
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "HomePage.tsx",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. architectural migration (`storefront-app/`)",
+      "source_file": "DEVLOG.md",
+      "source_location": "L215"
     },
     {
       "id": "storefront_app_tsconfig",
@@ -12074,6 +11843,380 @@
       "norm_label": "vue-router",
       "source_file": "billing/frontend/package.json",
       "source_location": "L25"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper",
+      "label": "reservationSweeper.js",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": "reservationsweeper.js",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_clearcache",
+      "label": "{ clearCache }",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": "{ clearcache }",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L10"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_db",
+      "label": "db",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": "db",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L8"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_ladhaservice",
+      "label": "ladhaService",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": "ladhaservice",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L9"
+    },
+    {
+      "id": "billing_backend_services_commerce_reservationsweeper_op",
+      "label": "{ Op }",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "code",
+      "norm_label": "{ op }",
+      "source_file": "billing/backend/services/commerce/reservationSweeper.js",
+      "source_location": "L7"
+    },
+    {
+      "id": "devlog_10_production_readiness_quality_audit_metrics",
+      "label": "10. Production Readiness & Quality Audit Metrics",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "reservationSweeper.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10. production readiness & quality audit metrics",
+      "source_file": "DEVLOG.md",
+      "source_location": "L115"
+    },
+    {
+      "id": "architecture_3_subtle_nuances_compatibility_logic",
+      "label": "3. Subtle Nuances & Compatibility Logic",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "3. Subtle Nuances & Compatibility Logic",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. subtle nuances & compatibility logic",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L80"
+    },
+    {
+      "id": "architecture_nuance_1_1_of_1_archival_pieces_vs_telecom_plans_quantities",
+      "label": "Nuance 1: 1-of-1 Archival Pieces vs. Telecom Plans & Quantities",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "3. Subtle Nuances & Compatibility Logic",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "nuance 1: 1-of-1 archival pieces vs. telecom plans & quantities",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L84"
+    },
+    {
+      "id": "architecture_nuance_2_kenyan_e_164_phone_normalization_customer_unification",
+      "label": "Nuance 2: Kenyan E.164 Phone Normalization & Customer Unification",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "3. Subtle Nuances & Compatibility Logic",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "nuance 2: kenyan e.164 phone normalization & customer unification",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L93"
+    },
+    {
+      "id": "architecture_nuance_3_nairobi_regional_delivery_tariffs_vs_flat_invoicing",
+      "label": "Nuance 3: Nairobi Regional Delivery Tariffs vs. Flat Invoicing",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "3. Subtle Nuances & Compatibility Logic",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "nuance 3: nairobi regional delivery tariffs vs. flat invoicing",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L101"
+    },
+    {
+      "id": "architecture_nuance_4_direct_api_bridge_qx_billing_ladha",
+      "label": "Nuance 4: Direct API Bridge (Qx_Billing -> Ladha)",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "3. Subtle Nuances & Compatibility Logic",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "nuance 4: direct api bridge (qx_billing -> ladha)",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L112"
+    },
+    {
+      "id": "architecture",
+      "label": "ARCHITECTURE.md",
+      "_origin": "ast",
+      "community": 153,
+      "community_name": "storefront-app/README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "architecture.md",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "_origin": "ast",
+      "community": 153,
+      "community_name": "storefront-app/README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "readme.md",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_readme",
+      "label": "storefront-app/README.md",
+      "_origin": "ast",
+      "community": 153,
+      "community_name": "storefront-app/README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "storefront-app/readme.md",
+      "source_file": "storefront-app/README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_readme_commands",
+      "label": "Commands",
+      "_origin": "ast",
+      "community": 153,
+      "community_name": "storefront-app/README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "commands",
+      "source_file": "storefront-app/README.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "storefront_app_readme_key_capabilities",
+      "label": "Key Capabilities",
+      "_origin": "ast",
+      "community": 153,
+      "community_name": "storefront-app/README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "key capabilities",
+      "source_file": "storefront-app/README.md",
+      "source_location": "L5"
+    },
+    {
+      "id": "storefront_app_readme_ladha_storefront_app_storefront_app",
+      "label": "Ladha Storefront App (`storefront-app/`)",
+      "_origin": "ast",
+      "community": 153,
+      "community_name": "storefront-app/README.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ladha storefront app (`storefront-app/`)",
+      "source_file": "storefront-app/README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "architecture_1_executive_summary",
+      "label": "1. Executive Summary",
+      "_origin": "ast",
+      "community": 154,
+      "community_name": "SYSTEM ARCHITECTURE \u2014 LADHA & QX BILLING INTEGRATION",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. executive summary",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "architecture_2_component_architecture",
+      "label": "2. Component Architecture",
+      "_origin": "ast",
+      "community": 154,
+      "community_name": "SYSTEM ARCHITECTURE \u2014 LADHA & QX BILLING INTEGRATION",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. component architecture",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "architecture_4_api_specification_for_qx_billing_to_ladha_bridge",
+      "label": "4. API Specification for Qx_Billing to Ladha Bridge",
+      "_origin": "ast",
+      "community": 154,
+      "community_name": "SYSTEM ARCHITECTURE \u2014 LADHA & QX BILLING INTEGRATION",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. api specification for qx_billing to ladha bridge",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L125"
+    },
+    {
+      "id": "architecture_5_directory_structure_in_unified_workspace",
+      "label": "5. Directory Structure in Unified Workspace",
+      "_origin": "ast",
+      "community": 154,
+      "community_name": "SYSTEM ARCHITECTURE \u2014 LADHA & QX BILLING INTEGRATION",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. directory structure in unified workspace",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L138"
+    },
+    {
+      "id": "architecture_system_architecture_ladha_qx_billing_integration",
+      "label": "SYSTEM ARCHITECTURE \u2014 LADHA & QX BILLING INTEGRATION",
+      "_origin": "ast",
+      "community": 154,
+      "community_name": "SYSTEM ARCHITECTURE \u2014 LADHA & QX BILLING INTEGRATION",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "system architecture \u2014 ladha & qx billing integration",
+      "source_file": "ARCHITECTURE.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_backend_routes_health_routes",
+      "label": "health.routes.js",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "health.routes.js",
+      "file_type": "code",
+      "norm_label": "health.routes.js",
+      "source_file": "billing/backend/routes/health.routes.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_backend_routes_health_routes_db",
+      "label": "db",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "health.routes.js",
+      "file_type": "code",
+      "norm_label": "db",
+      "source_file": "billing/backend/routes/health.routes.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "billing_backend_routes_health_routes_express",
+      "label": "express",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "health.routes.js",
+      "file_type": "code",
+      "norm_label": "express",
+      "source_file": "billing/backend/routes/health.routes.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_backend_routes_health_routes_redis",
+      "label": "redis",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "health.routes.js",
+      "file_type": "code",
+      "norm_label": "redis",
+      "source_file": "billing/backend/routes/health.routes.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "billing_backend_routes_health_routes_router",
+      "label": "router",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "health.routes.js",
+      "file_type": "code",
+      "norm_label": "router",
+      "source_file": "billing/backend/routes/health.routes.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "devlog",
+      "label": "DEVLOG.md",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "Ladha Commerce & Ledger Platform \u2014 Engineering Dev Log",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "devlog.md",
+      "source_file": "DEVLOG.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "devlog_1_aesthetic_pivot_from_brutalist_blocks_to_frosted_ceramic_glass",
+      "label": "1. Aesthetic Pivot: From Brutalist Blocks to Frosted Ceramic Glass",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "Ladha Commerce & Ledger Platform \u2014 Engineering Dev Log",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. aesthetic pivot: from brutalist blocks to frosted ceramic glass",
+      "source_file": "DEVLOG.md",
+      "source_location": "L136"
+    },
+    {
+      "id": "devlog_ladha_commerce_ledger_platform_engineering_dev_log",
+      "label": "Ladha Commerce & Ledger Platform \u2014 Engineering Dev Log",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "Ladha Commerce & Ledger Platform \u2014 Engineering Dev Log",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ladha commerce & ledger platform \u2014 engineering dev log",
+      "source_file": "DEVLOG.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "devlog_release_2_4_1_experimental_ui_design_apple_visionos_frosted_ceramic_glass_overhaul",
+      "label": "Release 2.4.1 (Experimental UI Design) \u2014 Apple visionOS / Frosted Ceramic Glass Overhaul",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "Ladha Commerce & Ledger Platform \u2014 Engineering Dev Log",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "release 2.4.1 (experimental ui design) \u2014 apple visionos / frosted ceramic glass overhaul",
+      "source_file": "DEVLOG.md",
+      "source_location": "L131"
+    },
+    {
+      "id": "devlog_release_3_0_0_experimental_mattis_storefront_mattis_editorial_architecture_kinetic_storefront_migration",
+      "label": "Release 3.0.0 (`experimental/mattis-storefront`) \u2014 Mattis Editorial Architecture & Kinetic Storefront Migration",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "Ladha Commerce & Ledger Platform \u2014 Engineering Dev Log",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "release 3.0.0 (`experimental/mattis-storefront`) \u2014 mattis editorial architecture & kinetic storefront migration",
+      "source_file": "DEVLOG.md",
+      "source_location": "L210"
     },
     {
       "id": "package",
@@ -12712,61 +12855,6 @@
       "norm_label": "redis",
       "source_file": "billing/backend/middleware/cacheHandler.js",
       "source_location": "L1"
-    },
-    {
-      "id": "billing_backend_routes_health_routes",
-      "label": "health.routes.js",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "cacheHandler.js",
-      "file_type": "code",
-      "norm_label": "health.routes.js",
-      "source_file": "billing/backend/routes/health.routes.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_backend_routes_health_routes_db",
-      "label": "db",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "cacheHandler.js",
-      "file_type": "code",
-      "norm_label": "db",
-      "source_file": "billing/backend/routes/health.routes.js",
-      "source_location": "L3"
-    },
-    {
-      "id": "billing_backend_routes_health_routes_express",
-      "label": "express",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "cacheHandler.js",
-      "file_type": "code",
-      "norm_label": "express",
-      "source_file": "billing/backend/routes/health.routes.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_backend_routes_health_routes_redis",
-      "label": "redis",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "cacheHandler.js",
-      "file_type": "code",
-      "norm_label": "redis",
-      "source_file": "billing/backend/routes/health.routes.js",
-      "source_location": "L4"
-    },
-    {
-      "id": "billing_backend_routes_health_routes_router",
-      "label": "router",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "cacheHandler.js",
-      "file_type": "code",
-      "norm_label": "router",
-      "source_file": "billing/backend/routes/health.routes.js",
-      "source_location": "L2"
     },
     {
       "id": "billing_backend_utlis_logger",
@@ -13715,42 +13803,6 @@
       "source_location": "L2"
     },
     {
-      "id": "devlog",
-      "label": "DEVLOG.md",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "devlog.md",
-      "source_file": "DEVLOG.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "devlog_10_production_readiness_quality_audit_metrics",
-      "label": "10. Production Readiness & Quality Audit Metrics",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "10. production readiness & quality audit metrics",
-      "source_file": "DEVLOG.md",
-      "source_location": "L115"
-    },
-    {
-      "id": "devlog_1_aesthetic_pivot_from_brutalist_blocks_to_frosted_ceramic_glass",
-      "label": "1. Aesthetic Pivot: From Brutalist Blocks to Frosted Ceramic Glass",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. aesthetic pivot: from brutalist blocks to frosted ceramic glass",
-      "source_file": "DEVLOG.md",
-      "source_location": "L136"
-    },
-    {
       "id": "devlog_1_executive_summary_philosophy",
       "label": "1. Executive Summary & Philosophy",
       "_origin": "ast",
@@ -13847,18 +13899,6 @@
       "source_location": "L100"
     },
     {
-      "id": "devlog_ladha_commerce_ledger_platform_engineering_dev_log",
-      "label": "Ladha Commerce & Ledger Platform \u2014 Engineering Dev Log",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ladha commerce & ledger platform \u2014 engineering dev log",
-      "source_file": "DEVLOG.md",
-      "source_location": "L1"
-    },
-    {
       "id": "devlog_release_2_4_0_apple_human_interface_swiss_brutalism_milestone",
       "label": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
       "_origin": "ast",
@@ -13869,18 +13909,6 @@
       "norm_label": "release 2.4.0 \u2014 apple human interface & swiss brutalism milestone",
       "source_file": "DEVLOG.md",
       "source_location": "L3"
-    },
-    {
-      "id": "devlog_release_2_4_1_experimental_ui_design_apple_visionos_frosted_ceramic_glass_overhaul",
-      "label": "Release 2.4.1 (Experimental UI Design) \u2014 Apple visionOS / Frosted Ceramic Glass Overhaul",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "Release 2.4.0 \u2014 Apple Human Interface & Swiss Brutalism Milestone",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "release 2.4.1 (experimental ui design) \u2014 apple visionos / frosted ceramic glass overhaul",
-      "source_file": "DEVLOG.md",
-      "source_location": "L131"
     },
     {
       "id": "storefront_js_admin",
@@ -13979,6 +14007,50 @@
       "file_type": "code",
       "norm_label": "router",
       "source_file": "billing/backend/routes/plans.routes.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "billing_backend_routes_reports_routes",
+      "label": "reports.routes.js",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "express",
+      "file_type": "code",
+      "norm_label": "reports.routes.js",
+      "source_file": "billing/backend/routes/reports.routes.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_backend_routes_reports_routes_express",
+      "label": "express",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "express",
+      "file_type": "code",
+      "norm_label": "express",
+      "source_file": "billing/backend/routes/reports.routes.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_backend_routes_reports_routes_reportcontroller",
+      "label": "reportController",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "express",
+      "file_type": "code",
+      "norm_label": "reportcontroller",
+      "source_file": "billing/backend/routes/reports.routes.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "billing_backend_routes_reports_routes_router",
+      "label": "router",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "express",
+      "file_type": "code",
+      "norm_label": "router",
+      "source_file": "billing/backend/routes/reports.routes.js",
       "source_location": "L2"
     },
     {
@@ -14653,18 +14725,6 @@
       "source_location": "L1"
     },
     {
-      "id": "readme",
-      "label": "README.md",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "STOREFRONT \u2014 Unified Commerce & Billing Ecosystem",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "readme.md",
-      "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
       "id": "readme_1_install_dependencies",
       "label": "1. Install Dependencies",
       "_origin": "ast",
@@ -14674,7 +14734,7 @@
       "node_kind": "heading",
       "norm_label": "1. install dependencies",
       "source_file": "README.md",
-      "source_location": "L102"
+      "source_location": "L106"
     },
     {
       "id": "readme_2_start_unified_development_environment",
@@ -14686,7 +14746,7 @@
       "node_kind": "heading",
       "norm_label": "2. start unified development environment",
       "source_file": "README.md",
-      "source_location": "L107"
+      "source_location": "L111"
     },
     {
       "id": "readme_3_individual_service_scripts",
@@ -14698,7 +14758,7 @@
       "node_kind": "heading",
       "norm_label": "3. individual service scripts",
       "source_file": "README.md",
-      "source_location": "L116"
+      "source_location": "L121"
     },
     {
       "id": "readme_commerce_bridge_api",
@@ -14710,7 +14770,7 @@
       "node_kind": "heading",
       "norm_label": "commerce bridge api",
       "source_file": "README.md",
-      "source_location": "L125"
+      "source_location": "L131"
     },
     {
       "id": "readme_ecosystem_overview",
@@ -14734,7 +14794,7 @@
       "node_kind": "heading",
       "norm_label": "license",
       "source_file": "README.md",
-      "source_location": "L138"
+      "source_location": "L144"
     },
     {
       "id": "readme_prerequisites",
@@ -14746,7 +14806,7 @@
       "node_kind": "heading",
       "norm_label": "prerequisites",
       "source_file": "README.md",
-      "source_location": "L98"
+      "source_location": "L102"
     },
     {
       "id": "readme_quick_start_local_development",
@@ -14758,7 +14818,7 @@
       "node_kind": "heading",
       "norm_label": "quick start (local development)",
       "source_file": "README.md",
-      "source_location": "L96"
+      "source_location": "L100"
     },
     {
       "id": "readme_repository_structure",
@@ -14794,7 +14854,7 @@
       "node_kind": "heading",
       "norm_label": "upstream git remotes",
       "source_file": "README.md",
-      "source_location": "L76"
+      "source_location": "L80"
     },
     {
       "id": "scripts_apply_commerce_fixes",
@@ -18100,44 +18160,33 @@
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_components_home_dropscatalogsection",
-      "label": "DropsCatalogSection.tsx",
+      "id": "storefront_app_src_app",
+      "label": "App.tsx",
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
-      "norm_label": "dropscatalogsection.tsx",
-      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
+      "norm_label": "app.tsx",
+      "source_file": "storefront-app/src/App.tsx",
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_components_home_dropscatalogsection_categories",
-      "label": "CATEGORIES",
+      "id": "storefront_app_src_app_page_titles",
+      "label": "PAGE_TITLES",
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
-      "norm_label": "categories",
-      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
-      "source_location": "L14"
-    },
-    {
-      "id": "storefront_app_src_components_home_hero",
-      "label": "Hero.tsx",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "useRouter",
-      "file_type": "code",
-      "norm_label": "hero.tsx",
-      "source_file": "storefront-app/src/components/home/Hero.tsx",
-      "source_location": "L1"
+      "norm_label": "page_titles",
+      "source_file": "storefront-app/src/App.tsx",
+      "source_location": "L22"
     },
     {
       "id": "storefront_app_src_components_quickviewmodal",
       "label": "QuickViewModal.tsx",
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "quickviewmodal.tsx",
       "source_file": "storefront-app/src/components/QuickViewModal.tsx",
@@ -18148,10 +18197,21 @@
       "label": "ProductCard.tsx",
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "productcard.tsx",
       "source_file": "storefront-app/src/components/ui/ProductCard.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_src_pages_legalpage",
+      "label": "LegalPage.tsx",
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "legalpage.tsx",
+      "source_file": "storefront-app/src/pages/LegalPage.tsx",
       "source_location": "L1"
     },
     {
@@ -18159,7 +18219,7 @@
       "label": "ProductPage.tsx",
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "productpage.tsx",
       "source_file": "storefront-app/src/pages/ProductPage.tsx",
@@ -18170,7 +18230,7 @@
       "label": "ShopPage.tsx",
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "shoppage.tsx",
       "source_file": "storefront-app/src/pages/ShopPage.tsx",
@@ -18181,7 +18241,7 @@
       "label": "CATEGORIES",
       "_origin": "ast",
       "community": 97,
-      "community_name": "useRouter",
+      "community_name": "App.tsx",
       "file_type": "code",
       "norm_label": "categories",
       "source_file": "storefront-app/src/pages/ShopPage.tsx",
@@ -19038,10 +19098,22 @@
       "label": "storefront_app_src_index",
       "_origin": "semantic",
       "community": 120,
-      "community_name": "App.tsx",
+      "community_name": "main.tsx",
       "external": true,
       "file_type": "concept",
       "norm_label": "storefront_app_src_index",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_jspdf",
+      "label": "ref_jspdf",
+      "_origin": "semantic",
+      "community": 124,
+      "community_name": "CheckoutPage.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_jspdf",
       "source_file": "",
       "type": "external"
     },
@@ -19174,18 +19246,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_lenis",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_jspdf",
-      "label": "ref_jspdf",
-      "_origin": "semantic",
-      "community": 18,
-      "community_name": "api.js",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_jspdf",
       "source_file": "",
       "type": "external"
     },
@@ -20561,18 +20621,6 @@
     },
     {
       "source": "storefront_app_src_components_home_lookbookshowcase_lookbookshowcase",
-      "target": "storefront_app_src_components_home_lookbookshowcase_useisdesktop",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
-      "source_location": "L193",
-      "weight": 1.0
-    },
-    {
-      "source": "storefront_app_src_components_home_lookbookshowcase_lookbookshowcase",
       "target": "storefront_app_src_context_routercontext_userouter",
       "relation": "calls",
       "_origin": "ast",
@@ -20580,7 +20628,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
-      "source_location": "L194",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
@@ -28092,7 +28140,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
-      "source_location": "L19",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -42009,6 +42057,17 @@
     },
     {
       "source": "devlog_ladha_commerce_ledger_platform_engineering_dev_log",
+      "target": "devlog_release_3_0_0_experimental_mattis_storefront_mattis_editorial_architecture_kinetic_storefront_migration",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEVLOG.md",
+      "source_location": "L210",
+      "weight": 1.0
+    },
+    {
+      "source": "devlog_ladha_commerce_ledger_platform_engineering_dev_log",
       "target": "devlog_release_2_4_0_apple_human_interface_swiss_brutalism_milestone",
       "relation": "contains",
       "_origin": "ast",
@@ -42126,6 +42185,17 @@
       "confidence_score": 1.0,
       "source_file": "DEVLOG.md",
       "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "devlog_release_3_0_0_experimental_mattis_storefront_mattis_editorial_architecture_kinetic_storefront_migration",
+      "target": "devlog_1_architectural_migration_storefront_app",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEVLOG.md",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -42526,7 +42596,7 @@
     },
     {
       "source": "readme_quick_start_local_development",
-      "target": "readme_1_install_dependencies",
+      "target": "readme_prerequisites",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -42537,13 +42607,24 @@
     },
     {
       "source": "readme_quick_start_local_development",
+      "target": "readme_1_install_dependencies",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_quick_start_local_development",
       "target": "readme_2_start_unified_development_environment",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L107",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -42554,18 +42635,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L116",
+      "source_location": "L121",
       "weight": 1.0
     },
     {
-      "source": "readme_quick_start_local_development",
-      "target": "readme_prerequisites",
+      "source": "readme_storefront_unified_commerce_billing_ecosystem",
+      "target": "readme_quick_start_local_development",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L98",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
@@ -42576,7 +42657,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L125",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
@@ -42587,7 +42668,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L138",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -42620,18 +42701,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L76",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_storefront_unified_commerce_billing_ecosystem",
-      "target": "readme_quick_start_local_development",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L96",
+      "source_location": "L80",
       "weight": 1.0
     },
     {
@@ -45462,6 +45532,39 @@
       "weight": 1.0
     },
     {
+      "source": "storefront_app_readme",
+      "target": "storefront_app_readme_ladha_storefront_app_storefront_app",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/README.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_readme_ladha_storefront_app_storefront_app",
+      "target": "storefront_app_readme_commands",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/README.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_readme_ladha_storefront_app_storefront_app",
+      "target": "storefront_app_readme_key_capabilities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/README.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "storefront_app_src_app",
       "target": "storefront_app_src_app_app",
       "relation": "contains",
@@ -45617,24 +45720,13 @@
     },
     {
       "source": "storefront_app_src_components_home_lookbookshowcase",
-      "target": "storefront_app_src_components_home_lookbookshowcase_lookslideprops",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "storefront_app_src_components_home_lookbookshowcase",
       "target": "storefront_app_src_components_home_lookbookshowcase_lookbookshowcase",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
-      "source_location": "L192",
+      "source_location": "L200",
       "weight": 1.0
     },
     {
@@ -45645,12 +45737,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/components/home/LookbookShowcase.tsx",
-      "source_location": "L36",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
       "source": "storefront_app_src_components_home_lookbookshowcase",
-      "target": "storefront_app_src_components_home_lookbookshowcase_useisdesktop",
+      "target": "storefront_app_src_components_home_lookbookshowcase_lookslideprops",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -50720,6 +50812,39 @@
       "weight": 1.0
     },
     {
+      "source": "storefront_app_readme",
+      "target": "architecture",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/README.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_readme",
+      "target": "devlog",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/README.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_readme",
+      "target": "readme",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/README.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
       "source": "billing_backend_routes_duka_routes",
       "target": "billing_backend_routes_duka_routes_handlereconcile",
       "relation": "indirect_call",
@@ -52772,6 +52897,42 @@
       "weight": 1.0
     },
     {
+      "source": "devlog_1_architectural_migration_storefront_app",
+      "target": "storefront_app_src_components_home_curationprocesssection_curationprocesssection",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "CurationProcessSection",
+      "source_file": "DEVLOG.md",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "devlog_1_architectural_migration_storefront_app",
+      "target": "storefront_app_src_components_home_lookbookshowcase_lookbookshowcase",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "LookbookShowcase",
+      "source_file": "DEVLOG.md",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "devlog_1_architectural_migration_storefront_app",
+      "target": "storefront_app_src_components_ui_productcard_productcard",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "ProductCard",
+      "source_file": "DEVLOG.md",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
       "source": "devlog_10_production_readiness_quality_audit_metrics",
       "target": "billing_backend_services_commerce_reservationsweeper_reservationsweeper",
       "relation": "references",
@@ -52781,6 +52942,30 @@
       "context": "ReservationSweeper",
       "source_file": "DEVLOG.md",
       "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "devlog_1_architectural_migration_storefront_app",
+      "target": "storefront_app_src_components_ui_rollingtextbutton_rollingtextbutton",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "RollingTextButton",
+      "source_file": "DEVLOG.md",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "devlog_1_architectural_migration_storefront_app",
+      "target": "storefront_app_src_components_home_selectionprotocolsection_selectionprotocolsection",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "SelectionProtocolSection",
+      "source_file": "DEVLOG.md",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -53203,5 +53388,5 @@
       "source_file": "ARCHITECTURE.md"
     }
   ],
-  "built_at_commit": "56766b91686c789562c3ed0d8906c9368a062da3"
+  "built_at_commit": "2e7d4484cb80cc27841b9ffed52861c4c4ee31a0"
 }

@@ -702,9 +702,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1793887094.0545447,
-    "seen": 1793887597.5511587,
-    "ast_hash": "67c608f4c798e12fd671828e9081c538",
+    "mtime": 1794738049.9836762,
+    "seen": 1794765133.593078,
+    "ast_hash": "3e7c3efb2c927078584304b4bf6a9440",
     "semantic_hash": ""
   },
   "billing/Implementation plan.txt": {
@@ -1410,9 +1410,9 @@
     "semantic_hash": ""
   },
   "DEVLOG.md": {
-    "mtime": 1793887094.0540304,
-    "seen": 1793887597.5511587,
-    "ast_hash": "0b99dbf5ba5f0c93bd254da9f02cc660",
+    "mtime": 1794738052.4573052,
+    "seen": 1794765133.593078,
+    "ast_hash": "346da32908b4f3c7b63622cc26d8dd7b",
     "semantic_hash": ""
   },
   "billing/backend/services/commerce/etimsInvoiceService.js": {
@@ -2064,9 +2064,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/components/home/LookbookShowcase.tsx": {
-    "mtime": 1794733246.2882836,
-    "seen": 1794733664.482079,
-    "ast_hash": "60c7c7991f6a8c044af17a80b0b3e4f5",
+    "mtime": 1794763712.478545,
+    "seen": 1794765133.593078,
+    "ast_hash": "317a30bb5d212336032f39884839ba24",
     "semantic_hash": ""
   },
   "storefront-app/src/components/home/ProofNumbersSection.tsx": {
@@ -2130,9 +2130,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/data/siteContent.ts": {
-    "mtime": 1794733240.4277778,
-    "seen": 1794733664.482079,
-    "ast_hash": "682be423f3c2d8af653b3363b5330181",
+    "mtime": 1794764700.242361,
+    "seen": 1794765133.593078,
+    "ast_hash": "55d20714d164759b5ed7240af9c11ce7",
     "semantic_hash": ""
   },
   "storefront-app/src/hooks/useAmbientAudio.ts": {
@@ -2265,6 +2265,18 @@
     "mtime": 1794683687.5519369,
     "seen": 1794684069.9344935,
     "ast_hash": "54195f535934e2bbb2349e1c9dc3f979",
+    "semantic_hash": ""
+  },
+  "storefront-app/README.md": {
+    "mtime": 1794738055.5032685,
+    "seen": 1794765133.593078,
+    "ast_hash": "ace7ab4497cf85c8c9850e00ed963bb2",
+    "semantic_hash": ""
+  },
+  "storefront/assets/lookbook/look-leather-poster.jpg": {
+    "mtime": 1794764712.4523978,
+    "seen": 1794765133.593078,
+    "ast_hash": "482c26824f3fc88c41e936ca6ec412d0",
     "semantic_hash": ""
   }
 }

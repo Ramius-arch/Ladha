@@ -37,7 +37,7 @@ export const LOOKBOOK_REELS: LookbookEntry[] = [
     title: 'Raw Selvedge & Hide',
     subtitle: 'Heavyweight Leather Patina & Night-Runway Motion Study',
     caption: 'LOOK 02 // LEATHER & PATINA STUDY — ARCHIVE NBO',
-    image: '/assets/lookbook/look-2.jpg',
+    image: '/assets/lookbook/look-leather-poster.jpg',
     video: '/assets/videos/streetwear-leather.mp4',
     tags: ['Grade A+', 'Natural Patina'],
     year: 'DROP 02',
