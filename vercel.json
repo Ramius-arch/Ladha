@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "installCommand": "npm --prefix billing/frontend install",
+  "installCommand": "npm --prefix storefront-app install && npm --prefix billing/frontend install",
   "buildCommand": "node scripts/build-unified.js",
   "outputDirectory": "dist",
   "rewrites": [

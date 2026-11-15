@@ -42,18 +42,20 @@ A unified monorepo integrating **Ladha** (curated Kenyan archival streetwear sto
 
 ```
 Storefront/
-├── storefront/              # Ladha Headless Storefront (HTML5 / Vanilla JS / CSS)
-│   ├── index.html           # Editorial Homepage & Optical Viewfinder Terminal
-│   ├── shop.html            # Garment Catalog with Filter & Search
-│   ├── product.html         # 1-of-1 Piece Details & Size Guides
-│   ├── checkout.html        # Unified Order & Payment Checkout
+├── storefront-app/          # Primary Ladha Storefront SPA (React 19 / TS / Vite 6 / Tailwind 3 / Framer Motion 12 / Lenis)
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── home/        # 1:1 Mattis Editorial Sections (Hero, SelectionProtocol, DropsCatalog, LookbookShowcase, etc.)
+│   │   │   └── ui/          # RollingTextButton, ProductCard, CartDrawer, QuickViewModal, CustomCursor
+│   │   ├── pages/           # HomePage, ShopPage, ProductPage, CheckoutPage, AboutPage, LegalPage
+│   │   ├── services/        # dukaCheckout.ts (M-Pesa STK Push, Polling, Simulator & KRA eTIMS PDF Bridge)
+│   │   └── context/         # CartContext (ladha_cart_v1), RouterContext, SoundContext
+│   └── vite.config.ts       # Dev server on Port 3002 with /assets & /api middleware
+│
+├── storefront/              # Shared Static Assets & Legacy HTML/Admin Suite (/assets, /admin)
+│   ├── assets/              # High-res Lookbook, Product, Audio & Runway Video Assets
 │   ├── admin.html           # Media Asset Manager & Catalog Suite
-│   ├── js/
-│   │   ├── duka-client.js   # Headless STK Push SDK & Commerce Bridge
-│   │   ├── cart.js          # Persistent Cart Engine
-│   │   └── products-data.js # Curated Product Catalog
-│   ├── css/style.css        # Swiss Brutalist Design System
-│   └── server.py            # Local multithreaded server (Port 3001)
+│   └── data/                # Seed Catalog (products.json) & Orders
 │
 ├── billing/                 # Qx_Billing Engine & Dashboard
 │   ├── backend/             # Express.js Commerce & Billing API (Port 5000)
@@ -62,12 +64,14 @@ Storefront/
 │   │   ├── routes/          # API Routes (including duka.routes.js commerce bridge)
 │   │   ├── controllers/     # Billing, Invoicing, Payment controllers
 │   │   └── services/        # PDF Invoicing, Africa's Talking SMS, Demo Data
-│   └── frontend/            # Vue 3 / Vite Management Dashboard (Port 5173)
+│   └── frontend/            # Vue 3 / Vite Management Dashboard (Port 5174)
 │       └── src/             # Analytics, Customer Ledger, Usage Trends
 │
 ├── scripts/
-│   └── start-dev.js         # Concurrent multi-service development launcher
+│   ├── start-dev.js         # Concurrent multi-service development launcher
+│   └── build-unified.js     # Unified production bundler (storefront-app + /assets + /admin + /admin/ledger)
 ├── ARCHITECTURE.md          # In-depth architectural blueprint and API contract
+├── DEVLOG.md                # Comprehensive engineering changelog and release milestones
 └── package.json             # Root workspace scripts and dependencies
 ```
 
@@ -110,14 +114,16 @@ npm run dev
 ```
 
 This launches:
-- **Ladha Storefront**: [http://localhost:3001](http://localhost:3001)
+- **Ladha Storefront (Mattis React SPA)**: [http://localhost:3002](http://localhost:3002)
 - **Billing Commerce API**: [http://localhost:5000](http://localhost:5000)
+- **Qx_Billing Ledger Dashboard**: [http://localhost:5174](http://localhost:5174)
 
 ### 3. Individual Service Scripts
 ```bash
-npm run dev:storefront        # Run only Ladha Storefront (Port 3001)
-npm run dev:billing-backend   # Run only Billing Engine (Port 5000)
-npm run dev:billing-frontend  # Run only Vue Dashboard (Port 5173)
+npm run dev:storefront-app    # Run Ladha Storefront React/Vite SPA (Port 3002)
+npm run dev:billing-backend   # Run Billing Engine & M-Pesa API (Port 5000)
+npm run dev:billing-frontend  # Run Vue Ledger Dashboard (Port 5174)
+npm run build                 # Build unified production bundle into dist/
 ```
 
 ---

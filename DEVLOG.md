@@ -203,3 +203,27 @@ Following user feedback regarding the light theme ("*I've noticed the current on
    - **Headless Visual & Automated Testing Verification**:
      - Verified sticky viewport sidebar and operational command center in both Frosted Ceramic Light Mode and Apple Obsidian Dark Mode (`verify_expanded_light.png`, `verify_expanded_dark.png`, `verify_live_light_cmd.png`).
      - Vitest automated test suite: 3/3 passed (100% green).
+
+
+---
+
+## Release 3.0.0 (`experimental/mattis-storefront`) — Mattis Editorial Architecture & Kinetic Storefront Migration
+**Date:** November 15, 2026  
+**Active Branch:** `experimental/mattis-storefront`  
+**Status:** Locally Verified (`http://localhost:3002`, API: `http://localhost:5000`, Ledger: `http://localhost:5174`)
+
+### 1. Architectural Migration (`storefront-app/`)
+Rebuilt the **Ladha Storefront** frontend on top of the **Mattis** architecture (**React 19 + TypeScript + Vite 6 + Tailwind CSS 3 + Framer Motion 12 + Lenis Smooth Scroll + Lucide React**) while preserving 100% of Ladha's Kenyan e-commerce and ledger pipelines:
+- **3-Canvas Color System**: `#0b0b0b` Obsidian, `#ff4500` International Orange, and `#e9e9e9` Editorial Gray with `1px` center vertical hairlines (`left: 50%`) and stepped `30px` section transitions.
+- **1:1 Mattis Structural Parity**:
+  - **`Header.tsx`**: Transparent top bar on Home (`/`), `52×25` 3-chevron geometric mark, `Ladha®`, `Nairobi Archive` tagline, `/` navigation separators, ambient Web Audio / MP3 toggle (`SoundContext`), and `BAG (N)` `RollingTextButton`.
+  - **`Hero.tsx`**: Fullscreen monochrome background video (`streetwear-editorial.mp4`), 4 exterior crosshair hairlines terminating cleanly at the `740px` frosted-glass card (`rgba(153,153,153,0.10)` + `backdrop-filter: blur(10px)`), 3D mouse-tilt spring physics (`useMotionValue` + `useSpring`), 4 corner registration dots, single-line `112px` `LADHA®` + `ARCHIVE` lockup, sweeping `#ff4500` cursive signature SVG (`/assets/mattis_signature.svg`), straddling `=` scroll button, and `z-30` film grain overlay.
+  - **`SelectionProtocolSection.tsx` (`#ff4500`)**: 1:1 `StrategySection` 2×2 grid (`92px` `TASTE OVER TREND.` headline, flush-bottom portrait with monochrome-to-color hover reveal, and `6%` bale acceptance counter).
+  - **`DropsCatalogSection.tsx` (`#e9e9e9`)**: 1:1 `ShowreelSection` 4-row asymmetric header (`WE CURATE GRAILS.` right-aligned against the center 50% hairline, `378px` preview card, and `LOOKBOOK` circular play trigger) paired with the live 1-of-1 Vault Product Grid (`ProductCard.tsx`).
+  - **`LookbookShowcase.tsx` (`#0b0b0b`)**: 1:1 `WorksBento` `400vh` pinned scroll-jacked showcase with 4 visually distinct landscape slides (`Concrete Brutalist Duo`, `Raw Selvedge & Hide` motion reel, `Vintage Graphic & Denim`, and `CDG Play & Wool Tailoring`), opaque `#0b0b0b` slide layers with `blur-[44px]` atmospheric backdrops, `80px–160px` infinite marquee ticker, 12-column HUD, and full-screen uncropped hold on Slide `(04)`, followed by the **`CONTACT SHEET // NBO STILLS`** 4-card monochrome-to-color hover strip.
+  - **`ReputationProofSection.tsx`, `CurationProcessSection.tsx`, `ProofNumbersSection.tsx`, `FaqSection.tsx`, & `FooterContact.tsx`**: Staggered interlocking `377×280px` reputation cards (`/4.9+` & `/94%`), 4-stage curation accordion with monochrome-to-color hover previews, stepped orange proof numbers (`6%`, `350+`, `99.4%`), and interactive 01–05 FAQ + Nairobi dispatch calculator.
+- **Selective Monochrome-to-Color Hover Reveal**:
+  - Scoped `grayscale` → `grayscale-0` hover transitions strictly to the three editorial sections (`SelectionProtocolSection` portrait, `LookbookShowcase` Contact Sheet `LKB-05..08`, and `CurationProcessSection` 01–04 stage previews), keeping all `ProductCard` catalog items in full natural color.
+- **Full Kenyan Commerce & Ledger Integration**:
+  - Preserved `localStorage` keys (`ladha_cart_v1`, `ladha_products_v1`, `ladha_orders_v1`), `dukaCheckout.ts` M-Pesa Daraja STK Push initiation + real-time polling + local STK approval simulator + resilient offline fallback, and one-click KRA eTIMS Tax Invoice PDF generation.
+  - Updated `scripts/build-unified.js` and `vercel.json` so `npm run build` outputs the unified production bundle (`dist/`) alongside `/admin` and `/admin/ledger`.

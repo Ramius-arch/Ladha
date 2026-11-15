@@ -59,8 +59,10 @@ Thumbs.db
 # Production builds
 dist/
 build/
+storefront-app/dist/
 billing/frontend/dist/
 
 # Graphify Cache
 graphify-out/cache/
 
+graphify-out/2026-*/
