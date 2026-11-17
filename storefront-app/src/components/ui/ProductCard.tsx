@@ -17,7 +17,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   const { addToCart, isInCart } = useCart();
   const { navigate } = useRouter();
+  const isLiveActionReel = Boolean(
+    product.videoPreview &&
+      ['product-10', 'product-13', 'product-16', 'product-19', 'product-22', 'product-25'].includes(
+        product.id
+      )
+  );
   const [hovered, setHovered] = useState(false);
+  const [reelPinned, setReelPinned] = useState(isLiveActionReel);
+  const showVideo = Boolean(product.videoPreview && (hovered || reelPinned));
   const inBag = isInCart(product.id);
   const available = product.inStock !== false;
 
@@ -52,7 +60,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
           />
-          {product.videoPreview && hovered && (
+          {showVideo && (
             <video
               src={product.videoPreview}
               poster={product.image}
@@ -84,13 +92,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               type="button"
               onClick={(e) => {
                 e.stopPropagation();
-                setHovered((prev) => !prev);
+                setReelPinned((prev) => !prev);
               }}
               title="Toggle Motion Reel Preview"
-              className="px-2 py-1 bg-[#0b0b0b]/85 backdrop-blur-sm border border-[#ff4500]/50 font-mono text-[9px] uppercase tracking-wider text-[#c7ff97] flex items-center gap-1"
+              className={`px-2 py-1 backdrop-blur-sm border font-mono text-[9px] uppercase tracking-wider flex items-center gap-1 transition-colors ${
+                showVideo
+                  ? 'bg-[#ff4500] border-[#ff4500] text-white font-bold'
+                  : 'bg-[#0b0b0b]/85 border-[#ff4500]/50 text-[#c7ff97]'
+              }`}
             >
               <Play size={9} className="fill-current" />
-              <span>REEL</span>
+              <span>{showVideo ? 'LIVE REEL' : 'REEL'}</span>
             </button>
           )}
           <div className="px-2 py-1 bg-[#0b0b0b]/80 backdrop-blur-sm border border-white/10 font-mono text-[10px] uppercase tracking-wider text-white/80">

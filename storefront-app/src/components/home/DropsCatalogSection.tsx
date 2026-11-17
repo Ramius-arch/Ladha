@@ -26,14 +26,17 @@ export const DropsCatalogSection: React.FC<DropsCatalogSectionProps> = ({
 }) => {
   const { navigate } = useRouter();
   const [activeCategory, setActiveCategory] = useState('ALL');
+  const [showAllOnHome, setShowAllOnHome] = useState(false);
+
+  const filteredProducts = useMemo(() => {
+    return activeCategory === 'ALL'
+      ? products
+      : products.filter((p) => p.category.toUpperCase() === activeCategory.toUpperCase());
+  }, [products, activeCategory]);
 
   const visibleProducts = useMemo(() => {
-    const filtered =
-      activeCategory === 'ALL'
-        ? products
-        : products.filter((p) => p.category.toUpperCase() === activeCategory.toUpperCase());
-    return filtered.slice(0, 9);
-  }, [products, activeCategory]);
+    return showAllOnHome ? filteredProducts : filteredProducts.slice(0, 12);
+  }, [filteredProducts, showAllOnHome]);
 
   const scrollToLookbook = () => {
     const el = document.getElementById('lookbook');
@@ -209,8 +212,21 @@ export const DropsCatalogSection: React.FC<DropsCatalogSectionProps> = ({
 
         {/* Bottom Full Catalog Trigger */}
         <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-[#0b0b0b]/10">
-          <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-wider text-[#0b0b0b]/70">
-            <span>↓ EXPLORE FULL ARCHIVE ({products.length} PIECES)</span>
+          <div className="flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-wider text-[#0b0b0b]/70">
+            <span>
+              SHOWING {visibleProducts.length} OF {filteredProducts.length} ARCHIVE PIECES
+            </span>
+            {filteredProducts.length > 12 && (
+              <button
+                type="button"
+                onClick={() => setShowAllOnHome((prev) => !prev)}
+                className="px-3.5 py-2 bg-[#ff4500] text-white font-mono text-[11px] font-bold uppercase tracking-wider hover:bg-[#0b0b0b] transition-colors"
+              >
+                {showAllOnHome
+                  ? 'SHOW COMPACT EDIT (12)'
+                  : `LOAD ALL ${filteredProducts.length} PIECES (+${filteredProducts.length - 12} MORE)`}
+              </button>
+            )}
           </div>
 
           <RollingTextButton

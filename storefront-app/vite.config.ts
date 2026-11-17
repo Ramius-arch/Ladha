@@ -29,10 +29,8 @@ function serveStorefrontAssetsPlugin(): Plugin {
     const cleanPath = reqUrl.split('?')[0];
     let targetPath: string | null = null;
 
-    if (cleanPath.startsWith('/assets/') || cleanPath.startsWith('/data/') || cleanPath.startsWith('/js/') || cleanPath.startsWith('/css/')) {
+    if (cleanPath.startsWith('/assets/') || cleanPath.startsWith('/data/')) {
       targetPath = path.join(STOREFRONT_DIR, cleanPath.slice(1));
-    } else if (cleanPath === '/admin' || cleanPath === '/admin.html') {
-      targetPath = path.join(STOREFRONT_DIR, 'admin.html');
     }
 
     if (!targetPath || !targetPath.startsWith(STOREFRONT_DIR) || !fs.existsSync(targetPath)) {

@@ -2,7 +2,7 @@ import { DEFAULT_PRODUCTS, resolveAssetUrl } from '../data/siteContent';
 import { DispatchLead, Product, StoreOrder } from '../types/store';
 
 const KEYS = {
-  PRODUCTS: 'ladha_products_v1',
+  PRODUCTS: 'ladha_products_v3',
   ORDERS: 'ladha_orders_v1',
   LEADS: 'ladha_dispatch_leads_v1',
 };
@@ -39,13 +39,19 @@ function normalizeProduct(p: Product): Product {
 
 function mergeWithDefaults(stored: Product[], seedSource: Product[] = DEFAULT_PRODUCTS): Product[] {
   const storedMap = new Map(stored.map((item) => [item.id, item]));
-  const merged: Product[] = [...stored];
-  for (const seedItem of seedSource) {
-    if (!storedMap.has(seedItem.id)) {
-      merged.push(seedItem);
-    }
-  }
-  return merged.map(normalizeProduct);
+  const seedIds = new Set(seedSource.map((s) => s.id));
+  // Preserve admin-added custom items first, then follow canonical seedSource order (new drops first)
+  const customAdded = stored.filter((item) => !seedIds.has(item.id));
+  const canonicalOrdered = seedSource.map((seedItem) => {
+    const existing = storedMap.get(seedItem.id);
+    if (!existing) return seedItem;
+    return {
+      ...seedItem,
+      inStock: existing.inStock,
+      price: existing.price || seedItem.price,
+    };
+  });
+  return [...customAdded, ...canonicalOrdered].map(normalizeProduct);
 }
 
 export function getStoredProducts(): Product[] {

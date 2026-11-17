@@ -2704,7 +2704,7 @@
       "file_type": "code",
       "norm_label": "submitorderrecord()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L155"
+      "source_location": "L161"
     },
     {
       "id": "billing_backend_services_commerce_pricing_calculateshippingfee",
@@ -3004,7 +3004,7 @@
       "file_type": "code",
       "norm_label": "fetchlivecatalog()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L65"
+      "source_location": "L71"
     },
     {
       "id": "storefront_app_src_services_storedb_getstoredorders",
@@ -3016,7 +3016,7 @@
       "file_type": "code",
       "norm_label": "getstoredorders()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L105"
+      "source_location": "L111"
     },
     {
       "id": "storefront_app_src_services_storedb_getstoredproducts",
@@ -3028,7 +3028,7 @@
       "file_type": "code",
       "norm_label": "getstoredproducts()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L51"
+      "source_location": "L57"
     },
     {
       "id": "storefront_app_src_services_storedb_markproductssoldout",
@@ -3040,7 +3040,7 @@
       "file_type": "code",
       "norm_label": "markproductssoldout()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L136"
+      "source_location": "L142"
     },
     {
       "id": "storefront_app_src_services_storedb_maskphoneforlocalpersistence",
@@ -3052,7 +3052,7 @@
       "file_type": "code",
       "norm_label": "maskphoneforlocalpersistence()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L121"
+      "source_location": "L127"
     },
     {
       "id": "storefront_app_src_services_storedb_mergewithdefaults",
@@ -3100,7 +3100,7 @@
       "file_type": "code",
       "norm_label": "resetcatalogtodefault()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L115"
+      "source_location": "L121"
     },
     {
       "id": "storefront_app_src_services_storedb_savecatalogproducts",
@@ -3112,7 +3112,7 @@
       "file_type": "code",
       "norm_label": "savecatalogproducts()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L109"
+      "source_location": "L115"
     },
     {
       "id": "storefront_app_src_services_storedb_savedispatchlead",
@@ -3124,7 +3124,7 @@
       "file_type": "code",
       "norm_label": "savedispatchlead()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L166"
+      "source_location": "L172"
     },
     {
       "id": "storefront_app_src_services_storedb_saveorderlocally",
@@ -3136,7 +3136,7 @@
       "file_type": "code",
       "norm_label": "saveorderlocally()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L127"
+      "source_location": "L133"
     },
     {
       "id": "storefront_app_src_services_storedb_writestorage",
@@ -21261,7 +21261,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L102",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -21273,7 +21273,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L73",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -21285,7 +21285,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L87",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -21297,7 +21297,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L93",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -21309,7 +21309,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L106",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -21321,7 +21321,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L52",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -21333,7 +21333,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L54",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -21345,7 +21345,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L56",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -21357,7 +21357,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L137",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -21369,7 +21369,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L140",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -21393,7 +21393,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L117",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -21405,7 +21405,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L111",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -21417,7 +21417,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L172",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -21429,7 +21429,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L173",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
@@ -21441,7 +21441,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L130",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -21453,7 +21453,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L132",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -21465,7 +21465,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L133",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -21477,7 +21477,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L156",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -47079,7 +47079,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L105",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -47090,7 +47090,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L109",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -47101,7 +47101,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L115",
+      "source_location": "L121",
       "weight": 1.0
     },
     {
@@ -47112,7 +47112,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L121",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
@@ -47123,7 +47123,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L127",
+      "source_location": "L133",
       "weight": 1.0
     },
     {
@@ -47134,7 +47134,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L136",
+      "source_location": "L142",
       "weight": 1.0
     },
     {
@@ -47145,7 +47145,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L155",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -47156,7 +47156,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L166",
+      "source_location": "L172",
       "weight": 1.0
     },
     {
@@ -47211,7 +47211,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L51",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -47222,7 +47222,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L65",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -51628,7 +51628,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L72",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -51640,7 +51640,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L60",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -51652,7 +51652,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L48",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -51664,7 +51664,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L116",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -51676,7 +51676,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L110",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -54139,5 +54139,5 @@
       "source_file": "ARCHITECTURE.md"
     }
   ],
-  "built_at_commit": "2b093018c22e36db0c602d96979cfd882f574460"
+  "built_at_commit": "1e30898099d3801984f80b93c25aa42f7aec2669"
 }
