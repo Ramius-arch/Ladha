@@ -14,6 +14,9 @@ app.use((req, res, next) => {
         'Content-Security-Policy',
         "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; font-src 'self' https://fonts.gstatic.com https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https:; connect-src 'self' http://localhost:5000 http://localhost:3001 http://localhost:5174 https: ws: wss:; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:;"
     );
+    res.setHeader('X-Frame-Options', 'DENY');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
     next();
 });
 
@@ -22,10 +25,32 @@ app.use('/.well-known', (req, res) => {
     res.status(204).end();
 });
 
+const ALLOWED_ORIGINS = new Set([
+    'https://ladha.vercel.app',
+    'https://qx-billing.vercel.app',
+    'https://qx-billing-client.netlify.app',
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'http://localhost:3002',
+    'http://localhost:5000',
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'http://127.0.0.1:3001',
+    'http://127.0.0.1:3002',
+    'http://127.0.0.1:5173',
+]);
+
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+    origin: (origin, callback) => {
+        if (!origin || ALLOWED_ORIGINS.has(origin) || process.env.NODE_ENV !== 'production') {
+            return callback(null, true);
+        }
+        return callback(new Error('Origin not allowed by CORS policy'));
+    }
+}));
 
 // Serve static frontend assets from dist if available
 const frontendDist = path.join(__dirname, '../frontend/dist');

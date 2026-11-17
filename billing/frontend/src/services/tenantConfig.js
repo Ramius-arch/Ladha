@@ -1,8 +1,27 @@
 import { ref, computed } from 'vue';
 import { SAAS_PRESETS } from '../config/saasPresets';
 
+function isWhiteLabelUnlocked() {
+  try {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('white_label') === 'true') {
+        sessionStorage.setItem('ladha_white_label_unlocked', 'true');
+        return true;
+      }
+      return sessionStorage.getItem('ladha_white_label_unlocked') === 'true';
+    }
+  } catch {
+    // ignore
+  }
+  return false;
+}
+
 // Check if a preset is requested via URL query param or saved in localStorage
 function getInitialPreset() {
+  if (!isWhiteLabelUnlocked()) {
+    return 'd2c_archival';
+  }
   try {
     if (typeof window !== 'undefined') {
       const urlParams = new URLSearchParams(window.location.search);
@@ -30,7 +49,8 @@ export function useTenantConfig() {
   });
 
   const availablePresets = computed(() => {
-    return Object.keys(SAAS_PRESETS).map(key => ({
+    const keys = isWhiteLabelUnlocked() ? Object.keys(SAAS_PRESETS) : ['d2c_archival'];
+    return keys.map(key => ({
       key,
       name: SAAS_PRESETS[key].brand.name + ' ' + SAAS_PRESETS[key].brand.accent,
       industry: SAAS_PRESETS[key].industryName,
@@ -39,6 +59,7 @@ export function useTenantConfig() {
   });
 
   function setPreset(key) {
+    if (!isWhiteLabelUnlocked() && key !== 'd2c_archival') return;
     if (SAAS_PRESETS[key]) {
       currentPresetKey.value = key;
       try {

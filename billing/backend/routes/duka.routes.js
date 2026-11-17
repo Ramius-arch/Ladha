@@ -87,10 +87,16 @@ router.get('/mpesa/query/:checkoutRequestId', async (req, res) => {
 
 /**
  * POST /api/mpesa/simulate-action
- * Developer action to simulate customer PIN approval or cancellation
+ * Developer action to simulate customer PIN approval or cancellation (disabled in production)
  */
 router.post('/mpesa/simulate-action', async (req, res) => {
   try {
+    if (process.env.NODE_ENV === 'production' && process.env.ALLOW_MPESA_SIMULATOR !== 'true') {
+      return res.status(403).json({
+        success: false,
+        error: 'M-Pesa simulator endpoint is disabled in production.'
+      });
+    }
     const { checkoutRequestId, action } = req.body;
 
     if (action === 'APPROVE') {
@@ -108,10 +114,17 @@ router.post('/mpesa/simulate-action', async (req, res) => {
 
 /**
  * POST /api/mpesa/callback
- * Live Safaricom Daraja STK Push Callback (Idempotent)
+ * Live Safaricom Daraja STK Push Callback (Idempotent + Webhook Token & Amount Guard)
  */
 router.post('/mpesa/callback', async (req, res) => {
   try {
+    if (process.env.MPESA_WEBHOOK_SECRET) {
+      const providedToken = req.query.token || req.headers['x-mpesa-signature'];
+      if (providedToken !== process.env.MPESA_WEBHOOK_SECRET) {
+        return res.status(401).json({ ResultCode: 1, ResultDesc: 'Unauthorized webhook signature' });
+      }
+    }
+
     const body = req.body?.Body?.stkCallback || req.body;
     const checkoutRequestId = body.CheckoutRequestID || req.body.checkoutRequestId;
     const resultCode = body.ResultCode;
@@ -124,7 +137,18 @@ router.post('/mpesa/callback', async (req, res) => {
       let receiptCode = null;
       const metadataItems = body.CallbackMetadata?.Item || [];
       const receiptItem = metadataItems.find(i => i.Name === 'MpesaReceiptNumber');
+      const amountItem = metadataItems.find(i => i.Name === 'Amount');
       if (receiptItem) receiptCode = receiptItem.Value;
+
+      if (amountItem && amountItem.Value !== undefined) {
+        const intent = await PaymentIntent.findOne({ where: { checkoutRequestId } });
+        if (intent && Number(amountItem.Value) < Number(intent.amount)) {
+          return res.status(400).json({
+            ResultCode: 1,
+            ResultDesc: 'Callback amount is less than expected PaymentIntent amount'
+          });
+        }
+      }
 
       await checkoutService.settlePayment(checkoutRequestId, { receiptCode });
     } else {

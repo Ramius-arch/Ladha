@@ -98,9 +98,19 @@ export function resetCatalogToDefault(): Product[] {
   return seeded;
 }
 
+function maskPhoneForLocalPersistence(phone: string): string {
+  const clean = (phone || '').trim();
+  if (clean.length <= 6) return clean;
+  return `${clean.slice(0, 4)}****${clean.slice(-2)}`;
+}
+
 export function saveOrderLocally(order: StoreOrder): void {
+  const sanitizedOrder: StoreOrder = {
+    ...order,
+    phone: maskPhoneForLocalPersistence(order.phone),
+  };
   const orders = readStorage<StoreOrder[]>(KEYS.ORDERS, []);
-  writeStorage(KEYS.ORDERS, [order, ...orders]);
+  writeStorage(KEYS.ORDERS, [sanitizedOrder, ...orders]);
 }
 
 export function markProductsSoldOut(productIds: string[]): Product[] {

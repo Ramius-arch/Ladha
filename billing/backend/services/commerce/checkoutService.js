@@ -42,19 +42,34 @@ class CheckoutService {
     const reservedProductIds = [];
 
     try {
-      // Step 1: Real-time 1-of-1 Archival Inventory Check & Lock
+      // Step 1: Real-time 1-of-1 Archival Inventory Check, Server-Side Price Enforcement & Lock
       for (const item of items) {
         const itemId = item.id || item.productId;
         const product = await ladhaService.getProduct(itemId).catch(() => null);
 
-        if (product && product.inStock === false) {
-          // Already claimed by another buyer! Roll back prior items in this basket
-          for (const resId of reservedProductIds) {
-            await ladhaService.releaseItem(resId, orderNumber).catch(() => {});
+        if (product) {
+          if (product.inStock === false) {
+            // Already claimed by another buyer! Roll back prior items in this basket
+            for (const resId of reservedProductIds) {
+              await ladhaService.releaseItem(resId, orderNumber).catch(() => {});
+            }
+            const err = new Error(`Item "${item.title || item.name || itemId}" has already been claimed and is out of stock.`);
+            err.status = 409; // HTTP 409 Conflict
+            err.soldOutItemId = itemId;
+            throw err;
           }
-          const err = new Error(`Item "${item.title || item.name || itemId}" has already been claimed and is out of stock.`);
-          err.status = 409; // HTTP 409 Conflict
-          err.soldOutItemId = itemId;
+          // Enforce authoritative server-side catalog price to prevent client-side price tampering
+          if (Number(product.price) > 0) {
+            item.price = Number(product.price);
+          }
+          if (product.name || product.title) {
+            item.title = product.name || product.title;
+          }
+        }
+
+        if (!(Number(item.price) > 0)) {
+          const err = new Error(`Invalid price for item "${item.title || item.name || itemId}".`);
+          err.status = 400;
           throw err;
         }
 
