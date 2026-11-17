@@ -1,5 +1,5 @@
-import React from 'react';
-import { Eye, ShoppingBag, ArrowUpRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Eye, ShoppingBag, ArrowUpRight, Play } from 'lucide-react';
 import { Product } from '../../types/store';
 import { useCart } from '../../context/CartContext';
 import { useRouter } from '../../context/RouterContext';
@@ -17,6 +17,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   const { addToCart, isInCart } = useCart();
   const { navigate } = useRouter();
+  const [hovered, setHovered] = useState(false);
   const inBag = isInCart(product.id);
   const available = product.inStock !== false;
 
@@ -34,6 +35,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <article
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
       className={`group relative flex flex-col border rounded-none transition-colors duration-300 ${cardBg} hover:border-[#ff4500]`}
     >
       {/* 4:5 Sharp Archival Media Container */}
@@ -41,7 +44,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         <a
           href={`/product?id=${encodeURIComponent(product.id)}`}
           onClick={handleOpenProduct}
-          className="block w-full h-full"
+          className="block w-full h-full relative"
         >
           <img
             src={product.image}
@@ -49,6 +52,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
           />
+          {product.videoPreview && hovered && (
+            <video
+              src={product.videoPreview}
+              poster={product.image}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover z-[5]"
+            />
+          )}
         </a>
 
         {/* Top Corner 1-of-1 Hangtag */}
@@ -63,9 +77,25 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </span>
         </div>
 
-        {/* Grade Pill Top Right */}
-        <div className="absolute top-3 right-3 z-10 px-2 py-1 bg-[#0b0b0b]/80 backdrop-blur-sm border border-white/10 font-mono text-[10px] uppercase tracking-wider text-white/80">
-          {product.id.toUpperCase()}
+        {/* Grade Pill & Video Reel Indicator Top Right */}
+        <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5">
+          {product.videoPreview && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setHovered((prev) => !prev);
+              }}
+              title="Toggle Motion Reel Preview"
+              className="px-2 py-1 bg-[#0b0b0b]/85 backdrop-blur-sm border border-[#ff4500]/50 font-mono text-[9px] uppercase tracking-wider text-[#c7ff97] flex items-center gap-1"
+            >
+              <Play size={9} className="fill-current" />
+              <span>REEL</span>
+            </button>
+          )}
+          <div className="px-2 py-1 bg-[#0b0b0b]/80 backdrop-blur-sm border border-white/10 font-mono text-[10px] uppercase tracking-wider text-white/80">
+            {product.id.toUpperCase()}
+          </div>
         </div>
 
         {/* Bottom-Pinned Hover Action Bar (Always accessible on touch, sharp on desktop hover) */}

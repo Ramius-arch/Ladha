@@ -12,6 +12,7 @@ interface QuickViewModalProps {
 
 export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose }) => {
   const [unit, setUnit] = useState<'in' | 'cm'>('in');
+  const [mediaMode, setMediaMode] = useState<'photo' | 'video'>('photo');
   const { addToCart, isInCart } = useCart();
   const { navigate } = useRouter();
 
@@ -42,13 +43,25 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
             data-lenis-prevent
             className="relative z-10 w-full max-w-[920px] max-h-[90vh] overflow-y-auto bg-[#e9e9e9] text-[#0b0b0b] border border-white/20 grid grid-cols-1 md:grid-cols-12"
           >
-            {/* Left Image Column */}
+            {/* Left Image / Video Reel Column */}
             <div className="md:col-span-6 bg-[#0b0b0b] relative aspect-[4/5] md:aspect-auto md:min-h-[480px]">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
+              {product.videoPreview && mediaMode === 'video' ? (
+                <video
+                  src={product.videoPreview}
+                  poster={product.image}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
+              )}
               <div className="absolute top-4 left-4 px-2.5 py-1 bg-[#0b0b0b]/85 border border-white/15 flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-white">
                 <span
                   className={`w-1.5 h-1.5 rounded-full ${
@@ -57,6 +70,28 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
                 />
                 <span>{product.inStock !== false ? '1-OF-1 IN VAULT' : 'ARCHIVED'}</span>
               </div>
+              {product.videoPreview && (
+                <div className="absolute bottom-4 left-4 flex border border-white/25 bg-[#0b0b0b]/85 backdrop-blur-sm">
+                  <button
+                    type="button"
+                    onClick={() => setMediaMode('photo')}
+                    className={`px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider transition-colors ${
+                      mediaMode === 'photo' ? 'bg-white text-black font-bold' : 'text-white/75 hover:text-white'
+                    }`}
+                  >
+                    Still Photo
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setMediaMode('video')}
+                    className={`px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider transition-colors ${
+                      mediaMode === 'video' ? 'bg-[#ff4500] text-white font-bold' : 'text-white/75 hover:text-white'
+                    }`}
+                  >
+                    Motion Reel
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Right Spec Column */}

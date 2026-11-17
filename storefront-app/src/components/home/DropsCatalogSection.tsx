@@ -32,7 +32,7 @@ export const DropsCatalogSection: React.FC<DropsCatalogSectionProps> = ({
       activeCategory === 'ALL'
         ? products
         : products.filter((p) => p.category.toUpperCase() === activeCategory.toUpperCase());
-    return filtered.slice(0, 6);
+    return filtered.slice(0, 9);
   }, [products, activeCategory]);
 
   const scrollToLookbook = () => {

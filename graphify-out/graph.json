@@ -74,19 +74,6 @@
       "source_location": "L16"
     },
     {
-      "id": "storefront_app_src_components_home_dropscatalogsection_dropscatalogsectionprops",
-      "label": "DropsCatalogSectionProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "dropscatalogsectionprops",
-      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
-      "source_location": "L9"
-    },
-    {
       "id": "storefront_app_src_components_home_hero_heroprops",
       "label": "HeroProps",
       "_callable": true,
@@ -126,6 +113,19 @@
       "source_location": "L4"
     },
     {
+      "id": "storefront_app_src_components_ui_rollingtextbutton_rollingtextbuttonprops",
+      "label": "RollingTextButtonProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "rollingtextbuttonprops",
+      "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
+      "source_location": "L4"
+    },
+    {
       "id": "storefront_app_src_pages_homepage_homepageprops",
       "label": "HomePageProps",
       "_callable": true,
@@ -139,43 +139,95 @@
       "source_location": "L12"
     },
     {
-      "id": "storefront_app_src_components_header_headerprops",
-      "label": "HeaderProps",
+      "id": "storefront_app_src_components_home_dropscatalogsection_dropscatalogsectionprops",
+      "label": "DropsCatalogSectionProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 108,
-      "community_name": "Header.tsx",
+      "community_name": "Product",
       "file_type": "code",
-      "norm_label": "headerprops",
-      "source_file": "storefront-app/src/components/Header.tsx",
+      "norm_label": "dropscatalogsectionprops",
+      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
       "source_location": "L9"
     },
     {
-      "id": "storefront_app_src_components_ui_rollingtextbutton_rollingtextbuttonprops",
-      "label": "RollingTextButtonProps",
+      "id": "storefront_app_src_components_quickviewmodal_quickviewmodalprops",
+      "label": "QuickViewModalProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 108,
-      "community_name": "Header.tsx",
+      "community_name": "Product",
       "file_type": "code",
-      "norm_label": "rollingtextbuttonprops",
-      "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
-      "source_location": "L4"
+      "norm_label": "quickviewmodalprops",
+      "source_file": "storefront-app/src/components/QuickViewModal.tsx",
+      "source_location": "L8"
     },
     {
-      "id": "storefront_app_src_hooks_useambientaudio_ambienttrack",
-      "label": "AmbientTrack",
+      "id": "storefront_app_src_components_ui_productcard_productcardprops",
+      "label": "ProductCardProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 108,
-      "community_name": "Header.tsx",
+      "community_name": "Product",
       "file_type": "code",
-      "norm_label": "ambienttrack",
-      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
-      "source_location": "L3"
+      "norm_label": "productcardprops",
+      "source_file": "storefront-app/src/components/ui/ProductCard.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "storefront_app_src_pages_productpage_productpageprops",
+      "label": "ProductPageProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 108,
+      "community_name": "Product",
+      "file_type": "code",
+      "norm_label": "productpageprops",
+      "source_file": "storefront-app/src/pages/ProductPage.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "storefront_app_src_pages_shoppage_shoppageprops",
+      "label": "ShopPageProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 108,
+      "community_name": "Product",
+      "file_type": "code",
+      "norm_label": "shoppageprops",
+      "source_file": "storefront-app/src/pages/ShopPage.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "storefront_app_src_types_store_product",
+      "label": "Product",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 108,
+      "community_name": "Product",
+      "file_type": "code",
+      "norm_label": "product",
+      "source_file": "storefront-app/src/types/store.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_src_context_cartcontext_cartcontextvalue",
+      "label": "CartContextValue",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 124,
+      "community_name": "CheckoutPage.tsx",
+      "file_type": "code",
+      "norm_label": "cartcontextvalue",
+      "source_file": "storefront-app/src/context/CartContext.tsx",
+      "source_location": "L7"
     },
     {
       "id": "storefront_app_src_pages_checkoutpage_checkoutpageprops",
@@ -184,7 +236,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "checkoutpageprops",
       "source_file": "storefront-app/src/pages/CheckoutPage.tsx",
@@ -197,7 +249,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "dukacheckoutrequest",
       "source_file": "storefront-app/src/services/dukaCheckout.ts",
@@ -210,7 +262,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "dukacheckoutresult",
       "source_file": "storefront-app/src/services/dukaCheckout.ts",
@@ -223,7 +275,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "etimsinvoicepayload",
       "source_file": "storefront-app/src/services/etimsPdf.ts",
@@ -236,7 +288,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "cartitem",
       "source_file": "storefront-app/src/types/store.ts",
@@ -280,6 +332,19 @@
       "norm_label": "checkoutservice",
       "source_file": "billing/backend/services/commerce/checkoutService.js",
       "source_location": "L22"
+    },
+    {
+      "id": "storefront_app_src_pages_adminpage_adminpageprops",
+      "label": "AdminPageProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "storeDb.ts",
+      "file_type": "code",
+      "norm_label": "adminpageprops",
+      "source_file": "storefront-app/src/pages/AdminPage.tsx",
+      "source_location": "L24"
     },
     {
       "id": "storefront_app_src_types_store_dispatchlead",
@@ -490,56 +555,30 @@
       "source_location": "L11"
     },
     {
-      "id": "storefront_app_src_components_quickviewmodal_quickviewmodalprops",
-      "label": "QuickViewModalProps",
+      "id": "storefront_app_src_components_header_headerprops",
+      "label": "HeaderProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 97,
       "community_name": "App.tsx",
       "file_type": "code",
-      "norm_label": "quickviewmodalprops",
-      "source_file": "storefront-app/src/components/QuickViewModal.tsx",
-      "source_location": "L8"
+      "norm_label": "headerprops",
+      "source_file": "storefront-app/src/components/Header.tsx",
+      "source_location": "L9"
     },
     {
-      "id": "storefront_app_src_components_ui_productcard_productcardprops",
-      "label": "ProductCardProps",
+      "id": "storefront_app_src_hooks_useambientaudio_ambienttrack",
+      "label": "AmbientTrack",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 97,
       "community_name": "App.tsx",
       "file_type": "code",
-      "norm_label": "productcardprops",
-      "source_file": "storefront-app/src/components/ui/ProductCard.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "storefront_app_src_context_cartcontext_cartcontextvalue",
-      "label": "CartContextValue",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "cartcontextvalue",
-      "source_file": "storefront-app/src/context/CartContext.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "storefront_app_src_pages_adminpage_adminpageprops",
-      "label": "AdminPageProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "adminpageprops",
-      "source_file": "storefront-app/src/pages/AdminPage.tsx",
-      "source_location": "L24"
+      "norm_label": "ambienttrack",
+      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
+      "source_location": "L3"
     },
     {
       "id": "storefront_app_src_pages_legalpage_legaltab",
@@ -555,45 +594,6 @@
       "source_location": "L4"
     },
     {
-      "id": "storefront_app_src_pages_productpage_productpageprops",
-      "label": "ProductPageProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "productpageprops",
-      "source_file": "storefront-app/src/pages/ProductPage.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "storefront_app_src_pages_shoppage_shoppageprops",
-      "label": "ShopPageProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "shoppageprops",
-      "source_file": "storefront-app/src/pages/ShopPage.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "storefront_app_src_types_store_product",
-      "label": "Product",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "product",
-      "source_file": "storefront-app/src/types/store.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "billing_backend_services_sms_sms_service_smsservice",
       "label": "SMSService",
       "_callable": true,
@@ -605,18 +605,6 @@
       "norm_label": "smsservice",
       "source_file": "billing/backend/services/SMS/sms_service.js",
       "source_location": "L3"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ea",
-      "label": "ea()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "Se",
-      "file_type": "code",
-      "norm_label": "ea()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L176"
     },
     {
       "id": "storefront_js_jspdf_umd_min_fa_addframedatatocanvas",
@@ -857,6 +845,30 @@
       "norm_label": "ha()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L176"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_at",
+      "label": "at()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Se",
+      "file_type": "code",
+      "norm_label": "at()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_xe",
+      "label": "xe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Se",
+      "file_type": "code",
+      "norm_label": "xe()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
     },
     {
       "id": "storefront_js_jspdf_umd_min_se_available",
@@ -1507,18 +1519,6 @@
       "source_location": "L176"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_xe",
-      "label": "xe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "Se",
-      "file_type": "code",
-      "norm_label": "xe()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L125"
-    },
-    {
       "id": "billing_backend_services_ladhaservice_ladhaservice_checkhealth",
       "label": ".checkHealth()",
       "_callable": true,
@@ -1747,6 +1747,18 @@
       "source_location": "L14"
     },
     {
+      "id": "storefront_app_src_components_ui_rollingtextbutton_rollingtextbutton",
+      "label": "RollingTextButton()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "rollingtextbutton()",
+      "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
+      "source_location": "L15"
+    },
+    {
       "id": "storefront_app_src_pages_homepage_homepage",
       "label": "HomePage()",
       "_callable": true,
@@ -1759,18 +1771,6 @@
       "source_location": "L23"
     },
     {
-      "id": "portfolio_assets_capture_screenshots_capture",
-      "label": "capture()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "ref_c",
-      "file_type": "code",
-      "norm_label": "capture()",
-      "source_file": "portfolio_assets/capture_screenshots.js",
-      "source_location": "L12"
-    },
-    {
       "id": "billing_frontend_src_app_setup",
       "label": "setup()",
       "_callable": true,
@@ -1781,18 +1781,6 @@
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/App.vue",
       "source_location": "L337"
-    },
-    {
-      "id": "billing_frontend_src_pages_dashboard_setup",
-      "label": "setup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 106,
-      "community_name": "useTenantConfig",
-      "file_type": "code",
-      "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L347"
     },
     {
       "id": "billing_frontend_src_pages_loadingpage_setup",
@@ -1879,28 +1867,16 @@
       "source_location": "L61"
     },
     {
-      "id": "storefront_app_src_components_ui_rollingtextbutton_rollingtextbutton",
-      "label": "RollingTextButton()",
+      "id": "storefront_app_src_components_ui_productcard_productcard",
+      "label": "ProductCard()",
       "_callable": true,
       "_origin": "ast",
       "community": 108,
-      "community_name": "Header.tsx",
+      "community_name": "Product",
       "file_type": "code",
-      "norm_label": "rollingtextbutton()",
-      "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "storefront_app_src_hooks_useambientaudio_useambientaudio",
-      "label": "useAmbientAudio()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 108,
-      "community_name": "Header.tsx",
-      "file_type": "code",
-      "norm_label": "useambientaudio()",
-      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
-      "source_location": "L14"
+      "norm_label": "productcard()",
+      "source_file": "storefront-app/src/components/ui/ProductCard.tsx",
+      "source_location": "L13"
     },
     {
       "id": "billing_backend_routes_duka_routes_handlereconcile",
@@ -1915,160 +1891,16 @@
       "source_location": "L294"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_b",
-      "label": "b()",
+      "id": "portfolio_assets_capture_screenshots_capture",
+      "label": "capture()",
       "_callable": true,
       "_origin": "ast",
       "community": 110,
-      "community_name": "s",
+      "community_name": "capture_screenshots.js",
       "file_type": "code",
-      "norm_label": "b()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L67"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ja_b",
-      "label": "B()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "b()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L236"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_an",
-      "label": "an()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "an()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_cn",
-      "label": "cn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "cn()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_hn",
-      "label": "hn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "hn()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_ln",
-      "label": "ln()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "ln()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_nn",
-      "label": "nn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "nn()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_rn",
-      "label": "rn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "rn()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_s",
-      "label": "s()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "s()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_sn",
-      "label": "sn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "sn()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_wn",
-      "label": "wn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "wn()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_xn",
-      "label": "xn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "xn()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_yn",
-      "label": "yn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 110,
-      "community_name": "s",
-      "file_type": "code",
-      "norm_label": "yn()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
+      "norm_label": "capture()",
+      "source_file": "portfolio_assets/capture_screenshots.js",
+      "source_location": "L12"
     },
     {
       "id": "scripts_test_diligence_gen_creatediligencepdf",
@@ -2095,6 +1927,30 @@
       "source_location": "L4"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_d",
+      "label": "d()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "d()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L358"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ja_r",
+      "label": "R()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "r()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L236"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_a",
       "label": "a()",
       "_callable": true,
@@ -2107,6 +1963,18 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_an",
+      "label": "an()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "an()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_c",
       "label": "c()",
       "_callable": true,
@@ -2115,6 +1983,18 @@
       "community_name": "a",
       "file_type": "code",
       "norm_label": "c()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_cn",
+      "label": "cn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "cn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -2143,6 +2023,18 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_ft",
+      "label": "ft()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "ft()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_h",
       "label": "h()",
       "_callable": true,
@@ -2151,6 +2043,30 @@
       "community_name": "a",
       "file_type": "code",
       "norm_label": "h()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_hn",
+      "label": "hn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "hn()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_it",
+      "label": "it()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "it()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -2179,6 +2095,30 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_ln",
+      "label": "ln()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "ln()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_nn",
+      "label": "nn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "nn()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_ot",
       "label": "ot()",
       "_callable": true,
@@ -2191,18 +2131,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_q",
-      "label": "q()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 114,
-      "community_name": "a",
-      "file_type": "code",
-      "norm_label": "q()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_rt",
       "label": "rt()",
       "_callable": true,
@@ -2211,6 +2139,30 @@
       "community_name": "a",
       "file_type": "code",
       "norm_label": "rt()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_s",
+      "label": "s()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "s()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_sn",
+      "label": "sn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "sn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -2247,6 +2199,66 @@
       "community_name": "a",
       "file_type": "code",
       "norm_label": "ut()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_v",
+      "label": "v()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "v()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_w",
+      "label": "w()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "w()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_wn",
+      "label": "wn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "wn()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_xn",
+      "label": "xn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "xn()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_yn",
+      "label": "yn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "a",
+      "file_type": "code",
+      "norm_label": "yn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -2299,6 +2311,18 @@
       "source_location": "L57"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_b",
+      "label": "b()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "i",
+      "file_type": "code",
+      "norm_label": "b()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L67"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_er",
       "label": "er()",
       "_callable": true,
@@ -2335,6 +2359,18 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_en",
+      "label": "en()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "i",
+      "file_type": "code",
+      "norm_label": "en()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_et",
       "label": "et()",
       "_callable": true,
@@ -2359,6 +2395,18 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_ht",
+      "label": "ht()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "i",
+      "file_type": "code",
+      "norm_label": "ht()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_i",
       "label": "i()",
       "_callable": true,
@@ -2367,6 +2415,18 @@
       "community_name": "i",
       "file_type": "code",
       "norm_label": "i()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_jn",
+      "label": "jn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "i",
+      "file_type": "code",
+      "norm_label": "jn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -2575,132 +2635,12 @@
       "source_location": "L3"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_d",
-      "label": "d()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "ge",
-      "file_type": "code",
-      "norm_label": "d()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L358"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_ge",
-      "label": "ge()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "ge",
-      "file_type": "code",
-      "norm_label": "ge()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_pe",
-      "label": "pe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "ge",
-      "file_type": "code",
-      "norm_label": "pe()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_qe",
-      "label": "qe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "ge",
-      "file_type": "code",
-      "norm_label": "qe()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_ve",
-      "label": "ve()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "ge",
-      "file_type": "code",
-      "norm_label": "ve()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_we",
-      "label": "we()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "ge",
-      "file_type": "code",
-      "norm_label": "we()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_r_x",
-      "label": "x()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "ge",
-      "file_type": "code",
-      "norm_label": "x()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L86"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_te",
-      "label": "Te()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "ge",
-      "file_type": "code",
-      "norm_label": "te()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L176"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ue",
-      "label": "Ue()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "ge",
-      "file_type": "code",
-      "norm_label": "ue()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L176"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ye",
-      "label": "ye()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 120,
-      "community_name": "ge",
-      "file_type": "code",
-      "norm_label": "ye()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L117"
-    },
-    {
       "id": "storefront_app_src_pages_checkoutpage_checkoutpage",
       "label": "CheckoutPage()",
       "_callable": true,
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "checkoutpage()",
       "source_file": "storefront-app/src/pages/CheckoutPage.tsx",
@@ -2712,7 +2652,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "initiatedukacheckout()",
       "source_file": "storefront-app/src/services/dukaCheckout.ts",
@@ -2724,7 +2664,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "querympesastatus()",
       "source_file": "storefront-app/src/services/dukaCheckout.ts",
@@ -2736,7 +2676,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "simulatempesaaction()",
       "source_file": "storefront-app/src/services/dukaCheckout.ts",
@@ -2748,11 +2688,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "generateclientetimspdf()",
       "source_file": "storefront-app/src/services/etimsPdf.ts",
       "source_location": "L18"
+    },
+    {
+      "id": "storefront_app_src_services_storedb_submitorderrecord",
+      "label": "submitOrderRecord()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 124,
+      "community_name": "CheckoutPage.tsx",
+      "file_type": "code",
+      "norm_label": "submitorderrecord()",
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L155"
     },
     {
       "id": "billing_backend_services_commerce_pricing_calculateshippingfee",
@@ -2995,18 +2947,6 @@
       "source_location": "L234"
     },
     {
-      "id": "storefront_app_src_app_storefrontshell",
-      "label": "StorefrontShell()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 131,
-      "community_name": "storeDb.ts",
-      "file_type": "code",
-      "norm_label": "storefrontshell()",
-      "source_file": "storefront-app/src/App.tsx",
-      "source_location": "L34"
-    },
-    {
       "id": "storefront_app_src_components_footercontact_footercontact",
       "label": "FooterContact()",
       "_callable": true,
@@ -3064,7 +3004,7 @@
       "file_type": "code",
       "norm_label": "fetchlivecatalog()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L47"
+      "source_location": "L65"
     },
     {
       "id": "storefront_app_src_services_storedb_getstoredorders",
@@ -3076,7 +3016,7 @@
       "file_type": "code",
       "norm_label": "getstoredorders()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L85"
+      "source_location": "L105"
     },
     {
       "id": "storefront_app_src_services_storedb_getstoredproducts",
@@ -3088,7 +3028,7 @@
       "file_type": "code",
       "norm_label": "getstoredproducts()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L37"
+      "source_location": "L51"
     },
     {
       "id": "storefront_app_src_services_storedb_markproductssoldout",
@@ -3100,7 +3040,7 @@
       "file_type": "code",
       "norm_label": "markproductssoldout()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L116"
+      "source_location": "L136"
     },
     {
       "id": "storefront_app_src_services_storedb_maskphoneforlocalpersistence",
@@ -3112,7 +3052,19 @@
       "file_type": "code",
       "norm_label": "maskphoneforlocalpersistence()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L101"
+      "source_location": "L121"
+    },
+    {
+      "id": "storefront_app_src_services_storedb_mergewithdefaults",
+      "label": "mergeWithDefaults()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 131,
+      "community_name": "storeDb.ts",
+      "file_type": "code",
+      "norm_label": "mergewithdefaults()",
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L40"
     },
     {
       "id": "storefront_app_src_services_storedb_normalizeproduct",
@@ -3148,7 +3100,7 @@
       "file_type": "code",
       "norm_label": "resetcatalogtodefault()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L95"
+      "source_location": "L115"
     },
     {
       "id": "storefront_app_src_services_storedb_savecatalogproducts",
@@ -3160,7 +3112,7 @@
       "file_type": "code",
       "norm_label": "savecatalogproducts()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L89"
+      "source_location": "L109"
     },
     {
       "id": "storefront_app_src_services_storedb_savedispatchlead",
@@ -3172,7 +3124,7 @@
       "file_type": "code",
       "norm_label": "savedispatchlead()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L146"
+      "source_location": "L166"
     },
     {
       "id": "storefront_app_src_services_storedb_saveorderlocally",
@@ -3184,19 +3136,7 @@
       "file_type": "code",
       "norm_label": "saveorderlocally()",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L107"
-    },
-    {
-      "id": "storefront_app_src_services_storedb_submitorderrecord",
-      "label": "submitOrderRecord()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 131,
-      "community_name": "storeDb.ts",
-      "file_type": "code",
-      "norm_label": "submitorderrecord()",
-      "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L135"
+      "source_location": "L127"
     },
     {
       "id": "storefront_app_src_services_storedb_writestorage",
@@ -3223,12 +3163,24 @@
       "source_location": "L27"
     },
     {
+      "id": "billing_frontend_src_components_animatednumber_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/components/AnimatedNumber.vue",
+      "source_location": "L24"
+    },
+    {
       "id": "billing_frontend_src_components_dataimporter_setup",
       "label": "setup()",
       "_callable": true,
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/components/DataImporter.vue",
@@ -3240,7 +3192,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/components/NotificationTray.vue",
@@ -3252,11 +3204,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/pages/BillingEngine.vue",
       "source_location": "L204"
+    },
+    {
+      "id": "billing_frontend_src_pages_helpcenter_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/pages/HelpCenter.vue",
+      "source_location": "L183"
     },
     {
       "id": "billing_frontend_src_pages_invoicedetail_setup",
@@ -3264,7 +3228,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/pages/InvoiceDetail.vue",
@@ -3276,11 +3240,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/pages/InvoiceGenerator.vue",
       "source_location": "L226"
+    },
+    {
+      "id": "billing_frontend_src_pages_notifications_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/pages/Notifications.vue",
+      "source_location": "L88"
     },
     {
       "id": "billing_frontend_src_pages_paymentprocessing_setup",
@@ -3288,11 +3264,47 @@
       "_callable": true,
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/pages/PaymentProcessing.vue",
       "source_location": "L122"
+    },
+    {
+      "id": "billing_frontend_src_pages_profilesettings_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/pages/ProfileSettings.vue",
+      "source_location": "L112"
+    },
+    {
+      "id": "billing_frontend_src_pages_register_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/pages/Register.vue",
+      "source_location": "L134"
+    },
+    {
+      "id": "billing_frontend_src_pages_usagetracker_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/pages/UsageTracker.vue",
+      "source_location": "L274"
     },
     {
       "id": "storefront_app_src_context_routercontext_readlocation",
@@ -3391,18 +3403,6 @@
       "source_location": "L70"
     },
     {
-      "id": "billing_src_frontend_components_app_app",
-      "label": "App()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "frontend/package.json",
-      "file_type": "code",
-      "norm_label": "app()",
-      "source_file": "billing/src/frontend/components/App.js",
-      "source_location": "L4"
-    },
-    {
       "id": "scripts_find_telecom_searchmatches",
       "label": "searchMatches()",
       "_callable": true,
@@ -3415,7 +3415,7 @@
       "source_location": "L4"
     },
     {
-      "id": "billing_frontend_src_pages_customers_setup",
+      "id": "billing_frontend_src_pages_landingpage_setup",
       "label": "setup()",
       "_callable": true,
       "_origin": "ast",
@@ -3423,23 +3423,23 @@
       "community_name": "router.js",
       "file_type": "code",
       "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/Customers.vue",
-      "source_location": "L174"
+      "source_file": "billing/frontend/src/pages/LandingPage.vue",
+      "source_location": "L482"
     },
     {
-      "id": "billing_frontend_src_pages_helpcenter_setup",
-      "label": "setup()",
+      "id": "billing_frontend_src_pages_login_computesaltedsha256",
+      "label": "computeSaltedSha256()",
       "_callable": true,
       "_origin": "ast",
       "community": 15,
       "community_name": "router.js",
       "file_type": "code",
-      "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/HelpCenter.vue",
-      "source_location": "L183"
+      "norm_label": "computesaltedsha256()",
+      "source_file": "billing/frontend/src/pages/Login.vue",
+      "source_location": "L96"
     },
     {
-      "id": "billing_frontend_src_pages_notifications_setup",
+      "id": "billing_frontend_src_pages_login_setup",
       "label": "setup()",
       "_callable": true,
       "_origin": "ast",
@@ -3447,8 +3447,8 @@
       "community_name": "router.js",
       "file_type": "code",
       "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/Notifications.vue",
-      "source_location": "L88"
+      "source_file": "billing/frontend/src/pages/Login.vue",
+      "source_location": "L110"
     },
     {
       "id": "billing_frontend_src_pages_offline_retry",
@@ -3461,30 +3461,6 @@
       "norm_label": "retry()",
       "source_file": "billing/frontend/src/pages/Offline.vue",
       "source_location": "L14"
-    },
-    {
-      "id": "billing_frontend_src_pages_register_setup",
-      "label": "setup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "router.js",
-      "file_type": "code",
-      "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/Register.vue",
-      "source_location": "L134"
-    },
-    {
-      "id": "billing_frontend_src_pages_usagetracker_setup",
-      "label": "setup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "router.js",
-      "file_type": "code",
-      "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/UsageTracker.vue",
-      "source_location": "L274"
     },
     {
       "id": "billing_frontend_src_router_hasvalidoperatorsession",
@@ -3559,30 +3535,6 @@
       "source_location": "L28"
     },
     {
-      "id": "billing_frontend_src_pages_login_computesaltedsha256",
-      "label": "computeSaltedSha256()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 151,
-      "community_name": "Login.vue",
-      "file_type": "code",
-      "norm_label": "computesaltedsha256()",
-      "source_file": "billing/frontend/src/pages/Login.vue",
-      "source_location": "L96"
-    },
-    {
-      "id": "billing_frontend_src_pages_login_setup",
-      "label": "setup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 151,
-      "community_name": "Login.vue",
-      "file_type": "code",
-      "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/Login.vue",
-      "source_location": "L110"
-    },
-    {
       "id": "billing_backend_services_ladhaservice_ladhaservice_calculateshippingfee",
       "label": ".calculateShippingFee()",
       "_callable": true,
@@ -3607,86 +3559,26 @@
       "source_location": "L152"
     },
     {
-      "id": "storefront_app_src_app_app",
-      "label": "App()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 154,
-      "community_name": "main.tsx",
-      "file_type": "code",
-      "norm_label": "app()",
-      "source_file": "storefront-app/src/App.tsx",
-      "source_location": "L116"
-    },
-    {
-      "id": "storefront_app_src_hooks_uselenis_uselenis",
-      "label": "useLenis()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 157,
-      "community_name": "useLenis.ts",
-      "file_type": "code",
-      "norm_label": "uselenis()",
-      "source_file": "storefront-app/src/hooks/useLenis.ts",
-      "source_location": "L4"
-    },
-    {
-      "id": "storefront_app_src_hooks_uselenis_uselenis_raf",
-      "label": "raf()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 157,
-      "community_name": "useLenis.ts",
-      "file_type": "code",
-      "norm_label": "raf()",
-      "source_file": "storefront-app/src/hooks/useLenis.ts",
-      "source_location": "L15"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_a",
-      "label": "a()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "r",
-      "file_type": "code",
-      "norm_label": "a()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L51"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_e",
-      "label": "e()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "r",
-      "file_type": "code",
-      "norm_label": "e()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L51"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_j",
-      "label": "j()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "r",
-      "file_type": "code",
-      "norm_label": "j()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L86"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_ja",
       "label": "ja()",
       "_callable": true,
       "_origin": "ast",
       "community": 18,
-      "community_name": "r",
+      "community_name": "ja",
       "file_type": "code",
       "norm_label": "ja()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L236"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ja_b",
+      "label": "B()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "ja",
+      "file_type": "code",
+      "norm_label": "b()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L236"
     },
@@ -3696,7 +3588,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 18,
-      "community_name": "r",
+      "community_name": "ja",
       "file_type": "code",
       "norm_label": "e()",
       "source_file": "storefront/js/jspdf.umd.min.js",
@@ -3708,7 +3600,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 18,
-      "community_name": "r",
+      "community_name": "ja",
       "file_type": "code",
       "norm_label": "j()",
       "source_file": "storefront/js/jspdf.umd.min.js",
@@ -3720,7 +3612,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 18,
-      "community_name": "r",
+      "community_name": "ja",
       "file_type": "code",
       "norm_label": "m()",
       "source_file": "storefront/js/jspdf.umd.min.js",
@@ -3732,21 +3624,9 @@
       "_callable": true,
       "_origin": "ast",
       "community": 18,
-      "community_name": "r",
+      "community_name": "ja",
       "file_type": "code",
       "norm_label": "o()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L236"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_ja_r",
-      "label": "R()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "r",
-      "file_type": "code",
-      "norm_label": "r()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L236"
     },
@@ -3756,7 +3636,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 18,
-      "community_name": "r",
+      "community_name": "ja",
       "file_type": "code",
       "norm_label": "m()",
       "source_file": "storefront/js/jspdf.umd.min.js",
@@ -3768,57 +3648,21 @@
       "_callable": true,
       "_origin": "ast",
       "community": 18,
-      "community_name": "r",
+      "community_name": "ja",
       "file_type": "code",
       "norm_label": "bn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_de",
-      "label": "de()",
+      "id": "storefront_js_jspdf_umd_min_oa_rn",
+      "label": "rn()",
       "_callable": true,
       "_origin": "ast",
       "community": 18,
-      "community_name": "r",
+      "community_name": "ja",
       "file_type": "code",
-      "norm_label": "de()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_dt",
-      "label": "dt()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "r",
-      "file_type": "code",
-      "norm_label": "dt()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_j",
-      "label": "j()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "r",
-      "file_type": "code",
-      "norm_label": "j()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_r",
-      "label": "r()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "r",
-      "file_type": "code",
-      "norm_label": "r()",
+      "norm_label": "rn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -3828,23 +3672,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 18,
-      "community_name": "r",
+      "community_name": "ja",
       "file_type": "code",
       "norm_label": "he()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L86"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_t",
-      "label": "t()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "r",
-      "file_type": "code",
-      "norm_label": "t()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L372"
     },
     {
       "id": "billing_backend_middleware_validate_validate",
@@ -4663,40 +4495,16 @@
       "source_location": "L1011"
     },
     {
-      "id": "billing_frontend_src_components_animatednumber_setup",
+      "id": "billing_frontend_src_pages_dashboard_setup",
       "label": "setup()",
       "_callable": true,
       "_origin": "ast",
       "community": 31,
-      "community_name": "vue",
+      "community_name": "Dashboard.vue",
       "file_type": "code",
       "norm_label": "setup()",
-      "source_file": "billing/frontend/src/components/AnimatedNumber.vue",
-      "source_location": "L24"
-    },
-    {
-      "id": "billing_frontend_src_pages_landingpage_setup",
-      "label": "setup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "vue",
-      "file_type": "code",
-      "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/LandingPage.vue",
-      "source_location": "L482"
-    },
-    {
-      "id": "billing_frontend_src_pages_profilesettings_setup",
-      "label": "setup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "vue",
-      "file_type": "code",
-      "norm_label": "setup()",
-      "source_file": "billing/frontend/src/pages/ProfileSettings.vue",
-      "source_location": "L112"
+      "source_file": "billing/frontend/src/pages/Dashboard.vue",
+      "source_location": "L347"
     },
     {
       "id": "billing_frontend_src_pages_reportsanalytics_setup",
@@ -4704,7 +4512,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 31,
-      "community_name": "vue",
+      "community_name": "Dashboard.vue",
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "billing/frontend/src/pages/ReportsAnalytics.vue",
@@ -4740,7 +4548,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 34,
-      "community_name": "api.js",
+      "community_name": "mockData.js",
       "file_type": "code",
       "norm_label": "getstored()",
       "source_file": "billing/frontend/src/services/mockData.js",
@@ -4752,71 +4560,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 34,
-      "community_name": "api.js",
+      "community_name": "mockData.js",
       "file_type": "code",
       "norm_label": "setstored()",
       "source_file": "billing/frontend/src/services/mockData.js",
       "source_location": "L70"
-    },
-    {
-      "id": "billing_frontend_src_services_pdfgenerator_creatediligencedossierdoc",
-      "label": "createDiligenceDossierDoc()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "api.js",
-      "file_type": "code",
-      "norm_label": "creatediligencedossierdoc()",
-      "source_file": "billing/frontend/src/services/pdfGenerator.js",
-      "source_location": "L15"
-    },
-    {
-      "id": "billing_frontend_src_services_pdfgenerator_createetimsinvoicedoc",
-      "label": "createEtimsInvoiceDoc()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "api.js",
-      "file_type": "code",
-      "norm_label": "createetimsinvoicedoc()",
-      "source_file": "billing/frontend/src/services/pdfGenerator.js",
-      "source_location": "L382"
-    },
-    {
-      "id": "billing_frontend_src_services_pdfgenerator_downloadblob",
-      "label": "downloadBlob()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "api.js",
-      "file_type": "code",
-      "norm_label": "downloadblob()",
-      "source_file": "billing/frontend/src/services/pdfGenerator.js",
-      "source_location": "L648"
-    },
-    {
-      "id": "billing_frontend_src_services_pdfgenerator_downloaddiligencedossier",
-      "label": "downloadDiligenceDossier()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "api.js",
-      "file_type": "code",
-      "norm_label": "downloaddiligencedossier()",
-      "source_file": "billing/frontend/src/services/pdfGenerator.js",
-      "source_location": "L665"
-    },
-    {
-      "id": "billing_frontend_src_services_pdfgenerator_downloadetimsinvoice",
-      "label": "downloadEtimsInvoice()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "api.js",
-      "file_type": "code",
-      "norm_label": "downloadetimsinvoice()",
-      "source_file": "billing/frontend/src/services/pdfGenerator.js",
-      "source_location": "L680"
     },
     {
       "id": "billing_backend_middleware_idempotency_idempotency",
@@ -5827,18 +5575,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_en",
-      "label": "en()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "en()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_fe",
       "label": "fe()",
       "_callable": true,
@@ -5859,6 +5595,18 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "fn()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_ge",
+      "label": "ge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "ge()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -5887,18 +5635,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_ht",
-      "label": "ht()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "ht()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_ie",
       "label": "ie()",
       "_callable": true,
@@ -5919,18 +5655,6 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "je()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_jn",
-      "label": "jn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "jn()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6007,18 +5731,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_o",
-      "label": "o()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "o()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_oe",
       "label": "oe()",
       "_callable": true,
@@ -6027,6 +5739,18 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "oe()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_pe",
+      "label": "pe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "pe()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6055,6 +5779,30 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_q",
+      "label": "q()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "q()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_qe",
+      "label": "qe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "qe()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_qt",
       "label": "qt()",
       "_callable": true,
@@ -6067,18 +5815,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_re",
-      "label": "re()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "re()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_se",
       "label": "se()",
       "_callable": true,
@@ -6087,18 +5823,6 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "se()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_te",
-      "label": "te()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "te()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6139,6 +5863,42 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_ve",
+      "label": "ve()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "ve()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_vn",
+      "label": "vn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "vn()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_we",
+      "label": "we()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "we()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_wt",
       "label": "wt()",
       "_callable": true,
@@ -6147,18 +5907,6 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "wt()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_xe",
-      "label": "xe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 81,
-      "community_name": "Oa",
-      "file_type": "code",
-      "norm_label": "xe()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6259,6 +6007,18 @@
       "source_location": "L86"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_r_x",
+      "label": "x()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "x()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L86"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_r_xn",
       "label": "xn()",
       "_callable": true,
@@ -6279,6 +6039,42 @@
       "community_name": "Oa",
       "file_type": "code",
       "norm_label": "rt()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L117"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_te",
+      "label": "Te()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "te()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L176"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ue",
+      "label": "Ue()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "ue()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L176"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ye",
+      "label": "ye()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 81,
+      "community_name": "Oa",
+      "file_type": "code",
+      "norm_label": "ye()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L117"
     },
@@ -6475,6 +6271,18 @@
       "source_location": "L4"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_a",
+      "label": "a()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "a()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L51"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_c",
       "label": "C()",
       "_callable": true,
@@ -6483,6 +6291,30 @@
       "community_name": "e",
       "file_type": "code",
       "norm_label": "c()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L86"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_e",
+      "label": "e()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "e()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L51"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_j",
+      "label": "j()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "j()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L86"
     },
@@ -6523,18 +6355,6 @@
       "source_location": "L51"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_at",
-      "label": "at()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "e",
-      "file_type": "code",
-      "norm_label": "at()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_b",
       "label": "b()",
       "_callable": true,
@@ -6571,6 +6391,30 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_de",
+      "label": "de()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "de()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_dt",
+      "label": "dt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "dt()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_e",
       "label": "e()",
       "_callable": true,
@@ -6579,18 +6423,6 @@
       "community_name": "e",
       "file_type": "code",
       "norm_label": "e()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_ft",
-      "label": "ft()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "e",
-      "file_type": "code",
-      "norm_label": "ft()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6619,14 +6451,14 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_it",
-      "label": "it()",
+      "id": "storefront_js_jspdf_umd_min_oa_j",
+      "label": "j()",
       "_callable": true,
       "_origin": "ast",
       "community": 90,
       "community_name": "e",
       "file_type": "code",
-      "norm_label": "it()",
+      "norm_label": "j()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6679,6 +6511,18 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_o",
+      "label": "o()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "o()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_on",
       "label": "on()",
       "_callable": true,
@@ -6687,6 +6531,30 @@
       "community_name": "e",
       "file_type": "code",
       "norm_label": "on()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_r",
+      "label": "r()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "r()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_oa_re",
+      "label": "re()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "re()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6703,6 +6571,18 @@
       "source_location": "L243"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_oa_te",
+      "label": "te()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "te()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L243"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_oa_un",
       "label": "un()",
       "_callable": true,
@@ -6715,30 +6595,6 @@
       "source_location": "L243"
     },
     {
-      "id": "storefront_js_jspdf_umd_min_oa_v",
-      "label": "v()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "e",
-      "file_type": "code",
-      "norm_label": "v()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_vn",
-      "label": "vn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "e",
-      "file_type": "code",
-      "norm_label": "vn()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
       "id": "storefront_js_jspdf_umd_min_oa_vt",
       "label": "vt()",
       "_callable": true,
@@ -6747,18 +6603,6 @@
       "community_name": "e",
       "file_type": "code",
       "norm_label": "vt()",
-      "source_file": "storefront/js/jspdf.umd.min.js",
-      "source_location": "L243"
-    },
-    {
-      "id": "storefront_js_jspdf_umd_min_oa_w",
-      "label": "w()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "e",
-      "file_type": "code",
-      "norm_label": "w()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L243"
     },
@@ -6835,6 +6679,102 @@
       "source_location": "L86"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_t",
+      "label": "t()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 90,
+      "community_name": "e",
+      "file_type": "code",
+      "norm_label": "t()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L372"
+    },
+    {
+      "id": "billing_frontend_src_pages_customers_setup",
+      "label": "setup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "billing/frontend/src/pages/Customers.vue",
+      "source_location": "L174"
+    },
+    {
+      "id": "billing_frontend_src_services_pdfgenerator_creatediligencedossierdoc",
+      "label": "createDiligenceDossierDoc()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "creatediligencedossierdoc()",
+      "source_file": "billing/frontend/src/services/pdfGenerator.js",
+      "source_location": "L15"
+    },
+    {
+      "id": "billing_frontend_src_services_pdfgenerator_createetimsinvoicedoc",
+      "label": "createEtimsInvoiceDoc()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "createetimsinvoicedoc()",
+      "source_file": "billing/frontend/src/services/pdfGenerator.js",
+      "source_location": "L382"
+    },
+    {
+      "id": "billing_frontend_src_services_pdfgenerator_downloadblob",
+      "label": "downloadBlob()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "downloadblob()",
+      "source_file": "billing/frontend/src/services/pdfGenerator.js",
+      "source_location": "L648"
+    },
+    {
+      "id": "billing_frontend_src_services_pdfgenerator_downloaddiligencedossier",
+      "label": "downloadDiligenceDossier()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "downloaddiligencedossier()",
+      "source_file": "billing/frontend/src/services/pdfGenerator.js",
+      "source_location": "L665"
+    },
+    {
+      "id": "billing_frontend_src_services_pdfgenerator_downloadetimsinvoice",
+      "label": "downloadEtimsInvoice()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "downloadetimsinvoice()",
+      "source_file": "billing/frontend/src/services/pdfGenerator.js",
+      "source_location": "L680"
+    },
+    {
+      "id": "billing_src_frontend_components_app_app",
+      "label": "App()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "app()",
+      "source_file": "billing/src/frontend/components/App.js",
+      "source_location": "L4"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_aa",
       "label": "aa()",
       "_callable": true,
@@ -6881,6 +6821,18 @@
       "norm_label": "ca()",
       "source_file": "storefront/js/jspdf.umd.min.js",
       "source_location": "L204"
+    },
+    {
+      "id": "storefront_js_jspdf_umd_min_ea",
+      "label": "ea()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "jspdf.umd.min.js",
+      "file_type": "code",
+      "norm_label": "ea()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L176"
     },
     {
       "id": "storefront_js_jspdf_umd_min_gi",
@@ -7135,6 +7087,18 @@
       "source_location": "L176"
     },
     {
+      "id": "storefront_js_jspdf_umd_min_xe",
+      "label": "xe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 95,
+      "community_name": "jspdf.umd.min.js",
+      "file_type": "code",
+      "norm_label": "xe()",
+      "source_file": "storefront/js/jspdf.umd.min.js",
+      "source_location": "L125"
+    },
+    {
       "id": "storefront_js_jspdf_umd_min_xi",
       "label": "Xi()",
       "_callable": true,
@@ -7195,6 +7159,30 @@
       "source_location": "L176"
     },
     {
+      "id": "storefront_app_src_app_app",
+      "label": "App()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "app()",
+      "source_file": "storefront-app/src/App.tsx",
+      "source_location": "L116"
+    },
+    {
+      "id": "storefront_app_src_app_storefrontshell",
+      "label": "StorefrontShell()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "storefrontshell()",
+      "source_file": "storefront-app/src/App.tsx",
+      "source_location": "L34"
+    },
+    {
       "id": "storefront_app_src_components_cartdrawer_cartdrawer",
       "label": "CartDrawer()",
       "_callable": true,
@@ -7231,18 +7219,6 @@
       "source_location": "L13"
     },
     {
-      "id": "storefront_app_src_components_ui_productcard_productcard",
-      "label": "ProductCard()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "productcard()",
-      "source_file": "storefront-app/src/components/ui/ProductCard.tsx",
-      "source_location": "L13"
-    },
-    {
       "id": "storefront_app_src_context_cartcontext_usecart",
       "label": "useCart()",
       "_callable": true,
@@ -7265,6 +7241,42 @@
       "norm_label": "userouter()",
       "source_file": "storefront-app/src/context/RouterContext.tsx",
       "source_location": "L102"
+    },
+    {
+      "id": "storefront_app_src_hooks_useambientaudio_useambientaudio",
+      "label": "useAmbientAudio()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "useambientaudio()",
+      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
+      "source_location": "L14"
+    },
+    {
+      "id": "storefront_app_src_hooks_uselenis_uselenis",
+      "label": "useLenis()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "uselenis()",
+      "source_file": "storefront-app/src/hooks/useLenis.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "storefront_app_src_hooks_uselenis_uselenis_raf",
+      "label": "raf()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "raf()",
+      "source_file": "storefront-app/src/hooks/useLenis.ts",
+      "source_location": "L15"
     },
     {
       "id": "storefront_app_src_pages_aboutpage_aboutpage",
@@ -7381,7 +7393,7 @@
       "author": "Ramius-arch",
       "captured_at": null,
       "community": 31,
-      "community_name": "vue",
+      "community_name": "Dashboard.vue",
       "contributor": null,
       "file_type": "document",
       "norm_label": "qx billing mobile portrait & layout plan",
@@ -7841,37 +7853,15 @@
       "source_location": "L14"
     },
     {
-      "id": "storefront_app_src_components_home_curationprocesssection",
-      "label": "CurationProcessSection.tsx",
+      "id": "storefront_app_src_components_cartdrawer",
+      "label": "CartDrawer.tsx",
       "_origin": "ast",
       "community": 102,
       "community_name": "react",
       "file_type": "code",
-      "norm_label": "curationprocesssection.tsx",
-      "source_file": "storefront-app/src/components/home/CurationProcessSection.tsx",
+      "norm_label": "cartdrawer.tsx",
+      "source_file": "storefront-app/src/components/CartDrawer.tsx",
       "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_components_home_dropscatalogsection",
-      "label": "DropsCatalogSection.tsx",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "dropscatalogsection.tsx",
-      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_components_home_dropscatalogsection_categories",
-      "label": "CATEGORIES",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "categories",
-      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
-      "source_location": "L14"
     },
     {
       "id": "storefront_app_src_components_home_faqsection",
@@ -7951,6 +7941,17 @@
       "source_location": "L1"
     },
     {
+      "id": "storefront_app_src_components_ui_rollingtextbutton",
+      "label": "RollingTextButton.tsx",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "rollingtextbutton.tsx",
+      "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "storefront_app_src_data_sitecontent_faq_items",
       "label": "FAQ_ITEMS",
       "_origin": "ast",
@@ -7970,6 +7971,17 @@
       "file_type": "code",
       "norm_label": "homepage.tsx",
       "source_file": "storefront-app/src/pages/HomePage.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_src_pages_notfoundpage",
+      "label": "NotFoundPage.tsx",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "notfoundpage.tsx",
+      "source_file": "storefront-app/src/pages/NotFoundPage.tsx",
       "source_location": "L1"
     },
     {
@@ -8005,61 +8017,6 @@
       "norm_label": "1. architectural migration (`storefront-app/`)",
       "source_file": "DEVLOG.md",
       "source_location": "L215"
-    },
-    {
-      "id": "portfolio_assets_capture_screenshots",
-      "label": "capture_screenshots.js",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "ref_c",
-      "file_type": "code",
-      "norm_label": "capture_screenshots.js",
-      "source_file": "portfolio_assets/capture_screenshots.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "portfolio_assets_capture_screenshots_chromium",
-      "label": "{ chromium }",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "ref_c",
-      "file_type": "code",
-      "norm_label": "{ chromium }",
-      "source_file": "portfolio_assets/capture_screenshots.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "portfolio_assets_capture_screenshots_fs",
-      "label": "fs",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "ref_c",
-      "file_type": "code",
-      "norm_label": "fs",
-      "source_file": "portfolio_assets/capture_screenshots.js",
-      "source_location": "L3"
-    },
-    {
-      "id": "portfolio_assets_capture_screenshots_out_dir",
-      "label": "OUT_DIR",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "ref_c",
-      "file_type": "code",
-      "norm_label": "out_dir",
-      "source_file": "portfolio_assets/capture_screenshots.js",
-      "source_location": "L5"
-    },
-    {
-      "id": "portfolio_assets_capture_screenshots_path",
-      "label": "path",
-      "_origin": "ast",
-      "community": 103,
-      "community_name": "ref_c",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "portfolio_assets/capture_screenshots.js",
-      "source_location": "L2"
     },
     {
       "id": "portfolio_assets_test_dashboard_fixes",
@@ -8159,6 +8116,83 @@
       "norm_label": "path",
       "source_file": "scripts/screenshot-downloaded-pdfs.js",
       "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_unified_dist",
+      "label": "test-unified-dist.js",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "ref_c",
+      "file_type": "code",
+      "norm_label": "test-unified-dist.js",
+      "source_file": "scripts/test-unified-dist.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_unified_dist_dist",
+      "label": "DIST",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "ref_c",
+      "file_type": "code",
+      "norm_label": "dist",
+      "source_file": "scripts/test-unified-dist.js",
+      "source_location": "L6"
+    },
+    {
+      "id": "scripts_test_unified_dist_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "ref_c",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scripts/test-unified-dist.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "scripts_test_unified_dist_http",
+      "label": "http",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "ref_c",
+      "file_type": "code",
+      "norm_label": "http",
+      "source_file": "scripts/test-unified-dist.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_test_unified_dist_mimetypes",
+      "label": "mimeTypes",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "ref_c",
+      "file_type": "code",
+      "norm_label": "mimetypes",
+      "source_file": "scripts/test-unified-dist.js",
+      "source_location": "L8"
+    },
+    {
+      "id": "scripts_test_unified_dist_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "ref_c",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "scripts/test-unified-dist.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "scripts_test_unified_dist_server",
+      "label": "server",
+      "_origin": "ast",
+      "community": 103,
+      "community_name": "ref_c",
+      "file_type": "code",
+      "norm_label": "server",
+      "source_file": "scripts/test-unified-dist.js",
+      "source_location": "L18"
     },
     {
       "id": "scripts_verify_live_pdf_download",
@@ -8447,59 +8481,103 @@
       "source_location": "L8"
     },
     {
-      "id": "storefront_app_src_components_header",
-      "label": "Header.tsx",
+      "id": "storefront_app_src_components_home_dropscatalogsection",
+      "label": "DropsCatalogSection.tsx",
       "_origin": "ast",
       "community": 108,
-      "community_name": "Header.tsx",
+      "community_name": "Product",
       "file_type": "code",
-      "norm_label": "header.tsx",
-      "source_file": "storefront-app/src/components/Header.tsx",
+      "norm_label": "dropscatalogsection.tsx",
+      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_components_ui_rollingtextbutton",
-      "label": "RollingTextButton.tsx",
+      "id": "storefront_app_src_components_home_dropscatalogsection_categories",
+      "label": "CATEGORIES",
       "_origin": "ast",
       "community": 108,
-      "community_name": "Header.tsx",
+      "community_name": "Product",
       "file_type": "code",
-      "norm_label": "rollingtextbutton.tsx",
-      "source_file": "storefront-app/src/components/ui/RollingTextButton.tsx",
+      "norm_label": "categories",
+      "source_file": "storefront-app/src/components/home/DropsCatalogSection.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "storefront_app_src_components_quickviewmodal",
+      "label": "QuickViewModal.tsx",
+      "_origin": "ast",
+      "community": 108,
+      "community_name": "Product",
+      "file_type": "code",
+      "norm_label": "quickviewmodal.tsx",
+      "source_file": "storefront-app/src/components/QuickViewModal.tsx",
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_hooks_useambientaudio",
-      "label": "useAmbientAudio.ts",
+      "id": "storefront_app_src_components_ui_productcard",
+      "label": "ProductCard.tsx",
       "_origin": "ast",
       "community": 108,
-      "community_name": "Header.tsx",
+      "community_name": "Product",
       "file_type": "code",
-      "norm_label": "useambientaudio.ts",
-      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
+      "norm_label": "productcard.tsx",
+      "source_file": "storefront-app/src/components/ui/ProductCard.tsx",
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_hooks_useambientaudio_playlist",
-      "label": "PLAYLIST",
+      "id": "storefront_app_src_pages_productpage",
+      "label": "ProductPage.tsx",
       "_origin": "ast",
       "community": 108,
-      "community_name": "Header.tsx",
+      "community_name": "Product",
       "file_type": "code",
-      "norm_label": "playlist",
-      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
-      "source_location": "L9"
+      "norm_label": "productpage.tsx",
+      "source_file": "storefront-app/src/pages/ProductPage.tsx",
+      "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_pages_notfoundpage",
-      "label": "NotFoundPage.tsx",
+      "id": "storefront_app_src_pages_shoppage",
+      "label": "ShopPage.tsx",
       "_origin": "ast",
       "community": 108,
-      "community_name": "Header.tsx",
+      "community_name": "Product",
       "file_type": "code",
-      "norm_label": "notfoundpage.tsx",
-      "source_file": "storefront-app/src/pages/NotFoundPage.tsx",
+      "norm_label": "shoppage.tsx",
+      "source_file": "storefront-app/src/pages/ShopPage.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_src_pages_shoppage_categories",
+      "label": "CATEGORIES",
+      "_origin": "ast",
+      "community": 108,
+      "community_name": "Product",
+      "file_type": "code",
+      "norm_label": "categories",
+      "source_file": "storefront-app/src/pages/ShopPage.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "storefront_app_src_types_store",
+      "label": "store.ts",
+      "_origin": "ast",
+      "community": 108,
+      "community_name": "Product",
+      "file_type": "code",
+      "norm_label": "store.ts",
+      "source_file": "storefront-app/src/types/store.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_lucide_react",
+      "label": "lucide-react",
+      "_origin": "ast",
+      "community": 108,
+      "community_name": "Product",
+      "file_type": "concept",
+      "norm_label": "lucide-react",
+      "source_file": "storefront-app/package.json",
+      "source_location": "L16"
     },
     {
       "id": "billing_backend_routes_duka_routes",
@@ -8645,58 +8723,113 @@
       "source_location": "L7"
     },
     {
-      "id": "scripts_patch_admin_html",
-      "label": "patch-admin-html.js",
+      "id": "portfolio_assets_capture_screenshots",
+      "label": "capture_screenshots.js",
       "_origin": "ast",
-      "community": 111,
-      "community_name": "patch-admin-html.js",
+      "community": 110,
+      "community_name": "capture_screenshots.js",
       "file_type": "code",
-      "norm_label": "patch-admin-html.js",
-      "source_file": "scripts/patch-admin-html.js",
+      "norm_label": "capture_screenshots.js",
+      "source_file": "portfolio_assets/capture_screenshots.js",
       "source_location": "L1"
     },
     {
-      "id": "scripts_patch_admin_html_filepath",
-      "label": "filePath",
+      "id": "portfolio_assets_capture_screenshots_chromium",
+      "label": "{ chromium }",
       "_origin": "ast",
-      "community": 111,
-      "community_name": "patch-admin-html.js",
+      "community": 110,
+      "community_name": "capture_screenshots.js",
       "file_type": "code",
-      "norm_label": "filepath",
-      "source_file": "scripts/patch-admin-html.js",
-      "source_location": "L4"
+      "norm_label": "{ chromium }",
+      "source_file": "portfolio_assets/capture_screenshots.js",
+      "source_location": "L1"
     },
     {
-      "id": "scripts_patch_admin_html_fs",
+      "id": "portfolio_assets_capture_screenshots_fs",
       "label": "fs",
       "_origin": "ast",
-      "community": 111,
-      "community_name": "patch-admin-html.js",
+      "community": 110,
+      "community_name": "capture_screenshots.js",
       "file_type": "code",
       "norm_label": "fs",
-      "source_file": "scripts/patch-admin-html.js",
-      "source_location": "L1"
+      "source_file": "portfolio_assets/capture_screenshots.js",
+      "source_location": "L3"
     },
     {
-      "id": "scripts_patch_admin_html_html",
-      "label": "html",
+      "id": "portfolio_assets_capture_screenshots_out_dir",
+      "label": "OUT_DIR",
       "_origin": "ast",
-      "community": 111,
-      "community_name": "patch-admin-html.js",
+      "community": 110,
+      "community_name": "capture_screenshots.js",
       "file_type": "code",
-      "norm_label": "html",
-      "source_file": "scripts/patch-admin-html.js",
+      "norm_label": "out_dir",
+      "source_file": "portfolio_assets/capture_screenshots.js",
       "source_location": "L5"
     },
     {
-      "id": "scripts_patch_admin_html_path",
+      "id": "portfolio_assets_capture_screenshots_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 110,
+      "community_name": "capture_screenshots.js",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "portfolio_assets/capture_screenshots.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "scripts_fix_app_icons",
+      "label": "fix-app-icons.js",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "fix-app-icons.js",
+      "file_type": "code",
+      "norm_label": "fix-app-icons.js",
+      "source_file": "scripts/fix-app-icons.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_fix_app_icons_c",
+      "label": "c",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "fix-app-icons.js",
+      "file_type": "code",
+      "norm_label": "c",
+      "source_file": "scripts/fix-app-icons.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "scripts_fix_app_icons_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "fix-app-icons.js",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scripts/fix-app-icons.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_fix_app_icons_p",
+      "label": "p",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "fix-app-icons.js",
+      "file_type": "code",
+      "norm_label": "p",
+      "source_file": "scripts/fix-app-icons.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "scripts_fix_app_icons_path",
       "label": "path",
       "_origin": "ast",
       "community": 111,
-      "community_name": "patch-admin-html.js",
+      "community_name": "fix-app-icons.js",
       "file_type": "code",
       "norm_label": "path",
-      "source_file": "scripts/patch-admin-html.js",
+      "source_file": "scripts/fix-app-icons.js",
       "source_location": "L2"
     },
     {
@@ -8731,61 +8864,6 @@
       "norm_label": "s",
       "source_file": "scripts/apply-checkout-patch.js",
       "source_location": "L3"
-    },
-    {
-      "id": "scripts_fix_app_icons",
-      "label": "fix-app-icons.js",
-      "_origin": "ast",
-      "community": 112,
-      "community_name": "ref_fs",
-      "file_type": "code",
-      "norm_label": "fix-app-icons.js",
-      "source_file": "scripts/fix-app-icons.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_fix_app_icons_c",
-      "label": "c",
-      "_origin": "ast",
-      "community": 112,
-      "community_name": "ref_fs",
-      "file_type": "code",
-      "norm_label": "c",
-      "source_file": "scripts/fix-app-icons.js",
-      "source_location": "L5"
-    },
-    {
-      "id": "scripts_fix_app_icons_fs",
-      "label": "fs",
-      "_origin": "ast",
-      "community": 112,
-      "community_name": "ref_fs",
-      "file_type": "code",
-      "norm_label": "fs",
-      "source_file": "scripts/fix-app-icons.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_fix_app_icons_p",
-      "label": "p",
-      "_origin": "ast",
-      "community": 112,
-      "community_name": "ref_fs",
-      "file_type": "code",
-      "norm_label": "p",
-      "source_file": "scripts/fix-app-icons.js",
-      "source_location": "L4"
-    },
-    {
-      "id": "scripts_fix_app_icons_path",
-      "label": "path",
-      "_origin": "ast",
-      "community": 112,
-      "community_name": "ref_fs",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "scripts/fix-app-icons.js",
-      "source_location": "L2"
     },
     {
       "id": "scripts_fix_finish_order",
@@ -8854,47 +8932,58 @@
       "source_location": "L3"
     },
     {
-      "id": "scripts_patch_billing_engine_tb",
-      "label": "patch-billing-engine-tb.js",
+      "id": "scripts_patch_admin_html",
+      "label": "patch-admin-html.js",
       "_origin": "ast",
       "community": 112,
       "community_name": "ref_fs",
       "file_type": "code",
-      "norm_label": "patch-billing-engine-tb.js",
-      "source_file": "scripts/patch-billing-engine-tb.js",
+      "norm_label": "patch-admin-html.js",
+      "source_file": "scripts/patch-admin-html.js",
       "source_location": "L1"
     },
     {
-      "id": "scripts_patch_billing_engine_tb_fs",
+      "id": "scripts_patch_admin_html_filepath",
+      "label": "filePath",
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "ref_fs",
+      "file_type": "code",
+      "norm_label": "filepath",
+      "source_file": "scripts/patch-admin-html.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "scripts_patch_admin_html_fs",
       "label": "fs",
       "_origin": "ast",
       "community": 112,
       "community_name": "ref_fs",
       "file_type": "code",
       "norm_label": "fs",
-      "source_file": "scripts/patch-billing-engine-tb.js",
+      "source_file": "scripts/patch-admin-html.js",
       "source_location": "L1"
     },
     {
-      "id": "scripts_patch_billing_engine_tb_p",
-      "label": "p",
+      "id": "scripts_patch_admin_html_html",
+      "label": "html",
       "_origin": "ast",
       "community": 112,
       "community_name": "ref_fs",
       "file_type": "code",
-      "norm_label": "p",
-      "source_file": "scripts/patch-billing-engine-tb.js",
-      "source_location": "L4"
+      "norm_label": "html",
+      "source_file": "scripts/patch-admin-html.js",
+      "source_location": "L5"
     },
     {
-      "id": "scripts_patch_billing_engine_tb_path",
+      "id": "scripts_patch_admin_html_path",
       "label": "path",
       "_origin": "ast",
       "community": 112,
       "community_name": "ref_fs",
       "file_type": "code",
       "norm_label": "path",
-      "source_file": "scripts/patch-billing-engine-tb.js",
+      "source_file": "scripts/patch-admin-html.js",
       "source_location": "L2"
     },
     {
@@ -9580,6 +9669,61 @@
       "source_location": "L1"
     },
     {
+      "id": "scripts_fix_usagetracker_icons",
+      "label": "fix-usagetracker-icons.js",
+      "_origin": "ast",
+      "community": 120,
+      "community_name": "fix-usagetracker-icons.js",
+      "file_type": "code",
+      "norm_label": "fix-usagetracker-icons.js",
+      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_fix_usagetracker_icons_c",
+      "label": "c",
+      "_origin": "ast",
+      "community": 120,
+      "community_name": "fix-usagetracker-icons.js",
+      "file_type": "code",
+      "norm_label": "c",
+      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "scripts_fix_usagetracker_icons_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 120,
+      "community_name": "fix-usagetracker-icons.js",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_fix_usagetracker_icons_p",
+      "label": "p",
+      "_origin": "ast",
+      "community": 120,
+      "community_name": "fix-usagetracker-icons.js",
+      "file_type": "code",
+      "norm_label": "p",
+      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "scripts_fix_usagetracker_icons_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 120,
+      "community_name": "fix-usagetracker-icons.js",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_location": "L2"
+    },
+    {
       "id": "billing_backend_config_redis",
       "label": "redis.js",
       "_origin": "ast",
@@ -9668,83 +9812,6 @@
       "source_location": "L35"
     },
     {
-      "id": "scripts_test_unified_dist",
-      "label": "test-unified-dist.js",
-      "_origin": "ast",
-      "community": 122,
-      "community_name": "test-unified-dist.js",
-      "file_type": "code",
-      "norm_label": "test-unified-dist.js",
-      "source_file": "scripts/test-unified-dist.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_test_unified_dist_dist",
-      "label": "DIST",
-      "_origin": "ast",
-      "community": 122,
-      "community_name": "test-unified-dist.js",
-      "file_type": "code",
-      "norm_label": "dist",
-      "source_file": "scripts/test-unified-dist.js",
-      "source_location": "L6"
-    },
-    {
-      "id": "scripts_test_unified_dist_fs",
-      "label": "fs",
-      "_origin": "ast",
-      "community": 122,
-      "community_name": "test-unified-dist.js",
-      "file_type": "code",
-      "norm_label": "fs",
-      "source_file": "scripts/test-unified-dist.js",
-      "source_location": "L2"
-    },
-    {
-      "id": "scripts_test_unified_dist_http",
-      "label": "http",
-      "_origin": "ast",
-      "community": 122,
-      "community_name": "test-unified-dist.js",
-      "file_type": "code",
-      "norm_label": "http",
-      "source_file": "scripts/test-unified-dist.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_test_unified_dist_mimetypes",
-      "label": "mimeTypes",
-      "_origin": "ast",
-      "community": 122,
-      "community_name": "test-unified-dist.js",
-      "file_type": "code",
-      "norm_label": "mimetypes",
-      "source_file": "scripts/test-unified-dist.js",
-      "source_location": "L8"
-    },
-    {
-      "id": "scripts_test_unified_dist_path",
-      "label": "path",
-      "_origin": "ast",
-      "community": 122,
-      "community_name": "test-unified-dist.js",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "scripts/test-unified-dist.js",
-      "source_location": "L3"
-    },
-    {
-      "id": "scripts_test_unified_dist_server",
-      "label": "server",
-      "_origin": "ast",
-      "community": 122,
-      "community_name": "test-unified-dist.js",
-      "file_type": "code",
-      "norm_label": "server",
-      "source_file": "scripts/test-unified-dist.js",
-      "source_location": "L18"
-    },
-    {
       "id": "scripts_patch_api_client",
       "label": "patch-api-client.js",
       "_origin": "ast",
@@ -9804,7 +9871,7 @@
       "label": "CheckoutPage.tsx",
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "checkoutpage.tsx",
       "source_file": "storefront-app/src/pages/CheckoutPage.tsx",
@@ -9815,7 +9882,7 @@
       "label": "REGIONS",
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "regions",
       "source_file": "storefront-app/src/pages/CheckoutPage.tsx",
@@ -9826,7 +9893,7 @@
       "label": "dukaCheckout.ts",
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "dukacheckout.ts",
       "source_file": "storefront-app/src/services/dukaCheckout.ts",
@@ -9837,7 +9904,7 @@
       "label": "BILLING_API_URL",
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "billing_api_url",
       "source_file": "storefront-app/src/services/dukaCheckout.ts",
@@ -9848,21 +9915,10 @@
       "label": "etimsPdf.ts",
       "_origin": "ast",
       "community": 124,
-      "community_name": "store.ts",
+      "community_name": "CheckoutPage.tsx",
       "file_type": "code",
       "norm_label": "etimspdf.ts",
       "source_file": "storefront-app/src/services/etimsPdf.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_types_store",
-      "label": "store.ts",
-      "_origin": "ast",
-      "community": 124,
-      "community_name": "store.ts",
-      "file_type": "code",
-      "norm_label": "store.ts",
-      "source_file": "storefront-app/src/types/store.ts",
       "source_location": "L1"
     },
     {
@@ -10282,6 +10338,17 @@
       "norm_label": "vite",
       "source_file": "storefront-app/package.json",
       "source_location": "L30"
+    },
+    {
+      "id": "storefront_app_src_components_home_curationprocesssection",
+      "label": "CurationProcessSection.tsx",
+      "_origin": "ast",
+      "community": 129,
+      "community_name": "siteContent.ts",
+      "file_type": "code",
+      "norm_label": "curationprocesssection.tsx",
+      "source_file": "storefront-app/src/components/home/CurationProcessSection.tsx",
+      "source_location": "L1"
     },
     {
       "id": "storefront_app_src_components_home_lookbookshowcase",
@@ -10933,11 +11000,22 @@
       "source_location": "L25"
     },
     {
+      "id": "billing_frontend_src_components_animatednumber",
+      "label": "AnimatedNumber.vue",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "animatednumber.vue",
+      "source_file": "billing/frontend/src/components/AnimatedNumber.vue",
+      "source_location": "L1"
+    },
+    {
       "id": "billing_frontend_src_components_dataimporter",
       "label": "DataImporter.vue",
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "dataimporter.vue",
       "source_file": "billing/frontend/src/components/DataImporter.vue",
@@ -10948,7 +11026,7 @@
       "label": "NotificationTray.vue",
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "notificationtray.vue",
       "source_file": "billing/frontend/src/components/NotificationTray.vue",
@@ -10959,10 +11037,21 @@
       "label": "BillingEngine.vue",
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "billingengine.vue",
       "source_file": "billing/frontend/src/pages/BillingEngine.vue",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_frontend_src_pages_helpcenter",
+      "label": "HelpCenter.vue",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "helpcenter.vue",
+      "source_file": "billing/frontend/src/pages/HelpCenter.vue",
       "source_location": "L1"
     },
     {
@@ -10970,7 +11059,7 @@
       "label": "InvoiceDetail.vue",
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "invoicedetail.vue",
       "source_file": "billing/frontend/src/pages/InvoiceDetail.vue",
@@ -10981,10 +11070,21 @@
       "label": "InvoiceGenerator.vue",
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "invoicegenerator.vue",
       "source_file": "billing/frontend/src/pages/InvoiceGenerator.vue",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_frontend_src_pages_notifications",
+      "label": "Notifications.vue",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "notifications.vue",
+      "source_file": "billing/frontend/src/pages/Notifications.vue",
       "source_location": "L1"
     },
     {
@@ -10992,10 +11092,43 @@
       "label": "PaymentProcessing.vue",
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "paymentprocessing.vue",
       "source_file": "billing/frontend/src/pages/PaymentProcessing.vue",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_frontend_src_pages_profilesettings",
+      "label": "ProfileSettings.vue",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "profilesettings.vue",
+      "source_file": "billing/frontend/src/pages/ProfileSettings.vue",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_frontend_src_pages_register",
+      "label": "Register.vue",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "register.vue",
+      "source_file": "billing/frontend/src/pages/Register.vue",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_frontend_src_pages_usagetracker",
+      "label": "UsageTracker.vue",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "code",
+      "norm_label": "usagetracker.vue",
+      "source_file": "billing/frontend/src/pages/UsageTracker.vue",
       "source_location": "L1"
     },
     {
@@ -11003,18 +11136,29 @@
       "label": "api",
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "code",
       "norm_label": "api",
       "source_file": "billing/frontend/src/services/api.js",
       "source_location": "L13"
     },
     {
+      "id": "ref_ant_design_icons_vue",
+      "label": "@ant-design/icons-vue",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "concept",
+      "norm_label": "@ant-design/icons-vue",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L16"
+    },
+    {
       "id": "ref_ant_design_vue",
       "label": "ant-design-vue",
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "concept",
       "norm_label": "ant-design-vue",
       "source_file": "billing/frontend/package.json",
@@ -11025,11 +11169,22 @@
       "label": "papaparse",
       "_origin": "ast",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "file_type": "concept",
       "norm_label": "papaparse",
       "source_file": "billing/frontend/package.json",
       "source_location": "L22"
+    },
+    {
+      "id": "ref_vue",
+      "label": "vue",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "vue",
+      "file_type": "concept",
+      "norm_label": "vue",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L23"
     },
     {
       "id": "storefront_app_package_dependencies",
@@ -11318,6 +11473,61 @@
       "source_location": "L2"
     },
     {
+      "id": "billing_frontend_package_scripts",
+      "label": "scripts",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "frontend/package.json",
+      "file_type": "code",
+      "norm_label": "scripts",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "billing_frontend_package_scripts_build",
+      "label": "build",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "frontend/package.json",
+      "file_type": "code",
+      "norm_label": "build",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "billing_frontend_package_scripts_dev",
+      "label": "dev",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "frontend/package.json",
+      "file_type": "code",
+      "norm_label": "dev",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "billing_frontend_package_scripts_preview",
+      "label": "preview",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "frontend/package.json",
+      "file_type": "code",
+      "norm_label": "preview",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "billing_frontend_package_scripts_test",
+      "label": "test",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "frontend/package.json",
+      "file_type": "code",
+      "norm_label": "test",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L10"
+    },
+    {
       "id": "billing_frontend_package_version",
       "label": "version",
       "_origin": "ast",
@@ -11327,50 +11537,6 @@
       "norm_label": "version",
       "source_file": "billing/frontend/package.json",
       "source_location": "L3"
-    },
-    {
-      "id": "billing_frontend_src_tests_app_test",
-      "label": "App.test.js",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "frontend/package.json",
-      "file_type": "code",
-      "norm_label": "app.test.js",
-      "source_file": "billing/frontend/src/tests/App.test.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_frontend_src_tests_customers_test",
-      "label": "Customers.test.js",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "frontend/package.json",
-      "file_type": "code",
-      "norm_label": "customers.test.js",
-      "source_file": "billing/frontend/src/tests/Customers.test.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_frontend_src_tests_dashboard_test",
-      "label": "Dashboard.test.js",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "frontend/package.json",
-      "file_type": "code",
-      "norm_label": "dashboard.test.js",
-      "source_file": "billing/frontend/src/tests/Dashboard.test.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_src_frontend_components_app",
-      "label": "App.js",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "frontend/package.json",
-      "file_type": "code",
-      "norm_label": "app.js",
-      "source_file": "billing/src/frontend/components/App.js",
-      "source_location": "L1"
     },
     {
       "id": "billing_frontend_package_json_ref_autoprefixer",
@@ -11439,17 +11605,6 @@
       "source_location": "L35"
     },
     {
-      "id": "ref_axios",
-      "label": "axios",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "frontend/package.json",
-      "file_type": "concept",
-      "norm_label": "axios",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L18"
-    },
-    {
       "id": "ref_happy_dom",
       "label": "happy-dom",
       "_origin": "ast",
@@ -11470,28 +11625,6 @@
       "norm_label": "@tailwindcss/postcss",
       "source_file": "billing/frontend/package.json",
       "source_location": "L28"
-    },
-    {
-      "id": "ref_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "frontend/package.json",
-      "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L36"
-    },
-    {
-      "id": "ref_vue_test_utils",
-      "label": "@vue/test-utils",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "frontend/package.json",
-      "file_type": "concept",
-      "norm_label": "@vue/test-utils",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L30"
     },
     {
       "id": "scripts_patch_checkout_pdf",
@@ -11547,61 +11680,6 @@
       "norm_label": "path",
       "source_file": "scripts/patch-checkout-pdf.js",
       "source_location": "L2"
-    },
-    {
-      "id": "billing_frontend_package_scripts",
-      "label": "scripts",
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "scripts",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "billing_frontend_package_scripts_build",
-      "label": "build",
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "build",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "billing_frontend_package_scripts_dev",
-      "label": "dev",
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "dev",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "billing_frontend_package_scripts_preview",
-      "label": "preview",
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "preview",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "billing_frontend_package_scripts_test",
-      "label": "test",
-      "_origin": "ast",
-      "community": 142,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "test",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L10"
     },
     {
       "id": "billing_frontend_vite_config",
@@ -11846,37 +11924,37 @@
       "source_location": "L1"
     },
     {
-      "id": "billing_frontend_src_pages_customers",
-      "label": "Customers.vue",
+      "id": "billing_frontend_src_pages_landingpage",
+      "label": "LandingPage.vue",
       "_origin": "ast",
       "community": 15,
       "community_name": "router.js",
       "file_type": "code",
-      "norm_label": "customers.vue",
-      "source_file": "billing/frontend/src/pages/Customers.vue",
+      "norm_label": "landingpage.vue",
+      "source_file": "billing/frontend/src/pages/LandingPage.vue",
       "source_location": "L1"
     },
     {
-      "id": "billing_frontend_src_pages_customers_columns",
-      "label": "columns",
+      "id": "billing_frontend_src_pages_login",
+      "label": "Login.vue",
       "_origin": "ast",
       "community": 15,
       "community_name": "router.js",
       "file_type": "code",
-      "norm_label": "columns",
-      "source_file": "billing/frontend/src/pages/Customers.vue",
-      "source_location": "L157"
+      "norm_label": "login.vue",
+      "source_file": "billing/frontend/src/pages/Login.vue",
+      "source_location": "L1"
     },
     {
-      "id": "billing_frontend_src_pages_helpcenter",
-      "label": "HelpCenter.vue",
+      "id": "billing_frontend_src_pages_login_valid_digests",
+      "label": "VALID_DIGESTS",
       "_origin": "ast",
       "community": 15,
       "community_name": "router.js",
       "file_type": "code",
-      "norm_label": "helpcenter.vue",
-      "source_file": "billing/frontend/src/pages/HelpCenter.vue",
-      "source_location": "L1"
+      "norm_label": "valid_digests",
+      "source_file": "billing/frontend/src/pages/Login.vue",
+      "source_location": "L91"
     },
     {
       "id": "billing_frontend_src_pages_notfound",
@@ -11901,17 +11979,6 @@
       "source_location": "L19"
     },
     {
-      "id": "billing_frontend_src_pages_notifications",
-      "label": "Notifications.vue",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "router.js",
-      "file_type": "code",
-      "norm_label": "notifications.vue",
-      "source_file": "billing/frontend/src/pages/Notifications.vue",
-      "source_location": "L1"
-    },
-    {
       "id": "billing_frontend_src_pages_offline",
       "label": "Offline.vue",
       "_origin": "ast",
@@ -11920,28 +11987,6 @@
       "file_type": "code",
       "norm_label": "offline.vue",
       "source_file": "billing/frontend/src/pages/Offline.vue",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_frontend_src_pages_register",
-      "label": "Register.vue",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "router.js",
-      "file_type": "code",
-      "norm_label": "register.vue",
-      "source_file": "billing/frontend/src/pages/Register.vue",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_frontend_src_pages_usagetracker",
-      "label": "UsageTracker.vue",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "router.js",
-      "file_type": "code",
-      "norm_label": "usagetracker.vue",
-      "source_file": "billing/frontend/src/pages/UsageTracker.vue",
       "source_location": "L1"
     },
     {
@@ -11989,17 +12034,6 @@
       "source_location": "L6"
     },
     {
-      "id": "ref_ant_design_icons_vue",
-      "label": "@ant-design/icons-vue",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "router.js",
-      "file_type": "concept",
-      "norm_label": "@ant-design/icons-vue",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L16"
-    },
-    {
       "id": "ref_vue_router",
       "label": "vue-router",
       "_origin": "ast",
@@ -12021,28 +12055,6 @@
       "norm_label": "10. production readiness & quality audit metrics",
       "source_file": "DEVLOG.md",
       "source_location": "L115"
-    },
-    {
-      "id": "billing_frontend_src_pages_login",
-      "label": "Login.vue",
-      "_origin": "ast",
-      "community": 151,
-      "community_name": "Login.vue",
-      "file_type": "code",
-      "norm_label": "login.vue",
-      "source_file": "billing/frontend/src/pages/Login.vue",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_frontend_src_pages_login_valid_digests",
-      "label": "VALID_DIGESTS",
-      "_origin": "ast",
-      "community": 151,
-      "community_name": "Login.vue",
-      "file_type": "code",
-      "norm_label": "valid_digests",
-      "source_file": "billing/frontend/src/pages/Login.vue",
-      "source_location": "L91"
     },
     {
       "id": "architecture_3_subtle_nuances_compatibility_logic",
@@ -12237,28 +12249,6 @@
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_main",
-      "label": "main.tsx",
-      "_origin": "ast",
-      "community": 154,
-      "community_name": "main.tsx",
-      "file_type": "code",
-      "norm_label": "main.tsx",
-      "source_file": "storefront-app/src/main.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_react_dom",
-      "label": "react-dom",
-      "_origin": "ast",
-      "community": 154,
-      "community_name": "main.tsx",
-      "file_type": "concept",
-      "norm_label": "react-dom",
-      "source_file": "storefront-app/package.json",
-      "source_location": "L18"
-    },
-    {
       "id": "billing_backend_routes_health_routes",
       "label": "health.routes.js",
       "_origin": "ast",
@@ -12372,17 +12362,6 @@
       "norm_label": "release 3.0.0 (`experimental/mattis-storefront`) \u2014 mattis editorial architecture & kinetic storefront migration",
       "source_file": "DEVLOG.md",
       "source_location": "L210"
-    },
-    {
-      "id": "storefront_app_src_hooks_uselenis",
-      "label": "useLenis.ts",
-      "_origin": "ast",
-      "community": 157,
-      "community_name": "useLenis.ts",
-      "file_type": "code",
-      "norm_label": "uselenis.ts",
-      "source_file": "storefront-app/src/hooks/useLenis.ts",
-      "source_location": "L1"
     },
     {
       "id": "package",
@@ -14121,47 +14100,14 @@
       "source_location": "L23"
     },
     {
-      "id": "billing_frontend_src_components_animatednumber",
-      "label": "AnimatedNumber.vue",
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "vue",
-      "file_type": "code",
-      "norm_label": "animatednumber.vue",
-      "source_file": "billing/frontend/src/components/AnimatedNumber.vue",
-      "source_location": "L1"
-    },
-    {
       "id": "billing_frontend_src_pages_dashboard",
       "label": "Dashboard.vue",
       "_origin": "ast",
       "community": 31,
-      "community_name": "vue",
+      "community_name": "Dashboard.vue",
       "file_type": "code",
       "norm_label": "dashboard.vue",
       "source_file": "billing/frontend/src/pages/Dashboard.vue",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_frontend_src_pages_landingpage",
-      "label": "LandingPage.vue",
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "vue",
-      "file_type": "code",
-      "norm_label": "landingpage.vue",
-      "source_file": "billing/frontend/src/pages/LandingPage.vue",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_frontend_src_pages_profilesettings",
-      "label": "ProfileSettings.vue",
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "vue",
-      "file_type": "code",
-      "norm_label": "profilesettings.vue",
-      "source_file": "billing/frontend/src/pages/ProfileSettings.vue",
       "source_location": "L1"
     },
     {
@@ -14169,7 +14115,7 @@
       "label": "ReportsAnalytics.vue",
       "_origin": "ast",
       "community": 31,
-      "community_name": "vue",
+      "community_name": "Dashboard.vue",
       "file_type": "code",
       "norm_label": "reportsanalytics.vue",
       "source_file": "billing/frontend/src/pages/ReportsAnalytics.vue",
@@ -14180,29 +14126,18 @@
       "label": "chart.js",
       "_origin": "ast",
       "community": 31,
-      "community_name": "vue",
+      "community_name": "Dashboard.vue",
       "file_type": "concept",
       "norm_label": "chart.js",
       "source_file": "billing/frontend/package.json",
       "source_location": "L19"
     },
     {
-      "id": "ref_vue",
-      "label": "vue",
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "vue",
-      "file_type": "concept",
-      "norm_label": "vue",
-      "source_file": "billing/frontend/package.json",
-      "source_location": "L23"
-    },
-    {
       "id": "ref_vue_chartjs",
       "label": "vue-chartjs",
       "_origin": "ast",
       "community": 31,
-      "community_name": "vue",
+      "community_name": "Dashboard.vue",
       "file_type": "concept",
       "norm_label": "vue-chartjs",
       "source_file": "billing/frontend/package.json",
@@ -14385,33 +14320,11 @@
       "source_location": "L22"
     },
     {
-      "id": "billing_frontend_src_services_api",
-      "label": "api.js",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "api.js",
-      "file_type": "code",
-      "norm_label": "api.js",
-      "source_file": "billing/frontend/src/services/api.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "billing_frontend_src_services_api_apiclient",
-      "label": "apiClient",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "api.js",
-      "file_type": "code",
-      "norm_label": "apiclient",
-      "source_file": "billing/frontend/src/services/api.js",
-      "source_location": "L5"
-    },
-    {
       "id": "billing_frontend_src_services_mockdata",
       "label": "mockData.js",
       "_origin": "ast",
       "community": 34,
-      "community_name": "api.js",
+      "community_name": "mockData.js",
       "file_type": "code",
       "norm_label": "mockdata.js",
       "source_file": "billing/frontend/src/services/mockData.js",
@@ -14422,7 +14335,7 @@
       "label": "DEFAULT_ACCOUNTS",
       "_origin": "ast",
       "community": 34,
-      "community_name": "api.js",
+      "community_name": "mockData.js",
       "file_type": "code",
       "norm_label": "default_accounts",
       "source_file": "billing/frontend/src/services/mockData.js",
@@ -14433,7 +14346,7 @@
       "label": "DEFAULT_CUSTOMERS",
       "_origin": "ast",
       "community": 34,
-      "community_name": "api.js",
+      "community_name": "mockData.js",
       "file_type": "code",
       "norm_label": "default_customers",
       "source_file": "billing/frontend/src/services/mockData.js",
@@ -14444,7 +14357,7 @@
       "label": "DEFAULT_INVOICES",
       "_origin": "ast",
       "community": 34,
-      "community_name": "api.js",
+      "community_name": "mockData.js",
       "file_type": "code",
       "norm_label": "default_invoices",
       "source_file": "billing/frontend/src/services/mockData.js",
@@ -14455,7 +14368,7 @@
       "label": "DEFAULT_ORDERS",
       "_origin": "ast",
       "community": 34,
-      "community_name": "api.js",
+      "community_name": "mockData.js",
       "file_type": "code",
       "norm_label": "default_orders",
       "source_file": "billing/frontend/src/services/mockData.js",
@@ -14466,7 +14379,7 @@
       "label": "DEFAULT_PLANS",
       "_origin": "ast",
       "community": 34,
-      "community_name": "api.js",
+      "community_name": "mockData.js",
       "file_type": "code",
       "norm_label": "default_plans",
       "source_file": "billing/frontend/src/services/mockData.js",
@@ -14477,7 +14390,7 @@
       "label": "MockStore",
       "_origin": "ast",
       "community": 34,
-      "community_name": "api.js",
+      "community_name": "mockData.js",
       "file_type": "code",
       "norm_label": "mockstore",
       "source_file": "billing/frontend/src/services/mockData.js",
@@ -14488,22 +14401,11 @@
       "label": "STORAGE_KEYS",
       "_origin": "ast",
       "community": 34,
-      "community_name": "api.js",
+      "community_name": "mockData.js",
       "file_type": "code",
       "norm_label": "storage_keys",
       "source_file": "billing/frontend/src/services/mockData.js",
       "source_location": "L6"
-    },
-    {
-      "id": "billing_frontend_src_services_pdfgenerator",
-      "label": "pdfGenerator.js",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "api.js",
-      "file_type": "code",
-      "norm_label": "pdfgenerator.js",
-      "source_file": "billing/frontend/src/services/pdfGenerator.js",
-      "source_location": "L1"
     },
     {
       "id": "billing_package",
@@ -17675,70 +17577,136 @@
       "source_location": "L35"
     },
     {
-      "id": "scripts_check_assets",
-      "label": "check-assets.js",
+      "id": "billing_frontend_src_pages_customers",
+      "label": "Customers.vue",
       "_origin": "ast",
       "community": 91,
-      "community_name": "check-assets.js",
+      "community_name": "api.js",
       "file_type": "code",
-      "norm_label": "check-assets.js",
-      "source_file": "scripts/check-assets.js",
+      "norm_label": "customers.vue",
+      "source_file": "billing/frontend/src/pages/Customers.vue",
       "source_location": "L1"
     },
     {
-      "id": "scripts_check_assets_fs",
-      "label": "fs",
+      "id": "billing_frontend_src_pages_customers_columns",
+      "label": "columns",
       "_origin": "ast",
       "community": 91,
-      "community_name": "check-assets.js",
+      "community_name": "api.js",
       "file_type": "code",
-      "norm_label": "fs",
-      "source_file": "scripts/check-assets.js",
+      "norm_label": "columns",
+      "source_file": "billing/frontend/src/pages/Customers.vue",
+      "source_location": "L157"
+    },
+    {
+      "id": "billing_frontend_src_services_api",
+      "label": "api.js",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "api.js",
+      "source_file": "billing/frontend/src/services/api.js",
       "source_location": "L1"
     },
     {
-      "id": "scripts_check_assets_hrefs",
-      "label": "hrefs",
+      "id": "billing_frontend_src_services_api_apiclient",
+      "label": "apiClient",
       "_origin": "ast",
       "community": 91,
-      "community_name": "check-assets.js",
+      "community_name": "api.js",
       "file_type": "code",
-      "norm_label": "hrefs",
-      "source_file": "scripts/check-assets.js",
-      "source_location": "L6"
-    },
-    {
-      "id": "scripts_check_assets_html",
-      "label": "html",
-      "_origin": "ast",
-      "community": 91,
-      "community_name": "check-assets.js",
-      "file_type": "code",
-      "norm_label": "html",
-      "source_file": "scripts/check-assets.js",
-      "source_location": "L4"
-    },
-    {
-      "id": "scripts_check_assets_path",
-      "label": "path",
-      "_origin": "ast",
-      "community": 91,
-      "community_name": "check-assets.js",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "scripts/check-assets.js",
-      "source_location": "L2"
-    },
-    {
-      "id": "scripts_check_assets_srcs",
-      "label": "srcs",
-      "_origin": "ast",
-      "community": 91,
-      "community_name": "check-assets.js",
-      "file_type": "code",
-      "norm_label": "srcs",
-      "source_file": "scripts/check-assets.js",
+      "norm_label": "apiclient",
+      "source_file": "billing/frontend/src/services/api.js",
       "source_location": "L5"
+    },
+    {
+      "id": "billing_frontend_src_services_pdfgenerator",
+      "label": "pdfGenerator.js",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "pdfgenerator.js",
+      "source_file": "billing/frontend/src/services/pdfGenerator.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_frontend_src_tests_app_test",
+      "label": "App.test.js",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "app.test.js",
+      "source_file": "billing/frontend/src/tests/App.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_frontend_src_tests_customers_test",
+      "label": "Customers.test.js",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "customers.test.js",
+      "source_file": "billing/frontend/src/tests/Customers.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_frontend_src_tests_dashboard_test",
+      "label": "Dashboard.test.js",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "dashboard.test.js",
+      "source_file": "billing/frontend/src/tests/Dashboard.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "billing_src_frontend_components_app",
+      "label": "App.js",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "code",
+      "norm_label": "app.js",
+      "source_file": "billing/src/frontend/components/App.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_axios",
+      "label": "axios",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "concept",
+      "norm_label": "axios",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "ref_vue_test_utils",
+      "label": "@vue/test-utils",
+      "_origin": "ast",
+      "community": 91,
+      "community_name": "api.js",
+      "file_type": "concept",
+      "norm_label": "@vue/test-utils",
+      "source_file": "billing/frontend/package.json",
+      "source_location": "L30"
     },
     {
       "id": "scripts_update_ui_to_ladha_commerce",
@@ -17873,6 +17841,72 @@
       "source_location": "L2"
     },
     {
+      "id": "scripts_check_assets",
+      "label": "check-assets.js",
+      "_origin": "ast",
+      "community": 93,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "check-assets.js",
+      "source_file": "scripts/check-assets.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_check_assets_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 93,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "scripts/check-assets.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_check_assets_hrefs",
+      "label": "hrefs",
+      "_origin": "ast",
+      "community": 93,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "hrefs",
+      "source_file": "scripts/check-assets.js",
+      "source_location": "L6"
+    },
+    {
+      "id": "scripts_check_assets_html",
+      "label": "html",
+      "_origin": "ast",
+      "community": 93,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "html",
+      "source_file": "scripts/check-assets.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "scripts_check_assets_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 93,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "scripts/check-assets.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "scripts_check_assets_srcs",
+      "label": "srcs",
+      "_origin": "ast",
+      "community": 93,
+      "community_name": "ref_path",
+      "file_type": "code",
+      "norm_label": "srcs",
+      "source_file": "scripts/check-assets.js",
+      "source_location": "L5"
+    },
+    {
       "id": "scripts_fix_dashboard_tags",
       "label": "fix-dashboard-tags.js",
       "_origin": "ast",
@@ -17983,58 +18017,47 @@
       "source_location": "L2"
     },
     {
-      "id": "scripts_fix_usagetracker_icons",
-      "label": "fix-usagetracker-icons.js",
+      "id": "scripts_patch_billing_engine_tb",
+      "label": "patch-billing-engine-tb.js",
       "_origin": "ast",
       "community": 93,
       "community_name": "ref_path",
       "file_type": "code",
-      "norm_label": "fix-usagetracker-icons.js",
-      "source_file": "scripts/fix-usagetracker-icons.js",
+      "norm_label": "patch-billing-engine-tb.js",
+      "source_file": "scripts/patch-billing-engine-tb.js",
       "source_location": "L1"
     },
     {
-      "id": "scripts_fix_usagetracker_icons_c",
-      "label": "c",
-      "_origin": "ast",
-      "community": 93,
-      "community_name": "ref_path",
-      "file_type": "code",
-      "norm_label": "c",
-      "source_file": "scripts/fix-usagetracker-icons.js",
-      "source_location": "L5"
-    },
-    {
-      "id": "scripts_fix_usagetracker_icons_fs",
+      "id": "scripts_patch_billing_engine_tb_fs",
       "label": "fs",
       "_origin": "ast",
       "community": 93,
       "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "fs",
-      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_file": "scripts/patch-billing-engine-tb.js",
       "source_location": "L1"
     },
     {
-      "id": "scripts_fix_usagetracker_icons_p",
+      "id": "scripts_patch_billing_engine_tb_p",
       "label": "p",
       "_origin": "ast",
       "community": 93,
       "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "p",
-      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_file": "scripts/patch-billing-engine-tb.js",
       "source_location": "L4"
     },
     {
-      "id": "scripts_fix_usagetracker_icons_path",
+      "id": "scripts_patch_billing_engine_tb_path",
       "label": "path",
       "_origin": "ast",
       "community": 93,
       "community_name": "ref_path",
       "file_type": "code",
       "norm_label": "path",
-      "source_file": "scripts/fix-usagetracker-icons.js",
+      "source_file": "scripts/patch-billing-engine-tb.js",
       "source_location": "L2"
     },
     {
@@ -18337,36 +18360,58 @@
       "source_location": "L23"
     },
     {
-      "id": "storefront_app_src_components_cartdrawer",
-      "label": "CartDrawer.tsx",
+      "id": "storefront_app_src_components_header",
+      "label": "Header.tsx",
       "_origin": "ast",
       "community": 97,
       "community_name": "App.tsx",
       "file_type": "code",
-      "norm_label": "cartdrawer.tsx",
-      "source_file": "storefront-app/src/components/CartDrawer.tsx",
+      "norm_label": "header.tsx",
+      "source_file": "storefront-app/src/components/Header.tsx",
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_components_quickviewmodal",
-      "label": "QuickViewModal.tsx",
+      "id": "storefront_app_src_hooks_useambientaudio",
+      "label": "useAmbientAudio.ts",
       "_origin": "ast",
       "community": 97,
       "community_name": "App.tsx",
       "file_type": "code",
-      "norm_label": "quickviewmodal.tsx",
-      "source_file": "storefront-app/src/components/QuickViewModal.tsx",
+      "norm_label": "useambientaudio.ts",
+      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_components_ui_productcard",
-      "label": "ProductCard.tsx",
+      "id": "storefront_app_src_hooks_useambientaudio_playlist",
+      "label": "PLAYLIST",
       "_origin": "ast",
       "community": 97,
       "community_name": "App.tsx",
       "file_type": "code",
-      "norm_label": "productcard.tsx",
-      "source_file": "storefront-app/src/components/ui/ProductCard.tsx",
+      "norm_label": "playlist",
+      "source_file": "storefront-app/src/hooks/useAmbientAudio.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "storefront_app_src_hooks_uselenis",
+      "label": "useLenis.ts",
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "uselenis.ts",
+      "source_file": "storefront-app/src/hooks/useLenis.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "storefront_app_src_main",
+      "label": "main.tsx",
+      "_origin": "ast",
+      "community": 97,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "main.tsx",
+      "source_file": "storefront-app/src/main.tsx",
       "source_location": "L1"
     },
     {
@@ -18381,48 +18426,15 @@
       "source_location": "L1"
     },
     {
-      "id": "storefront_app_src_pages_productpage",
-      "label": "ProductPage.tsx",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "productpage.tsx",
-      "source_file": "storefront-app/src/pages/ProductPage.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_pages_shoppage",
-      "label": "ShopPage.tsx",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "shoppage.tsx",
-      "source_file": "storefront-app/src/pages/ShopPage.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "storefront_app_src_pages_shoppage_categories",
-      "label": "CATEGORIES",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "categories",
-      "source_file": "storefront-app/src/pages/ShopPage.tsx",
-      "source_location": "L12"
-    },
-    {
-      "id": "ref_lucide_react",
-      "label": "lucide-react",
+      "id": "ref_react_dom",
+      "label": "react-dom",
       "_origin": "ast",
       "community": 97,
       "community_name": "App.tsx",
       "file_type": "concept",
-      "norm_label": "lucide-react",
+      "norm_label": "react-dom",
       "source_file": "storefront-app/package.json",
-      "source_location": "L16"
+      "source_location": "L18"
     },
     {
       "id": "scripts_audit_telecom_all",
@@ -19271,6 +19283,18 @@
       "type": "external"
     },
     {
+      "id": "ref_jspdf",
+      "label": "ref_jspdf",
+      "_origin": "semantic",
+      "community": 124,
+      "community_name": "CheckoutPage.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_jspdf",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "storefront_app_src_data_defaultproducts",
       "label": "storefront_app_src_data_defaultproducts",
       "_origin": "semantic",
@@ -19335,7 +19359,7 @@
       "label": "ref_dayjs",
       "_origin": "semantic",
       "community": 135,
-      "community_name": "ant-design-vue",
+      "community_name": "vue",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_dayjs",
@@ -19403,18 +19427,6 @@
       "type": "external"
     },
     {
-      "id": "storefront_app_src_index",
-      "label": "storefront_app_src_index",
-      "_origin": "semantic",
-      "community": 154,
-      "community_name": "main.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "storefront_app_src_index",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_components_paymentstatus_vue",
       "label": "ref_components_paymentstatus_vue",
       "_origin": "semantic",
@@ -19459,18 +19471,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_daterangeselector_vue",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_jspdf",
-      "label": "ref_jspdf",
-      "_origin": "semantic",
-      "community": 34,
-      "community_name": "api.js",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_jspdf",
       "source_file": "",
       "type": "external"
     },
@@ -19747,6 +19747,18 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_path",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "storefront_app_src_index",
+      "label": "storefront_app_src_index",
+      "_origin": "semantic",
+      "community": 97,
+      "community_name": "App.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "storefront_app_src_index",
       "source_file": "",
       "type": "external"
     }
@@ -20889,7 +20901,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/components/QuickViewModal.tsx",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -20901,7 +20913,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/components/QuickViewModal.tsx",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -21242,6 +21254,18 @@
     },
     {
       "source": "storefront_app_src_services_storedb_fetchlivecatalog",
+      "target": "storefront_app_src_services_storedb_getstoredproducts",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_src_services_storedb_fetchlivecatalog",
       "target": "storefront_app_src_services_storedb_writestorage",
       "relation": "calls",
       "_origin": "ast",
@@ -21249,7 +21273,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L55",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -21261,19 +21285,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L69",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
       "source": "storefront_app_src_services_storedb_fetchlivecatalog",
-      "target": "storefront_app_src_services_storedb_getstoredproducts",
+      "target": "storefront_app_src_services_storedb_mergewithdefaults",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L82",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -21285,7 +21309,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L86",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -21297,7 +21321,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L38",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_src_services_storedb_getstoredproducts",
+      "target": "storefront_app_src_services_storedb_mergewithdefaults",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -21309,7 +21345,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L43",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -21321,7 +21357,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L117",
+      "source_location": "L137",
       "weight": 1.0
     },
     {
@@ -21333,7 +21369,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L120",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -21345,7 +21381,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L32",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -21357,7 +21393,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L97",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -21369,7 +21405,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L91",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -21381,7 +21417,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L152",
+      "source_location": "L172",
       "weight": 1.0
     },
     {
@@ -21393,7 +21429,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L153",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -21405,7 +21441,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L110",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -21417,7 +21453,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L112",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -21429,7 +21465,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L113",
+      "source_location": "L133",
       "weight": 1.0
     },
     {
@@ -21441,7 +21477,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L136",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -47037,13 +47073,46 @@
     },
     {
       "source": "storefront_app_src_services_storedb",
+      "target": "storefront_app_src_services_storedb_getstoredorders",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_src_services_storedb",
+      "target": "storefront_app_src_services_storedb_savecatalogproducts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_src_services_storedb",
+      "target": "storefront_app_src_services_storedb_resetcatalogtodefault",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_src_services_storedb",
       "target": "storefront_app_src_services_storedb_maskphoneforlocalpersistence",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L101",
+      "source_location": "L121",
       "weight": 1.0
     },
     {
@@ -47054,7 +47123,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L107",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
@@ -47065,7 +47134,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L116",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -47076,7 +47145,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L135",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -47087,7 +47156,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L146",
+      "source_location": "L166",
       "weight": 1.0
     },
     {
@@ -47114,17 +47183,6 @@
     },
     {
       "source": "storefront_app_src_services_storedb",
-      "target": "storefront_app_src_services_storedb_getstoredproducts",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L37",
-      "weight": 1.0
-    },
-    {
-      "source": "storefront_app_src_services_storedb",
       "target": "storefront_app_src_services_storedb_keys",
       "relation": "contains",
       "_origin": "ast",
@@ -47136,46 +47194,35 @@
     },
     {
       "source": "storefront_app_src_services_storedb",
+      "target": "storefront_app_src_services_storedb_mergewithdefaults",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_src_services_storedb",
+      "target": "storefront_app_src_services_storedb_getstoredproducts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_src_services_storedb",
       "target": "storefront_app_src_services_storedb_fetchlivecatalog",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L47",
-      "weight": 1.0
-    },
-    {
-      "source": "storefront_app_src_services_storedb",
-      "target": "storefront_app_src_services_storedb_getstoredorders",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L85",
-      "weight": 1.0
-    },
-    {
-      "source": "storefront_app_src_services_storedb",
-      "target": "storefront_app_src_services_storedb_savecatalogproducts",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L89",
-      "weight": 1.0
-    },
-    {
-      "source": "storefront_app_src_services_storedb",
-      "target": "storefront_app_src_services_storedb_resetcatalogtodefault",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L95",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -51581,7 +51628,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L54",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -51593,7 +51640,19 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L40",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "storefront_app_src_services_storedb_mergewithdefaults",
+      "target": "storefront_app_src_services_storedb_normalizeproduct",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "storefront-app/src/services/storeDb.ts",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -51605,7 +51664,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L96",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -51617,7 +51676,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "storefront-app/src/services/storeDb.ts",
-      "source_location": "L90",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -54080,5 +54139,5 @@
       "source_file": "ARCHITECTURE.md"
     }
   ],
-  "built_at_commit": "09f78ac810b5438de1667d723f2f9a1543beaa1f"
+  "built_at_commit": "2b093018c22e36db0c602d96979cfd882f574460"
 }

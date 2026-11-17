@@ -27,17 +27,35 @@ function writeStorage<T>(key: string, value: T): void {
 }
 
 function normalizeProduct(p: Product): Product {
+  const defaultMatch = DEFAULT_PRODUCTS.find((d) => d.id === p.id);
+  const rawVideo = p.videoPreview || defaultMatch?.videoPreview;
   return {
     ...p,
     image: resolveAssetUrl(p.image),
+    videoPreview: rawVideo ? resolveAssetUrl(rawVideo) : undefined,
     inStock: p.inStock !== false,
   };
+}
+
+function mergeWithDefaults(stored: Product[], seedSource: Product[] = DEFAULT_PRODUCTS): Product[] {
+  const storedMap = new Map(stored.map((item) => [item.id, item]));
+  const merged: Product[] = [...stored];
+  for (const seedItem of seedSource) {
+    if (!storedMap.has(seedItem.id)) {
+      merged.push(seedItem);
+    }
+  }
+  return merged.map(normalizeProduct);
 }
 
 export function getStoredProducts(): Product[] {
   const stored = readStorage<Product[] | null>(KEYS.PRODUCTS, null);
   if (stored && Array.isArray(stored) && stored.length > 0) {
-    return stored.map(normalizeProduct);
+    const merged = mergeWithDefaults(stored, DEFAULT_PRODUCTS);
+    if (merged.length !== stored.length) {
+      writeStorage(KEYS.PRODUCTS, merged);
+    }
+    return merged;
   }
   const seeded = DEFAULT_PRODUCTS.map(normalizeProduct);
   writeStorage(KEYS.PRODUCTS, seeded);
@@ -67,12 +85,14 @@ export async function fetchLiveCatalog(): Promise<Product[]> {
       const payload = (await jsonResp.json()) as Product[];
       if (Array.isArray(payload) && payload.length > 0) {
         const stored = readStorage<Product[] | null>(KEYS.PRODUCTS, null);
-        // Preserve admin stock mutations if already persisted locally
         if (!stored || stored.length === 0) {
           const normalized = payload.map(normalizeProduct);
           writeStorage(KEYS.PRODUCTS, normalized);
           return normalized;
         }
+        const merged = mergeWithDefaults(stored, payload);
+        writeStorage(KEYS.PRODUCTS, merged);
+        return merged;
       }
     }
   } catch {

@@ -14,6 +14,7 @@ export const ProductPage: React.FC<ProductPageProps> = ({ products, onQuickView 
   const { searchParams, navigate } = useRouter();
   const { addToCart, isInCart } = useCart();
   const [unit, setUnit] = useState<'in' | 'cm'>('in');
+  const [mediaMode, setMediaMode] = useState<'photo' | 'video'>('photo');
 
   const requestedId = searchParams.get('id') || 'product-1';
   const product = useMemo(
@@ -86,14 +87,26 @@ export const ProductPage: React.FC<ProductPageProps> = ({ products, onQuickView 
       {/* Main Split Specimen Container */}
       <section className="max-w-[1440px] mx-auto px-5 sm:px-6 lg:px-[30px] py-10 lg:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Left Sticky Specimen Photo Frame */}
+          {/* Left Sticky Specimen Photo & Motion Reel Frame */}
           <div className="lg:col-span-6 lg:sticky lg:top-[90px]">
             <div className="relative bg-[#0b0b0b] border border-[#0b0b0b]/15 aspect-[4/5] overflow-hidden">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
+              {product.videoPreview && mediaMode === 'video' ? (
+                <video
+                  src={product.videoPreview}
+                  poster={product.image}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
+              )}
               <div className="absolute top-4 left-4 px-2.5 py-1 bg-[#0b0b0b]/90 border border-white/15 flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-white">
                 <span
                   className={`w-2 h-2 rounded-full ${
@@ -102,6 +115,28 @@ export const ProductPage: React.FC<ProductPageProps> = ({ products, onQuickView 
                 />
                 <span>{available ? '1-OF-1 AVAILABLE' : 'SOLD OUT / ARCHIVED'}</span>
               </div>
+              {product.videoPreview && (
+                <div className="absolute bottom-4 left-4 flex border border-white/25 bg-[#0b0b0b]/90 backdrop-blur-sm">
+                  <button
+                    type="button"
+                    onClick={() => setMediaMode('photo')}
+                    className={`px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider transition-colors ${
+                      mediaMode === 'photo' ? 'bg-white text-black font-bold' : 'text-white/75 hover:text-white'
+                    }`}
+                  >
+                    Still Photo
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setMediaMode('video')}
+                    className={`px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider transition-colors ${
+                      mediaMode === 'video' ? 'bg-[#ff4500] text-white font-bold' : 'text-white/75 hover:text-white'
+                    }`}
+                  >
+                    Motion Reel
+                  </button>
+                </div>
+              )}
               <div className="absolute bottom-4 right-4 px-2.5 py-1 bg-[#0b0b0b]/90 border border-white/15 font-mono text-[10px] uppercase tracking-widest text-white/80">
                 REF // {product.id.toUpperCase()}
               </div>

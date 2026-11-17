@@ -624,9 +624,9 @@
     "semantic_hash": ""
   },
   "storefront/data/products.json": {
-    "mtime": 1793887095.6662443,
-    "seen": 1793887597.5511587,
-    "ast_hash": "c64a053c2a0c9fd8aef9e2f2257d171c",
+    "mtime": 1794933010.5573783,
+    "seen": 1794933248.6073651,
+    "ast_hash": "241766086876809b3bd09134e5742af1",
     "semantic_hash": ""
   },
   "storefront/js/admin-guard.js": {
@@ -2034,9 +2034,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/components/QuickViewModal.tsx": {
-    "mtime": 1794680930.0399232,
-    "seen": 1794681430.527105,
-    "ast_hash": "ca46e5175db2c06def88c2c8e39a5586",
+    "mtime": 1794933110.7908492,
+    "seen": 1794933248.6073651,
+    "ast_hash": "b853b9beaff5b0bb1f0054d232bb03a7",
     "semantic_hash": ""
   },
   "storefront-app/src/components/home/CurationProcessSection.tsx": {
@@ -2046,9 +2046,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/components/home/DropsCatalogSection.tsx": {
-    "mtime": 1794736227.3145397,
-    "seen": 1794736409.828311,
-    "ast_hash": "47beafa3490003dd4e4ed7442db507a9",
+    "mtime": 1794933158.9602396,
+    "seen": 1794933248.6073651,
+    "ast_hash": "61bb2ecb0ec0c01d2555db001d739284",
     "semantic_hash": ""
   },
   "storefront-app/src/components/home/FaqSection.tsx": {
@@ -2100,9 +2100,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/components/ui/ProductCard.tsx": {
-    "mtime": 1794736225.4490001,
-    "seen": 1794736409.828311,
-    "ast_hash": "01d45748850417461bad3e1e973aa80e",
+    "mtime": 1794933106.0076482,
+    "seen": 1794933248.6073651,
+    "ast_hash": "e8d1a29e577645c59639d11993082ad5",
     "semantic_hash": ""
   },
   "storefront-app/src/components/ui/RollingTextButton.tsx": {
@@ -2124,9 +2124,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/data/defaultProducts.json": {
-    "mtime": 1793887095.6662443,
-    "seen": 1794681430.527105,
-    "ast_hash": "c64a053c2a0c9fd8aef9e2f2257d171c",
+    "mtime": 1794933010.5579698,
+    "seen": 1794933248.6073651,
+    "ast_hash": "241766086876809b3bd09134e5742af1",
     "semantic_hash": ""
   },
   "storefront-app/src/data/siteContent.ts": {
@@ -2184,9 +2184,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/pages/ProductPage.tsx": {
-    "mtime": 1794680934.399308,
-    "seen": 1794681430.527105,
-    "ast_hash": "5b8cb1919b7b964a8d24dc27dca8552c",
+    "mtime": 1794933115.345428,
+    "seen": 1794933248.6073651,
+    "ast_hash": "7137a441694138ae715c35f445eb422c",
     "semantic_hash": ""
   },
   "storefront-app/src/pages/ShopPage.tsx": {
@@ -2208,9 +2208,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/services/storeDb.ts": {
-    "mtime": 1794931334.8668065,
-    "seen": 1794931457.602561,
-    "ast_hash": "20db71082e62e0365f36f331998bf1fd",
+    "mtime": 1794933104.0716314,
+    "seen": 1794933248.6073651,
+    "ast_hash": "30f029eb14930009f0ac28fce1f126aa",
     "semantic_hash": ""
   },
   "storefront-app/src/types/store.ts": {
@@ -2283,6 +2283,138 @@
     "mtime": 1794930733.3172307,
     "seen": 1794930853.8145196,
     "ast_hash": "526ec64c2641b3d3f507fcc12c6e369f",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-16.jpg": {
+    "mtime": 1794932648.4179041,
+    "seen": 1794933248.6073651,
+    "ast_hash": "9b1e30d65cded7637f06b2ecc8d1f61c",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-17.jpg": {
+    "mtime": 1794932667.4394546,
+    "seen": 1794933248.6073651,
+    "ast_hash": "365cafe3e8c2a6cd02544587cecaae8d",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-18.jpg": {
+    "mtime": 1794932681.697749,
+    "seen": 1794933248.6073651,
+    "ast_hash": "c8d5569b4e686a0d5c1a146cb4c78258",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-19.jpg": {
+    "mtime": 1794932645.048939,
+    "seen": 1794933248.6073651,
+    "ast_hash": "bfe8fd41485dd5facd45edc862ad92a5",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-20.jpg": {
+    "mtime": 1794932680.3999712,
+    "seen": 1794933248.6073651,
+    "ast_hash": "1f7c67b2867826cd0422767a8fec8b57",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-21.jpg": {
+    "mtime": 1794932651.3284829,
+    "seen": 1794933248.6073651,
+    "ast_hash": "7c895d5faf0cb65fdbc2def45a3a3981",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-22.jpg": {
+    "mtime": 1794932676.06093,
+    "seen": 1794933248.6073651,
+    "ast_hash": "4a047222427b3a66610d3770245b6495",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-23.jpg": {
+    "mtime": 1794932683.8227527,
+    "seen": 1794933248.6073651,
+    "ast_hash": "68439c1a3e675dde9f8d22adf287c268",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-24.jpg": {
+    "mtime": 1794932682.5217755,
+    "seen": 1794933248.6073651,
+    "ast_hash": "720896340b6b6fc1e571551558851651",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-25.jpg": {
+    "mtime": 1794932659.750309,
+    "seen": 1794933248.6073651,
+    "ast_hash": "e9efadc5f0e1fe63bd26970ee14a10f6",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-26.jpg": {
+    "mtime": 1794932678.168097,
+    "seen": 1794933248.6073651,
+    "ast_hash": "4cbc50f890181653b936fbda76ff15bb",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-27.jpg": {
+    "mtime": 1794932678.5636966,
+    "seen": 1794933248.6073651,
+    "ast_hash": "8e1c75f3293bd5e594050feb0f8af540",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-28.jpg": {
+    "mtime": 1794932683.1934178,
+    "seen": 1794933248.6073651,
+    "ast_hash": "9464b335daa19bb4388fbf9ee43b8ed0",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-29.jpg": {
+    "mtime": 1794932654.376115,
+    "seen": 1794933248.6073651,
+    "ast_hash": "330a1d35b26e92991a4193db85f0cf9f",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/product-30.jpg": {
+    "mtime": 1794932646.4297082,
+    "seen": 1794933248.6073651,
+    "ast_hash": "094cfbba5142fe2b85e54cc9c6faa4fc",
+    "semantic_hash": ""
+  },
+  "storefront/assets/videos/streetwear-archive.mp4": {
+    "mtime": 1794932723.767138,
+    "seen": 1794933248.6073651,
+    "ast_hash": "4a1d9b85bb39181b2b1d485031d1035f",
+    "semantic_hash": ""
+  },
+  "storefront/assets/videos/streetwear-denim.mp4": {
+    "mtime": 1794932780.2898,
+    "seen": 1794933248.6073651,
+    "ast_hash": "cbe73ec6b789f8fe7e849a3dd189473c",
+    "semantic_hash": ""
+  },
+  "storefront/assets/videos/streetwear-nairobi-capsule.mp4": {
+    "mtime": 1794932786.033557,
+    "seen": 1794933248.6073651,
+    "ast_hash": "06b0a863569e8fa011fe4b6df05d1238",
+    "semantic_hash": ""
+  },
+  "storefront/assets/videos/streetwear-outerwear.mp4": {
+    "mtime": 1794932782.5262115,
+    "seen": 1794933248.6073651,
+    "ast_hash": "4f651ed566d36d9d441cec47f8d323ea",
+    "semantic_hash": ""
+  },
+  "storefront/assets/videos/streetwear-runway.mp4": {
+    "mtime": 1794932722.3448763,
+    "seen": 1794933248.6073651,
+    "ast_hash": "c418e241870f18a4fe441e64c2f0adb9",
+    "semantic_hash": ""
+  },
+  "storefront/assets/videos/streetwear-tailoring.mp4": {
+    "mtime": 1794932783.6593375,
+    "seen": 1794933248.6073651,
+    "ast_hash": "72eb61de24ca71700c89d976da12f176",
+    "semantic_hash": ""
+  },
+  "storefront/assets/videos/streetwear-utility.mp4": {
+    "mtime": 1794932784.7046545,
+    "seen": 1794933248.6073651,
+    "ast_hash": "ae2eb0f28015c3690fe0c8408509396c",
     "semantic_hash": ""
   }
 }

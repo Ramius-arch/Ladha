@@ -27,11 +27,12 @@
       "SLEEVE LENGTH": "63.5 cm"
     },
     "fabric": "100% Ripstop Nylon / Breathable Poly Mesh Lining",
-    "provenance": "Sourced in Gikomba. Era: c. 1993\u20131996.",
+    "provenance": "Sourced in Gikomba. Era: c. 1993–1996.",
     "description": "Iconic geometric paneling featuring deep royal navy, vibrant cyan, and crisp white angular chevrons. The definition of golden-era Nike track aesthetic.",
     "inStock": true,
     "stockReason": "RELEASED_FROM_FAILED_CHECKOUT_REFUND_LDH-8921-KE",
-    "lastStockUpdate": 1793703126.941782
+    "lastStockUpdate": 1793703126.941782,
+    "videoPreview": "/assets/videos/streetwear-editorial.mp4"
   },
   {
     "id": "product-2",
@@ -63,7 +64,8 @@
     "fabric": "100% Heavyweight Cotton Denim (Non-stretch)",
     "provenance": "Sourced in Toi Market. Vintage washed patina.",
     "description": "Heavily marble-washed with authentic 90s wear. Features reinforced brass shank buttons and dual flap utility chest pockets.",
-    "inStock": true
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-leather.mp4"
   },
   {
     "id": "product-3",
@@ -97,7 +99,8 @@
     "description": "Fine light-blue and white Bengal stripe with navy embroidered pony emblem at chest. Perfect relaxed drape worn open or buttoned.",
     "inStock": true,
     "stockReason": "RELEASED_FROM_FAILED_CHECKOUT_LDH-3056-KE_product-3",
-    "lastStockUpdate": 1793704039.5102508
+    "lastStockUpdate": 1793704039.5102508,
+    "videoPreview": "/assets/videos/streetwear-motion.mp4"
   },
   {
     "id": "product-4",
@@ -129,7 +132,8 @@
     "fabric": "100% Rigid Indigo Denim",
     "provenance": "Manufactured in San Francisco, USA. c. 1994.",
     "description": "The benchmark of denim history. Straight-leg cut with classic copper rivets and signature red tab. Unrepeatable natural indigo fading.",
-    "inStock": true
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-runway.mp4"
   },
   {
     "id": "product-5",
@@ -161,7 +165,8 @@
     "fabric": "12oz 100% Ring-Spun Cotton Duck Canvas",
     "provenance": "Sourced in Ngara. Heavy brass zip fly.",
     "description": "Rugged double-front chap panels with rivet reinforcements. Utility hammer loop and dual tool pockets for pure streetwear utility.",
-    "inStock": true
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-archive.mp4"
   },
   {
     "id": "product-6",
@@ -173,24 +178,25 @@
     "conditionNote": "Lustrous heavy crepe-back silk satin. Elastic hidden waistband, zero snags.",
     "size": "S/M (Fluid Draping)",
     "measurements": {
-      "waist": "26\u201329 in (Elasticized 66\u201374 cm)",
+      "waist": "26–29 in (Elasticized 66–74 cm)",
       "length": "33.0 in (84 cm)",
       "hip": "38.0 in (96 cm)"
     },
     "measurementsIn": {
-      "WAIST (ELASTIC)": "26.0\u201329.0 in",
+      "WAIST (ELASTIC)": "26.0–29.0 in",
       "TOTAL LENGTH": "33.0 in",
       "HIP SWEEP": "38.0 in"
     },
     "measurementsCm": {
-      "WAIST (ELASTIC)": "66.0\u201374.0 cm",
+      "WAIST (ELASTIC)": "66.0–74.0 cm",
       "TOTAL LENGTH": "84.0 cm",
       "HIP SWEEP": "96.0 cm"
     },
     "fabric": "100% Mulberry Silk Charmeuse",
     "provenance": "Sourced in Westlands curated private collection.",
     "description": "Cut on the bias to hug the silhouette with fluid liquid movement. Pairs effortlessly with chunky boots, oversized knitwear, or minimalist sandals.",
-    "inStock": true
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-denim.mp4"
   },
   {
     "id": "product-7",
@@ -222,7 +228,8 @@
     "fabric": "100% Brushed Cotton Twill Flannel",
     "provenance": "Sourced in Gikomba outer bales.",
     "description": "Classic forest green, rust amber, and deep navy buffalo plaid. Heavy enough to function as an overshirt jacket across cool Nairobi evenings.",
-    "inStock": true
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-outerwear.mp4"
   },
   {
     "id": "product-8",
@@ -254,11 +261,12 @@
     "fabric": "82% Cotton, 18% Polyester Heavyweight Fleece",
     "provenance": "c. late 90s athletic issue.",
     "description": "Cut across the grain to resist vertical shrinkage. Features double-ply hood, oversized pouch pocket, and robust 4-inch wrist cuffs.",
-    "inStock": true
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-tailoring.mp4"
   },
   {
     "id": "product-9",
-    "name": "St\u00fcssy Tribe Archive Graphic Tee",
+    "name": "Stüssy Tribe Archive Graphic Tee",
     "category": "STREETWEAR",
     "price": 1200,
     "image": "assets/products/product-9.jpg",
@@ -282,7 +290,701 @@
     },
     "fabric": "100% Combed Heavy Cotton",
     "provenance": "Sourced in Toi Market.",
-    "description": "Classic International St\u00fcssy Tribe screenprint on washed charcoal black jersey. The definitive core of worldwide skate and street culture.",
-    "inStock": true
+    "description": "Classic International Stüssy Tribe screenprint on washed charcoal black jersey. The definitive core of worldwide skate and street culture.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-utility.mp4"
+  },
+  {
+    "id": "product-10",
+    "name": "Issey Miyake Pleats Homme Archival Overshirt",
+    "category": "VINTAGE",
+    "price": 6800,
+    "image": "assets/products/product-10.jpg",
+    "condition": "Grade A+ Archive (9.6/10)",
+    "conditionNote": "Original heat-set micro-pleating fully intact, zero tension loss at elbows or cuffs.",
+    "size": "L (Size 3 Japanese Boxy)",
+    "measurements": {
+      "pitToPit": "24.0 in (61.0 cm)",
+      "length": "29.0 in (73.5 cm)",
+      "shoulder": "21.0 in (53.5 cm)",
+      "sleeve": "24.5 in (62.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "24.0 in",
+      "TOTAL LENGTH": "29.0 in",
+      "SHOULDER WIDTH": "21.0 in",
+      "SLEEVE LENGTH": "24.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "61.0 cm",
+      "TOTAL LENGTH": "73.5 cm",
+      "SHOULDER WIDTH": "53.5 cm",
+      "SLEEVE LENGTH": "62.0 cm"
+    },
+    "fabric": "100% Heat-Treated Architectural Polyester Pleat",
+    "provenance": "Sourced in Westlands Private Estate. Era: c. 1998.",
+    "description": "Sculptural Japanese micro-pleated overshirt with mattehorn buttons and fluid architectural drape. Featherweight yet structured for year-round Nairobi layering.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-nairobi-capsule.mp4"
+  },
+  {
+    "id": "product-11",
+    "name": "1996 Patagonia Synchilla Snap-T Fleece Pullover",
+    "category": "STREETWEAR",
+    "price": 4500,
+    "image": "assets/products/product-11.jpg",
+    "condition": "Grade A Vintage (9.3/10)",
+    "conditionNote": "Plush double-faced pile fleece, nylon chest snap placket and Y-Joint sleeves intact.",
+    "size": "L (Relaxed Outdoor Cut)",
+    "measurements": {
+      "pitToPit": "24.5 in (62.0 cm)",
+      "length": "28.0 in (71.0 cm)",
+      "shoulder": "21.5 in (54.5 cm)",
+      "sleeve": "25.0 in (63.5 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "24.5 in",
+      "TOTAL LENGTH": "28.0 in",
+      "SHOULDER WIDTH": "21.5 in",
+      "SLEEVE LENGTH": "25.0 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "62.0 cm",
+      "TOTAL LENGTH": "71.0 cm",
+      "SHOULDER WIDTH": "54.5 cm",
+      "SLEEVE LENGTH": "63.5 cm"
+    },
+    "fabric": "100% Double-Faced Recycled Polyester Pile Fleece",
+    "provenance": "Sourced in Gikomba Dawn Bale. Made in USA.",
+    "description": "Deep hunter green with contrasting cobalt nylon trim at collar and chest pocket. Built for high-altitude warmth and timeless gorpcore styling.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-editorial.mp4"
+  },
+  {
+    "id": "product-12",
+    "name": "Helmut Lang 1999 Painter Distressed Carpenter Denim",
+    "category": "VINTAGE",
+    "price": 7200,
+    "image": "assets/products/product-12.jpg",
+    "condition": "Archive Distressed (9.1/10)",
+    "conditionNote": "Authentic atelier paint flecks and whiskering, original Italian hardware.",
+    "size": "W31 / L32",
+    "measurements": {
+      "waist": "31.0 in (79.0 cm)",
+      "inseam": "32.0 in (81.0 cm)",
+      "rise": "11.0 in (28.0 cm)",
+      "legOpening": "8.2 in (21.0 cm)"
+    },
+    "measurementsIn": {
+      "WAIST WIDTH": "31.0 in",
+      "INSEAM LENGTH": "32.0 in",
+      "FRONT RISE": "11.0 in",
+      "LEG OPENING": "8.2 in"
+    },
+    "measurementsCm": {
+      "WAIST WIDTH": "79.0 cm",
+      "INSEAM LENGTH": "81.0 cm",
+      "FRONT RISE": "28.0 cm",
+      "LEG OPENING": "21.0 cm"
+    },
+    "fabric": "13.5oz Italian Ring-Spun Selvedge Cotton",
+    "provenance": "Sourced in Kilimani Collector Vault. c. 1999.",
+    "description": "Grail-tier late-90s minimalist utilitarian denim with subtle pigment splatters, straight-leg silhouette, and signature silver shank button fly.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-leather.mp4"
+  },
+  {
+    "id": "product-13",
+    "name": "Avirex Type A-2 Distressed Lambskin Flight Jacket",
+    "category": "MEN'S",
+    "price": 9500,
+    "image": "assets/products/product-13.jpg",
+    "condition": "Grade A Patina (9.2/10)",
+    "conditionNote": "Supple butter-soft hide with natural honey-brown grain patina; ribbed wool hem intact.",
+    "size": "XL (90s Bomber Silhouette)",
+    "measurements": {
+      "pitToPit": "26.0 in (66.0 cm)",
+      "length": "27.5 in (70.0 cm)",
+      "shoulder": "22.5 in (57.0 cm)",
+      "sleeve": "26.0 in (66.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "26.0 in",
+      "TOTAL LENGTH": "27.5 in",
+      "SHOULDER WIDTH": "22.5 in",
+      "SLEEVE LENGTH": "26.0 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "66.0 cm",
+      "TOTAL LENGTH": "70.0 cm",
+      "SHOULDER WIDTH": "57.0 cm",
+      "SLEEVE LENGTH": "66.0 cm"
+    },
+    "fabric": "100% Full-Grain Aged Lambskin Leather / Satin Map Lining",
+    "provenance": "Sourced in Toi Market Reserve Bale.",
+    "description": "Heavyweight vintage aviation bomber featuring dual snap-flap cargo pockets, side hand-warmer entries, and authentic cartographic interior lining.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-motion.mp4"
+  },
+  {
+    "id": "product-14",
+    "name": "Maison Margiela Replica Line Oversized Knit Cardigan",
+    "category": "WOMEN'S",
+    "price": 6400,
+    "image": "assets/products/product-14.jpg",
+    "condition": "Grade A+ Mint (9.7/10)",
+    "conditionNote": "Four white basting stitches intact at nape; zero pilling on merino gauge.",
+    "size": "M/L (Slouchy Editorial Fit)",
+    "measurements": {
+      "pitToPit": "23.5 in (59.5 cm)",
+      "length": "28.5 in (72.5 cm)",
+      "shoulder": "21.0 in (53.5 cm)",
+      "sleeve": "24.5 in (62.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "23.5 in",
+      "TOTAL LENGTH": "28.5 in",
+      "SHOULDER WIDTH": "21.0 in",
+      "SLEEVE LENGTH": "24.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "59.5 cm",
+      "TOTAL LENGTH": "72.5 cm",
+      "SHOULDER WIDTH": "53.5 cm",
+      "SLEEVE LENGTH": "62.0 cm"
+    },
+    "fabric": "85% Virgin Merino Wool, 15% Alpaca",
+    "provenance": "Sourced in Westlands Curated Archive.",
+    "description": "Deconstructed drop-shoulder silhouette with ribbed shawl placket, horn buttons, and tactile brushed wool texture.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-runway.mp4"
+  },
+  {
+    "id": "product-15",
+    "name": "90s Umbro Inter Milan Drill Training Pullover",
+    "category": "STREETWEAR",
+    "price": 4100,
+    "image": "assets/products/product-15.jpg",
+    "condition": "Grade A Vintage (9.4/10)",
+    "conditionNote": "Direct-embroidered crest and Umbro diamond; crisp ribbed V-neck collar.",
+    "size": "L (Boxy Terrace Cut)",
+    "measurements": {
+      "pitToPit": "25.0 in (63.5 cm)",
+      "length": "28.0 in (71.0 cm)",
+      "shoulder": "22.0 in (56.0 cm)",
+      "sleeve": "24.5 in (62.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "25.0 in",
+      "TOTAL LENGTH": "28.0 in",
+      "SHOULDER WIDTH": "22.0 in",
+      "SLEEVE LENGTH": "24.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "63.5 cm",
+      "TOTAL LENGTH": "71.0 cm",
+      "SHOULDER WIDTH": "56.0 cm",
+      "SLEEVE LENGTH": "62.0 cm"
+    },
+    "fabric": "100% Heavyweight Peached Cotton Drill",
+    "provenance": "Sourced in Gikomba Sector 4. Era: c. 1995.",
+    "description": "Iconic Britpop and 90s football terrace drill top in midnight navy and Pirelli gold piping with drawstring hem toggle.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-archive.mp4"
+  },
+  {
+    "id": "product-16",
+    "name": "Schott NYC Perfecto 618 Heavy Steerhide Moto Jacket",
+    "category": "VINTAGE",
+    "price": 12500,
+    "image": "assets/products/product-16.jpg",
+    "condition": "Grade A+ Grail (9.6/10)",
+    "conditionNote": "Heavy Talon asymmetrical main zip, star epaulets, and belted waist buckle intact.",
+    "size": "L (42 Chest Tailored Moto)",
+    "measurements": {
+      "pitToPit": "22.5 in (57.0 cm)",
+      "length": "25.5 in (65.0 cm)",
+      "shoulder": "19.5 in (49.5 cm)",
+      "sleeve": "25.5 in (65.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "22.5 in",
+      "TOTAL LENGTH": "25.5 in",
+      "SHOULDER WIDTH": "19.5 in",
+      "SLEEVE LENGTH": "25.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "57.0 cm",
+      "TOTAL LENGTH": "65.0 cm",
+      "SHOULDER WIDTH": "49.5 cm",
+      "SLEEVE LENGTH": "65.0 cm"
+    },
+    "fabric": "100% Heavyweight Oiled Steerhide Leather / Quilted Nylon Liner",
+    "provenance": "Manufactured in New Jersey, USA. Sourced in Nairobi.",
+    "description": "The definitive American motorcycle jacket. Armour-grade steerhide with bi-swing action back panels and gleaming nickel hardware.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-denim.mp4"
+  },
+  {
+    "id": "product-17",
+    "name": "1993 Nirvana In Utero Single-Stitch Tour Tee",
+    "category": "VINTAGE",
+    "price": 5800,
+    "image": "assets/products/product-17.jpg",
+    "condition": "Archive Distressed (9.0/10)",
+    "conditionNote": "True single-stitch top and bottom hem on Giant tag; natural charcoal sun-fade.",
+    "size": "XL (Boxy 90s Fit)",
+    "measurements": {
+      "pitToPit": "24.0 in (61.0 cm)",
+      "length": "29.5 in (75.0 cm)",
+      "shoulder": "21.5 in (54.5 cm)",
+      "sleeve": "8.5 in (21.5 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "24.0 in",
+      "TOTAL LENGTH": "29.5 in",
+      "SHOULDER WIDTH": "21.5 in",
+      "SLEEVE LENGTH": "8.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "61.0 cm",
+      "TOTAL LENGTH": "75.0 cm",
+      "SHOULDER WIDTH": "54.5 cm",
+      "SLEEVE LENGTH": "21.5 cm"
+    },
+    "fabric": "100% Heavyweight Pre-Shrunk USA Cotton",
+    "provenance": "Sourced in Toi Market Grail Vault.",
+    "description": "Museum-grade 90s grunge artifact with cracked plastisol anatomical angel graphic and back tour dates.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-outerwear.mp4"
+  },
+  {
+    "id": "product-18",
+    "name": "Burberrys Prorsum Gabardine Trench Coat",
+    "category": "WOMEN'S",
+    "price": 8900,
+    "image": "assets/products/product-18.jpg",
+    "condition": "Grade A+ Vintage (9.7/10)",
+    "conditionNote": "Complete with original D-ring belt, throat latch, wrist straps, and Nova Check lining.",
+    "size": "M/L (Full-Length Fluid Drape)",
+    "measurements": {
+      "pitToPit": "22.5 in (57.0 cm)",
+      "length": "45.0 in (114.0 cm)",
+      "shoulder": "19.0 in (48.0 cm)",
+      "sleeve": "24.5 in (62.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "22.5 in",
+      "TOTAL LENGTH": "45.0 in",
+      "SHOULDER WIDTH": "19.0 in",
+      "SLEEVE LENGTH": "24.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "57.0 cm",
+      "TOTAL LENGTH": "114.0 cm",
+      "SHOULDER WIDTH": "48.0 cm",
+      "SLEEVE LENGTH": "62.0 cm"
+    },
+    "fabric": "100% Aqua-Repellent Cotton Gabardine",
+    "provenance": "Made in England. Sourced in Karen Estate Sale.",
+    "description": "Double-breasted heritage storm trench in classic honey stone with raglan sleeves and iconic tartan check cotton lining.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-tailoring.mp4"
+  },
+  {
+    "id": "product-19",
+    "name": "Evisu No.1 Lot 2000 Hand-Painted Seagull Selvedge",
+    "category": "STREETWEAR",
+    "price": 6200,
+    "image": "assets/products/product-19.jpg",
+    "condition": "Grade A Vintage (9.4/10)",
+    "conditionNote": "Sunrise selvedge ID, hidden back pocket rivets, crisp ecru seagull paint.",
+    "size": "W33 / L32",
+    "measurements": {
+      "waist": "33.0 in (84.0 cm)",
+      "inseam": "32.0 in (81.0 cm)",
+      "rise": "12.0 in (30.5 cm)",
+      "legOpening": "8.5 in (21.5 cm)"
+    },
+    "measurementsIn": {
+      "WAIST WIDTH": "33.0 in",
+      "INSEAM LENGTH": "32.0 in",
+      "FRONT RISE": "12.0 in",
+      "LEG OPENING": "8.5 in"
+    },
+    "measurementsCm": {
+      "WAIST WIDTH": "84.0 cm",
+      "INSEAM LENGTH": "81.0 cm",
+      "FRONT RISE": "30.5 cm",
+      "LEG OPENING": "21.5 cm"
+    },
+    "fabric": "14.5oz Unsanforized Japanese Shuttle-Loom Denim",
+    "provenance": "Osaka Archive. Sourced in Nairobi.",
+    "description": "Roped indigo dyeing and bold rear gull motifs—the cornerstone of early-2000s Japanese and London streetwear.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-utility.mp4"
+  },
+  {
+    "id": "product-20",
+    "name": "Yeezy Gap Engineered by Balenciaga Dove Washed Hoodie",
+    "category": "STREETWEAR",
+    "price": 7500,
+    "image": "assets/products/product-20.jpg",
+    "condition": "Grade A+ (9.6/10)",
+    "conditionNote": "Double-layered heavyweight cotton jersey; no seam separation or print cracking.",
+    "size": "M (Fits XL Cropped Boxy)",
+    "measurements": {
+      "pitToPit": "27.0 in (68.5 cm)",
+      "length": "25.5 in (65.0 cm)",
+      "shoulder": "26.0 in (66.0 cm)",
+      "sleeve": "23.0 in (58.5 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "27.0 in",
+      "TOTAL LENGTH": "25.5 in",
+      "SHOULDER WIDTH": "26.0 in",
+      "SLEEVE LENGTH": "23.0 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "68.5 cm",
+      "TOTAL LENGTH": "65.0 cm",
+      "SHOULDER WIDTH": "66.0 cm",
+      "SLEEVE LENGTH": "58.5 cm"
+    },
+    "fabric": "100% Double-Layer 32oz Heavy Cotton Fleece",
+    "provenance": "Sourced in Kilimani Collector Drop.",
+    "description": "Monumental cropped boxy silhouette in washed obsidian grey with seamlessly integrated kangaroo pocket and high-density back graphic.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-nairobi-capsule.mp4"
+  },
+  {
+    "id": "product-21",
+    "name": "Jil Sander Minimalist Virgin Wool Tailored Blazer",
+    "category": "WOMEN'S",
+    "price": 5400,
+    "image": "assets/products/product-21.jpg",
+    "condition": "Grade A+ Mint (9.8/10)",
+    "conditionNote": "Razor-sharp lapel roll, cupro Bemberg lining, concealed horn button closure.",
+    "size": "S/M (IT 40 Structured)",
+    "measurements": {
+      "pitToPit": "20.5 in (52.0 cm)",
+      "length": "29.5 in (75.0 cm)",
+      "shoulder": "17.5 in (44.5 cm)",
+      "sleeve": "24.0 in (61.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "20.5 in",
+      "TOTAL LENGTH": "29.5 in",
+      "SHOULDER WIDTH": "17.5 in",
+      "SLEEVE LENGTH": "24.0 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "52.0 cm",
+      "TOTAL LENGTH": "75.0 cm",
+      "SHOULDER WIDTH": "44.5 cm",
+      "SLEEVE LENGTH": "61.0 cm"
+    },
+    "fabric": "100% Super 120s Virgin Wool Barathea",
+    "provenance": "Made in Italy. Sourced in Westlands.",
+    "description": "Pure architectural tailoring with padded square shoulders, elongated silhouette, and zero superfluous detailing.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-editorial.mp4"
+  },
+  {
+    "id": "product-22",
+    "name": "Stone Island 2004 Raso Gommato Tactical Field Jacket",
+    "category": "MEN'S",
+    "price": 11000,
+    "image": "assets/products/product-22.jpg",
+    "condition": "Grade A Archive (9.3/10)",
+    "conditionNote": "Original green-edge compass badge on left arm; polyurethane windproof backing intact.",
+    "size": "L (Technical Field Fit)",
+    "measurements": {
+      "pitToPit": "23.5 in (59.5 cm)",
+      "length": "29.0 in (73.5 cm)",
+      "shoulder": "20.0 in (51.0 cm)",
+      "sleeve": "25.5 in (65.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "23.5 in",
+      "TOTAL LENGTH": "29.0 in",
+      "SHOULDER WIDTH": "20.0 in",
+      "SLEEVE LENGTH": "25.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "59.5 cm",
+      "TOTAL LENGTH": "73.5 cm",
+      "SHOULDER WIDTH": "51.0 cm",
+      "SLEEVE LENGTH": "65.0 cm"
+    },
+    "fabric": "100% Garment-Dyed Military Spec Cotton Satin",
+    "provenance": "Ravarino Archive. Sourced in Nairobi.",
+    "description": "Multi-pocket technical field shell treated with garment-dyed pigment wash and concealed hood in stand collar.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-leather.mp4"
+  },
+  {
+    "id": "product-23",
+    "name": "Comme des Garcons PLAY Heart Patch Breton Stripe Tee",
+    "category": "STREETWEAR",
+    "price": 3400,
+    "image": "assets/products/product-23.jpg",
+    "condition": "Grade A+ (9.6/10)",
+    "conditionNote": "Crisp Filip Pagowski embroidered heart patch; zero collar stretch.",
+    "size": "L (Japanese Tailored Fit)",
+    "measurements": {
+      "pitToPit": "21.5 in (54.5 cm)",
+      "length": "27.5 in (70.0 cm)",
+      "shoulder": "19.0 in (48.0 cm)",
+      "sleeve": "24.0 in (61.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "21.5 in",
+      "TOTAL LENGTH": "27.5 in",
+      "SHOULDER WIDTH": "19.0 in",
+      "SLEEVE LENGTH": "24.0 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "54.5 cm",
+      "TOTAL LENGTH": "70.0 cm",
+      "SHOULDER WIDTH": "48.0 cm",
+      "SLEEVE LENGTH": "61.0 cm"
+    },
+    "fabric": "100% Japanese Long-Staple Combed Cotton",
+    "provenance": "Made in Japan. Sourced in Ngara.",
+    "description": "Classic navy-and-ecru French mariniere long-sleeve jersey finished with the iconic red emblem at chest.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-motion.mp4"
+  },
+  {
+    "id": "product-24",
+    "name": "Filson Tin Cloth Waxed Logger Field Cruiser",
+    "category": "MEN'S",
+    "price": 6900,
+    "image": "assets/products/product-24.jpg",
+    "condition": "Workwear Patina (9.1/10)",
+    "conditionNote": "Rich oil-finish patina across yoke and cuffs; full-width rear map pocket intact.",
+    "size": "L (Generous Heritage Cut)",
+    "measurements": {
+      "pitToPit": "24.5 in (62.0 cm)",
+      "length": "30.0 in (76.0 cm)",
+      "shoulder": "20.5 in (52.0 cm)",
+      "sleeve": "25.5 in (65.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "24.5 in",
+      "TOTAL LENGTH": "30.0 in",
+      "SHOULDER WIDTH": "20.5 in",
+      "SLEEVE LENGTH": "25.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "62.0 cm",
+      "TOTAL LENGTH": "76.0 cm",
+      "SHOULDER WIDTH": "52.0 cm",
+      "SLEEVE LENGTH": "65.0 cm"
+    },
+    "fabric": "14oz Oil-Finish Waxed Cotton Duck",
+    "provenance": "Made in Seattle, USA. Sourced in Gikomba.",
+    "description": "Unbeatable weather-resistant waxed canvas cruiser with four gusseted utility pockets and brass snap closures.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-runway.mp4"
+  },
+  {
+    "id": "product-25",
+    "name": "Yohji Yamamoto Pour Homme Wool Gabardine Long Coat",
+    "category": "VINTAGE",
+    "price": 13500,
+    "image": "assets/products/product-25.jpg",
+    "condition": "Grade A+ Grail (9.8/10)",
+    "conditionNote": "Signature #100 wrinkle-gabardine weave in deep pitch black; museum condition.",
+    "size": "L/XL (Size 3 Oversized Sweep)",
+    "measurements": {
+      "pitToPit": "26.5 in (67.5 cm)",
+      "length": "47.0 in (119.5 cm)",
+      "shoulder": "22.0 in (56.0 cm)",
+      "sleeve": "25.5 in (65.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "26.5 in",
+      "TOTAL LENGTH": "47.0 in",
+      "SHOULDER WIDTH": "22.0 in",
+      "SLEEVE LENGTH": "25.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "67.5 cm",
+      "TOTAL LENGTH": "119.5 cm",
+      "SHOULDER WIDTH": "56.0 cm",
+      "SLEEVE LENGTH": "65.0 cm"
+    },
+    "fabric": "100% Japanese 100s Wool Wrinkle Gabardine",
+    "provenance": "Tokyo Runway Archive. Sourced in Nairobi.",
+    "description": "Dramatic floor-skimming silhouette engineered to catch the wind with every stride. The pinnacle of avant-garde dark tailoring.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-archive.mp4"
+  },
+  {
+    "id": "product-26",
+    "name": "Acne Studios Velocite Oversized Shearling Moto Coat",
+    "category": "WOMEN'S",
+    "price": 11800,
+    "image": "assets/products/product-26.jpg",
+    "condition": "Grade A+ (9.6/10)",
+    "conditionNote": "Plush lamb shearling lining throughout; heavy roller buckles at cuffs and hem.",
+    "size": "M (Oversized Editorial Fit)",
+    "measurements": {
+      "pitToPit": "24.0 in (61.0 cm)",
+      "length": "29.0 in (73.5 cm)",
+      "shoulder": "21.0 in (53.5 cm)",
+      "sleeve": "24.5 in (62.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "24.0 in",
+      "TOTAL LENGTH": "29.0 in",
+      "SHOULDER WIDTH": "21.0 in",
+      "SLEEVE LENGTH": "24.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "61.0 cm",
+      "TOTAL LENGTH": "73.5 cm",
+      "SHOULDER WIDTH": "53.5 cm",
+      "SLEEVE LENGTH": "62.0 cm"
+    },
+    "fabric": "100% Dyed Lamb Shearling & Suede",
+    "provenance": "Stockholm Archive. Sourced in Lavington.",
+    "description": "Statement Nordic shearling outerwear with exaggerated lapels, matte black leather straps, and cocooning proportions.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-denim.mp4"
+  },
+  {
+    "id": "product-27",
+    "name": "Vivienne Westwood Anglomania Asymmetric Tartan Skirt",
+    "category": "WOMEN'S",
+    "price": 4900,
+    "image": "assets/products/product-27.jpg",
+    "condition": "Grade A Vintage (9.5/10)",
+    "conditionNote": "Embossed Orb buttons at waist, raw-edge draped tartan pleats intact.",
+    "size": "S/M (W28 Tailored Waist)",
+    "measurements": {
+      "waist": "28.0 in (71.0 cm)",
+      "inseam": "24.0 in (61.0 cm)",
+      "rise": "37.0 in (94.0 cm)",
+      "legOpening": "22.0 in (56.0 cm)"
+    },
+    "measurementsIn": {
+      "WAIST WIDTH": "28.0 in",
+      "INSEAM LENGTH": "24.0 in",
+      "FRONT RISE": "37.0 in",
+      "LEG OPENING": "22.0 in"
+    },
+    "measurementsCm": {
+      "WAIST WIDTH": "71.0 cm",
+      "INSEAM LENGTH": "61.0 cm",
+      "FRONT RISE": "94.0 cm",
+      "LEG OPENING": "56.0 cm"
+    },
+    "fabric": "100% Scottish Lochcarron Virgin Wool Tartan",
+    "provenance": "Made in Italy. Sourced in Westlands.",
+    "description": "Punk-heritage draped kilt skirt combining traditional Scottish clan plaid with signature asymmetric draping.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-outerwear.mp4"
+  },
+  {
+    "id": "product-28",
+    "name": "Giorgio Armani Le Collezioni Double-Breasted Power Suit Jacket",
+    "category": "MEN'S",
+    "price": 5600,
+    "image": "assets/products/product-28.jpg",
+    "condition": "Grade A+ (9.7/10)",
+    "conditionNote": "Soft unconstructed Milanese drape, peak lapels, subtle charcoal pinstripe.",
+    "size": "L (42R Relaxed Italian Cut)",
+    "measurements": {
+      "pitToPit": "22.5 in (57.0 cm)",
+      "length": "31.0 in (79.0 cm)",
+      "shoulder": "19.5 in (49.5 cm)",
+      "sleeve": "25.5 in (65.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "22.5 in",
+      "TOTAL LENGTH": "31.0 in",
+      "SHOULDER WIDTH": "19.5 in",
+      "SLEEVE LENGTH": "25.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "57.0 cm",
+      "TOTAL LENGTH": "79.0 cm",
+      "SHOULDER WIDTH": "49.5 cm",
+      "SLEEVE LENGTH": "65.0 cm"
+    },
+    "fabric": "92% Virgin Wool, 8% Cashmere",
+    "provenance": "Made in Italy. Sourced in Nairobi CBD.",
+    "description": "Effortless 90s Milanese power tailoring with fluid low-stance 6x2 buttoning and cashmere-blend hand feel.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-tailoring.mp4"
+  },
+  {
+    "id": "product-29",
+    "name": "KAPITAL Kountry Boro-Stitched Heavy Waffle Crewneck",
+    "category": "STREETWEAR",
+    "price": 5200,
+    "image": "assets/products/product-29.jpg",
+    "condition": "Grade A+ (9.5/10)",
+    "conditionNote": "Artisanal sashiko reinforcement stitching at elbows and shoulder seams.",
+    "size": "L (Size 3 Relaxed Thermal)",
+    "measurements": {
+      "pitToPit": "23.5 in (59.5 cm)",
+      "length": "27.5 in (70.0 cm)",
+      "shoulder": "21.0 in (53.5 cm)",
+      "sleeve": "25.0 in (63.5 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "23.5 in",
+      "TOTAL LENGTH": "27.5 in",
+      "SHOULDER WIDTH": "21.0 in",
+      "SLEEVE LENGTH": "25.0 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "59.5 cm",
+      "TOTAL LENGTH": "70.0 cm",
+      "SHOULDER WIDTH": "53.5 cm",
+      "SLEEVE LENGTH": "63.5 cm"
+    },
+    "fabric": "100% Indigo-Dyed Heavy Honeycomb Thermal Cotton",
+    "provenance": "Kojima, Japan. Sourced in Nairobi.",
+    "description": "Deeply textured honeycomb waffle knit enriched with hand-guided sashiko repairs and vintage washed ribbing.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-utility.mp4"
+  },
+  {
+    "id": "product-30",
+    "name": "1992 Adidas Equipment (EQT) Colorblock Track Jacket",
+    "category": "STREETWEAR",
+    "price": 3900,
+    "image": "assets/products/product-30.jpg",
+    "condition": "Grade A Vintage (9.4/10)",
+    "conditionNote": "Original EQT Sub Green three-stripe shoulder blocks and metal trefoil zip pull.",
+    "size": "XL (90s Baggy Track Cut)",
+    "measurements": {
+      "pitToPit": "26.0 in (66.0 cm)",
+      "length": "28.0 in (71.0 cm)",
+      "shoulder": "23.0 in (58.5 cm)",
+      "sleeve": "24.5 in (62.0 cm)"
+    },
+    "measurementsIn": {
+      "PIT TO PIT": "26.0 in",
+      "TOTAL LENGTH": "28.0 in",
+      "SHOULDER WIDTH": "23.0 in",
+      "SLEEVE LENGTH": "24.5 in"
+    },
+    "measurementsCm": {
+      "PIT TO PIT": "66.0 cm",
+      "TOTAL LENGTH": "71.0 cm",
+      "SHOULDER WIDTH": "58.5 cm",
+      "SLEEVE LENGTH": "62.0 cm"
+    },
+    "fabric": "100% Crinkle Taslan Nylon / Cotton Jersey Lining",
+    "provenance": "Sourced in Gikomba Dawn Bale. Era: c. 1992.",
+    "description": "Early-90s Peter Moore EQT archival shell in sub-green, black, and chalk white with oversized dolman sleeves.",
+    "inStock": true,
+    "videoPreview": "/assets/videos/streetwear-nairobi-capsule.mp4"
   }
 ]
