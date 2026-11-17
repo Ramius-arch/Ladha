@@ -14,6 +14,7 @@ import { ProductPage } from './pages/ProductPage';
 import { CheckoutPage } from './pages/CheckoutPage';
 import { AboutPage } from './pages/AboutPage';
 import { LegalPage } from './pages/LegalPage';
+import { AdminPage } from './pages/AdminPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { DEFAULT_PRODUCTS } from './data/siteContent';
 import { fetchLiveCatalog, getStoredProducts } from './services/storeDb';
@@ -26,6 +27,7 @@ const PAGE_TITLES: Record<string, string> = {
   checkout: 'Claim & M-Pesa Checkout — LADHA',
   about: 'The 6% Curation Rule — LADHA',
   legal: 'Legal, KDPA & Disclosures — LADHA',
+  admin: 'Store Command Center — LADHA',
   not_found: 'Archive Not Found — LADHA',
 };
 
@@ -82,6 +84,9 @@ const StorefrontShell: React.FC = () => {
         {route === 'checkout' && <CheckoutPage onCatalogMutated={() => setProducts(getStoredProducts())} />}
         {route === 'about' && <AboutPage />}
         {route === 'legal' && <LegalPage />}
+        {route === 'admin' && (
+          <AdminPage products={products} onCatalogMutated={() => setProducts(getStoredProducts())} />
+        )}
         {route === 'not_found' && <NotFoundPage />}
       </main>
 

@@ -222,9 +222,39 @@ const router = createRouter({
   }
 });
 
+function hasValidOperatorSession() {
+  try {
+    const token =
+      localStorage.getItem('authToken') ||
+      sessionStorage.getItem('ladha_admin_token') ||
+      '';
+    return (
+      token.startsWith('ladha_v3_sig_49584038a130249c_') ||
+      token.startsWith('ladha_v3_sig_3b7e395b6309fbc2_')
+    );
+  } catch {
+    return false;
+  }
+}
+
 router.beforeEach((to, from, next) => {
   isRouteLoading.value = true;
   document.title = to.meta.title ? `${to.meta.title} | Ladha Ledger` : 'Ladha Ledger | Archival Commerce Financial Hub';
+
+  const isPublicAuthRoute = to.name === 'Login';
+  if (!isPublicAuthRoute && !hasValidOperatorSession()) {
+    next({
+      name: 'Login',
+      query: to.fullPath && to.fullPath !== '/' ? { redirect: to.fullPath } : undefined,
+    });
+    return;
+  }
+
+  if (to.name === 'Login' && hasValidOperatorSession()) {
+    next({ path: '/dashboard' });
+    return;
+  }
+
   next();
 });
 

@@ -82,6 +82,22 @@ export async function fetchLiveCatalog(): Promise<Product[]> {
   return getStoredProducts();
 }
 
+export function getStoredOrders(): StoreOrder[] {
+  return readStorage<StoreOrder[]>(KEYS.ORDERS, []);
+}
+
+export function saveCatalogProducts(products: Product[]): Product[] {
+  const normalized = products.map(normalizeProduct);
+  writeStorage(KEYS.PRODUCTS, normalized);
+  return normalized;
+}
+
+export function resetCatalogToDefault(): Product[] {
+  const seeded = DEFAULT_PRODUCTS.map(normalizeProduct);
+  writeStorage(KEYS.PRODUCTS, seeded);
+  return seeded;
+}
+
 export function saveOrderLocally(order: StoreOrder): void {
   const orders = readStorage<StoreOrder[]>(KEYS.ORDERS, []);
   writeStorage(KEYS.ORDERS, [order, ...orders]);

@@ -1,6 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
 
-export type AppRoute = 'home' | 'shop' | 'product' | 'checkout' | 'about' | 'legal' | 'not_found';
+export type AppRoute = 'home' | 'shop' | 'product' | 'checkout' | 'about' | 'legal' | 'admin' | 'not_found';
 
 interface RouteState {
   pathname: string;
@@ -18,6 +18,7 @@ function resolveRoute(pathname: string): AppRoute {
   if (clean === '/checkout' || clean === '/checkout.html') return 'checkout';
   if (clean === '/about' || clean === '/about.html') return 'about';
   if (clean === '/legal' || clean === '/legal.html') return 'legal';
+  if (clean === '/admin' || clean === '/admin.html') return 'admin';
   return 'not_found';
 }
 
@@ -73,7 +74,7 @@ export const RouterProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         window.open(to, '_blank', 'noopener,noreferrer');
         return;
       }
-      if (to === '/admin' || to === '/admin.html' || to.startsWith('/admin/')) {
+      if (to.startsWith('/admin/')) {
         window.location.href = to;
         return;
       }

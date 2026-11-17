@@ -378,7 +378,7 @@ export default defineComponent({
       const item = menuItems.find(i => i.key === key);
       if (item) {
         if (item.href) {
-          window.open(item.href, '_blank');
+          window.open(item.href, '_blank', 'noopener,noreferrer');
         } else if (item.path) {
           if (route.path !== item.path) {
             router.push(item.path).catch(err => {
@@ -399,6 +399,8 @@ export default defineComponent({
         router.push('/help');
       } else if (key === 'logout') {
         localStorage.removeItem('authToken');
+        localStorage.removeItem('user');
+        sessionStorage.removeItem('ladha_admin_token');
         message.success('Session terminated securely. Returning to login.');
         router.push('/login');
       }

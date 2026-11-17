@@ -336,9 +336,9 @@
     "semantic_hash": "ac96fa81e8dd4224012bce81068fe169"
   },
   "billing/frontend/src/App.vue": {
-    "mtime": 1793887095.2312338,
-    "seen": 1793887597.5511587,
-    "ast_hash": "4e1bc6bf54b9695ea34bebfbaaff068b",
+    "mtime": 1794930663.0921688,
+    "seen": 1794930853.8145196,
+    "ast_hash": "64bb7641fafe360c4550651d8fd7e5ef",
     "semantic_hash": ""
   },
   "billing/frontend/src/components/AnimatedNumber.vue": {
@@ -456,9 +456,9 @@
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/Login.vue": {
-    "mtime": 1793887095.2593675,
-    "seen": 1793887597.5511587,
-    "ast_hash": "ca134ad20db65737d8e800ea65eaaab1",
+    "mtime": 1794930660.4385574,
+    "seen": 1794930853.8145196,
+    "ast_hash": "5d9c96ec2946f9e357286f025d6fc830",
     "semantic_hash": ""
   },
   "billing/frontend/src/pages/NotFound.vue": {
@@ -516,9 +516,9 @@
     "semantic_hash": ""
   },
   "billing/frontend/src/router.js": {
-    "mtime": 1793887095.27341,
-    "seen": 1793887597.5511587,
-    "ast_hash": "d37525de60da1ab7b4d4d3fda2747187",
+    "mtime": 1794930658.4140248,
+    "seen": 1794930853.8145196,
+    "ast_hash": "1e6f72e7e641ab6fcd8216ecd7ede1bd",
     "semantic_hash": ""
   },
   "billing/frontend/src/services/api.js": {
@@ -1734,9 +1734,9 @@
     "semantic_hash": ""
   },
   "scripts/build-unified.js": {
-    "mtime": 1794681107.775358,
-    "seen": 1794681430.527105,
-    "ast_hash": "091cd66bad8b5ff923642f7ae0965b09",
+    "mtime": 1794930537.8594253,
+    "seen": 1794930853.8145196,
+    "ast_hash": "9d997f10a1d121f9aeb1b7082c10853c",
     "semantic_hash": ""
   },
   "scripts/patch-admin-html.js": {
@@ -1764,9 +1764,9 @@
     "semantic_hash": ""
   },
   "vercel.json": {
-    "mtime": 1794681075.884342,
-    "seen": 1794681430.527105,
-    "ast_hash": "0f2fbf0260371f2f614398675b7a140e",
+    "mtime": 1794930666.4177547,
+    "seen": 1794930853.8145196,
+    "ast_hash": "e43e721f2e5d54639041dff97399d138",
     "semantic_hash": ""
   },
   "portfolio_assets/screenshots/live_ladha_vercel_app.png": {
@@ -2010,9 +2010,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/App.tsx": {
-    "mtime": 1794680873.4545732,
-    "seen": 1794681430.527105,
-    "ast_hash": "9bed320afe104a2fd664aa85aceff246",
+    "mtime": 1794930514.0170798,
+    "seen": 1794930853.8145196,
+    "ast_hash": "cc5088d5b11a27fb87f403f7dd5d287d",
     "semantic_hash": ""
   },
   "storefront-app/src/components/CartDrawer.tsx": {
@@ -2118,9 +2118,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/context/RouterContext.tsx": {
-    "mtime": 1794680613.013548,
-    "seen": 1794681430.527105,
-    "ast_hash": "497e379f7ad44a6dafb8ed90f4dd9f5a",
+    "mtime": 1794930509.103511,
+    "seen": 1794930853.8145196,
+    "ast_hash": "28799df6781949f71b4b3ea502258a08",
     "semantic_hash": ""
   },
   "storefront-app/src/data/defaultProducts.json": {
@@ -2208,9 +2208,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/services/storeDb.ts": {
-    "mtime": 1794681003.3148298,
-    "seen": 1794681430.527105,
-    "ast_hash": "affebda7ece60f44a745af36e4738f2f",
+    "mtime": 1794930376.3884935,
+    "seen": 1794930853.8145196,
+    "ast_hash": "549bf4be0608a8e218da29486d740b2a",
     "semantic_hash": ""
   },
   "storefront-app/src/types/store.ts": {
@@ -2277,6 +2277,12 @@
     "mtime": 1794764712.4523978,
     "seen": 1794765133.593078,
     "ast_hash": "482c26824f3fc88c41e936ca6ec412d0",
+    "semantic_hash": ""
+  },
+  "storefront-app/src/pages/AdminPage.tsx": {
+    "mtime": 1794930733.3172307,
+    "seen": 1794930853.8145196,
+    "ast_hash": "526ec64c2641b3d3f507fcc12c6e369f",
     "semantic_hash": ""
   }
 }

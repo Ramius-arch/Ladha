@@ -53,10 +53,9 @@ if (fs.existsSync(OUTPUT_DIST)) {
 }
 fs.mkdirSync(OUTPUT_DIST, { recursive: true });
 
-console.log('\n=== Step 4: Copying Storefront Media, Data, and Store Manager (/admin) to dist/ Root ===');
-copyDirRecursive(STOREFRONT_DIR, OUTPUT_DIST);
-const serverPy = path.join(OUTPUT_DIST, 'server.py');
-if (fs.existsSync(serverPy)) fs.unlinkSync(serverPy);
+console.log('\n=== Step 4: Copying Storefront Media & Catalog Data to dist/ (Excluding Legacy Unminified JS/CSS) ===');
+copyDirRecursive(path.join(STOREFRONT_DIR, 'assets'), path.join(OUTPUT_DIST, 'assets'));
+copyDirRecursive(path.join(STOREFRONT_DIR, 'data'), path.join(OUTPUT_DIST, 'data'));
 
 console.log('\n=== Step 5: Overlaying Mattis-Architecture Storefront App onto dist/ ===');
 const storefrontAppDist = path.join(STOREFRONT_APP_DIR, 'dist');
@@ -67,7 +66,7 @@ if (!fs.existsSync(storefrontAppIndex) || !fs.existsSync(storefrontAppAssets)) {
 }
 copyDirRecursive(storefrontAppAssets, path.join(OUTPUT_DIST, 'storefront-assets'));
 
-for (const routeHtml of ['index.html', 'shop.html', 'product.html', 'checkout.html', 'about.html', 'legal.html']) {
+for (const routeHtml of ['index.html', 'shop.html', 'product.html', 'checkout.html', 'about.html', 'legal.html', 'admin.html']) {
   fs.copyFileSync(storefrontAppIndex, path.join(OUTPUT_DIST, routeHtml));
 }
 
