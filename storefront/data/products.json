@@ -96,6 +96,230 @@
     "inStock": true
   },
   {
+    "id": "bag-13",
+    "name": "Vivo Heather Grey Minimalist Commuter Daypack",
+    "category": "SPORT & COMMUTE",
+    "price": 1000,
+    "image": "assets/products/bag-13.jpg",
+    "condition": "Grade A+ Deadstock (9.5/10)",
+    "conditionNote": "Crisp deadstock-grade heather-grey weave with zero marks, smooth hidden front zip pocket, matte black pull tab, and clean woven vivo seam label.",
+    "size": "Slim Everyday Daypack (Approx. 18L)",
+    "measurements": {
+      "height": "16.5 in (42.0 cm)",
+      "width": "12.0 in (30.5 cm)",
+      "depth": "5.0 in (13.0 cm)",
+      "capacity": "Approx. 18L"
+    },
+    "measurementsIn": {
+      "HEIGHT": "16.5 in",
+      "WIDTH": "12.0 in",
+      "DEPTH": "5.0 in",
+      "CAPACITY": "Approx. 18L"
+    },
+    "measurementsCm": {
+      "HEIGHT": "42.0 cm",
+      "WIDTH": "30.5 cm",
+      "DEPTH": "13.0 cm",
+      "CAPACITY": "Approx. 18L"
+    },
+    "fabric": "Textured Heather-Grey Woven Polyester Twill",
+    "provenance": "Curated Nairobi Thrift Stock — Sanitized & Inspected.",
+    "description": "Ultra-clean architectural dome backpack in soft heather grey with a concealed horizontal front zip pocket, matte black zip pull, and minimalist woven side tab. Effortless daily laptop or campus pack.",
+    "inStock": true
+  },
+  {
+    "id": "bag-14",
+    "name": "LTY Charcoal Fine-Wale Corduroy Vintage Daypack",
+    "category": "STREETWEAR",
+    "price": 1000,
+    "image": "assets/products/bag-14.jpg",
+    "condition": "Grade A Thrift (9.1/10)",
+    "conditionNote": "Rich washed-charcoal corduroy ribs fully intact with classic grey diamond lash-tab patch, silver metal pulls, and sharp lower-right embroidery.",
+    "size": "Standard Street Pack (Approx. 21L)",
+    "measurements": {
+      "height": "17.0 in (43.0 cm)",
+      "width": "12.5 in (32.0 cm)",
+      "depth": "5.5 in (14.0 cm)",
+      "capacity": "Approx. 21L"
+    },
+    "measurementsIn": {
+      "HEIGHT": "17.0 in",
+      "WIDTH": "12.5 in",
+      "DEPTH": "5.5 in",
+      "CAPACITY": "Approx. 21L"
+    },
+    "measurementsCm": {
+      "HEIGHT": "43.0 cm",
+      "WIDTH": "32.0 cm",
+      "DEPTH": "14.0 cm",
+      "CAPACITY": "Approx. 21L"
+    },
+    "fabric": "Heavy Fine-Wale Cotton Corduroy with Contrast Grey Piping",
+    "provenance": "Curated Nairobi Thrift Stock — Sanitized & Inspected.",
+    "description": "Tactile charcoal-black corduroy backpack finished with a heritage grey diamond lash patch, brushed silver rectangular zip pulls, contrast pocket trim, and subtle 'LTY Liu.tie.yan' embroidery.",
+    "inStock": true
+  },
+  {
+    "id": "bag-15",
+    "name": "Careborn Deep Purple Ballistic Laptop Backpack",
+    "category": "SPORT & COMMUTE",
+    "price": 950,
+    "image": "assets/products/bag-15.jpg",
+    "condition": "Grade A Thrift (9.0/10)",
+    "conditionNote": "Structured deep plum ballistic weave with intact metallic Careborn emblem, padded mesh top handle, and vertical front weather-strip pocket.",
+    "size": "Structured Laptop Pack (Approx. 24L)",
+    "measurements": {
+      "height": "18.0 in (46.0 cm)",
+      "width": "12.5 in (32.0 cm)",
+      "depth": "6.0 in (15.0 cm)",
+      "capacity": "Approx. 24L"
+    },
+    "measurementsIn": {
+      "HEIGHT": "18.0 in",
+      "WIDTH": "12.5 in",
+      "DEPTH": "6.0 in",
+      "CAPACITY": "Approx. 24L"
+    },
+    "measurementsCm": {
+      "HEIGHT": "46.0 cm",
+      "WIDTH": "32.0 cm",
+      "DEPTH": "15.0 cm",
+      "CAPACITY": "Approx. 24L"
+    },
+    "fabric": "Deep Plum Ballistic Nylon with Contrast Leatherette Trim & Mesh Handle",
+    "provenance": "Curated Nairobi Thrift Stock — Sanitized & Inspected.",
+    "description": "Boxy structured commuter laptop backpack in rich aubergine purple featuring a metallic Careborn crest plate, charcoal vertical zip weather-guard with orange stitching, and rare vintage automotive service print.",
+    "inStock": true
+  },
+  {
+    "id": "bag-16",
+    "name": "Bobdog Navy & Crimson Heritage Striped Backpack",
+    "category": "GRAPHIC & RETRO",
+    "price": 950,
+    "image": "assets/products/bag-16.jpg",
+    "condition": "Grade A Thrift (9.0/10)",
+    "conditionNote": "Strong structured navy canvas with crisp embossed red BOBDOG leatherette strap, twin racing stripes, reflective side strips, and solid zips.",
+    "size": "Multi-Pocket School & Daypack (Approx. 21L)",
+    "measurements": {
+      "height": "17.0 in (43.0 cm)",
+      "width": "12.5 in (32.0 cm)",
+      "depth": "6.0 in (15.0 cm)",
+      "capacity": "Approx. 21L"
+    },
+    "measurementsIn": {
+      "HEIGHT": "17.0 in",
+      "WIDTH": "12.5 in",
+      "DEPTH": "6.0 in",
+      "CAPACITY": "Approx. 21L"
+    },
+    "measurementsCm": {
+      "HEIGHT": "43.0 cm",
+      "WIDTH": "32.0 cm",
+      "DEPTH": "15.0 cm",
+      "CAPACITY": "Approx. 21L"
+    },
+    "fabric": "Heavy Navy Polyester Canvas, Red Mesh Side Sleeves & Reflective Piping",
+    "provenance": "Curated Nairobi Thrift Stock — Sanitized & Inspected.",
+    "description": "Varsity-inspired navy and crimson Bobdog backpack featuring an embossed red faux-leather top strap with metal loops, dual vertical racing stripes, crimson lower block, and reflective side pockets.",
+    "inStock": true
+  },
+  {
+    "id": "bag-17",
+    "name": "Magenta Pink & Heather Grey Multi-Zip Sport Backpack",
+    "category": "SPORT & COMMUTE",
+    "price": 900,
+    "image": "assets/products/bag-17.jpg",
+    "condition": "Grade A- Thrift (8.9/10)",
+    "conditionNote": "Bright berry-magenta nylon with clean heather-grey arched trims, smooth triple-compartment zippers, and intact side mesh bottle sleeves.",
+    "size": "Large Multi-Zip Pack (Approx. 24L)",
+    "measurements": {
+      "height": "18.0 in (46.0 cm)",
+      "width": "12.5 in (32.0 cm)",
+      "depth": "6.5 in (16.5 cm)",
+      "capacity": "Approx. 24L"
+    },
+    "measurementsIn": {
+      "HEIGHT": "18.0 in",
+      "WIDTH": "12.5 in",
+      "DEPTH": "6.5 in",
+      "CAPACITY": "Approx. 24L"
+    },
+    "measurementsCm": {
+      "HEIGHT": "46.0 cm",
+      "WIDTH": "32.0 cm",
+      "DEPTH": "16.5 cm",
+      "CAPACITY": "Approx. 24L"
+    },
+    "fabric": "Lightweight Berry-Pink Woven Nylon & Heather-Grey Trim Panels",
+    "provenance": "Curated Nairobi Thrift Stock — Sanitized & Inspected.",
+    "description": "Roomy high-visibility magenta and heather-grey sport backpack built with three curved full-zip compartments, brushed silver oval pulls, quick-stash front pocket, and dual grey mesh bottle holders.",
+    "inStock": true
+  },
+  {
+    "id": "bag-18",
+    "name": "Cobalt Navy & Lime Green Archive Flap Satchel",
+    "category": "GRAPHIC & RETRO",
+    "price": 850,
+    "image": "assets/products/bag-18.jpg",
+    "condition": "Grade A Thrift (9.0/10)",
+    "conditionNote": "Clean structured navy and lime canvas with intact embroidered yellow/green crest, crisp lettering, and uncracked clear PVC ID window.",
+    "size": "Boxy Flap Satchel Pack (Approx. 18L)",
+    "measurements": {
+      "height": "16.0 in (40.5 cm)",
+      "width": "12.0 in (30.5 cm)",
+      "depth": "5.5 in (14.0 cm)",
+      "capacity": "Approx. 18L"
+    },
+    "measurementsIn": {
+      "HEIGHT": "16.0 in",
+      "WIDTH": "12.0 in",
+      "DEPTH": "5.5 in",
+      "CAPACITY": "Approx. 18L"
+    },
+    "measurementsCm": {
+      "HEIGHT": "40.5 cm",
+      "WIDTH": "30.5 cm",
+      "DEPTH": "14.0 cm",
+      "CAPACITY": "Approx. 18L"
+    },
+    "fabric": "Heavy Cobalt & Lime Woven Canvas with Clear PVC ID Slot",
+    "provenance": "Curated Nairobi Thrift Stock — Sanitized & Inspected.",
+    "description": "Bold architectural flap-front school satchel in cobalt navy and electric lime green, finished with golden-yellow calligraphy embroidery, crescent emblem, and a sage-framed clear ID card window.",
+    "inStock": true
+  },
+  {
+    "id": "bag-19",
+    "name": "Crimson Bunny & Carrot Retro School Backpack",
+    "category": "KIDS & SCHOOL",
+    "price": 800,
+    "image": "assets/products/bag-19.jpg",
+    "condition": "Grade B+ Thrift (8.4/10)",
+    "conditionNote": "Bright crimson nylon with adorable white bunny & carrot print intact, sturdy red mesh side pockets, and authentic pre-loved name-box markings on the top hood.",
+    "size": "Compact Kids School Pack (Approx. 15L)",
+    "measurements": {
+      "height": "14.5 in (37.0 cm)",
+      "width": "11.0 in (28.0 cm)",
+      "depth": "5.0 in (13.0 cm)",
+      "capacity": "Approx. 15L"
+    },
+    "measurementsIn": {
+      "HEIGHT": "14.5 in",
+      "WIDTH": "11.0 in",
+      "DEPTH": "5.0 in",
+      "CAPACITY": "Approx. 15L"
+    },
+    "measurementsCm": {
+      "HEIGHT": "37.0 cm",
+      "WIDTH": "28.0 cm",
+      "DEPTH": "13.0 cm",
+      "CAPACITY": "Approx. 15L"
+    },
+    "fabric": "Smooth Crimson Red Nylon, Navy Piping & Red Mesh Side Sleeves",
+    "provenance": "Curated Nairobi Thrift Stock — Sanitized & Inspected.",
+    "description": "Playful crimson-red and navy archival kindergarten backpack featuring a bright cartoon bunny holding a carrot, curved zip-hood top panel with retro Chinese typography, and twin mesh bottle pockets.",
+    "inStock": true
+  },
+  {
     "id": "bag-04",
     "name": "Stone Beige 'LATER.' Astronaut Streetwear Daypack",
     "category": "STREETWEAR",

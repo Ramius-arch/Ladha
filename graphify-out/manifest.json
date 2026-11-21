@@ -624,9 +624,9 @@
     "semantic_hash": ""
   },
   "storefront/data/products.json": {
-    "mtime": 1795251891.5701263,
-    "seen": 1795252455.9831758,
-    "ast_hash": "dce6c01e6f9af6a679ce7e6036c36c77",
+    "mtime": 1795278239.4832408,
+    "seen": 1795278359.6533353,
+    "ast_hash": "efed4a08fbbb134944895f92753371ba",
     "semantic_hash": ""
   },
   "storefront/js/admin-guard.js": {
@@ -2124,9 +2124,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/data/defaultProducts.json": {
-    "mtime": 1795251889.7525437,
-    "seen": 1795252455.9821818,
-    "ast_hash": "dce6c01e6f9af6a679ce7e6036c36c77",
+    "mtime": 1795278239.4832408,
+    "seen": 1795278359.6533353,
+    "ast_hash": "efed4a08fbbb134944895f92753371ba",
     "semantic_hash": ""
   },
   "storefront-app/src/data/siteContent.ts": {
@@ -2208,9 +2208,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/services/storeDb.ts": {
-    "mtime": 1795252321.2812629,
-    "seen": 1795252455.9821818,
-    "ast_hash": "bc69e3b13fd945cde01ab69976807228",
+    "mtime": 1795278240.9421268,
+    "seen": 1795278359.6533353,
+    "ast_hash": "c1089471e75cf2fd642baddb34b5748b",
     "semantic_hash": ""
   },
   "storefront-app/src/types/store.ts": {
@@ -2589,6 +2589,48 @@
     "mtime": 1795255177.7430427,
     "seen": 1795255312.131586,
     "ast_hash": "470f65fb0b64f221816b56b93f6936f8",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/bag-13.jpg": {
+    "mtime": 1795278146.993322,
+    "seen": 1795278359.6533353,
+    "ast_hash": "6494d1b551e73a0e184ad47981140c62",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/bag-14.jpg": {
+    "mtime": 1795278147.0247118,
+    "seen": 1795278359.6533353,
+    "ast_hash": "f3bc1d51001b146644a00d5d34eca832",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/bag-15.jpg": {
+    "mtime": 1795278147.0582898,
+    "seen": 1795278359.6533353,
+    "ast_hash": "950b092cdc446322691ac97ae351331a",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/bag-16.jpg": {
+    "mtime": 1795278147.089861,
+    "seen": 1795278359.6533353,
+    "ast_hash": "d97519489bf4621313592f6e736dff97",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/bag-17.jpg": {
+    "mtime": 1795278147.1209369,
+    "seen": 1795278359.6533353,
+    "ast_hash": "8e4e6d170f8cd015cb387cc107020e26",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/bag-18.jpg": {
+    "mtime": 1795278147.1550567,
+    "seen": 1795278359.6533353,
+    "ast_hash": "2461075e0c7d6cf4d0a29294e0c87161",
+    "semantic_hash": ""
+  },
+  "storefront/assets/products/bag-19.jpg": {
+    "mtime": 1795278147.1875184,
+    "seen": 1795278359.6533353,
+    "ast_hash": "6dcf0057de4e7b3045bd6d5b6c0be5c9",
     "semantic_hash": ""
   }
 }
