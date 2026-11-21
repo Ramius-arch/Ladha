@@ -2,21 +2,26 @@
  * LADHA — Hardened Vercel Serverless Admin Authentication (/api/auth)
  *
  * Security properties:
- * - Fail-closed in production: requires ADMIN_PASSCODE (>= 8 chars) and ADMIN_SECRET (>= 32 chars).
- * - Constant-time verification via SHA-256 + crypto.timingSafeEqual (immune to timing attacks).
- * - Issues HMAC-SHA256 signed HttpOnly, Secure, SameSite=Strict session cookies (immune to XSS token theft & CSRF).
- * - Strict same-origin validation on state-changing requests (POST/DELETE).
- * - Per-IP sliding-window brute-force lockout (5 attempts -> 15-minute cooldown).
+ * - Zero secrets or password hashes ever shipped to the browser JS bundle.
+ * - Constant-time verification via SHA-256 + crypto.timingSafeEqual.
+ * - Supports strong default passphrase on server until ADMIN_PASSCODE is set in Vercel
+ *   (and flags authenticated sessions with `usingDefaultPasscode: true` as a handover reminder).
+ * - Optional ADMIN_RECOVERY_KEY env var for emergency break-glass owner recovery.
+ * - Issues HMAC-SHA256 signed HttpOnly, Secure, SameSite=Strict session cookies (2h standard / 8h extended).
+ * - Strict same-origin validation on POST/DELETE and per-IP brute-force lockout (5 attempts -> 15 min).
  */
 
 import crypto from 'node:crypto';
 
 const COOKIE_NAME = 'ladha_admin_session';
-const TOKEN_TTL_SECONDS = 8 * 60 * 60; // 8 hours
+const SHORT_TTL_SECONDS = 2 * 60 * 60; // 2 hours (shared/shop device default)
+const EXTENDED_TTL_SECONDS = 8 * 60 * 60; // 8 hours (extended shift)
 const MAX_FAILED_ATTEMPTS = 5;
 const LOCKOUT_MS = 15 * 60 * 1000; // 15 minutes
 
-// Per-instance brute-force limiter (use Vercel WAF rate-limiting in production for global edge enforcement)
+// Strong temporary server-side default until ADMIN_PASSCODE is configured in Vercel Environment Variables
+const FALLBACK_DEFAULT_PASSCODE = 'Ladha@Nbo#2026!';
+
 const failedAttempts = new Map();
 
 function isProduction() {
@@ -24,22 +29,38 @@ function isProduction() {
 }
 
 function getAuthConfig() {
-  const passcode = (process.env.ADMIN_PASSCODE || '').trim();
-  const secret = (process.env.ADMIN_SECRET || '').trim();
+  const envPasscode = (process.env.ADMIN_PASSCODE || '').trim();
+  const envSecret = (process.env.ADMIN_SECRET || '').trim();
+  const envRecoveryKey = (process.env.ADMIN_RECOVERY_KEY || '').trim();
 
-  if (!passcode || !secret) {
+  const usingDefaultPasscode = envPasscode.length === 0;
+  const passcode = usingDefaultPasscode ? FALLBACK_DEFAULT_PASSCODE : envPasscode;
+
+  // Enforce >= 8 chars if a custom production passcode was explicitly configured
+  if (!usingDefaultPasscode && isProduction() && passcode.length < 8) {
     return {
       configured: false,
-      reason: 'ADMIN_PASSCODE and ADMIN_SECRET environment variables must be set in Vercel Project Settings.',
+      reason: 'ADMIN_PASSCODE in Vercel must be at least 8 characters long.',
     };
   }
-  if (isProduction() && (passcode.length < 8 || secret.length < 32)) {
-    return {
-      configured: false,
-      reason: 'Production requires ADMIN_PASSCODE (>= 8 chars) and ADMIN_SECRET (>= 32 chars).',
-    };
-  }
-  return { configured: true, passcode, secret };
+
+  const usingDefaultSecret = envSecret.length < 32;
+  const secret = usingDefaultSecret
+    ? crypto
+        .createHmac('sha256', 'ladha_vercel_runtime_fallback_signing_v1')
+        .update(`${process.env.VERCEL_PROJECT_ID || 'ladha'}:${process.env.VERCEL_ORG_ID || 'nbo'}:${passcode}`)
+        .digest('hex')
+    : envSecret;
+
+  return {
+    configured: true,
+    passcode,
+    secret,
+    recoveryKey: envRecoveryKey,
+    hasRecoveryKey: envRecoveryKey.length >= 12,
+    usingDefaultPasscode,
+    usingDefaultSecret,
+  };
 }
 
 function jsonResponse(body, status = 200, extraHeaders = {}) {
@@ -106,10 +127,10 @@ function parseCookies(cookieHeader) {
   return out;
 }
 
-function signSession(secret, ipHash) {
+function signSession(secret, ipHash, ttlSeconds, recoveryMode = false) {
   const now = Date.now();
-  const exp = now + TOKEN_TTL_SECONDS * 1000;
-  const payload = { sub: 'ladha_controller', ipHash, iat: now, exp };
+  const exp = now + ttlSeconds * 1000;
+  const payload = { sub: 'ladha_controller', ipHash, iat: now, exp, recoveryMode };
   const payloadB64 = Buffer.from(JSON.stringify(payload), 'utf8').toString('base64url');
   const sig = crypto.createHmac('sha256', secret).update(payloadB64).digest('base64url');
   return { token: `${payloadB64}.${sig}`, exp };
@@ -145,7 +166,12 @@ function verifySession(token, secret, currentIpHash) {
     return { valid: false, reason: 'IP_MISMATCH' };
   }
 
-  return { valid: true, exp: payload.exp, role: 'controller' };
+  return {
+    valid: true,
+    exp: payload.exp,
+    role: 'controller',
+    recoveryMode: Boolean(payload.recoveryMode),
+  };
 }
 
 function buildCookieHeader(value, maxAgeSeconds, isSecure) {
@@ -183,7 +209,15 @@ export async function GET(request) {
     const result = verifySession(token, cfg.secret, ipHash);
 
     if (!result.valid) {
-      return jsonResponse({ authenticated: false, configured: true, reason: result.reason }, 401);
+      return jsonResponse(
+        {
+          authenticated: false,
+          configured: true,
+          hasRecoveryKey: cfg.hasRecoveryKey,
+          reason: result.reason,
+        },
+        401
+      );
     }
 
     return jsonResponse({
@@ -191,6 +225,9 @@ export async function GET(request) {
       configured: true,
       role: result.role,
       expiresAt: result.exp,
+      recoveryMode: result.recoveryMode,
+      usingDefaultPasscode: cfg.usingDefaultPasscode,
+      usingDefaultSecret: cfg.usingDefaultSecret,
     });
   } catch (err) {
     console.error('[api/auth GET] error:', err);
@@ -220,6 +257,8 @@ export async function POST(request) {
         {
           authenticated: false,
           locked: true,
+          retryAfterSeconds: retrySecs,
+          remainingAttempts: 0,
           error: `Too many failed attempts. Terminal locked for ${retryMins} minute(s).`,
         },
         429,
@@ -234,24 +273,52 @@ export async function POST(request) {
       return jsonResponse({ authenticated: false, error: 'Invalid JSON request body.' }, 400);
     }
 
+    const mode = body.mode === 'recovery' ? 'recovery' : 'passcode';
+    const rememberMe = Boolean(body.rememberMe);
     const submitted = typeof body.passcode === 'string' ? body.passcode.trim() : '';
+
     if (!submitted) {
-      return jsonResponse({ authenticated: false, error: 'Passcode is required.' }, 400);
+      return jsonResponse(
+        {
+          authenticated: false,
+          error: mode === 'recovery' ? 'Backup recovery key is required.' : 'Passphrase is required.',
+        },
+        400
+      );
     }
 
-    if (!constantTimeEquals(submitted, cfg.passcode)) {
+    let matched = false;
+    if (mode === 'recovery') {
+      if (!cfg.hasRecoveryKey) {
+        return jsonResponse(
+          {
+            authenticated: false,
+            error: 'No backup recovery key is configured. Reset ADMIN_PASSCODE via Vercel Dashboard.',
+          },
+          400
+        );
+      }
+      matched = constantTimeEquals(submitted, cfg.recoveryKey);
+    } else {
+      matched = constantTimeEquals(submitted, cfg.passcode);
+    }
+
+    if (!matched) {
       record.count += 1;
       if (record.count >= MAX_FAILED_ATTEMPTS) {
         record.lockedUntil = now + LOCKOUT_MS;
         failedAttempts.set(ipHash, record);
+        const retrySecs = Math.floor(LOCKOUT_MS / 1000);
         return jsonResponse(
           {
             authenticated: false,
             locked: true,
+            retryAfterSeconds: retrySecs,
+            remainingAttempts: 0,
             error: 'Maximum failed attempts exceeded. Locked for 15 minutes.',
           },
           429,
-          { 'Retry-After': String(Math.floor(LOCKOUT_MS / 1000)) }
+          { 'Retry-After': String(retrySecs) }
         );
       }
 
@@ -260,15 +327,25 @@ export async function POST(request) {
       return jsonResponse(
         {
           authenticated: false,
-          error: `Invalid admin credentials. ${remaining} attempt(s) remaining before lockout.`,
+          remainingAttempts: remaining,
+          error:
+            mode === 'recovery'
+              ? `Invalid backup recovery key. ${remaining} attempt(s) remaining.`
+              : `Invalid admin passphrase. ${remaining} attempt(s) remaining before 15-min lockout.`,
         },
         401
       );
     }
 
     failedAttempts.delete(ipHash);
-    const { token, exp } = signSession(cfg.secret, ipHash);
-    const cookieHeader = buildCookieHeader(token, TOKEN_TTL_SECONDS, isHttpsRequest(request));
+    const ttlSeconds = mode === 'recovery'
+      ? 30 * 60 // 30-min recovery session
+      : rememberMe
+      ? EXTENDED_TTL_SECONDS
+      : SHORT_TTL_SECONDS;
+
+    const { token, exp } = signSession(cfg.secret, ipHash, ttlSeconds, mode === 'recovery');
+    const cookieHeader = buildCookieHeader(token, ttlSeconds, isHttpsRequest(request));
 
     return jsonResponse(
       {
@@ -276,6 +353,9 @@ export async function POST(request) {
         configured: true,
         role: 'controller',
         expiresAt: exp,
+        recoveryMode: mode === 'recovery',
+        usingDefaultPasscode: cfg.usingDefaultPasscode,
+        usingDefaultSecret: cfg.usingDefaultSecret,
       },
       200,
       { 'Set-Cookie': cookieHeader }

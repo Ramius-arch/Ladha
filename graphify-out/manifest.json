@@ -2250,9 +2250,9 @@
     "semantic_hash": ""
   },
   "storefront-app/vite.config.ts": {
-    "mtime": 1795254152.5495083,
-    "seen": 1795254474.295444,
-    "ast_hash": "b7ad1c4e4a1a46c200500d51b4fbadff",
+    "mtime": 1795280827.7751925,
+    "seen": 1795281084.6847389,
+    "ast_hash": "475f5a00751c301518df8151ef274016",
     "semantic_hash": ""
   },
   "storefront-app/index.html": {
@@ -2280,9 +2280,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/pages/AdminPage.tsx": {
-    "mtime": 1795255189.10155,
-    "seen": 1795255312.131586,
-    "ast_hash": "78e726f03b065f778bceeb049a650a4f",
+    "mtime": 1795280945.4528558,
+    "seen": 1795281084.68373,
+    "ast_hash": "a1863e682fa98e460d758bd8cd4fe9f6",
     "semantic_hash": ""
   },
   "storefront/assets/products/product-16.jpg": {
@@ -2580,9 +2580,9 @@
     "semantic_hash": ""
   },
   "api/auth.mjs": {
-    "mtime": 1795253766.266819,
-    "seen": 1795254474.2944112,
-    "ast_hash": "567b1e99323c404b588c956d83c6a485",
+    "mtime": 1795280763.26612,
+    "seen": 1795281084.68373,
+    "ast_hash": "3a8f9748fcd0929e96ca0dd04ceff4d8",
     "semantic_hash": ""
   },
   "storefront-app/src/config/storeConfig.ts": {

@@ -12,6 +12,15 @@ import {
   Receipt,
   LogOut,
   AlertTriangle,
+  Eye,
+  EyeOff,
+  KeyRound,
+  Copy,
+  Check,
+  MessageCircle,
+  Clock,
+  Loader2,
+  ArrowLeft,
 } from 'lucide-react';
 import { Product, StoreOrder } from '../types/store';
 import {
@@ -28,16 +37,40 @@ interface AdminPageProps {
 }
 
 const LEDGER_TOKEN_KEY = 'authToken';
+const SECRET_GEN_CMD = 'node -e "console.log(require(\'crypto\').randomBytes(32).toString(\'hex\'))"';
+
+function formatCountdown(totalSeconds: number): string {
+  const clamped = Math.max(0, Math.floor(totalSeconds));
+  const hrs = Math.floor(clamped / 3600);
+  const mins = Math.floor((clamped % 3600) / 60);
+  const secs = clamped % 60;
+  if (hrs > 0) {
+    return `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+  }
+  return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+}
 
 export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated }) => {
   const { navigate } = useRouter();
   const [checkingSession, setCheckingSession] = useState<boolean>(true);
   const [authorized, setAuthorized] = useState<boolean>(false);
   const [sessionExpiresAt, setSessionExpiresAt] = useState<number | null>(null);
+  const [sessionRemainingSecs, setSessionRemainingSecs] = useState<number | null>(null);
+  const [usingDefaultPasscode, setUsingDefaultPasscode] = useState<boolean>(false);
+  const [recoveryModeSession, setRecoveryModeSession] = useState<boolean>(false);
+  const [hasRecoveryKey, setHasRecoveryKey] = useState<boolean>(false);
 
   const [passcode, setPasscode] = useState('');
+  const [showPasscode, setShowPasscode] = useState(false);
+  const [capsLockOn, setCapsLockOn] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
+  const [authView, setAuthView] = useState<'login' | 'forgot' | 'recovery-key'>('login');
+  const [copiedCmd, setCopiedCmd] = useState(false);
   const [verifying, setVerifying] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
+  const [remainingAttempts, setRemainingAttempts] = useState<number | null>(null);
+  const [lockoutSecs, setLockoutSecs] = useState<number>(0);
+
   const [activeTab, setActiveTab] = useState<'inventory' | 'orders' | 'security'>('inventory');
   const [searchQuery, setSearchQuery] = useState('');
   const [orders, setOrders] = useState<StoreOrder[]>([]);
@@ -67,12 +100,18 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
           authenticated?: boolean;
           expiresAt?: number;
           configured?: boolean;
+          hasRecoveryKey?: boolean;
+          recoveryMode?: boolean;
+          usingDefaultPasscode?: boolean;
           error?: string;
         };
         if (!active) return;
+        setHasRecoveryKey(Boolean(data.hasRecoveryKey));
         if (res.ok && data.authenticated) {
           setAuthorized(true);
           setSessionExpiresAt(data.expiresAt || null);
+          setUsingDefaultPasscode(Boolean(data.usingDefaultPasscode));
+          setRecoveryModeSession(Boolean(data.recoveryMode));
         } else {
           setAuthorized(false);
           if (res.status === 503 && data.error) {
@@ -90,30 +129,94 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
     };
   }, []);
 
+  // Tick brute-force lockout countdown live
+  useEffect(() => {
+    if (lockoutSecs <= 0) return;
+    const timer = window.setInterval(() => {
+      setLockoutSecs((prev) => {
+        if (prev <= 1) {
+          setAuthError(null);
+          setRemainingAttempts(null);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => window.clearInterval(timer);
+  }, [lockoutSecs]);
+
+  // Tick active session expiry timer and auto-relock when session expires
+  useEffect(() => {
+    if (!authorized || !sessionExpiresAt) {
+      setSessionRemainingSecs(null);
+      return;
+    }
+    const updateRemaining = () => {
+      const secs = Math.floor((sessionExpiresAt - Date.now()) / 1000);
+      if (secs <= 0) {
+        setSessionRemainingSecs(0);
+        setAuthorized(false);
+        setSessionExpiresAt(null);
+        setAuthError('Session expired for security. Please sign in again.');
+      } else {
+        setSessionRemainingSecs(secs);
+      }
+    };
+    updateRemaining();
+    const timer = window.setInterval(updateRemaining, 1000);
+    return () => window.clearInterval(timer);
+  }, [authorized, sessionExpiresAt]);
+
   useEffect(() => {
     if (authorized) {
       setOrders(getStoredOrders());
     }
   }, [authorized]);
 
+  const handleKeyState = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (typeof e.getModifierState === 'function') {
+      setCapsLockOn(e.getModifierState('CapsLock'));
+    }
+  };
+
+  const handleCopyCommand = async () => {
+    try {
+      await navigator.clipboard.writeText(SECRET_GEN_CMD);
+      setCopiedCmd(true);
+      window.setTimeout(() => setCopiedCmd(false), 2200);
+    } catch {
+      // ignore clipboard restrictions
+    }
+  };
+
   const handleUnlock = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!passcode.trim() || verifying) return;
+    if (!passcode.trim() || verifying || lockoutSecs > 0) return;
 
     setVerifying(true);
     setAuthError(null);
+
+    const submitMode = authView === 'recovery-key' ? 'recovery' : 'passcode';
 
     try {
       const res = await fetch('/api/auth', {
         method: 'POST',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ passcode: passcode.trim() }),
+        body: JSON.stringify({
+          passcode: passcode.trim(),
+          mode: submitMode,
+          rememberMe: submitMode === 'passcode' ? rememberMe : false,
+        }),
       });
 
       const data = (await res.json().catch(() => ({}))) as {
         authenticated?: boolean;
         expiresAt?: number;
+        recoveryMode?: boolean;
+        usingDefaultPasscode?: boolean;
+        retryAfterSeconds?: number;
+        remainingAttempts?: number;
         error?: string;
       };
 
@@ -128,10 +231,22 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
           })
         );
         setSessionExpiresAt(data.expiresAt || null);
+        setUsingDefaultPasscode(Boolean(data.usingDefaultPasscode));
+        setRecoveryModeSession(Boolean(data.recoveryMode));
+        setRemainingAttempts(null);
+        setLockoutSecs(0);
         setPasscode('');
+        setShowPasscode(false);
+        setAuthView('login');
         setAuthorized(true);
       } else {
-        setAuthError(data.error || 'Invalid security key. Access denied.');
+        setAuthError(data.error || 'Invalid security credentials. Access denied.');
+        if (typeof data.remainingAttempts === 'number') {
+          setRemainingAttempts(data.remainingAttempts);
+        }
+        if (typeof data.retryAfterSeconds === 'number' && data.retryAfterSeconds > 0) {
+          setLockoutSecs(data.retryAfterSeconds);
+        }
         setPasscode('');
       }
     } catch {
@@ -158,6 +273,9 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
       // ignore
     }
     setSessionExpiresAt(null);
+    setSessionRemainingSecs(null);
+    setUsingDefaultPasscode(false);
+    setRecoveryModeSession(false);
     setAuthorized(false);
   };
 
@@ -238,66 +356,256 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
   if (checkingSession) {
     return (
       <section className="min-h-[85vh] w-full bg-[#0b0b0b] text-white flex items-center justify-center px-4 py-24">
-        <div className="font-mono text-xs uppercase tracking-[0.2em] text-white/60">
-          VERIFYING SERVER SESSION...
+        <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-white/60">
+          <Loader2 className="w-4 h-4 animate-spin text-[#c7ff97]" />
+          <span>VERIFYING SERVER SESSION...</span>
         </div>
       </section>
     );
   }
 
   if (!authorized) {
+    const isRecoveryKeyView = authView === 'recovery-key';
+    const recoverySupportUrl = STORE_CONFIG.whatsappUrl(
+      `Hello ${STORE_CONFIG.brandName} Owner, I need an admin passphrase reset / access recovery for /admin.`
+    );
+
     return (
       <section className="min-h-[85vh] w-full bg-[#0b0b0b] text-white flex items-center justify-center px-4 py-24">
-        <div className="w-full max-w-md bg-[#111111] border border-white/15 p-8 sm:p-10 relative shadow-2xl">
-          <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.2em] uppercase text-[#c7ff97] mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#c7ff97] animate-pulse" />
-            <span>RESTRICTED STORE COMMAND GATE</span>
+        <div className="w-full max-w-md bg-[#111111] border border-white/15 p-7 sm:p-10 relative shadow-2xl">
+          <div className="flex items-center justify-between gap-2 font-mono text-[10px] tracking-[0.2em] uppercase text-[#c7ff97] mb-3">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#c7ff97] animate-pulse" />
+              <span>RESTRICTED STORE COMMAND GATE</span>
+            </div>
+            {lockoutSecs > 0 && (
+              <span className="text-[#ff4500] font-bold">
+                LOCKED {formatCountdown(lockoutSecs)}
+              </span>
+            )}
           </div>
 
-          <h1 className="text-2xl font-bold tracking-tight text-white mb-2">
-            Operator Authentication
-          </h1>
-          <p className="text-xs text-white/60 font-mono mb-6">
-            SERVER-SIDE HTTPONLY SESSION · MAX 5 ATTEMPTS // 15-MIN LOCKOUT
-          </p>
-
-          <form onSubmit={handleUnlock} className="space-y-5">
-            <div>
-              <label
-                htmlFor="admin-security-key"
-                className="block font-mono text-[10px] uppercase tracking-[0.16em] text-white/70 mb-2"
-              >
-                Enter Manager Security Passphrase
-              </label>
-              <input
-                id="admin-security-key"
-                type="password"
-                value={passcode}
-                onChange={(e) => setPasscode(e.target.value)}
-                placeholder="••••••••"
-                autoComplete="current-password"
-                required
-                autoFocus
-                className="w-full bg-black border border-white/25 px-4 py-3 text-white font-mono text-base tracking-[0.2em] focus:outline-none focus:border-[#c7ff97]"
-              />
-            </div>
-
-            {authError && (
-              <div className="flex items-start gap-2 bg-[#ff4500]/15 border border-[#ff4500]/40 px-3.5 py-2.5 text-xs font-mono text-[#ff4500]">
-                <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
-                <span>{authError}</span>
+          {authView === 'forgot' ? (
+            <div className="space-y-5">
+              <div>
+                <h1 className="text-2xl font-bold tracking-tight text-white mb-1.5">
+                  Passphrase Recovery
+                </h1>
+                <p className="text-xs text-white/60 leading-relaxed">
+                  To block account takeovers, public self-reset is disabled. Recover access securely using your 2FA-protected Vercel dashboard or an offline backup recovery key.
+                </p>
               </div>
-            )}
 
-            <button
-              type="submit"
-              disabled={verifying}
-              className="w-full bg-[#c7ff97] text-[#0b0b0b] font-mono text-xs font-bold uppercase tracking-[0.16em] py-3.5 hover:bg-white transition-colors flex items-center justify-center gap-2"
-            >
-              <Lock className="w-3.5 h-3.5" />
-              <span>{verifying ? 'VERIFYING DIGEST...' : 'UNLOCK STORE COMMAND PORTAL →'}</span>
-            </button>
-          </form>
+              <div className="bg-black border border-white/15 p-4 space-y-2.5 text-xs">
+                <div className="font-mono text-[10px] uppercase tracking-widest text-[#c7ff97]">
+                  OPTION 1 // OWNER RESET VIA VERCEL (2FA)
+                </div>
+                <ol className="list-decimal pl-4 space-y-1.5 text-white/75 leading-relaxed">
+                  <li>Open <strong>Vercel Dashboard → ladha → Settings → Environment Variables</strong>.</li>
+                  <li>Update <code className="text-[#c7ff97]">ADMIN_PASSCODE</code> (8+ chars) and <code className="text-[#c7ff97]">ADMIN_SECRET</code> (32+ chars).</li>
+                  <li>Click <strong>Deployments → Redeploy</strong> to apply immediately.</li>
+                </ol>
+                <div className="pt-2">
+                  <button
+                    type="button"
+                    onClick={handleCopyCommand}
+                    className="w-full flex items-center justify-between gap-2 border border-white/20 px-3 py-2 font-mono text-[10px] uppercase tracking-wider text-white/80 hover:border-[#c7ff97] hover:text-[#c7ff97] transition-colors"
+                  >
+                    <span>
+                      {copiedCmd ? 'COPIED SECRET GENERATOR COMMAND' : 'COPY 64-CHAR ADMIN_SECRET GENERATOR'}
+                    </span>
+                    {copiedCmd ? <Check className="w-3.5 h-3.5 text-[#c7ff97]" /> : <Copy className="w-3.5 h-3.5" />}
+                  </button>
+                </div>
+              </div>
+
+              <div className="bg-black border border-white/15 p-4 space-y-2.5 text-xs">
+                <div className="font-mono text-[10px] uppercase tracking-widest text-[#ff4500]">
+                  OPTION 2 // EMERGENCY BACKUP KEY OR OWNER SUPPORT
+                </div>
+                <div className="flex flex-col gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setAuthError(null);
+                      setPasscode('');
+                      setAuthView('recovery-key');
+                    }}
+                    className="w-full py-2.5 px-3 border border-white/25 hover:bg-white hover:text-black font-mono text-[11px] uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
+                  >
+                    <KeyRound className="w-3.5 h-3.5" />
+                    <span>
+                      {hasRecoveryKey ? 'Sign In With Backup Recovery Key' : 'Enter Backup Recovery Key'}
+                    </span>
+                  </button>
+
+                  <a
+                    href={recoverySupportUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-2.5 px-3 border border-[#c7ff97]/40 text-[#c7ff97] hover:bg-[#c7ff97] hover:text-black font-mono text-[11px] uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5" />
+                    <span>Contact Store Owner ({STORE_CONFIG.phoneLocal})</span>
+                  </a>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setAuthError(null);
+                  setAuthView('login');
+                }}
+                className="w-full py-2.5 font-mono text-[11px] uppercase tracking-widest text-white/70 hover:text-white flex items-center justify-center gap-1.5 transition-colors"
+              >
+                <ArrowLeft className="w-3.5 h-3.5" />
+                <span>Back to Sign In</span>
+              </button>
+            </div>
+          ) : (
+            <>
+              <h1 className="text-2xl font-bold tracking-tight text-white mb-2">
+                {isRecoveryKeyView ? 'Backup Recovery Key' : 'Operator Authentication'}
+              </h1>
+              <p className="text-xs text-white/60 font-mono mb-6">
+                {isRecoveryKeyView
+                  ? '30-MIN BREAK-GLASS SESSION · ADMIN_RECOVERY_KEY'
+                  : 'SERVER-SIDE HTTPONLY SESSION · 5 ATTEMPTS // 15-MIN LOCKOUT'}
+              </p>
+
+              <form onSubmit={handleUnlock} className="space-y-5">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <label
+                      htmlFor="admin-security-key"
+                      className="block font-mono text-[10px] uppercase tracking-[0.16em] text-white/70"
+                    >
+                      {isRecoveryKeyView ? 'Enter Backup Recovery Key' : 'Manager Passphrase'}
+                    </label>
+                    {remainingAttempts !== null && remainingAttempts > 0 && (
+                      <span className="font-mono text-[10px] uppercase text-[#ff4500]">
+                        {remainingAttempts} / 5 LEFT
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="relative">
+                    <input
+                      id="admin-security-key"
+                      type={showPasscode ? 'text' : 'password'}
+                      value={passcode}
+                      onChange={(e) => {
+                        setPasscode(e.target.value);
+                        if (authError && lockoutSecs === 0) setAuthError(null);
+                      }}
+                      onKeyUp={handleKeyState}
+                      onKeyDown={handleKeyState}
+                      placeholder={isRecoveryKeyView ? 'Enter offline recovery key' : 'Enter manager passphrase'}
+                      autoComplete={isRecoveryKeyView ? 'off' : 'current-password'}
+                      disabled={lockoutSecs > 0 || verifying}
+                      required
+                      autoFocus
+                      className="w-full bg-black border border-white/25 pl-4 pr-12 py-3 text-white font-mono text-sm tracking-wider placeholder:text-white/30 placeholder:tracking-normal focus:outline-none focus:border-[#c7ff97] disabled:opacity-50"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPasscode((prev) => !prev)}
+                      aria-label={showPasscode ? 'Hide passphrase' : 'Show passphrase'}
+                      aria-pressed={showPasscode}
+                      title={showPasscode ? 'Hide passphrase' : 'Show passphrase'}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-white/60 hover:text-[#c7ff97] transition-colors"
+                    >
+                      {showPasscode ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
+
+                  {capsLockOn && (
+                    <div className="mt-2 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-amber-400">
+                      <AlertTriangle className="w-3.5 h-3.5 shrink-0" />
+                      <span>Caps Lock is ON — passphrases are case-sensitive</span>
+                    </div>
+                  )}
+                </div>
+
+                {!isRecoveryKeyView && (
+                  <div className="flex items-center justify-between gap-2 text-xs">
+                    <label className="inline-flex items-center gap-2 font-mono text-[11px] text-white/70 cursor-pointer select-none">
+                      <input
+                        type="checkbox"
+                        checked={rememberMe}
+                        onChange={(e) => setRememberMe(e.target.checked)}
+                        className="accent-[#c7ff97]"
+                      />
+                      <span>Keep signed in (8h shift)</span>
+                    </label>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setAuthError(null);
+                        setShowPasscode(false);
+                        setAuthView('forgot');
+                      }}
+                      className="font-mono text-[11px] uppercase tracking-wider text-white/60 hover:text-[#c7ff97] underline underline-offset-4 transition-colors"
+                    >
+                      Forgot password?
+                    </button>
+                  </div>
+                )}
+
+                {authError && (
+                  <div
+                    role="alert"
+                    className="flex items-start gap-2 bg-[#ff4500]/15 border border-[#ff4500]/40 px-3.5 py-2.5 text-xs font-mono text-[#ff4500]"
+                  >
+                    <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+                    <span>{authError}</span>
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={verifying || lockoutSecs > 0 || !passcode.trim()}
+                  className="w-full bg-[#c7ff97] text-[#0b0b0b] font-mono text-xs font-bold uppercase tracking-[0.16em] py-3.5 hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+                >
+                  {verifying ? (
+                    <>
+                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                      <span>VERIFYING CREDENTIALS...</span>
+                    </>
+                  ) : lockoutSecs > 0 ? (
+                    <>
+                      <Clock className="w-3.5 h-3.5" />
+                      <span>LOCKED — RETRY IN {formatCountdown(lockoutSecs)}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Lock className="w-3.5 h-3.5" />
+                      <span>
+                        {isRecoveryKeyView ? 'UNLOCK RECOVERY SESSION →' : 'UNLOCK STORE COMMAND PORTAL →'}
+                      </span>
+                    </>
+                  )}
+                </button>
+
+                {isRecoveryKeyView && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setAuthError(null);
+                      setPasscode('');
+                      setAuthView('forgot');
+                    }}
+                    className="w-full py-1.5 font-mono text-[11px] uppercase tracking-widest text-white/60 hover:text-white flex items-center justify-center gap-1.5 transition-colors"
+                  >
+                    <ArrowLeft className="w-3.5 h-3.5" />
+                    <span>Back to Recovery Options</span>
+                  </button>
+                )}
+              </form>
+            </>
+          )}
 
           <div className="mt-6 pt-5 border-t border-white/10 text-center">
             <button
@@ -315,12 +623,39 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
 
   return (
     <section className="min-h-screen w-full bg-[#0b0b0b] text-white pt-24 pb-20 px-4 sm:px-8 max-w-[1440px] mx-auto">
+      {/* Default Passcode / Recovery Mode Handover Warning Banner */}
+      {(usingDefaultPasscode || recoveryModeSession) && (
+        <div className="mb-6 bg-amber-500/10 border border-amber-400/40 px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="flex items-start gap-2.5 text-xs font-mono text-amber-200">
+            <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+            <span>
+              {recoveryModeSession
+                ? 'BREAK-GLASS RECOVERY SESSION ACTIVE (30 MIN) — Rotate ADMIN_PASSCODE in Vercel Environment Variables immediately.'
+                : 'TEMPORARY DEFAULT PASSPHRASE ACTIVE — Before client handover, set custom ADMIN_PASSCODE & ADMIN_SECRET in Vercel → Settings → Environment Variables.'}
+            </span>
+          </div>
+          <button
+            type="button"
+            onClick={() => setActiveTab('security')}
+            className="shrink-0 px-3 py-1.5 bg-amber-400 text-black font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-colors"
+          >
+            View Handover Steps →
+          </button>
+        </div>
+      )}
+
       {/* Command Header */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-white/15">
         <div>
-          <div className="flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.18em] text-[#c7ff97] mb-1">
+          <div className="flex flex-wrap items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.18em] text-[#c7ff97] mb-1">
             <ShieldCheck className="w-4 h-4" />
             <span>LADHA COMMAND CENTER // AUTHENTICATED SESSION</span>
+            {sessionRemainingSecs !== null && (
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-white/10 text-white/80 text-[10px]">
+                <Clock className="w-3 h-3" />
+                <span>{formatCountdown(sessionRemainingSecs)}</span>
+              </span>
+            )}
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
             Archive Drop & Dispatch Control
@@ -620,6 +955,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
             <ul className="space-y-2 font-mono text-xs text-white/80 bg-black border border-white/10 p-4">
               <li><span className="text-[#c7ff97]">ADMIN_PASSCODE</span> — Strong manager passphrase (8+ chars)</li>
               <li><span className="text-[#c7ff97]">ADMIN_SECRET</span> — Random 32+ char hex cookie-signing key</li>
+              <li><span className="text-[#c7ff97]">ADMIN_RECOVERY_KEY</span> — Optional 12+ char offline break-glass key</li>
               <li><span className="text-[#c7ff97]">VITE_STORE_WHATSAPP</span> — WhatsApp digits (e.g. 254706678338)</li>
               <li><span className="text-[#c7ff97]">VITE_STORE_PHONE_DISPLAY</span> — Formatted phone (e.g. +254 706 678 338)</li>
               <li><span className="text-[#c7ff97]">VITE_MPESA_TILL</span> — Safaricom Buy Goods Till / Paybill</li>
