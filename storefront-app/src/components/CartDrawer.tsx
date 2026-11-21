@@ -4,6 +4,7 @@ import { X, Trash2, ArrowRight, MessageCircle } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useRouter } from '../context/RouterContext';
 import { RollingTextButton } from './ui/RollingTextButton';
+import { STORE_CONFIG } from '../config/storeConfig';
 
 export const CartDrawer: React.FC = () => {
   const { items, count, subtotal, isDrawerOpen, closeDrawer, removeFromCart } = useCart();
@@ -21,7 +22,7 @@ export const CartDrawer: React.FC = () => {
       msg += `${idx + 1}. ${item.name} (${item.size}) — KES ${item.price.toLocaleString()}\n`;
     });
     msg += `\n*Subtotal: KES ${subtotal.toLocaleString()}*\nConfirm availability & courier dispatch!`;
-    return `https://wa.me/254700000000?text=${encodeURIComponent(msg)}`;
+    return STORE_CONFIG.whatsappUrl(msg);
   })();
 
   return (
@@ -149,7 +150,9 @@ export const CartDrawer: React.FC = () => {
                   onClick={handleCheckout}
                   className="w-full py-3.5 px-5 bg-[#ff4500] hover:bg-[#e63e00] text-white font-mono text-xs font-semibold uppercase tracking-widest flex items-center justify-between transition-colors"
                 >
-                  <span>CHECKOUT WITH M-PESA STK</span>
+                  <span>
+                    {STORE_CONFIG.hasMpesaTill ? 'CHECKOUT WITH M-PESA STK' : 'PROCEED TO CHECKOUT'}
+                  </span>
                   <ArrowRight size={15} />
                 </button>
 

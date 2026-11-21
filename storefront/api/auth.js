@@ -6,9 +6,10 @@
 
 const crypto = require('crypto');
 
-// Master configuration
-const SECRET_KEY = process.env.ADMIN_SECRET || 'ladha_nairobi_archive_254_secret_key_v1';
-const VALID_PASSCODE = process.env.ADMIN_PASSCODE || '2540';
+// Master configuration — resolve strictly from environment or ephemeral in-memory dev secret
+const EPHEMERAL_DEV_SECRET = crypto.randomBytes(32).toString('hex');
+const SECRET_KEY = process.env.ADMIN_SECRET || EPHEMERAL_DEV_SECRET;
+const VALID_PASSCODE = process.env.ADMIN_PASSCODE || (process.env.NODE_ENV === 'production' ? '' : '2540');
 const TOKEN_TTL_MS = 8 * 60 * 60 * 1000; // 8 hours
 const MAX_FAILED_ATTEMPTS = 5;
 const LOCKOUT_DURATION_MS = 15 * 60 * 1000; // 15 minutes

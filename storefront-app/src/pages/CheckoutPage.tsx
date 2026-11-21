@@ -9,6 +9,7 @@ import {
 } from '../services/dukaCheckout';
 import { markProductsSoldOut, submitOrderRecord } from '../services/storeDb';
 import { CartItem } from '../types/store';
+import { STORE_CONFIG } from '../config/storeConfig';
 
 interface CheckoutPageProps {
   onCatalogMutated: () => void;
@@ -30,7 +31,9 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onCatalogMutated }) 
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
   const [regionVal, setRegionVal] = useState('nairobi-kilimani');
-  const [paymentMethod, setPaymentMethod] = useState<'mpesa' | 'cod'>('mpesa');
+  const [paymentMethod, setPaymentMethod] = useState<'mpesa' | 'cod'>(
+    STORE_CONFIG.hasMpesaTill ? 'mpesa' : 'cod'
+  );
   const [agreedTerms, setAgreedTerms] = useState(true);
 
   const [submitting, setSubmitting] = useState(false);
@@ -165,9 +168,9 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onCatalogMutated }) 
   };
 
   const whatsappTrackUrl = completedOrder
-    ? `https://wa.me/254700000000?text=${encodeURIComponent(
-        `*LADHA ORDER CONFIRMATION*\nRef: ${completedOrder.orderCode}\nM-Pesa Receipt: ${completedOrder.receiptCode}\nCustomer: ${completedOrder.customerName} (${completedOrder.customerPhone})\nDelivery: ${completedOrder.deliveryZone}\nTotal: KES ${completedOrder.grandTotal.toLocaleString()}`
-      )}`
+    ? STORE_CONFIG.whatsappUrl(
+        `*${STORE_CONFIG.brandName} ORDER CONFIRMATION*\nRef: ${completedOrder.orderCode}\nM-Pesa Receipt: ${completedOrder.receiptCode}\nCustomer: ${completedOrder.customerName} (${completedOrder.customerPhone})\nDelivery: ${completedOrder.deliveryZone}\nTotal: KES ${completedOrder.grandTotal.toLocaleString()}`
+      )
     : '#';
 
   return (
@@ -382,9 +385,39 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onCatalogMutated }) 
                 </h2>
 
                 <div className="grid grid-cols-1 gap-3">
+                  {STORE_CONFIG.hasMpesaTill && (
+                    <label
+                      className={`border p-4 cursor-pointer transition-colors ${
+                        paymentMethod === 'mpesa'
+                          ? 'border-[#ff4500] bg-[#ff4500]/[0.04]'
+                          : 'border-[#0b0b0b]/15 bg-[#f9f9f9]'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-3">
+                          <input
+                            type="radio"
+                            name="payment_method"
+                            checked={paymentMethod === 'mpesa'}
+                            onChange={() => setPaymentMethod('mpesa')}
+                          />
+                          <span className="font-sans text-sm font-bold uppercase">
+                            Lipa na M-Pesa Instant STK Push
+                          </span>
+                        </div>
+                        <span className="font-mono text-[10px] uppercase px-2 py-0.5 bg-[#0b0b0b] text-[#c7ff97]">
+                          TILL {STORE_CONFIG.mpesaTill}
+                        </span>
+                      </div>
+                      <p className="text-xs text-[#0b0b0b]/70 mt-2 pl-6">
+                        Triggers an instant STK prompt on your phone. Generates an official Safaricom M-Pesa SMS receipt and KRA eTIMS PDF invoice.
+                      </p>
+                    </label>
+                  )}
+
                   <label
                     className={`border p-4 cursor-pointer transition-colors ${
-                      paymentMethod === 'mpesa'
+                      paymentMethod === 'cod'
                         ? 'border-[#ff4500] bg-[#ff4500]/[0.04]'
                         : 'border-[#0b0b0b]/15 bg-[#f9f9f9]'
                     }`}
@@ -394,42 +427,19 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onCatalogMutated }) 
                         <input
                           type="radio"
                           name="payment_method"
-                          checked={paymentMethod === 'mpesa'}
-                          onChange={() => setPaymentMethod('mpesa')}
+                          checked={paymentMethod === 'cod'}
+                          onChange={() => setPaymentMethod('cod')}
                         />
                         <span className="font-sans text-sm font-bold uppercase">
-                          Lipa na M-Pesa Instant STK Push
+                          Pay on Delivery — Direct M-Pesa ({STORE_CONFIG.phoneLocal}) or Cash
                         </span>
                       </div>
                       <span className="font-mono text-[10px] uppercase px-2 py-0.5 bg-[#0b0b0b] text-[#c7ff97]">
-                        TILL 987654
+                        VERIFIED HANDOVER
                       </span>
                     </div>
                     <p className="text-xs text-[#0b0b0b]/70 mt-2 pl-6">
-                      Triggers an instant STK prompt on your phone. Generates an official Safaricom M-Pesa SMS receipt and KRA eTIMS PDF invoice.
-                    </p>
-                  </label>
-
-                  <label
-                    className={`border p-4 cursor-pointer transition-colors ${
-                      paymentMethod === 'cod'
-                        ? 'border-[#ff4500] bg-[#ff4500]/[0.04]'
-                        : 'border-[#0b0b0b]/15 bg-[#f9f9f9]'
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <input
-                        type="radio"
-                        name="payment_method"
-                        checked={paymentMethod === 'cod'}
-                        onChange={() => setPaymentMethod('cod')}
-                      />
-                      <span className="font-sans text-sm font-bold uppercase">
-                        Cash / M-Pesa on Delivery (Nairobi Only)
-                      </span>
-                    </div>
-                    <p className="text-xs text-[#0b0b0b]/70 mt-2 pl-6">
-                      Inspect garment weight & flat measurements upon rider arrival and settle directly at handover.
+                      Inspect your 1-of-1 piece upon arrival, then settle directly via M-Pesa Send Money to <strong>{STORE_CONFIG.phoneDisplay}</strong> or Cash at handover. Never send funds to any unverified Till number.
                     </p>
                   </label>
                 </div>
@@ -497,7 +507,9 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({ onCatalogMutated }) 
                   className="mt-6 w-full py-4 px-6 bg-[#ff4500] hover:bg-[#e63e00] disabled:opacity-50 text-white font-mono text-xs font-semibold uppercase tracking-widest transition-colors"
                 >
                   {submitting
-                    ? 'CONNECTING TO DUKAENGINE...'
+                    ? 'CONFIRMING ORDER...'
+                    : paymentMethod === 'cod'
+                    ? `RESERVE ORDER — PAY KES ${grandTotal.toLocaleString()} ON DELIVERY →`
                     : `AUTHORIZE KES ${grandTotal.toLocaleString()} & PLACE ORDER →`}
                 </button>
               </div>

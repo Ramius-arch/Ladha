@@ -1,5 +1,6 @@
 import defaultProductsRaw from './defaultProducts.json';
 import { LookbookEntry, Product } from '../types/store';
+import { STORE_CONFIG } from '../config/storeConfig';
 
 export function resolveAssetUrl(path?: string): string {
   if (!path) return '/assets/products/bag-01.jpg';
@@ -96,9 +97,12 @@ export const FAQ_ITEMS = [
   },
   {
     num: '04',
-    question: 'How fast is M-Pesa STK checkout and Nairobi courier dispatch?',
-    answer:
-      'Enter your Safaricom number at checkout to trigger an instant Lipa na M-Pesa STK Push (Buy Goods Till 987654) or select Cash/M-Pesa on Delivery inside Nairobi. Verified orders placed before 14:00 EAT dispatch the same day via private rider (CBD KES 200, Westlands/Kilimani KES 250, Karen KES 350). Countrywide courier takes 24–48 hours.',
+    question: STORE_CONFIG.hasMpesaTill
+      ? 'How fast is M-Pesa STK checkout and Nairobi courier dispatch?'
+      : 'How do payments and Nairobi courier dispatch work?',
+    answer: STORE_CONFIG.hasMpesaTill
+      ? `Enter your Safaricom number at checkout to trigger an instant Lipa na M-Pesa STK Push (Buy Goods Till ${STORE_CONFIG.mpesaTill}) or select Cash/M-Pesa on Delivery inside Nairobi. Verified orders placed before 14:00 EAT dispatch the same day via private rider (CBD KES 200, Westlands/Kilimani KES 250, Karen KES 350). Countrywide courier takes 24–48 hours.`
+      : `Reserve your 1-of-1 piece at checkout or on WhatsApp (${STORE_CONFIG.phoneDisplay}) and settle on delivery via direct M-Pesa (${STORE_CONFIG.phoneLocal}) or Cash upon inspection. Confirmed orders placed before 14:00 EAT dispatch the same day across Nairobi (CBD KES 200, Westlands/Kilimani KES 250, Karen KES 350). Countrywide courier takes 24–48 hours.`,
   },
   {
     num: '05',

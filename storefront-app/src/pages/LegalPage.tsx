@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from '../context/RouterContext';
+import { STORE_CONFIG } from '../config/storeConfig';
 
 type LegalTab = 'terms' | 'privacy' | 'disclosures';
 
@@ -90,7 +91,15 @@ export const LegalPage: React.FC = () => {
                   2. Pricing, M-Pesa & KRA eTIMS Settlement
                 </h2>
                 <p>
-                  All catalog prices are stated in Kenya Shillings (KES) inclusive of applicable statutory VAT (16%). M-Pesa Lipa na Safaricom STK payments settle against Buy Goods Till <strong>987654</strong>, generating an official KRA eTIMS PDF invoice alongside your SMS confirmation.
+                  {STORE_CONFIG.hasMpesaTill ? (
+                    <>
+                      All catalog prices are stated in Kenya Shillings (KES) inclusive of applicable statutory VAT (16%). M-Pesa Lipa na Safaricom STK payments settle against Buy Goods Till <strong>{STORE_CONFIG.mpesaTill}</strong>, generating an official KRA eTIMS PDF invoice alongside your SMS confirmation.
+                    </>
+                  ) : (
+                    <>
+                      All catalog prices are stated in Kenya Shillings (KES). Orders are confirmed directly via WhatsApp (<strong>{STORE_CONFIG.phoneDisplay}</strong>) and settled upon delivery via Cash or direct M-Pesa to <strong>{STORE_CONFIG.phoneLocal}</strong>. Never send payments to any third-party Till number not explicitly verified by LADHA.
+                    </>
+                  )}
                 </p>
               </div>
               <div>
@@ -137,7 +146,7 @@ export const LegalPage: React.FC = () => {
                   3. Zero Data Monetization & Right of Erasure
                 </h2>
                 <p>
-                  LADHA never sells, leases, or licenses customer records to third-party brokers. Collectors may request complete order record expungement at any time via <a href="mailto:archive@ladha.ke" className="font-bold underline text-[#0b0b0b]">archive@ladha.ke</a>.
+                  LADHA never sells, leases, or licenses customer records to third-party brokers. Collectors may request complete order record expungement at any time via <a href={`mailto:${STORE_CONFIG.email}`} className="font-bold underline text-[#0b0b0b]">{STORE_CONFIG.email}</a>.
                 </p>
               </div>
             </>

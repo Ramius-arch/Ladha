@@ -4,6 +4,7 @@ import { Product } from '../types/store';
 import { ProductCard } from '../components/ui/ProductCard';
 import { useCart } from '../context/CartContext';
 import { useRouter } from '../context/RouterContext';
+import { STORE_CONFIG } from '../config/storeConfig';
 
 interface ProductPageProps {
   products: Product[];
@@ -38,9 +39,9 @@ export const ProductPage: React.FC<ProductPageProps> = ({ products, onQuickView 
   const available = product.inStock !== false;
   const inBag = isInCart(product.id);
 
-  const whatsappUrl = `https://wa.me/254700000000?text=${encodeURIComponent(
-    `Hello LADHA, I want to instantly buy this 1-of-1 piece:\n\n*${product.name}*\nPrice: KES ${product.price.toLocaleString()}\nSize: ${product.size}\nItem Code: ${product.id.toUpperCase()}\n\nPlease confirm availability and courier dispatch!`
-  )}`;
+  const whatsappUrl = STORE_CONFIG.whatsappUrl(
+    `Hello ${STORE_CONFIG.brandName}, I want to instantly buy this 1-of-1 piece:\n\n*${product.name}*\nPrice: KES ${product.price.toLocaleString()}\nSize: ${product.size}\nItem Code: ${product.id.toUpperCase()}\n\nPlease confirm availability and courier dispatch!`
+  );
 
   return (
     <div className="min-h-screen bg-[#e9e9e9] text-[#0b0b0b]">

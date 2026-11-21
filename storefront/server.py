@@ -5,6 +5,7 @@ import time
 import base64
 import hashlib
 import hmac
+import secrets
 import urllib.parse
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
@@ -38,8 +39,8 @@ def write_json_data(filepath, data):
         print(f"[API] Error writing {filepath}: {e}")
         return False
 
-AUTH_SECRET = "ladha_nairobi_archive_254_secret_key_v1"
-VALID_PASSCODE = "2540"
+AUTH_SECRET = os.getenv("ADMIN_SECRET") or secrets.token_hex(32)
+VALID_PASSCODE = os.getenv("ADMIN_PASSCODE") or "2540"
 RATE_LIMIT_MAP = {} # ip -> {'attempts': int, 'lockedUntil': float}
 
 def hash_ip(ip):

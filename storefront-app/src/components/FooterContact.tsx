@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, Check, ArrowRight } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
 import { saveDispatchLead } from '../services/storeDb';
+import { STORE_CONFIG } from '../config/storeConfig';
 
 export const FooterContact: React.FC = () => {
   const { navigate } = useRouter();
@@ -111,21 +112,23 @@ export const FooterContact: React.FC = () => {
               {/* Direct Contacts */}
               <div className="mt-10 flex flex-col">
                 <span className="font-mono text-[11px] uppercase tracking-widest text-white/50 mb-2">
-                  DIRECT CONCIERGE & TILL 987654
+                  {STORE_CONFIG.hasMpesaTill
+                    ? `DIRECT CONCIERGE & TILL ${STORE_CONFIG.mpesaTill}`
+                    : 'DIRECT CONCIERGE & WHATSAPP ORDERS'}
                 </span>
                 <a
-                  href="https://wa.me/254700000000"
+                  href={STORE_CONFIG.whatsappUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl sm:text-[26px] font-semibold tracking-tight text-white hover:text-[#ff4500] transition-colors w-fit"
                 >
-                  +254 700 000 000
+                  {STORE_CONFIG.phoneDisplay}
                 </a>
                 <a
-                  href="mailto:archive@ladha.ke"
+                  href={`mailto:${STORE_CONFIG.email}`}
                   className="text-sm sm:text-base font-medium tracking-tight text-white/80 hover:text-white transition-colors mt-1 w-fit"
                 >
-                  archive@ladha.ke
+                  {STORE_CONFIG.email}
                 </a>
                 <p className="font-mono text-[10px] uppercase tracking-wider text-white/45 mt-3 max-w-[290px] leading-relaxed">
                   ORDERS VERIFIED BEFORE 14:00 EAT DISPATCH SAME DAY ACROSS NAIROBI.

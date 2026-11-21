@@ -20,52 +20,25 @@ import {
   saveCatalogProducts,
 } from '../services/storeDb';
 import { useRouter } from '../context/RouterContext';
+import { STORE_CONFIG } from '../config/storeConfig';
 
 interface AdminPageProps {
   products: Product[];
   onCatalogMutated: () => void;
 }
 
-const SALT = 'ladha_nbo_salt_v3_9941';
-const VALID_DIGESTS = new Set([
-  '49584038a130249c15866a58795369de67812a1c75fb72aeb4f3b0e0081b525b',
-  '3b7e395b6309fbc22c63e3e4affe8907160518fef19a3cafa97f36b1f724a1b0',
-]);
-const SESSION_TOKEN_KEY = 'ladha_admin_token';
 const LEDGER_TOKEN_KEY = 'authToken';
-const LOCKOUT_KEY = 'ladha_admin_lockout_until';
-const ATTEMPTS_KEY = 'ladha_admin_attempts';
-
-function isSignedTokenValid(token: string | null): boolean {
-  if (!token) return false;
-  return (
-    token.startsWith('ladha_v3_sig_49584038a130249c_') ||
-    token.startsWith('ladha_v3_sig_3b7e395b6309fbc2_')
-  );
-}
-
-async function computeSaltedSha256(input: string): Promise<string> {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(`${SALT}:${input}`);
-  const hashBuffer = await window.crypto.subtle.digest('SHA-256', data);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
-}
 
 export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated }) => {
   const { navigate } = useRouter();
-  const [authorized, setAuthorized] = useState<boolean>(() => {
-    try {
-      return isSignedTokenValid(sessionStorage.getItem(SESSION_TOKEN_KEY));
-    } catch {
-      return false;
-    }
-  });
+  const [checkingSession, setCheckingSession] = useState<boolean>(true);
+  const [authorized, setAuthorized] = useState<boolean>(false);
+  const [sessionExpiresAt, setSessionExpiresAt] = useState<number | null>(null);
 
   const [passcode, setPasscode] = useState('');
   const [verifying, setVerifying] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'inventory' | 'orders'>('inventory');
+  const [activeTab, setActiveTab] = useState<'inventory' | 'orders' | 'security'>('inventory');
   const [searchQuery, setSearchQuery] = useState('');
   const [orders, setOrders] = useState<StoreOrder[]>([]);
   const [showAddModal, setShowAddModal] = useState(false);
@@ -80,6 +53,43 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
     description: 'Single-piece curated thrift backpack sanitized and graded in Nairobi.',
   });
 
+  // Verify existing server-issued HttpOnly session cookie on mount (zero client-side bypass possible)
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      try {
+        const res = await fetch('/api/auth', {
+          method: 'GET',
+          credentials: 'same-origin',
+          cache: 'no-store',
+        });
+        const data = (await res.json().catch(() => ({}))) as {
+          authenticated?: boolean;
+          expiresAt?: number;
+          configured?: boolean;
+          error?: string;
+        };
+        if (!active) return;
+        if (res.ok && data.authenticated) {
+          setAuthorized(true);
+          setSessionExpiresAt(data.expiresAt || null);
+        } else {
+          setAuthorized(false);
+          if (res.status === 503 && data.error) {
+            setAuthError(data.error);
+          }
+        }
+      } catch {
+        if (active) setAuthorized(false);
+      } finally {
+        if (active) setCheckingSession(false);
+      }
+    })();
+    return () => {
+      active = false;
+    };
+  }, []);
+
   useEffect(() => {
     if (authorized) {
       setOrders(getStoredOrders());
@@ -90,70 +100,68 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
     e.preventDefault();
     if (!passcode.trim() || verifying) return;
 
-    const now = Date.now();
-    const lockoutUntil = Number(sessionStorage.getItem(LOCKOUT_KEY) || '0');
-    if (lockoutUntil > now) {
-      const mins = Math.ceil((lockoutUntil - now) / 60000);
-      setAuthError(`Rate limit exceeded. Terminal locked for ${mins} min(s).`);
-      return;
-    }
-
     setVerifying(true);
     setAuthError(null);
 
     try {
-      const digest = await computeSaltedSha256(passcode.trim());
-      if (VALID_DIGESTS.has(digest)) {
-        const signedToken = `ladha_v3_sig_${digest.slice(0, 16)}_${Date.now()}`;
-        sessionStorage.setItem(SESSION_TOKEN_KEY, signedToken);
-        sessionStorage.removeItem(ATTEMPTS_KEY);
-        sessionStorage.removeItem(LOCKOUT_KEY);
-        localStorage.setItem(LEDGER_TOKEN_KEY, signedToken);
+      const res = await fetch('/api/auth', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ passcode: passcode.trim() }),
+      });
+
+      const data = (await res.json().catch(() => ({}))) as {
+        authenticated?: boolean;
+        expiresAt?: number;
+        error?: string;
+      };
+
+      if (res.ok && data.authenticated) {
         localStorage.setItem(
           'user',
           JSON.stringify({
             name: 'Executive Controller',
-            email: 'controller@ladha.ke',
+            email: STORE_CONFIG.email,
             role: 'controller',
-            organization: 'Ladha Nairobi',
+            organization: `${STORE_CONFIG.brandName} Nairobi`,
           })
         );
+        setSessionExpiresAt(data.expiresAt || null);
         setPasscode('');
         setAuthorized(true);
       } else {
-        const attempts = Number(sessionStorage.getItem(ATTEMPTS_KEY) || '0') + 1;
-        sessionStorage.setItem(ATTEMPTS_KEY, String(attempts));
-        if (attempts >= 5) {
-          sessionStorage.setItem(LOCKOUT_KEY, String(Date.now() + 15 * 60 * 1000));
-          setAuthError('Maximum attempts (5/5) reached. Terminal locked for 15 minutes.');
-        } else {
-          setAuthError(`Invalid security key (${attempts}/5 attempts). Access denied.`);
-        }
+        setAuthError(data.error || 'Invalid security key. Access denied.');
         setPasscode('');
       }
     } catch {
-      setAuthError('Cryptographic verification failed. Use a secure HTTPS/localhost context.');
+      setAuthError('Unable to reach /api/auth security service. Ensure the server is running.');
     } finally {
       setVerifying(false);
     }
   };
 
-  const handleLockSession = () => {
+  const handleLockSession = async () => {
     try {
-      sessionStorage.removeItem(SESSION_TOKEN_KEY);
+      await fetch('/api/auth', {
+        method: 'DELETE',
+        credentials: 'same-origin',
+      });
+    } catch {
+      // Proceed with local cleanup even if network drops
+    }
+    try {
+      sessionStorage.removeItem('ladha_admin_token');
       localStorage.removeItem(LEDGER_TOKEN_KEY);
       localStorage.removeItem('user');
     } catch {
       // ignore
     }
+    setSessionExpiresAt(null);
     setAuthorized(false);
   };
 
   const handleOpenLedger = () => {
-    const token = sessionStorage.getItem(SESSION_TOKEN_KEY);
-    if (token) {
-      localStorage.setItem(LEDGER_TOKEN_KEY, token);
-    }
     window.location.href = '/admin/ledger/dashboard';
   };
 
@@ -226,7 +234,17 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
     return { inStockCount, soldOutCount, archiveValue, verifiedGmv };
   }, [products, orders]);
 
-  // FAIL-CLOSED GATE: Do not mount any Admin DOM until SHA-256 signature is verified
+  // FAIL-CLOSED GATE: Do not mount any Admin DOM until server HttpOnly session is verified
+  if (checkingSession) {
+    return (
+      <section className="min-h-[85vh] w-full bg-[#0b0b0b] text-white flex items-center justify-center px-4 py-24">
+        <div className="font-mono text-xs uppercase tracking-[0.2em] text-white/60">
+          VERIFYING SERVER SESSION...
+        </div>
+      </section>
+    );
+  }
+
   if (!authorized) {
     return (
       <section className="min-h-[85vh] w-full bg-[#0b0b0b] text-white flex items-center justify-center px-4 py-24">
@@ -240,7 +258,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
             Operator Authentication
           </h1>
           <p className="text-xs text-white/60 font-mono mb-6">
-            SHA-256 SALTED HANDSHAKE · MAX 5 ATTEMPTS // 15-MIN LOCKOUT
+            SERVER-SIDE HTTPONLY SESSION · MAX 5 ATTEMPTS // 15-MIN LOCKOUT
           </p>
 
           <form onSubmit={handleUnlock} className="space-y-5">
@@ -249,18 +267,18 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
                 htmlFor="admin-security-key"
                 className="block font-mono text-[10px] uppercase tracking-[0.16em] text-white/70 mb-2"
               >
-                Enter Manager Security Key
+                Enter Manager Security Passphrase
               </label>
               <input
                 id="admin-security-key"
                 type="password"
                 value={passcode}
                 onChange={(e) => setPasscode(e.target.value)}
-                placeholder="••••"
+                placeholder="••••••••"
                 autoComplete="current-password"
                 required
                 autoFocus
-                className="w-full bg-black border border-white/25 px-4 py-3 text-white font-mono text-base tracking-[0.25em] focus:outline-none focus:border-[#c7ff97]"
+                className="w-full bg-black border border-white/25 px-4 py-3 text-white font-mono text-base tracking-[0.2em] focus:outline-none focus:border-[#c7ff97]"
               />
             </div>
 
@@ -402,6 +420,18 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
             <Receipt className="w-3.5 h-3.5" />
             <span>Order Registry ({orders.length})</span>
           </button>
+          <button
+            type="button"
+            onClick={() => setActiveTab('security')}
+            className={`px-4 py-2 font-mono text-xs uppercase tracking-widest border transition-colors flex items-center gap-2 ${
+              activeTab === 'security'
+                ? 'bg-white text-black border-white font-bold'
+                : 'bg-transparent text-white/70 border-white/20 hover:border-white/50'
+            }`}
+          >
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>Security &amp; Handover</span>
+          </button>
         </div>
 
         {activeTab === 'inventory' && (
@@ -502,7 +532,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
             </tbody>
           </table>
         </div>
-      ) : (
+      ) : activeTab === 'orders' ? (
         <div className="overflow-x-auto border border-white/15 bg-[#111111]">
           {orders.length === 0 ? (
             <div className="p-12 text-center font-mono text-xs text-white/50">
@@ -541,6 +571,61 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
               </tbody>
             </table>
           )}
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="border border-white/15 bg-[#111111] p-6 space-y-4">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-[#c7ff97]">
+              LIVE STORE CONTACT CONFIGURATION
+            </div>
+            <h2 className="text-lg font-bold">Active Public Dispatch Details</h2>
+            <dl className="divide-y divide-white/10 border-y border-white/10 font-mono text-xs">
+              <div className="py-3 flex justify-between gap-4">
+                <dt className="text-white/50 uppercase">Display Phone</dt>
+                <dd className="text-white font-semibold">{STORE_CONFIG.phoneDisplay}</dd>
+              </div>
+              <div className="py-3 flex justify-between gap-4">
+                <dt className="text-white/50 uppercase">WhatsApp Endpoint</dt>
+                <dd className="text-[#c7ff97]">wa.me/{STORE_CONFIG.whatsappDigits}</dd>
+              </div>
+              <div className="py-3 flex justify-between gap-4">
+                <dt className="text-white/50 uppercase">M-Pesa Buy Goods Till</dt>
+                <dd className="text-white font-semibold">
+                  {STORE_CONFIG.hasMpesaTill
+                    ? STORE_CONFIG.mpesaTill
+                    : `Not Active — Direct Pay on Delivery (${STORE_CONFIG.phoneLocal})`}
+                </dd>
+              </div>
+              <div className="py-3 flex justify-between gap-4">
+                <dt className="text-white/50 uppercase">Store Email</dt>
+                <dd className="text-white font-semibold">{STORE_CONFIG.email}</dd>
+              </div>
+              <div className="py-3 flex justify-between gap-4">
+                <dt className="text-white/50 uppercase">Session Mode</dt>
+                <dd className="text-[#c7ff97]">
+                  HttpOnly Signed Cookie{sessionExpiresAt ? ` (Expires ${new Date(sessionExpiresAt).toLocaleTimeString()})` : ''}
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <div className="border border-white/15 bg-[#111111] p-6 space-y-4">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-[#ff4500]">
+              CLIENT HANDOVER &amp; CREDENTIAL ROTATION
+            </div>
+            <h2 className="text-lg font-bold">How to Safely Change Password or Phone</h2>
+            <p className="text-xs text-white/70 leading-relaxed">
+              For maximum security, credentials are never stored in browser code and no public password-reset endpoint is exposed. Rotate secrets inside <strong>Vercel Dashboard → Project Settings → Environment Variables</strong> (protected by Vercel 2FA), then redeploy:
+            </p>
+            <ul className="space-y-2 font-mono text-xs text-white/80 bg-black border border-white/10 p-4">
+              <li><span className="text-[#c7ff97]">ADMIN_PASSCODE</span> — Strong manager passphrase (8+ chars)</li>
+              <li><span className="text-[#c7ff97]">ADMIN_SECRET</span> — Random 32+ char hex cookie-signing key</li>
+              <li><span className="text-[#c7ff97]">VITE_STORE_WHATSAPP</span> — WhatsApp digits (e.g. 254706678338)</li>
+              <li><span className="text-[#c7ff97]">VITE_STORE_PHONE_DISPLAY</span> — Formatted phone (e.g. +254 706 678 338)</li>
+              <li><span className="text-[#c7ff97]">VITE_MPESA_TILL</span> — Safaricom Buy Goods Till / Paybill</li>
+              <li><span className="text-[#c7ff97]">VITE_STORE_EMAIL</span> — Store support &amp; privacy email</li>
+            </ul>
+          </div>
         </div>
       )}
 

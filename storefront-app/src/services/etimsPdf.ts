@@ -119,11 +119,20 @@ export function generateClientEtimsPdf(orderData: EtimsInvoicePayload): void {
   doc.setTextColor(71, 85, 105);
   doc.text(`Phone: ${customerPhone}`, rightX + 10, curY + 42);
   doc.text(`Delivery Zone: ${deliveryZone}`, rightX + 10, curY + 54);
-  doc.text(`Settlement Ref: ${paymentRef} (Lipa na M-Pesa)`, rightX + 10, curY + 66);
+  const isPayOnDelivery = paymentRef === 'PAY-ON-DELIVERY';
+  doc.text(
+    `Settlement Ref: ${paymentRef} (${isPayOnDelivery ? 'Pay on Delivery' : 'Lipa na M-Pesa'})`,
+    rightX + 10,
+    curY + 66
+  );
 
   doc.setFont('helvetica', 'bold');
-  doc.setTextColor(16, 185, 129);
-  doc.text('Status: PAID & SETTLED (Daraja STK)', rightX + 10, curY + 78);
+  doc.setTextColor(isPayOnDelivery ? 217 : 16, isPayOnDelivery ? 119 : 185, isPayOnDelivery ? 6 : 129);
+  doc.text(
+    isPayOnDelivery ? 'Status: RESERVED (PAY ON DELIVERY)' : 'Status: PAID & SETTLED (Daraja STK)',
+    rightX + 10,
+    curY + 78
+  );
 
   // 3. Itemized 16% VAT Schedule
   curY = 218;

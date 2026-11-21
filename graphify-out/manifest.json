@@ -612,10 +612,10 @@
     "semantic_hash": ""
   },
   "storefront/api/auth.js": {
-    "mtime": 1795250123.5363133,
-    "seen": 1795252455.9831758,
-    "ast_hash": "4a4d0dbb8dc9f5badada65daa352f804",
-    "semantic_hash": "4a4d0dbb8dc9f5badada65daa352f804"
+    "mtime": 1795254189.1158824,
+    "seen": 1795254474.295444,
+    "ast_hash": "cea1aeb1f8f1dfeed41103af4e18b3f3",
+    "semantic_hash": ""
   },
   "storefront/data/orders.json": {
     "mtime": 1793887095.6652536,
@@ -684,9 +684,9 @@
     "semantic_hash": "e4c7448c19a8f238001e42f75d752417"
   },
   "storefront/server.py": {
-    "mtime": 1795250123.5383077,
-    "seen": 1795252455.9831758,
-    "ast_hash": "70db179d1e235da1359f8ab4404ea54a",
+    "mtime": 1795254192.7903388,
+    "seen": 1795254474.295444,
+    "ast_hash": "7a0be89c8045baa8429171b15c066db0",
     "semantic_hash": ""
   },
   "storefront/vercel.json": {
@@ -1764,9 +1764,9 @@
     "semantic_hash": ""
   },
   "vercel.json": {
-    "mtime": 1794930666.4177547,
-    "seen": 1794930853.8145196,
-    "ast_hash": "e43e721f2e5d54639041dff97399d138",
+    "mtime": 1795253769.9493752,
+    "seen": 1795254474.295444,
+    "ast_hash": "9d9c405cd742176aac04b0cbc6c5e3c0",
     "semantic_hash": ""
   },
   "portfolio_assets/screenshots/live_ladha_vercel_app.png": {
@@ -2016,15 +2016,15 @@
     "semantic_hash": ""
   },
   "storefront-app/src/components/CartDrawer.tsx": {
-    "mtime": 1794680688.9716494,
-    "seen": 1794681430.527105,
-    "ast_hash": "aa0467f470a1046754780724b2c0cc17",
+    "mtime": 1795255180.9199708,
+    "seen": 1795255312.131586,
+    "ast_hash": "ebe7ebb1538865fc6722c07eea4fc2ca",
     "semantic_hash": ""
   },
   "storefront-app/src/components/FooterContact.tsx": {
-    "mtime": 1795250123.5318954,
-    "seen": 1795252455.9821818,
-    "ast_hash": "8789a95d913628728e1154299037e622",
+    "mtime": 1795255179.1521482,
+    "seen": 1795255312.131586,
+    "ast_hash": "5e763a9eab137ba519d36890c77bbcfc",
     "semantic_hash": ""
   },
   "storefront-app/src/components/Header.tsx": {
@@ -2052,9 +2052,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/components/home/FaqSection.tsx": {
-    "mtime": 1794684211.1496754,
-    "seen": 1794684361.9116497,
-    "ast_hash": "b1f9c30949f879d8631c3966ffc7e380",
+    "mtime": 1795254372.1311457,
+    "seen": 1795254474.295444,
+    "ast_hash": "c5b3d668b5e75fca3eb138e90300de84",
     "semantic_hash": ""
   },
   "storefront-app/src/components/home/Hero.tsx": {
@@ -2130,9 +2130,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/data/siteContent.ts": {
-    "mtime": 1795251938.3915927,
-    "seen": 1795252455.9821818,
-    "ast_hash": "83135e8f25987f0ae48cacdda89c2c87",
+    "mtime": 1795255185.8676004,
+    "seen": 1795255312.131586,
+    "ast_hash": "7f4d809d06e6229ca0f56dbbe00dba12",
     "semantic_hash": ""
   },
   "storefront-app/src/hooks/useAmbientAudio.ts": {
@@ -2160,9 +2160,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/pages/CheckoutPage.tsx": {
-    "mtime": 1794681780.0892732,
-    "seen": 1794681989.7467718,
-    "ast_hash": "ab96d140b3e9963ce575d8b467202e2f",
+    "mtime": 1795255235.4046018,
+    "seen": 1795255312.131586,
+    "ast_hash": "26f1969c53a513fc0903403cf3b6464c",
     "semantic_hash": ""
   },
   "storefront-app/src/pages/HomePage.tsx": {
@@ -2172,9 +2172,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/pages/LegalPage.tsx": {
-    "mtime": 1794680868.0582426,
-    "seen": 1794681430.527105,
-    "ast_hash": "0e25ea255264e482a15083f38b0eb2b4",
+    "mtime": 1795255187.3780532,
+    "seen": 1795255312.131586,
+    "ast_hash": "99e1f2ccb4751dfffd277aed4513dffa",
     "semantic_hash": ""
   },
   "storefront-app/src/pages/NotFoundPage.tsx": {
@@ -2184,9 +2184,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/pages/ProductPage.tsx": {
-    "mtime": 1795251979.2936008,
-    "seen": 1795252455.9821818,
-    "ast_hash": "845f7fdfbf36e484f855bf08d75f2175",
+    "mtime": 1795253891.6896663,
+    "seen": 1795254474.295444,
+    "ast_hash": "c214ac2e714c0108b6ee9f8c68cbb7cd",
     "semantic_hash": ""
   },
   "storefront-app/src/pages/ShopPage.tsx": {
@@ -2202,9 +2202,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/services/etimsPdf.ts": {
-    "mtime": 1794680601.1894999,
-    "seen": 1794681430.527105,
-    "ast_hash": "485a67f1e8d5f44ccc7203f19ff8a2d2",
+    "mtime": 1795255190.9351318,
+    "seen": 1795255312.131586,
+    "ast_hash": "4d93ab04bae16c8691b9a723461d62bd",
     "semantic_hash": ""
   },
   "storefront-app/src/services/storeDb.ts": {
@@ -2250,15 +2250,15 @@
     "semantic_hash": ""
   },
   "storefront-app/vite.config.ts": {
-    "mtime": 1794933555.6259835,
-    "seen": 1794933770.3163204,
-    "ast_hash": "5da8f82aa54d761945c7182906f6461f",
+    "mtime": 1795254152.5495083,
+    "seen": 1795254474.295444,
+    "ast_hash": "b7ad1c4e4a1a46c200500d51b4fbadff",
     "semantic_hash": ""
   },
   "storefront-app/index.html": {
-    "mtime": 1794680502.3715289,
-    "seen": 1794681430.527105,
-    "ast_hash": "b5554d6f246730c5e2179ff6e4e0091c",
+    "mtime": 1795255192.2552845,
+    "seen": 1795255312.131586,
+    "ast_hash": "0db65836b1cb50f932c76cf31a18dccf",
     "semantic_hash": ""
   },
   "storefront/assets/mattis_signature.svg": {
@@ -2280,9 +2280,9 @@
     "semantic_hash": ""
   },
   "storefront-app/src/pages/AdminPage.tsx": {
-    "mtime": 1795252323.120081,
-    "seen": 1795252455.9821818,
-    "ast_hash": "97c4cb14e8d7265fa78835b201e8bd91",
+    "mtime": 1795255189.10155,
+    "seen": 1795255312.131586,
+    "ast_hash": "78e726f03b065f778bceeb049a650a4f",
     "semantic_hash": ""
   },
   "storefront/assets/products/product-16.jpg": {
@@ -2577,6 +2577,18 @@
     "mtime": 1795251488.5688865,
     "seen": 1795252455.9831758,
     "ast_hash": "5f7a1e799efd0fde14fdffb57f5c4c6d",
+    "semantic_hash": ""
+  },
+  "api/auth.mjs": {
+    "mtime": 1795253766.266819,
+    "seen": 1795254474.2944112,
+    "ast_hash": "567b1e99323c404b588c956d83c6a485",
+    "semantic_hash": ""
+  },
+  "storefront-app/src/config/storeConfig.ts": {
+    "mtime": 1795255177.7430427,
+    "seen": 1795255312.131586,
+    "ast_hash": "470f65fb0b64f221816b56b93f6936f8",
     "semantic_hash": ""
   }
 }

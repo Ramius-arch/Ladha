@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FAQ_ITEMS } from '../../data/siteContent';
+import { STORE_CONFIG } from '../../config/storeConfig';
 
 /**
  * FaqSection — 100% structural parity with Mattis FAQSection.tsx:
@@ -136,7 +137,7 @@ export const FaqSection: React.FC = () => {
             {/* ASK A QUESTION Button: 30px Black Sharp Rectangle with Rolling Text */}
             <div>
               <a
-                href="https://wa.me/254700000000"
+                href={STORE_CONFIG.whatsappUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center h-[30px] px-3.5 bg-[#0b0b0b] text-white text-[12px] font-semibold tracking-[-0.01em] uppercase overflow-hidden select-none hover:bg-black transition-colors"
