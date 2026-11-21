@@ -9,15 +9,13 @@ interface ShopPageProps {
   onQuickView: (product: Product) => void;
 }
 
-const CATEGORIES = ['ALL', 'STREETWEAR', 'VINTAGE', "MEN'S", "WOMEN'S"];
+const CATEGORIES = ['ALL', 'SPORT & COMMUTE', 'STREETWEAR', 'GRAPHIC & RETRO', 'KIDS & SCHOOL'];
 
 export const ShopPage: React.FC<ShopPageProps> = ({ products, onQuickView }) => {
   const { searchParams, navigate } = useRouter();
 
   const initialCat = (() => {
     const param = (searchParams.get('category') || 'ALL').toUpperCase();
-    if (param === 'MENS') return "MEN'S";
-    if (param === 'WOMENS') return "WOMEN'S";
     return CATEGORIES.includes(param) ? param : 'ALL';
   })();
 
@@ -29,9 +27,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({ products, onQuickView }) => 
   useEffect(() => {
     const param = (searchParams.get('category') || '').toUpperCase();
     if (!param) return;
-    if (param === 'MENS') setActiveCategory("MEN'S");
-    else if (param === 'WOMENS') setActiveCategory("WOMEN'S");
-    else if (CATEGORIES.includes(param)) setActiveCategory(param);
+    if (CATEGORIES.includes(param)) setActiveCategory(param);
   }, [searchParams]);
 
   const filteredProducts = useMemo(() => {

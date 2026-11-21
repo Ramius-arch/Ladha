@@ -16,7 +16,7 @@ export const ProductPage: React.FC<ProductPageProps> = ({ products, onQuickView 
   const [unit, setUnit] = useState<'in' | 'cm'>('in');
   const [mediaMode, setMediaMode] = useState<'photo' | 'video'>('photo');
 
-  const requestedId = searchParams.get('id') || 'product-1';
+  const requestedId = searchParams.get('id') || 'bag-01';
   const product = useMemo(
     () => products.find((p) => p.id === requestedId) || products[0],
     [products, requestedId]
@@ -186,7 +186,7 @@ export const ProductPage: React.FC<ProductPageProps> = ({ products, onQuickView 
             <div className="border-t border-[#0b0b0b]/15 pt-6">
               <div className="flex items-center justify-between mb-3">
                 <h2 className="font-mono text-xs font-bold uppercase tracking-widest">
-                  FLAT-LAY MEASUREMENTS
+                  DIMENSIONS &amp; CAPACITY
                 </h2>
                 <div className="flex border border-[#0b0b0b]/25">
                   {(['in', 'cm'] as const).map((mode) => (
@@ -221,7 +221,7 @@ export const ProductPage: React.FC<ProductPageProps> = ({ products, onQuickView 
                 </tbody>
               </table>
               <p className="font-mono text-[10px] text-[#0b0b0b]/50 mt-2.5">
-                * Compare laid-flat measurements against your favorite fitting vintage piece before claiming.
+                * Approximate hand-measured dimensions (in / cm) verified in Nairobi before claiming.
               </p>
             </div>
 

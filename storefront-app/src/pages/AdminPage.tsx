@@ -71,13 +71,13 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
   const [showAddModal, setShowAddModal] = useState(false);
   const [newPiece, setNewPiece] = useState({
     name: '',
-    category: 'Outerwear' as Product['category'],
-    price: 9500,
-    size: 'L',
-    condition: '9.5/10 Archive Mint',
-    era: '90s Vintage',
-    image: '/assets/products/product-1.jpg',
-    description: 'Single-piece curated archival specimen sanitized and graded in Nairobi.',
+    category: 'STREETWEAR' as Product['category'],
+    price: 900,
+    size: 'Standard Daypack (Approx. 20L)',
+    condition: 'Grade A Thrift (9.0/10)',
+    era: 'Curated Thrift',
+    image: '/assets/products/bag-01.jpg',
+    description: 'Single-piece curated thrift backpack sanitized and graded in Nairobi.',
   });
 
   useEffect(() => {
@@ -178,7 +178,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({ products, onCatalogMutated
     e.preventDefault();
     if (!newPiece.name.trim()) return;
     const created: Product = {
-      id: `product-${Date.now().toString().slice(-5)}`,
+      id: `bag-${Date.now().toString().slice(-5)}`,
       name: newPiece.name.trim(),
       category: newPiece.category,
       price: Number(newPiece.price) || 8500,

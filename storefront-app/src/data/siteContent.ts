@@ -2,7 +2,7 @@ import defaultProductsRaw from './defaultProducts.json';
 import { LookbookEntry, Product } from '../types/store';
 
 export function resolveAssetUrl(path?: string): string {
-  if (!path) return '/assets/products/product-1.jpg';
+  if (!path) return '/assets/products/bag-01.jpg';
   if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:') || path.startsWith('/')) {
     return path;
   }

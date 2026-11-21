@@ -11,7 +11,7 @@ interface DropsCatalogSectionProps {
   onQuickView: (product: Product) => void;
 }
 
-const CATEGORIES = ['ALL', "MEN'S", "WOMEN'S", 'STREETWEAR', 'VINTAGE'] as const;
+const CATEGORIES = ['ALL', 'SPORT & COMMUTE', 'STREETWEAR', 'GRAPHIC & RETRO', 'KIDS & SCHOOL'] as const;
 
 /**
  * DropsCatalogSection:

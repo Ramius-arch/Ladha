@@ -2,10 +2,21 @@ import { DEFAULT_PRODUCTS, resolveAssetUrl } from '../data/siteContent';
 import { DispatchLead, Product, StoreOrder } from '../types/store';
 
 const KEYS = {
-  PRODUCTS: 'ladha_products_v3',
+  PRODUCTS: 'ladha_products_v5',
   ORDERS: 'ladha_orders_v1',
   LEADS: 'ladha_dispatch_leads_v1',
 };
+
+// Clear superseded catalog storage keys so retired placeholder items never bleed into live stock
+if (typeof window !== 'undefined') {
+  try {
+    ['ladha_products_v1', 'ladha_products_v2', 'ladha_products_v3', 'ladha_products_v4'].forEach((oldKey) => {
+      localStorage.removeItem(oldKey);
+    });
+  } catch {
+    // Ignore storage privacy restrictions
+  }
+}
 
 function readStorage<T>(key: string, fallback: T): T {
   try {
